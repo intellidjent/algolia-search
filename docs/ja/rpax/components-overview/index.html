@@ -1,0 +1,146 @@
+<!DOCTYPE html><html lang="ja"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Components Overview · WorkFusion Knowledge Base</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="WorkFusionは、幅広いコンポーネントを提供し、包括的な"/><meta name="docsearch:language" content="ja"/><meta property="og:title" content="Components Overview · WorkFusion Knowledge Base"/><meta property="og:type" content="website"/><meta property="og:url" content="https://workfusion.com/index.html"/><meta property="og:description" content="WorkFusionは、幅広いコンポーネントを提供し、包括的な"/><meta property="og:image" content="https://workfusion.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://workfusion.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/ja"><img class="logo" src="/img/wf_logo.png" alt="WorkFusion Knowledge Base"/><h2 class="headerTitleWithLogo">WorkFusion Knowledge Base</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/ja/rpax/rpax-landing" target="_self">Docs</a></li><li class=""><a href="/docs/ja/doc4" target="_self">API</a></li><li class=""><a href="/ja/help" target="_self">Help</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/img/language.svg" alt="Languages icon"/>日本語</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/rpax/components-overview">English</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>RPA Express</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Components Overview</h1></header><article><div><span><p>WorkFusionは、幅広いコンポーネントを提供し、包括的な
+エンタープライズオートメーション。それぞれの目的とコンポーネントの目的を理解する
+最初に一緒に仕事をしてみましょう。</p>
+<p><img src="/docs/assets/rpax/components-overview/components-overview.png" alt=""></p>
+<p>次に、各コンポーネントの説明とその機能について説明します。</p>
+<h2><a class="anchor" aria-hidden="true" id="用途"></a><a href="#用途" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>用途</h2>
+<h3><a class="anchor" aria-hidden="true" id="ワークスペース"></a><a href="#ワークスペース" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ワークスペース</h3>
+<p>WorkSpaceは、Subject Matter Expertによる手動タスクの実行のためのWebアプリケーションです。</p>
+<p>関連コンポーネント：コントロールタワー、オブジェクトストレージ</p>
+<p>対象機能：</p>
+<ul>
+<li>手動タスクのキュー管理。</li>
+<li>主題専門家による手作業の完了。</li>
+<li>ユーザー、役割、チーム、資格の管理。</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="管制塔"></a><a href="#管制塔" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>管制塔</h3>
+<p>Control Towerは、中央管理Webアプリケーションであり、自動化プロセスやタスクを編成し、パワーユーザー、管理者、および開発者向けのユーザーインターフェイスを提供します。</p>
+<p>関連するコンポーネント：WorkSpace、Workflow、RPA、AutoML、OCR、データストレージ</p>
+<p>対象機能：</p>
+<ul>
+<li>自動化プロセス管理</li>
+<li>GUIツールを使用したワークフローの作成と編集</li>
+<li>自動化の実行と監視</li>
+<li>入力/出力データ処理</li>
+<li>ユーザーと役割の管理</li>
+<li>手動タスク管理</li>
+<li>労働力管理</li>
+<li>システム全体の構成</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="サービス"></a><a href="#サービス" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>サービス</h2>
+<h3><a class="anchor" aria-hidden="true" id="automl"></a><a href="#automl" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>AutoML</h3>
+<blockquote>
+<p><strong>注</strong>：SPA経由でのみご利用いただけます</p>
+</blockquote>
+<p>AutoMLは、特定のターゲット関数（Manual Taskで表現されている）のための最良のMLモデルを見つけ、トレーニングし、検証し、最終的にターゲットの変数を予測します。</p>
+<p>関連コンポーネント：コントロールタワー、データストレージ</p>
+<p>WorkFusion SPAにはAutoMLというネイティブ機能があり、データクレンジング、モデル選択、モデルトレーニングをデータ科学者が手動で手動で自動化します。このソフトウェアには、MLモデルが作業中のパターンを識別できるように、ビジネス・ユーザーが非構造化データにタグを付けるために使用するインターフェースが含まれています。作業パターンの事例が十分に見られると、ソフトウェアは人間またはより高い信頼水準で作業の実行方法を予測します。 AutoMLを使用すると、ビジネスユーザにスケーラブルなセルフサービス機能を提供することで、AIの配備と拡張に要する時間とコストを大幅に削減できます。</p>
+<p><img src="/docs/assets/rpax/components-overview/automl.png" alt=""></p>
+<p>AutoMLは、Wordドキュメント、PDF、TIFFだけでなく、スプレッドシート、電子メール、テキストメッセージ、Webページ、およびコメントフィールドからも学習できます。一般的なクラウドベースのAIプロバイダのような何百万ものサンプルを必要とするのではなく、300〜500個のサンプルを最適にトレーニングしてから、画期的な自動化率を実現するという点で、SPAはAI分野ではユニークです。追加サンプルが1つ増えるごとに、自動化率が増加します。</p>
+<p>ビジネス全体の多くの自動化ユースケースには同じタスクがあります。たとえば、銀行業務では、モーゲージ文書とSWIFTメッセージは異なる形式のデータで、異なるプロセスで使用されますが、どちらも人の名前と住所が含まれています。 WorkFusion SPAのネイティブ機能であるTransfer Learningは、あるユースケースの学習を同じタスクの別のユースケースに適用します。これにより、MLの学習と導入に要する時間が短縮されます。</p>
+<h3><a class="anchor" aria-hidden="true" id="rpa"></a><a href="#rpa" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>RPA</h3>
+<p>RPAクラスタは、デスクトップまたはWebアプリケーション内のユーザーシナリオを実行するスケーラブルなコンピューティング環境です。ユーザ入力をエミュレートするためにキーボードとマウスポインタを制御します。</p>
+<p>RPAの主な目標は、デスクトップおよびWebアプリケーション内のユーザーシナリオの自動化です。</p>
+<p>関連コンポーネント：Control Tower |</p>
+<h3><a class="anchor" aria-hidden="true" id="ocr"></a><a href="#ocr" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OCR</h3>
+<p>OCRエンジンはスキャンされたドキュメントを処理し、非構造化イメージベースのデータをいくつかのフォーマット（html、xml）の構造化文字ドキュメントに変換します。</p>
+<p>関連コンポーネント：Control Tower、WorkSpace、データストレージ</p>
+<h3><a class="anchor" aria-hidden="true" id="ワークフロー"></a><a href="#ワークフロー" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ワークフロー</h3>
+<p>Workflow Engineは、Control Towerで作成された自動化プロセスを実行します。これはControl Tower内で設定されたサーバーアプリケーションです。</p>
+<p>Automation Control Towerで作成されたプロセス定義に従ってプロセスを実行します。実行はさまざまなコンピューティング環境（RPA、WorkSpace、OCR、AutoML）で処理されます。</p>
+<p>関連コンポーネント：Control Tower、RPA、WorkSpace、AutoML</p>
+<h3><a class="anchor" aria-hidden="true" id="analytics"></a><a href="#analytics" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Analytics</h3>
+<blockquote>
+<p><strong>注</strong>：SPAのみで利用可能</p>
+</blockquote>
+<p>Analytics Webアプリケーションは、包括的なダッシュボードとレポート機能を提供します。</p>
+<p>関連コンポーネント：Control Tower、WorkSpace</p>
+<p>WorkFusion Analytics Dashboardsは、メトリックと主要業績評価指標（KPI）を集約して表示するレポート作成メカニズムです。ダッシュボードは、コンテキスト内の洞察を明らかにし、ビジネスパフォーマンスに伝達することによって意思決定を改善するのに役立ちます。</p>
+<p><img src="/docs/assets/rpax/components-overview/analytics.png" alt=""></p>
+<p>ダッシュボードは、1つ以上の図表、表、および数値メトリックで構成されています。各SPAセットアップでは、すぐに使用できるダッシュボードのパッケージが提供されます。 WorkFusion SPAチームまたはWorkFusionパートナーは、カスタムセットのオンデマンドダッシュボードを提供して、オートメーション固有の結果を可能な限り最良の方法で視覚化することもできます。</p>
+<p>プラットフォームモニタ</p>
+<p>プラットフォームモニタは、SPAプラットフォームコンポーネントの集中監視を担当します。</p>
+<p>関連するコンポーネント：</p>
+<h3><a class="anchor" aria-hidden="true" id="プラットフォームモニタ"></a><a href="#プラットフォームモニタ" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>プラットフォームモニタ</h3>
+<p>プラットフォームモニタは、SPAプラットフォームコンポーネントの集中監視を担当します。</p>
+<p>関連コンポーネント：Control Tower、WorkSpace、RPA、OCR、Analytics</p>
+<p>対象機能：</p>
+<ul>
+<li>全体的なプラットフォームコンポーネントの状態を監視する。</li>
+<li>ハードウェアの利用状況と状態を監視する。</li>
+<li>問題に関する警告。</li>
+<li>サードパーティのアプリケーション監視ツールと統合するためのAPIを提供する。</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="secrets-vault"></a><a href="#secrets-vault" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Secrets Vault</h3>
+<p>Secrets Vaultは機密データの保護された格納先です。</p>
+<p>関連コンポーネント：コントロールタワー、RPA</p>
+<p>これは、ほとんどの場合、ソリューションの非機能要件に関連しています。</p>
+<ul>
+<li>RPAに関係するアプリケーションの認証データ（ログイン/パスワード）を格納し、ビジネスプロセスの実行中にRPAに安全なアクセスを提供する。</li>
+<li>WorkFusion SPAのコンポーネント間の相互作用に関する認証データの保存。</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="データベース"></a><a href="#データベース" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>データベース</h3>
+<p>データベースには、ビジネスプロセス定義、ランタイム、RPAや認知自動化などの実行に関する情報が格納されます。これは、設計されたオートメーション実装の信頼できるストレージです。</p>
+<p>関連コンポーネント：Control Tower、WorkSpace、Analytics</p>
+<h3><a class="anchor" aria-hidden="true" id="オブジェクトストレージ"></a><a href="#オブジェクトストレージ" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>オブジェクトストレージ</h3>
+<p>Object Storageは、OCR結果、AutoMLモデル、スクリーンショット、レポート生成などのバイナリファイルタイプのコンテンツを自動化して保持します。これは、OCRの結果と訓練されたAutoMLモデルの信頼できるストレージです。</p>
+<p>関連するコンポーネント：ワークフロー、OCR、AutoML</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/ja/rpax/rpax-landing"><span class="arrow-prev">← </span><span>Get Started</span></a><a class="docs-next button" href="/docs/ja/rpax/user-guide/welcome"><span>Welcome</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#用途">用途</a><ul class="toc-headings"><li><a href="#ワークスペース">ワークスペース</a></li><li><a href="#管制塔">管制塔</a></li></ul></li><li><a href="#サービス">サービス</a><ul class="toc-headings"><li><a href="#automl">AutoML</a></li><li><a href="#rpa">RPA</a></li><li><a href="#ocr">OCR</a></li><li><a href="#ワークフロー">ワークフロー</a></li><li><a href="#analytics">Analytics</a></li><li><a href="#プラットフォームモニタ">プラットフォームモニタ</a></li><li><a href="#secrets-vault">Secrets Vault</a></li><li><a href="#データベース">データベース</a></li><li><a href="#オブジェクトストレージ">オブジェクトストレージ</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/wf_logo.png" alt="WorkFusion Knowledge Base" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/ja/doc1.html">Getting Started (or other categories)</a><a href="/docs/ja/doc2.html">Guides (or other categories)</a><a href="/docs/ja/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/ja/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://code.facebook.com/projects/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Your Name or Your Company Name</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'd6feff56be61397a72b3481cd4f889e4',
+                indexName: 'search-config',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:ja","version:undefined"]}
+              });
+            </script></body></html>
