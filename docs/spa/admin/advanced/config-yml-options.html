@@ -1,0 +1,1150 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>config.yml options · Knowledgebase</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;The following page describes the configuration options available during&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="config.yml options · Knowledgebase"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docusaurus.workfusion.com//"/><meta property="og:description" content="&lt;p&gt;The following page describes the configuration options available during&lt;/p&gt;
+"/><meta property="og:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.4/fuse.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/WorkFusion_H_5_RGB.png" alt="Knowledgebase"/><h2 class="headerTitleWithLogo">Knowledgebase</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/terra" target="_self">WorkFusion 10.0</a></li><li class=""><a href="/docs/spa" target="_self">SPA</a></li><li class="siteNavGroupActive"><a href="/docs/spa/admin/install-spa/prepare/overview" target="_self">Administrator&#x27;s Guide</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Advanced configuration</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">System requirements<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/system-requirements">System requirements</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/infrastructure-capacity-planning">Infrastructure capacity planning</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/application-ports">Applications&#x27; ports</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/dns-names-configuration">DNS names configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/env-readiness-checklist">Environment readiness checklist</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Installation<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/overview-install">Overview</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Prepare for installation</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/overview">Prerequisites</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/create-users">Create users</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/prepare-tls-certificates">Prepare TLS certificates</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/prepare-servers">Prepare servers</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/install-spa">Install SPA</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/post-install">Post-installation tasks</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/uninstall-win">Uninstall WF components from Windows servers</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Maintenance<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/restart-servers">Restart servers</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/backup-and-restore-data">Backup and restore data</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/update-tls-certificates">Update TLS certificates</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/update-passwords">Update passwords</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Logs management</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/aggregate-and-view-logs">Aggregate and view logs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/filebeat-configuration">Filebeat configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/search-a-specific-message-in-logs">Search a specific message in logs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/archive-logs">Archive logs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/change-a-component-s-log-level">Change a component&#x27;s log level</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/reference-log-configuration-of-components">Reference: log configuration of components</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/reference-log-rotation">Reference: log rotation</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Service information</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/general-services-information">General services Information</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/inorder-and-deps-checker">Inorder and deps_checker</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/common-services">Common services</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/app">APP</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/int">INT</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/ocr">OCR</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/bep">BEP</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Monitoring<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/monitoring-overview">Monitoring overview</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/сhange-elk-admin-password">Сhange ELK admin password in Kibana</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/investigate-performance-hot-spot">Investigate performance hot spot in environment</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/heartbeat-configuration-guide">Heartbeat configuration guide</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/metricbeat-configuration-guide">Metricbeat configuration guide</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/connect-external-elk">Integrate external ELK</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">License management<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/manage-workfusion-analytics-license">Manage WorkFusion Analytics license</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/activate-the-ocr-license">Activate OCR license</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/update-the-elk-license">Update ELK license</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/workfusion-libraries-and-tools">WorkFusion libraries and tools</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">OCR<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/ocr/scale-ocr">Scale OCR</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/ocr/install-second-ocr-server-in-same-spa-instance">Install second OCR server</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/ocr/migration-notes">OCR Migration Notes</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/ocr/advanced-configuration">Advanced Configuration</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Information security<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/info-sec/sso-integration">SSO integration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/info-sec/ldap-and-ad-integration">LDAP and AD integration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/info-sec/import-root-or-intermediate-ca-to-store">Import Root or Intermediate CA to Store</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/info-sec/manage-secure-properties">Manage secure properties</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Analytics<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/analytics/backup-restore-custom-dashboards">Backup and restore custom Analytics dashboards</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/analytics/using-tableau">Setup end-to-end SSI audit chart</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Advanced configuration<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem navListItemActive"><a class="navItem" href="/docs/spa/admin/advanced/config-yml-options">config.yml options</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/hosts-yml-options">hosts.yml options</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/secret-vault-properties">Secrets vault properties</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/health-сheck-messages">Health сheck messages</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/configuration-and-health-check">Configuration and health check</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/crontab-jobs">Crontab jobs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/notifications-via-email">Notifications via email</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/prepare-rpa-ocrwin-and-bi-configurations">Prepare RPA, OCRWIN and BI configurations</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://git.workfusion.com/projects/DOC/repos/documentation/browse/docs/spa/admin/advanced/config-yml-options.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">config.yml options</h1></header><article><div><span><p>The following page describes the configuration options available during
+installation of WorkFusion SPA version 10.0.</p>
+<p>SPA installation begins with setting parameters in <strong>config.yml</strong>. In
+this configuration file you define:</p>
+<ul>
+<li>Service ports</li>
+<li>Runtime users</li>
+<li>Home directory</li>
+<li>Execution parameters</li>
+<li>Sensitive data, such as database credentials</li>
+<li>Other essential options</li>
+</ul>
+<p>Complete the file on your Integration Server. If you install SPA in the
+<a href="/docs/spa/admin/install-spa/prepare/prepare-servers">recommended way</a>, <strong>config.yml</strong> will be automatically delivered to all required servers during installation. If you are using <a href="/docs/spa/admin/legacy/legacy-overview">Legacy setup</a>, you must deliver it to all the other servers manually.</p>
+
+    <div class="admonition admonition-note">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div> note</h5>
+      </div>
+      <div class="admonition-content">
+    <p>All further customizations, such as adding new servers or
+configuring LDAP, and post-installation upgrades must be performed using</p>
+<p>this file. Remember to save it after the SPA installation.</p>
+</div></div><h2><a class="anchor" aria-hidden="true" id="file-format"></a><a href="#file-format" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>File format</h2>
+<p>The configuration file uses the <a href="http://www.yaml.org/">YAML</a> format.</p>
+<p>This file contains a few common parameters shared by all servers. For
+example, <strong><code>wf_user</code></strong> (runtime user for all
+software), <code>install_dir</code>(installation directory), which
+already have reasonable defaults, while the other must be defined by the
+end-user.</p>
+<p>The configuration file is thoroughly commented to explain each of the
+parameters. A detailed description of all parameters is provided
+further.</p>
+<p><details>
+<summary><font color="#FD4810">
+Example of config.yml
+</font></summary></p>
+<pre><code class="hljs css language-yml"><span class="hljs-comment"># At least one space should be present between each 'key: value'</span>
+<span class="hljs-comment"># It is strongly adviced to enclose values with specisl symbols into single quotes</span>
+
+<span class="hljs-comment"># PASSWORDS POLICY</span>
+<span class="hljs-comment"># - must be not shorter that 6 symbols and not longer than 20 symbols;</span>
+<span class="hljs-comment"># - must contain at least one uppercase character [A-Z];</span>
+<span class="hljs-comment"># - must contain at least one lowercase character [a-z];</span>
+<span class="hljs-comment"># - must contain at least one numeric character [0-9];</span>
+<span class="hljs-comment"># - must contain at least one of the following special symbols unless limitations are explicitly described in comments: @#^*():,.;}[]&lt;&gt;/</span>
+<span class="hljs-comment"># - must NOT contain the following symbols: \"!?&amp;'{$|`%</span>
+<span class="hljs-comment"># - must NOT contain spaces</span>
+
+<span class="hljs-comment"># Ansible vault password - config.yml will be encrypted with this password after encrypt command</span>
+<span class="hljs-comment"># Change it!</span>
+<span class="hljs-attr">ansible_vault_password:</span> <span class="hljs-string">'WorkFusion!'</span>
+
+<span class="hljs-comment"># Ansible Linux user(used in inventory)</span>
+<span class="hljs-attr">linux_installation_user:</span> <span class="hljs-string">'ec2-user'</span>
+
+<span class="hljs-comment"># Access and Secret keys for S3 storage</span>
+<span class="hljs-attr">s3_access_key:</span> <span class="hljs-string">'JOZXPHL1ZC8WXZAJXNU7'</span>                     <span class="hljs-comment"># Special symbols are not allowed. 3-20 characters length.</span>
+<span class="hljs-attr">s3_secret_key:</span> <span class="hljs-string">'qAEYOVLOViPjxk3Lbuj0wrDztf8fGJrqMb4Obw=='</span> <span class="hljs-comment"># Allowed special symbols: '=', '/'. 8-40 characters length.</span>
+
+<span class="hljs-comment"># SSL Certificates are used to secure Workfusion SPA services communication</span>
+<span class="hljs-comment"># Put your Trusted Certificates and key files to certificates/ directory.</span>
+<span class="hljs-comment"># Otherwise, Self-Signed certificates will be generated automatically</span>
+<span class="hljs-comment"># Provide password for autogenerated ca.key file. This setting will be used only when you're using self-signed certs generated by "install.sh certs generate" command</span>
+<span class="hljs-attr">ca_key_pass:</span> <span class="hljs-string">'aHja&amp;a^T8c'</span>
+
+<span class="hljs-comment"># Set password for built-in 'cacerts' java truststore on Linux servers.</span>
+<span class="hljs-attr">java_cacerts_truststore_pass:</span> <span class="hljs-string">'@#^*():,.;}[]&lt;&gt;/Atd7'</span>
+
+<span class="hljs-comment"># Vault Certificates</span>
+<span class="hljs-comment"># These certificates are generated using "./install.sh cert_vault generate" command</span>
+<span class="hljs-comment"># They are used by Workfusion applications for authentication and access control into Vault (Secure Storage)</span>
+<span class="hljs-attr">vault_admin_cert_pass:</span>  <span class="hljs-string">'PQS*jzJa9%'</span>  <span class="hljs-comment"># password for vault_admin.p12 certificate</span>
+<span class="hljs-attr">vault_client_cert_pass:</span> <span class="hljs-string">'a2J@Kn5llk'</span>  <span class="hljs-comment"># password for vault_workfusion.p12 certificate</span>
+
+<span class="hljs-comment"># Linux runtime user and group. Must be the same for all linux servers</span>
+<span class="hljs-attr">wf_user:</span>            <span class="hljs-string">wfuser</span>
+<span class="hljs-attr">wf_group:</span>           <span class="hljs-string">wfuser</span>
+<span class="hljs-attr">install_dir:</span>        <span class="hljs-string">/opt/workfusion</span>   <span class="hljs-comment"># Target installation directory, should not contain dot(s)</span>
+
+<span class="hljs-comment"># Windows installation properties</span>
+<span class="hljs-comment"># Existing user on OCRWin server. It will be used ONLY if ocr_platform is windows. Used for OCRWin installation. Should be member of Administrators group.</span>
+<span class="hljs-attr">ocrwin_user:</span>        <span class="hljs-string">'ec2-user'</span>
+<span class="hljs-attr">ocrwin_pass:</span>        <span class="hljs-string">'jEn125us$'</span>
+<span class="hljs-attr">ocrwin_install_dir:</span> <span class="hljs-string">'C:\workfusion'</span>  <span class="hljs-comment"># Target installation directory for OCRWin on the server.</span>
+
+<span class="hljs-comment"># Existing user on Analytics (BI) server. Used for Analytics (BI) installation. Should be member of Administrators group.</span>
+<span class="hljs-attr">bi_user:</span>            <span class="hljs-string">'ec2-user'</span>     <span class="hljs-comment"># User with administrator privileges</span>
+<span class="hljs-attr">bi_pass:</span>            <span class="hljs-string">'jEn125us$'</span>
+<span class="hljs-attr">bi_install_dir:</span>     <span class="hljs-string">'C:\workfusion'</span>  <span class="hljs-comment"># Target installation directory for Analytics (BI) server.</span>
+
+<span class="hljs-comment"># Existing user on RPA server(s). Used for RPA installation. Should be member of Administrators group.</span>
+<span class="hljs-attr">rpa_user:</span>           <span class="hljs-string">'ec2-user'</span>     <span class="hljs-comment"># User with administrator privileges</span>
+<span class="hljs-attr">rpa_pass:</span>           <span class="hljs-string">'jEn125us$'</span>
+<span class="hljs-attr">rpa_install_dir:</span>    <span class="hljs-string">'C:\RPA'</span>         <span class="hljs-comment"># Target installation directory for RPA server.</span>
+
+<span class="hljs-comment"># Logging</span>
+<span class="hljs-attr">log_level_type:</span> <span class="hljs-string">prod</span> <span class="hljs-comment"># Affects log levels for Control Tower, Workspace, OCR, AutoQC. Possible values 'prod' or 'dev'. Use 'dev' for debugging only.</span>
+
+<span class="hljs-comment"># Control Tower default user credentials used for login into Control Tower UI from browser.</span>
+<span class="hljs-attr">wf_username:</span> <span class="hljs-string">'workfusion'</span>
+<span class="hljs-attr">wf_password:</span> <span class="hljs-string">'ldT#!E3vHp'</span> <span class="hljs-comment"># Allowed special symbols: @#^*(),.;}[]&lt;&gt;/</span>
+
+<span class="hljs-comment"># Marathon</span>
+<span class="hljs-attr">marathon_web_pass:</span> <span class="hljs-string">'Pt1mdbw#jG'</span>  <span class="hljs-comment"># password for buint-in user "marathon" for Marathon Web UI</span>
+
+<span class="hljs-comment"># Mesos</span>
+<span class="hljs-attr">mesos_web_pass:</span> <span class="hljs-string">'JLUm7xsuS!'</span>     <span class="hljs-comment"># password for built-in user "mesos" for Masos Web UI. Allowed special symbols: !*#^@</span>
+
+<span class="hljs-comment"># Rabbitmq</span>
+<span class="hljs-attr">rabbitmq_ocr_pass:</span>   <span class="hljs-string">'Ge48fd!jr74'</span> <span class="hljs-comment"># password for built-in rabbitmq user "ocr" used by OCR services</span>
+<span class="hljs-attr">rabbitmq_bep_pass:</span>   <span class="hljs-string">'CSH5rU9(#5'</span>  <span class="hljs-comment"># password for built-in rabbitmq user "bep" used by BEP services</span>
+<span class="hljs-attr">rabbitmq_admin_pass:</span> <span class="hljs-string">'Fj76dj)pW'</span>   <span class="hljs-comment"># password for built-in rabbitmq user "admin"</span>
+
+<span class="hljs-comment"># ELK</span>
+<span class="hljs-attr">elk_admin_pass:</span>    <span class="hljs-string">'sc@R@^S#9V'</span>   <span class="hljs-comment"># password for elasticsearch user 'admin' used as login for Kibana UI</span>
+<span class="hljs-attr">elk_elastic_pass:</span>  <span class="hljs-string">'KL7N!#v2@M'</span>   <span class="hljs-comment"># password for build-in elasticsearch user 'elastic'</span>
+<span class="hljs-attr">elk_kibana_pass:</span>   <span class="hljs-string">'PM8Q^*p1^Q'</span>   <span class="hljs-comment"># password for build-in elasticsearch user 'kibana' used for install process</span>
+<span class="hljs-attr">elk_logstash_certificate_pass:</span> <span class="hljs-string">'j3D^qEe4!d'</span> <span class="hljs-comment"># auth certificate 'logstash.p12' password</span>
+
+
+<span class="hljs-comment"># Email/SMTP</span>
+<span class="hljs-attr">mail_user:</span>   <span class="hljs-string">'wfadmin'</span>              <span class="hljs-comment"># Credentials for SMTP server</span>
+<span class="hljs-attr">mail_pass:</span>   <span class="hljs-string">'wfadmin'</span>              <span class="hljs-comment"># Credentials for SMTP server</span>
+<span class="hljs-attr">mail_host:</span>   <span class="hljs-string">'localhost'</span>            <span class="hljs-comment"># Used by CT, WS</span>
+<span class="hljs-attr">mail_port:</span>   <span class="hljs-string">'25'</span>                   <span class="hljs-comment"># Used by CT, WS</span>
+<span class="hljs-attr">mail_sender:</span> <span class="hljs-string">'no-reply@example.com'</span> <span class="hljs-comment"># Used by CT, WS to send email notifications</span>
+
+<span class="hljs-comment"># Nexus</span>
+<span class="hljs-attr">nexus_admin_pass:</span>      <span class="hljs-string">'EjuzrQo*6O'</span>  <span class="hljs-comment"># password for built-in nexus user "admin"</span>
+
+<span class="hljs-comment"># Tableau (BI)</span>
+<span class="hljs-comment"># All values should be added on BI server to "\to_deploy\deploy\config\import_users.csv" file</span>
+<span class="hljs-attr">tableau_dashboard_user:</span>  <span class="hljs-string">'tableau_user'</span>  <span class="hljs-comment"># tableau dashboard user. Can't be changed after initial installation</span>
+<span class="hljs-attr">tableau_dashboard_pass:</span>  <span class="hljs-string">'tableau_pass'</span>  <span class="hljs-comment"># tableau dashboard password (special symbols are not allowed). Can't be changed after initial installation</span>
+
+<span class="hljs-comment"># OCR</span>
+<span class="hljs-attr">ocr_platform:</span>   <span class="hljs-string">'linux'</span>      <span class="hljs-comment"># Which OS is used for OCR? Affects Control Tower configuration. Available options: 'linux', 'windows'.</span>
+<span class="hljs-attr">ocr_sec_pass:</span>   <span class="hljs-string">'j^N3C88JmN'</span> <span class="hljs-comment"># password for user "ocr" used for basic authentication to OCR service api via nginx over HTTPS</span>
+<span class="hljs-attr">ocr_jwt_secret:</span> <span class="hljs-string">'rzqFIc#1jc'</span> <span class="hljs-comment"># JWT secret for OCR authentication</span>
+
+<span class="hljs-comment"># Workspace</span>
+<span class="hljs-attr">workspace_root_requester_pass:</span> <span class="hljs-string">'I#U#koa9Jo'</span>   <span class="hljs-comment"># password for user "workfusion" used by Workspace service</span>
+
+<span class="hljs-comment"># RPA</span>
+<span class="hljs-comment"># The value of 'bot_manager_jwt_secret' should consist of 24 symbols</span>
+<span class="hljs-comment"># Numbers, capital and lowercase letters are allowed</span>
+<span class="hljs-comment"># Allowed special symbols: '/', '+'</span>
+<span class="hljs-comment"># The string must end with '=='</span>
+<span class="hljs-attr">bot_manager_jwt_secret:</span> <span class="hljs-string">'SuQ6fzt5693XRmGueUhSbQ=='</span>  <span class="hljs-comment"># JWT secret for bot_manager authentication</span>
+<span class="hljs-attr">rpa_bot_manager_pass:</span>   <span class="hljs-string">'Kt#Ol4luYl'</span>                <span class="hljs-comment"># password for built-in springboot user "wfagent" used by Bot-manager</span>
+
+<span class="hljs-comment"># Provide existing Bot Master Windows user on RPA server(s)</span>
+<span class="hljs-comment"># This user must be present before installation on each RPA server from rpa_hostnames list</span>
+<span class="hljs-comment"># The same password must be used for Bot Master User on each RPA server</span>
+<span class="hljs-comment"># The user must be a member of 'Administrators' group on each RPA server</span>
+<span class="hljs-attr">bot_master_user_name:</span> <span class="hljs-string">'BotMaster'</span>
+<span class="hljs-attr">bot_master_user_pass:</span> <span class="hljs-string">'Test111'</span>
+
+<span class="hljs-comment"># Provide existing Bot Unit Windows user(s) on RPA server(s)</span>
+<span class="hljs-comment"># The user(s) must be present before installation on each RPA server from rpa_hostnames list</span>
+<span class="hljs-comment"># The number of created users should be equal to the value of 'rpa_bots_per_server' setting</span>
+<span class="hljs-comment"># All Bot Unit users must have common basename and different index numbers in the end of basename</span>
+<span class="hljs-comment"># For example, if you set 'rpa_bots_per_server: 2', and 'bot_unit_base_name: BotUnit' then you should have the following users on each RPA server: BotUnit1, BotUnit2</span>
+<span class="hljs-comment"># All Bot Unit users on all RPA servers must have the same password</span>
+<span class="hljs-attr">rpa_bots_per_server:</span> <span class="hljs-number">1</span>  <span class="hljs-comment"># Number of Bots on each RPA server</span>
+<span class="hljs-attr">bot_unit_base_name:</span> <span class="hljs-string">'BotUnit'</span>
+<span class="hljs-attr">bot_unit_pass:</span>      <span class="hljs-string">'Test111'</span>
+
+<span class="hljs-comment"># MSSQL parameters</span>
+<span class="hljs-attr">mssql_db_name:</span>   <span class="hljs-string">'workfusion'</span>   <span class="hljs-comment"># MSSQL db name</span>
+<span class="hljs-comment">## If you want to use Windows Authentication instead of SQL logins, uncomment line below and define your working AD realm there.</span>
+<span class="hljs-comment">## ad_realm: EXAMPLE.COM</span>
+
+<span class="hljs-attr">mssql_dba_user:</span>  <span class="hljs-string">'wf_dba'</span>       <span class="hljs-comment"># db owner login for MSSQL db</span>
+<span class="hljs-attr">mssql_dba_pass:</span>  <span class="hljs-string">'f*6F123MRH7'</span>  <span class="hljs-comment"># db owner password</span>
+
+<span class="hljs-attr">mssql_ct_user:</span>   <span class="hljs-string">'workfusion'</span>   <span class="hljs-comment"># db user for Control Tower component</span>
+<span class="hljs-attr">mssql_ct_pass:</span>   <span class="hljs-string">'f*6FKvMRH7'</span>   <span class="hljs-comment"># db password for Control Tower component</span>
+
+<span class="hljs-attr">mssql_ws_user:</span>   <span class="hljs-string">'workspace'</span>    <span class="hljs-comment"># db user for Workspace component</span>
+<span class="hljs-attr">mssql_ws_pass:</span>   <span class="hljs-string">'R^Ie4MBT7^'</span>   <span class="hljs-comment"># db password for Workspace component</span>
+
+<span class="hljs-attr">mssql_sqc_user:</span>  <span class="hljs-string">'sqc'</span>          <span class="hljs-comment"># db user for SQC component</span>
+<span class="hljs-attr">mssql_sqc_pass:</span>  <span class="hljs-string">'g64twVZO@3'</span>   <span class="hljs-comment"># db password for SQC component</span>
+
+<span class="hljs-attr">mssql_ds_user:</span>   <span class="hljs-string">'ds'</span>           <span class="hljs-comment"># db user for CT datasource connection</span>
+<span class="hljs-attr">mssql_ds_pass:</span>   <span class="hljs-string">'f*6FKvMRH7'</span>   <span class="hljs-comment"># db password for CT datasource connection</span>
+
+<span class="hljs-attr">mssql_rpa_user:</span>  <span class="hljs-string">'rpa'</span>          <span class="hljs-comment"># db user for RPA component</span>
+<span class="hljs-attr">mssql_rpa_pass:</span>  <span class="hljs-string">'vYatC#cU7A'</span>   <span class="hljs-comment"># db password for RPA component</span>
+
+<span class="hljs-attr">mssql_pm_user:</span>   <span class="hljs-string">'pm'</span>           <span class="hljs-comment"># db user for monitoring tools</span>
+<span class="hljs-attr">mssql_pm_pass:</span>   <span class="hljs-string">'Xzdi*A4b4F'</span>   <span class="hljs-comment"># db password for monitoring tools. Allowed special symbols: @#^*():,.}&lt;&gt;/</span>
+
+<span class="hljs-attr">mssql_dm_user:</span>   <span class="hljs-string">'dm'</span>           <span class="hljs-comment"># db user for analytics component</span>
+<span class="hljs-attr">mssql_dm_pass:</span>   <span class="hljs-string">'IKx66#dx0T'</span>   <span class="hljs-comment"># db password for analytics component. Allowed special symbols: @#^*():,.;}[]/</span>
+
+<span class="hljs-attr">mssql_rapi_user:</span> <span class="hljs-string">'rapi'</span>         <span class="hljs-comment"># db user for analytics remote api</span>
+<span class="hljs-attr">mssql_rapi_pass:</span> <span class="hljs-string">'dqPUhUoT*5'</span>   <span class="hljs-comment"># db password for analytics remote api</span>
+
+<span class="hljs-attr">mssql_ocr_user:</span>  <span class="hljs-string">'ocr'</span>          <span class="hljs-comment"># db user for OCR component</span>
+<span class="hljs-attr">mssql_ocr_pass:</span>  <span class="hljs-string">'CItYS_38!sdf'</span> <span class="hljs-comment"># db password for OCR component</span>
+
+
+<span class="hljs-comment">#---ADVANCED CONFIGURATION---</span>
+
+<span class="hljs-comment"># Uncomment lines below if you have external Elasticsearch and Kibana</span>
+<span class="hljs-comment">#elasticsearch_external:  true</span>
+<span class="hljs-comment">#kibana_url:              'http://elasticsearch-external1.example.com:5701/external_kibana'</span>
+<span class="hljs-comment">#elasticsearch_host:      'elasticsearch-external1.example.com'</span>
+<span class="hljs-comment">#elasticsearch_url:       'http://elasticsearch-external1.example.com:9210/external_elasticsearch'</span>
+<span class="hljs-comment">#elasticsearch_port:      '9210'    # uncomment and define if your port for Elasticsearch is different than 9200</span>
+
+
+<span class="hljs-comment"># Workfusion SPA ports configuration</span>
+<span class="hljs-comment"># If you want to change the default port values, make sure you don't set duplicated ports for the same server.</span>
+<span class="hljs-comment"># Ports used for SPA installation</span>
+<span class="hljs-attr">ssh_port:</span>                            <span class="hljs-string">'22'</span>   <span class="hljs-comment"># SSH port listening on all linux servers. Used by SPA installer to deploy SPA Components into linux-based servers.</span>
+<span class="hljs-attr">winrm_port:</span>                          <span class="hljs-string">'5986'</span> <span class="hljs-comment"># Windows Remote Management HTTPS port. Used by SPA installer to deploy SPA Components into Windows-based servers.</span>
+
+<span class="hljs-comment"># MSSQL Server ports</span>
+<span class="hljs-attr">mssql_port:</span>                          <span class="hljs-string">'1433'</span> <span class="hljs-comment"># The port where MSSQL server is listening. Used by SPA installer and SPA services to connect to MSSQL database.</span>
+
+<span class="hljs-comment"># ALL Servers (INT, BEP Master, BEP Agent(s), APP, RPA, OCR)</span>
+<span class="hljs-attr">nginx_port:</span>                          <span class="hljs-string">'80'</span>   <span class="hljs-comment"># Nginx HTTP port. Affects nginx configuration on all servers. All requests to 'nginx_port' are redirected to 'nginx_port_ssl'.</span>
+<span class="hljs-attr">nginx_port_ssl:</span>                      <span class="hljs-string">'443'</span>  <span class="hljs-comment"># Nginx HTTPS port. The main port for accessing Control Tower and many other SPA services with http clients (e.g. browsers). Affects all servers.</span>
+
+<span class="hljs-comment"># INT Server ports</span>
+<span class="hljs-attr">task_dispatcher_service_port:</span>        <span class="hljs-string">'9090'</span>  <span class="hljs-comment"># Spring Boot port where task-dispatcher is listening. Listens on 127.0.0.1 (HTTP).</span>
+<span class="hljs-attr">task_dispatcher_service_mtls_port:</span>   <span class="hljs-string">'9092'</span>  <span class="hljs-comment"># Nginx port. Listens on 0.0.0.0 (HTTPS) and proxies requests from to 'task_dispatcher_service_port'. Validates client certs .</span>
+<span class="hljs-attr">vault_port:</span>                          <span class="hljs-string">'8200'</span>  <span class="hljs-comment"># Hashicorp Vault port. Listens on 0.0.0.0 (HTTPS).</span>
+<span class="hljs-attr">nexus_port:</span>                          <span class="hljs-string">'8082'</span>  <span class="hljs-comment"># Sonatype Nexus port. Listens on 127.0.0.1 (HTTP).</span>
+<span class="hljs-attr">minio_port:</span>                          <span class="hljs-string">'9000'</span>  <span class="hljs-comment"># Minio Server Port (S3 emulator). Listens on 127.0.0.1 (HTTP).</span>
+<span class="hljs-attr">elasticsearch_port:</span>                  <span class="hljs-string">'9200'</span>  <span class="hljs-comment"># Elasticsearch port. Listens on 0.0.0.0 (HTTPS).</span>
+<span class="hljs-attr">logstash_spa_port:</span>                   <span class="hljs-string">'4567'</span>  <span class="hljs-comment"># Logstash port. Listens on 0.0.0.0 (HTTPS).</span>
+<span class="hljs-attr">logstash_automl_port:</span>                <span class="hljs-string">'4568'</span>  <span class="hljs-comment"># Logstash port. Listens on 0.0.0.0 (HTTPS).</span>
+<span class="hljs-attr">logstash_bep_metrics_port:</span>           <span class="hljs-string">'15072'</span> <span class="hljs-comment"># Logstash port. Listens on 0.0.0.0 (HTTPS).</span>
+<span class="hljs-attr">logstash_metrics_port:</span>               <span class="hljs-string">'4569'</span>  <span class="hljs-comment"># Logstash port. Listens on 0.0.0.0 (HTTPS).</span>
+<span class="hljs-attr">logstash_bep_logs_port:</span>              <span class="hljs-string">'4570'</span>  <span class="hljs-comment"># Logstash port. Listens on 0.0.0.0 (HTTPS).</span>
+<span class="hljs-attr">logstash_heartbeat_port:</span>             <span class="hljs-string">'4571'</span>  <span class="hljs-comment"># Logstash port. Listens on 0.0.0.0 (HTTPS).</span>
+<span class="hljs-attr">rabbitmq_api_port:</span>                   <span class="hljs-string">'15672'</span> <span class="hljs-comment"># RabbitMQ API port. Listens on 127.0.0.1 (HTTP).</span>
+<span class="hljs-attr">rabbitmq_api_proxy_port:</span>             <span class="hljs-string">'45672'</span> <span class="hljs-comment"># Nginx port. Listens on 0.0.0.0 (HTTPS) and proxies requests to 'rabbitmq_api_port'.</span>
+<span class="hljs-attr">rabbitmq_amqp_port:</span>                  <span class="hljs-string">'5672'</span>  <span class="hljs-comment"># RabbitMQ message Queue port. Listens on 0.0.0.0 (TLS ecrtypted AMQP).</span>
+<span class="hljs-attr">zookeeper_port:</span>                      <span class="hljs-string">'2181'</span>  <span class="hljs-comment"># Zookeeper port. Listens on 0.0.0.0.</span>
+
+<span class="hljs-comment"># APP Server ports</span>
+<span class="hljs-attr">workfusion_port:</span>                     <span class="hljs-string">'7080'</span> <span class="hljs-comment"># Tomcat port where Control Tower is listening. Listens on 127.0.0.1 (HTTP).</span>
+<span class="hljs-attr">workfusion_mtls_port:</span>                <span class="hljs-string">'7083'</span> <span class="hljs-comment"># Nginx port. Listens on 0.0.0.0 (HTTPS) and proxies requests to 'workfusion_port'. Validates client certs.</span>
+<span class="hljs-attr">hazelcast_port:</span>                      <span class="hljs-string">'5702'</span> <span class="hljs-comment"># Hazelcast port for Control Tower. Listens on 0.0.0.0.</span>
+<span class="hljs-attr">workspace_port:</span>                      <span class="hljs-string">'5080'</span> <span class="hljs-comment"># Tomcat port where Workspace is listening. Listens on 127.0.0.1 (HTTP).</span>
+<span class="hljs-attr">sqc_port:</span>                            <span class="hljs-string">'4080'</span> <span class="hljs-comment"># Tomcat port where AutoQC is listening. Listens on 127.0.0.1 (HTTP).</span>
+<span class="hljs-attr">bot_manager_port:</span>                    <span class="hljs-string">'5555'</span> <span class="hljs-comment"># Spring Boot port where bot-manager service is listening. Listens on 127.0.0.1 (HTTP).</span>
+<span class="hljs-attr">kibana_port:</span>                         <span class="hljs-string">'5601'</span> <span class="hljs-comment"># Kibana port. Listens on 127.0.0.1 (HTTP).</span>
+<span class="hljs-comment"># <span class="hljs-doctag">NOTE:</span> 'worker_management_service_port' and 'automl_gateway_service_port' are also listening on APP server (Nginx HTTP listeners on 127.0.0.1). So, make sure you don't assign any ports on APP server to the same values as 'worker_management_service_port' or 'automl_gateway_service_port'.</span>
+<span class="hljs-comment"># <span class="hljs-doctag">NOTE:</span> Additionally the following ports are used by Tomcat processes on APP server:</span>
+<span class="hljs-comment"># 'workfusion_port + 5'; 'workfusion_port + 8'; 'workspace_port + 5'; 'workspace_port + 8'; 'sqc_port + 5'; 'sqc_port + 8'. Make sure you don't use them for any services on APP server. All these ports are used only on 127.0.0.1.</span>
+
+<span class="hljs-comment"># BEP Master ports</span>
+<span class="hljs-attr">worker_management_service_port:</span>      <span class="hljs-string">'9091'</span> <span class="hljs-comment"># Spring Boot port where worker-management-service is listening. Listens on 127.0.0.1 (HTTP).</span>
+<span class="hljs-attr">worker_management_service_mtls_port:</span> <span class="hljs-string">'9093'</span> <span class="hljs-comment"># Nginx port. Listens on 0.0.0.0 (HTTPS) and proxies requests to 'worker_management_service_port'. Validates client certs.</span>
+<span class="hljs-attr">automl_gateway_service_port:</span>         <span class="hljs-string">'9070'</span> <span class="hljs-comment"># Spring Boot port where automl-gateway-service is listening. Listens on 127.0.0.1 (HTTP).</span>
+<span class="hljs-attr">automl_gateway_service_mtls_port:</span>    <span class="hljs-string">'9073'</span> <span class="hljs-comment"># Nginx port. Listens on 0.0.0.0 (HTTPS) and proxies requests to 'automl_gateway_service_port'. Validates client certs.</span>
+<span class="hljs-attr">automl_model_service_port:</span>           <span class="hljs-string">'9071'</span> <span class="hljs-comment"># Spring Boot port where automl-model-service is listgning. Listens on 127.0.0.1 (HTTP).</span>
+<span class="hljs-attr">marathon_port:</span>                       <span class="hljs-string">'8080'</span> <span class="hljs-comment"># Marathon Port. Listens on 127.0.0.1 (HTTP).</span>
+<span class="hljs-attr">marathon_proxy_port:</span>                 <span class="hljs-string">'8480'</span> <span class="hljs-comment"># Nginx port. Listens on 0.0.0.0 (HTTPS) and proxies requests to 'marathon_port'.</span>
+<span class="hljs-attr">marathon_communication_port:</span>         <span class="hljs-string">'15000'</span> <span class="hljs-comment"># The port used by Marathon for libprocess communication. Listens on 0.0.0.0 (HTTPS).</span>
+<span class="hljs-attr">mesos_master_port:</span>                   <span class="hljs-string">'5050'</span> <span class="hljs-comment"># Mesos master port. Listens on 0.0.0.0 (HTTPS).</span>
+<span class="hljs-attr">vds_gateway_service_port:</span>            <span class="hljs-string">'9080'</span> <span class="hljs-comment"># Spring Boot port where VDS Gateway Service is listening. Listens on 127.0.0.1 (HTTP). Only used when SPA9.2 AutoML is installed. Used for backward compatibility with SPA9.2 business-processes.</span>
+<span class="hljs-attr">vds_scaling_service_port:</span>            <span class="hljs-string">'9081'</span> <span class="hljs-comment"># Spring Boot port where VDS Scaling Service is listening. Listens on 127.0.0.1 (HTTP). Only used when SPA9.2 AutoML is installed. Used for backward compatibility with SPA9.2 business-processes.</span>
+<span class="hljs-attr">vds_mesos_adapter_port:</span>              <span class="hljs-string">'9052'</span> <span class="hljs-comment"># Spring Boot port where VDS Mesos Adapter Service is listening. Listens on 127.0.0.1 (HTTP). Only used when SPA9.2 AutoML is installed. Used for backward compatibility with SPA9.2 business-processes.</span>
+<span class="hljs-comment"># <span class="hljs-doctag">NOTE:</span> 'task_dispatcher_service_port' is also listening on BEP Master (Nginx HTTP listener on 127.0.0.1). So, make sure you don't assign any ports on BEP Master server to the same value as 'task_dispatcher_service_port'.</span>
+
+<span class="hljs-comment"># BEP Agent ports</span>
+<span class="hljs-attr">mesos_slave_port:</span>                    <span class="hljs-string">'5051'</span>        <span class="hljs-comment"># Mesos Agent port. Listens on 0.0.0.0 (HTTPS).</span>
+<span class="hljs-attr">mesos_slave_port_range:</span>              <span class="hljs-string">'40000-44000'</span> <span class="hljs-comment"># Ports range on mesos Agent(s) used for communication with Mesos Master (ports from this range are opened randomly during tasks execution).</span>
+<span class="hljs-comment"># <span class="hljs-doctag">NOTE:</span> 'workfusion_port' and 'automl_gateway_service_port' are also listening on BEP Agent(s) server(s) (Nginx HTTP listeners on 127.0.0.1). So, make sure you don't assign any ports on BEP Agent(s) server(s) to the same values as 'workfusion_port' or 'automl_gateway_service_port'.</span>
+
+<span class="hljs-comment"># OCR Server ports</span>
+<span class="hljs-attr">ocr_port:</span>                            <span class="hljs-string">'9002'</span> <span class="hljs-comment"># Spring Boot port where OCR Rest API is listening. Listens on 127.0.0.1 (HTTP).</span>
+
+
+<span class="hljs-comment"># LDAP configuration</span>
+<span class="hljs-attr">ldap_enabled:</span>                        <span class="hljs-literal">false</span>  <span class="hljs-comment"># if you're performing upgrade and already have ldap configured, set this to true</span>
+<span class="hljs-attr">ldap_internal_authorization_enabled:</span> <span class="hljs-literal">false</span>  <span class="hljs-comment"># If true, LDAP with WF roles will be used. No groups from LDAP will be used.</span>
+<span class="hljs-attr">ldap_server_url:</span>                     <span class="hljs-string">'ldaps://ldap.example.com:636'</span>   <span class="hljs-comment"># Ldap server connection url</span>
+<span class="hljs-attr">ldap_bind_dn:</span>                        <span class="hljs-string">'ldap-user-distinguished-name'</span>   <span class="hljs-comment"># Ldap server bind username</span>
+<span class="hljs-attr">ldap_bind_password:</span>                  <span class="hljs-string">'ldap-user-password'</span>             <span class="hljs-comment"># Ldap server bind password</span>
+<span class="hljs-attr">ldap_user_base:</span>                      <span class="hljs-string">'ou=People,dc=domain,dc=com'</span>     <span class="hljs-comment"># Container of LDAP users used for authentication</span>
+<span class="hljs-attr">ldap_group_base:</span>                     <span class="hljs-string">'ou=Groups,dc=domain,dc=com'</span>     <span class="hljs-comment"># Container of LDAP groups used for authorization</span>
+<span class="hljs-attr">ldap_user_filter:</span>                    <span class="hljs-string">'(sAMAccountName={0})'</span>           <span class="hljs-comment"># User filter for search, optional, example: '(uid={0})'</span>
+<span class="hljs-attr">ldap_group_filter:</span>                   <span class="hljs-string">'(member={0})'</span>                   <span class="hljs-comment"># Group filter for search, optional, example: '(memberUid={1})'</span>
+<span class="hljs-attr">ws_ldap_worker_groups:</span>               <span class="hljs-string">'CC Dev,Galiot,CC Ops'</span>           <span class="hljs-comment"># Comma separated groups from LDAP for mapping to worker users</span>
+<span class="hljs-attr">ws_ldap_requester_groups:</span>            <span class="hljs-string">'CC Admin'</span>                       <span class="hljs-comment"># Comma separated groups from LDAP for mapping to WorkSpace Requester user</span>
+
+<span class="hljs-comment"># Workspace</span>
+<span class="hljs-attr">ws_enable_worker_email_confirmation:</span>  <span class="hljs-literal">false</span>   <span class="hljs-comment"># If true, Email confirmation for worker users will be enabled. Used by Workspace.</span>
+
+<span class="hljs-comment"># SSO SAML</span>
+<span class="hljs-attr">wf_sso_saml_enabled:</span>            <span class="hljs-literal">false</span>                                 <span class="hljs-comment"># Enables or disables SSO (SAML 2.0 protocol) authentification for CT</span>
+<span class="hljs-attr">wf_sso_saml_sp_metadata:</span>        <span class="hljs-string">'workfusion-metadata-id'</span>              <span class="hljs-comment"># A unique string. ID of Service Provider.</span>
+<span class="hljs-attr">wf_sso_saml_idp_metadata:</span>       <span class="hljs-string">'https://SAML_SERVICE_URL/idp/sso'</span>    <span class="hljs-comment"># URL that points to a file with IdP metadata parameters. Should be provided by customer.</span>
+<span class="hljs-attr">wf_sso_saml_idp_file_metadata:</span>  <span class="hljs-string">'/path/to/idp/file/metadata.xml'</span>      <span class="hljs-comment"># Local path to a file with IdP metadata parameters</span>
+<span class="hljs-attr">wf_sso_saml_username_attribute:</span> <span class="hljs-string">'uid'</span>                                 <span class="hljs-comment"># Name of attribute that will be used for authentication. uid for LDAP, sAMAcountName for Active Directory</span>
+
+<span class="hljs-attr">ws_sso_saml_enabled:</span>            <span class="hljs-literal">false</span>                                 <span class="hljs-comment"># Enables or disables SSO (SAML 2.0 protocol) authentification for CT (WS)</span>
+<span class="hljs-attr">ws_sso_saml_sp_metadata:</span>        <span class="hljs-string">'ws-sp-hostname'</span>                      <span class="hljs-comment"># A unique string. ID of Service Provider, for example, https://&lt;instance&gt;/workspace/saml/metadata</span>
+<span class="hljs-attr">ws_sso_saml_idp_metadata:</span>       <span class="hljs-string">'https://SAML_SERVICE_URL/idp/sso'</span>    <span class="hljs-comment"># URL that points to a file with IdP metadata parameters</span>
+<span class="hljs-attr">ws_sso_saml_idp_file_metadata:</span>  <span class="hljs-string">'/path/to/idp/file/metadata.xml'</span>      <span class="hljs-comment"># Local path to a file with IdP metadata parameters</span>
+<span class="hljs-attr">ws_sso_saml_username_attribute:</span> <span class="hljs-string">'mail'</span>                                <span class="hljs-comment"># Name of attribute that will be used for authentication. uid for LDAP, mail for Active Directory</span>
+</code></pre>
+<p></details></p>
+<h2><a class="anchor" aria-hidden="true" id="configuration-parameters"></a><a href="#configuration-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuration parameters</h2>
+<h3><a class="anchor" aria-hidden="true" id="ansible-vault-password"></a><a href="#ansible-vault-password" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ansible Vault password</h3>
+<pre><code class="hljs css language-yml"><span class="hljs-comment"># Ansible vault password - config.yml will be encrypted with this password after encrypt command</span>
+<span class="hljs-comment"># Change it!</span>
+<span class="hljs-attr">ansible_vault_password:</span> <span class="hljs-string">'WorkFusion!'</span>
+</code></pre>
+<table>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 82%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>ansible_vault_password</code></td>
+<td>The password, which is used for encrypting the <strong>config.yml</strong> file. The installation cannot be started until this password is changed</td>
+</tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="ansible-users-used-for-a-single-point-setup"></a><a href="#ansible-users-used-for-a-single-point-setup" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ansible users used for a Single point setup</h3>
+<pre><code class="hljs css language-yml"><span class="hljs-comment"># Ansible Linux user(used in inventory)</span>
+<span class="hljs-attr">linux_installation_user:</span> <span class="hljs-string">'ec2-user'</span>
+</code></pre>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 78%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>linux_installation_user</code></td>
+<td>The user, which is used during the <a href="../install-spa/prepare/prepare-servers#configure-installation">Single point setup</a> of Linux servers  for connection over SSH</td>
+</tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="s3-storage-keys"></a><a href="#s3-storage-keys" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>S3 storage keys</h3>
+<pre><code class="hljs css language-yml"><span class="hljs-comment"># Access and Secret keys for S3 storage</span>
+<span class="hljs-attr">s3_access_key:</span> <span class="hljs-string">'JOZXPHL1ZC8WXZAJXNU7'</span>                     <span class="hljs-comment"># Special symbols are not allowed. 3-20 characters length.</span>
+<span class="hljs-attr">s3_secret_key:</span> <span class="hljs-string">'qAEYOVLOViPjxk3Lbuj0wrDztf8fGJrqMb4Obw=='</span> <span class="hljs-comment"># Allowed special symbols: '=', '/'. 8-40 characters length.</span>
+</code></pre>
+<table>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 82%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>s3_access_key</code></td>
+<td>The access key for the S3 server</td>
+</tr>
+<tr class="even">
+<td><code>s3_secret_key</code></td>
+<td>The secret key for the S3 server</td>
+</tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="ssl-certificates"></a><a href="#ssl-certificates" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SSL certificates</h3>
+<pre><code class="hljs css language-yml"><span class="hljs-comment"># SSL Certificates are used to secure Workfusion SPA services communication</span>
+<span class="hljs-comment"># Put your Trusted Certificates and key files to certificates/ directory.</span>
+<span class="hljs-comment"># Otherwise, Self-Signed certificates will be generated automatically</span>
+<span class="hljs-comment"># Provide password for autogenerated ca.key file. This setting will be used only when you're using self-signed certs generated by "install.sh cert_all generate" or "install.sh cert_nginx generate" commands</span>
+<span class="hljs-attr">ca_key_pass:</span> <span class="hljs-string">'aHja&amp;a^T8c'</span> 
+</code></pre>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>ca_key_pass</code></td><td>The password for the auto generated <strong>ca.key</strong> file. This setting will be used only when you're using self-signed certs generated by <code>install.sh cert_all generate</code> or <code>install.sh cert_nginx generate</code>commands</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="vault-certificates"></a><a href="#vault-certificates" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Vault certificates</h3>
+<pre><code class="hljs css language-yml"><span class="hljs-comment"># Vault Certificates</span>
+<span class="hljs-comment"># These certificates are generated using "./install.sh cert_vault generate" command</span>
+<span class="hljs-comment"># They are used by Workfusion applications for authentication and access control into Vault (Secure Storage)</span>
+<span class="hljs-attr">vault_admin_cert_pass:</span>  <span class="hljs-string">'PQS*jzJa9%'</span>  <span class="hljs-comment"># password for vault_admin.p12 certificate</span>
+<span class="hljs-attr">vault_client_cert_pass:</span> <span class="hljs-string">'a2J@Kn5llk'</span>  <span class="hljs-comment"># password for vault_workfusion.p12 certificate. Allowed special symbols: @#^*():,.;}[]/</span>
+</code></pre>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>vault_admin_cert_pass</code></td><td>The password for the <strong>vault_admin.p12</strong> certificate</td></tr>
+<tr><td><code>vault_client_cert_pass</code></td><td>The password for the <strong>vault_workfusion.p12</strong> certificate</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="linux-runtime-user-and-group"></a><a href="#linux-runtime-user-and-group" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Linux runtime user and group</h3>
+<pre><code class="hljs css language-yml"><span class="hljs-comment"># Linux runtime user and group. Must be the same for all linux servers</span>
+<span class="hljs-attr">wf_user:</span>            <span class="hljs-string">wfuser</span>
+<span class="hljs-attr">wf_group:</span>           <span class="hljs-string">wfuser</span>
+<span class="hljs-attr">install_dir:</span>        <span class="hljs-string">/opt/workfusion</span>   <span class="hljs-comment"># Target installation directory, should not contain dot(s)</span>
+</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>wf_user</code></td>
+<td>The name of a runtime user for Linux servers. The user is created during the installation</td>
+</tr>
+<tr class="even">
+<td><code>wf_group</code></td>
+<td>The name of a user group for wf_user. The group is created during the installation</td>
+</tr>
+<tr class="odd">
+<td><code>install_dir</code></td>
+<td><p>The WorkFusion installation directory for Linux servers. The directory is created on all Linux servers during installation.</p>
+<p>The directory must not contain the dot character (<strong>.</strong>) due to limitations of UIMA library. Mandatory.</p>
+<p>For example, the following path won't be processed correctly: <strong>/opt/worfusion-8.5.0</strong></p></td>
+</tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="windows-installation-properties"></a><a href="#windows-installation-properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Windows installation properties</h3>
+<pre><code class="hljs css language-yml"><span class="hljs-comment"># Windows installation properties</span>
+<span class="hljs-comment"># Existing user on OCRWin server. It will be used ONLY if ocr_platform is windows. Used for OCRWin installation. Should be member of Administrators group.</span>
+<span class="hljs-attr">ocrwin_user:</span>        <span class="hljs-string">'ec2-user'</span>
+<span class="hljs-attr">ocrwin_pass:</span>        <span class="hljs-string">'jEn125us$'</span>
+<span class="hljs-attr">ocrwin_install_dir:</span> <span class="hljs-string">'C:\workfusion'</span>  <span class="hljs-comment"># Target installation directory for OCRWin on the server.</span>
+
+<span class="hljs-comment"># Existing user on Analytics (BI) server. Used for Analytics (BI) installation. Should be member of Administrators group.</span>
+<span class="hljs-attr">bi_user:</span>            <span class="hljs-string">'ec2-user'</span>     <span class="hljs-comment"># User with administrator privileges</span>
+<span class="hljs-attr">bi_pass:</span>            <span class="hljs-string">'jEn125us$'</span>
+<span class="hljs-attr">bi_install_dir:</span>     <span class="hljs-string">'C:\workfusion'</span>  <span class="hljs-comment"># Target installation directory for Analytics (BI) server.</span>
+
+<span class="hljs-comment"># Existing user on RPA server(s). Used for RPA installation. Should be member of Administrators group.</span>
+<span class="hljs-attr">rpa_user:</span>           <span class="hljs-string">'ec2-user'</span>     <span class="hljs-comment"># User with administrator privileges</span>
+<span class="hljs-attr">rpa_pass:</span>           <span class="hljs-string">'jEn125us$'</span>
+<span class="hljs-attr">rpa_install_dir:</span>    <span class="hljs-string">'C:\RPA'</span>         <span class="hljs-comment"># Target installation directory for RPA server.</span>
+</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>ocrwin_user</code></td>
+<td>The user, which is used during the <a href="../install-spa/prepare/prepare-servers#configure-installation">Single point setup</a> for connection by WinRM to Windows OCR servers</td>
+</tr>
+<tr class="even">
+<td><code>ocrwin_pass</code></td>
+<td>The password of the Windows installation user</td>
+</tr>
+<tr class="odd">
+<td><code>ocrwin_install_dir</code></td>
+<td><p>The WorkFusion installation directory for the Windows OCRWin server.</p>
+<p>The directory is created on all Windows servers during the installation</p></td>
+</tr>
+<tr class="even">
+<td><code>bi_user</code></td>
+<td>The user, which is used during the <a href="../install-spa/prepare/prepare-servers#configure-installation">Single point setup</a> for connection by WinRM to Windows BI (Analytics) servers</td>
+</tr>
+<tr class="odd">
+<td><code>bi_pass</code></td>
+<td>The password of the Windows installation user</td>
+</tr>
+<tr class="even">
+<td><code>bi_install_dir</code></td>
+<td><p>The WorkFusion installation directory for the Windows BI server.</p>
+<p>The directory is created on all Windows servers during installation</p></td>
+</tr>
+<tr class="odd">
+<td><code>rpa_user</code></td>
+<td>The user, which is used during the <a href="../install-spa/prepare/prepare-servers#configure-installation">Single point setup</a> for connection by WinRM to Windows RPA servers</td>
+</tr>
+<tr class="even">
+<td><code>rpa_pass</code></td>
+<td>The password of the Windows installation user</td>
+</tr>
+<tr class="odd">
+<td><code>rpa_install_dir</code></td>
+<td><p>The WorkFusion installation directory for the RPA server.</p>
+<p>The directory is created on all Windows servers during the installation</p></td>
+</tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="logging"></a><a href="#logging" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Logging</h3>
+<pre><code class="hljs css language-yml"><span class="hljs-attr">log_level_type:</span> <span class="hljs-string">prod</span> <span class="hljs-comment"># Affects log levels for all components. Possible values 'prod' or 'dev'. Use 'dev' for debugging only.</span>
+</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>log_level_type</code></td>
+<td><p>The ability to change log level for WorkFusion components logs. <br />
+Possible values:</p>
+<ul>
+<li><strong>prod</strong>. The logs contain <strong>only</strong> error messages and warnings</li>
+<li><strong>dev</strong>. The logs contain error messages, warnings, info and debug messages</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="user-credentials-and-passwords"></a><a href="#user-credentials-and-passwords" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>User credentials and passwords</h3>
+<pre><code class="hljs css language-yml"><span class="hljs-comment"># Control Tower default user credentials used for login into Control Tower UI from browser.</span>
+<span class="hljs-attr">wf_username:</span> <span class="hljs-string">'workfusion'</span>
+<span class="hljs-attr">wf_password:</span> <span class="hljs-string">'ldT#!E3vHp'</span> <span class="hljs-comment"># ":" and "&amp;" characters are restricted for this passwords</span>
+
+<span class="hljs-comment"># Marathon</span>
+<span class="hljs-attr">marathon_web_pass:</span> <span class="hljs-string">'Pt1mdbw#jG'</span>  <span class="hljs-comment"># password for buint-in user "marathon" for Marathon Web UI</span>
+
+<span class="hljs-comment"># Mesos</span>
+<span class="hljs-attr">mesos_web_pass:</span> <span class="hljs-string">'JLUm7xsuS!'</span>     <span class="hljs-comment"># password for built-in user "mesos" for Masos Web UI. Allowed special symbols: !*#^@</span>
+
+<span class="hljs-comment"># Rabbitmq</span>
+<span class="hljs-attr">rabbitmq_ocr_pass:</span>   <span class="hljs-string">'Ge48fd!jr74'</span> <span class="hljs-comment"># password for built-in rabbitmq user "ocr" used by OCR services</span>
+<span class="hljs-attr">rabbitmq_bep_pass:</span>   <span class="hljs-string">'CSH5rU9(#5'</span>  <span class="hljs-comment"># password for built-in rabbitmq user "bep" used by BEP services</span>
+<span class="hljs-attr">rabbitmq_admin_pass:</span> <span class="hljs-string">'Fj76dj)pW'</span>   <span class="hljs-comment"># password for built-in rabbitmq user "admin"</span>
+
+<span class="hljs-comment"># ELK</span>
+<span class="hljs-attr">elk_admin_pass:</span>    <span class="hljs-string">'sc@R@^S#9V'</span>   <span class="hljs-comment"># password for elasticsearch user 'admin' used for Kibana UI</span>
+<span class="hljs-attr">elk_elastic_pass:</span>  <span class="hljs-string">'KL7N!#v2@M'</span>   <span class="hljs-comment"># password for build-in elasticsearch user 'elastic'</span>
+<span class="hljs-attr">elk_kibana_pass:</span>   <span class="hljs-string">'PM8Q^*p1^Q'</span>   <span class="hljs-comment"># password for build-in elasticsearch user 'kibana' used for install process</span>
+<span class="hljs-attr">elk_logstash_certificate_pass:</span> <span class="hljs-string">'j3D^qEe4!d'</span> <span class="hljs-comment"># auth certificate 'logstash.p12' password</span>
+</code></pre>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>wf_username</code></td><td>A default username for Control Tower</td></tr>
+<tr><td><code>wf_password</code></td><td>The password for a default user of Control Tower. Never use the '%' symbol in a password</td></tr>
+<tr><td><code>marathon_web_pass</code></td><td>The default password for Marathon. Marathon is protected by the HTTP authentication mechanism. Change this option to replace the default password (recommended)</td></tr>
+<tr><td><code>mesos_web_pass</code></td><td>The default password for Mesos. Mesos is protected by the HTTP authentication mechanism. Change this option to replace the default password (recommended)</td></tr>
+<tr><td><code>rabbitmq_admin_pass</code></td><td>The password for the RabbitMQ user &quot;admin&quot; used by AutoML services</td></tr>
+<tr><td><code>rabbitmq_ocr_pass</code></td><td>The password for the RabbitMQ user &quot;ocr&quot; used by OCR services</td></tr>
+<tr><td><code>rabbitmq_bep_pass</code></td><td>The password for the RabbitMQ user &quot;bep&quot; used by BEP services</td></tr>
+<tr><td><code>elk_admin_pass</code></td><td>The password for the Elasticsearch user &quot;admin&quot; used for the Kibana UI</td></tr>
+<tr><td><code>elk_elastic_pass</code></td><td>The password for the Elasticsearch user &quot;elastic&quot;</td></tr>
+<tr><td><code>elk_kibana_pass</code></td><td>The password for the Elasticsearch user &quot;kibana&quot; used for the installation</td></tr>
+<tr><td><code>elk_logstash_certificate_pass</code></td><td>The password for the &quot;logstash.p12&quot; authentication password</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="email-smtp"></a><a href="#email-smtp" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Email/SMTP</h3>
+<pre><code class="hljs css language-yml"><span class="hljs-comment"># Email/SMTP</span>
+<span class="hljs-attr">mail_user:</span>   <span class="hljs-string">'wfadmin'</span>              <span class="hljs-comment"># Credentials for SMTP server</span>
+<span class="hljs-attr">mail_pass:</span>   <span class="hljs-string">'wfadmin'</span>              <span class="hljs-comment"># Credentials for SMTP server</span>
+<span class="hljs-attr">mail_host:</span>   <span class="hljs-string">'localhost'</span>            <span class="hljs-comment"># Used by CT, WS</span>
+<span class="hljs-attr">mail_port:</span>   <span class="hljs-string">'25'</span>                   <span class="hljs-comment"># Used by CT, WS</span>
+<span class="hljs-attr">mail_sender:</span> <span class="hljs-string">'no-reply@example.com'</span> <span class="hljs-comment"># Used by CT, WS to send email notifications</span>
+</code></pre>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>mail_user</code></td><td>Credentials for the SMTP server</td></tr>
+<tr><td><code>mail_pass</code></td><td>Credentials for the SMTP server</td></tr>
+<tr><td><code>mail_host</code></td><td>The mail server host. Used by CT, WS</td></tr>
+<tr><td><code>mail_port</code></td><td>The port of a mail server. Used by CT, WS</td></tr>
+<tr><td><code>mail_sender</code></td><td>The email address to be used by CT and WS to send emails to users</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="nexus"></a><a href="#nexus" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Nexus</h3>
+<pre><code class="hljs css language-yml"><span class="hljs-comment"># Nexus</span>
+<span class="hljs-attr">nexus_admin_pass:</span>      <span class="hljs-string">'EjuzrQo*6O'</span>  <span class="hljs-comment"># password for built-in nexus user "admin"</span>
+</code></pre>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>nexus_admin_pass</code></td><td>The password for user &quot;admin&quot; used by Nexus services</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="tableau-bi"></a><a href="#tableau-bi" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tableau (BI)</h3>
+<pre><code class="hljs css language-yml"><span class="hljs-comment"># Tableau (BI)</span>
+<span class="hljs-comment"># All values should be added on BI server to "\to_deploy\deploy\config\import_users.csv" file</span>
+<span class="hljs-attr">tableau_dashboard_user:</span>  <span class="hljs-string">'tableau_user'</span>  <span class="hljs-comment"># tableau dashboard user. Can't be changed after initial installation</span>
+<span class="hljs-attr">tableau_dashboard_pass:</span>  <span class="hljs-string">'tableau_pass'</span>  <span class="hljs-comment"># tableau dashboard password (special symbols are not allowed). Can't be changed after initial installation</span>
+</code></pre>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>tableau_dashboard_user</code></td><td>The Tableau dashboard user. Can't be changed after initial installation</td></tr>
+<tr><td><code>tableau_dashboard_pass</code></td><td>The password for user &quot;tableau_user&quot; used by Tableau dashboard. Special symbols are not allowed</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="ocr"></a><a href="#ocr" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OCR</h3>
+<pre><code class="hljs css language-yml"><span class="hljs-attr">ocr_platform:</span>          <span class="hljs-string">'linux'</span>        <span class="hljs-comment"># Which OS is used for OCR? Affects Control Tower configuration. Available options: 'linux', 'windows'.</span>
+<span class="hljs-attr">ocr_sec_pass:</span>          <span class="hljs-string">j^N3C88JmN</span>
+<span class="hljs-attr">ocr_jwt_secret:</span>        <span class="hljs-string">rzqFIc#1jc</span>     <span class="hljs-comment"># JWT secret for OCR authentication</span>
+</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>ocr_platform</code></td>
+<td><p>The option to select the OCR platform. Two options available:</p>
+<ul>
+<li>'windows'</li>
+<li>'linux'</li>
+</ul>
+<p>These values are mutually exclusive: you have to define only 'linux' or 'windows' OCR platform value before installation. Simultaneously running platforms are not supported at the moment. The option affects Control Tower configuration.</p></td>
+</tr>
+<tr class="even">
+<td><code>ocr_sec_pass</code></td>
+<td>The password for user "ocr" used by the OCR service via NGINX over HTTPS</td>
+</tr>
+<tr class="odd">
+<td><code>ocr_jwt_secret</code></td>
+<td>The JWT secret for the OCR authentication</td>
+</tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="workspace"></a><a href="#workspace" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Workspace</h3>
+<pre><code class="hljs css language-yml"><span class="hljs-attr">workspace_root_requester_pass:</span> <span class="hljs-string">'I#U#koa9Jo'</span>   <span class="hljs-comment"># password for user "workfusion" used by Workspace service</span>
+</code></pre>
+<table>
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>workspace_root_requester_pass</code></td>
+<td>The password of a default requester user created for Workspace</td>
+</tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="rpa"></a><a href="#rpa" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>RPA</h3>
+<pre><code class="hljs css language-yml"><span class="hljs-comment"># RPA</span>
+<span class="hljs-comment"># Bot Manager</span>
+<span class="hljs-attr">bot_manager_jwt_secret:</span> <span class="hljs-string">'SuQ6fzt5693XRmGueUhSbQ=='</span>  <span class="hljs-comment"># JWT secret for bot_manager authentication</span>
+<span class="hljs-attr">rpa_bot_manager_pass:</span>   <span class="hljs-string">'Kt#Ol4luYl'</span>                <span class="hljs-comment"># password for built-in springboot user "wfagent" used by Bot-manager</span>
+
+<span class="hljs-comment"># Provide existing Bot Master Windows user on RPA server(s)</span>
+<span class="hljs-comment"># This user must be present before installation on each RPA server from rpa_hostnames list</span>
+<span class="hljs-comment"># The same password must be used for Bot Master User on each RPA server</span>
+<span class="hljs-comment"># The user must be a member of 'Administrators' group on each RPA server</span>
+<span class="hljs-attr">bot_master_user_name:</span> <span class="hljs-string">'BotMaster'</span>
+<span class="hljs-attr">bot_master_user_pass:</span> <span class="hljs-string">'Test111'</span>
+
+<span class="hljs-comment"># Provide existing Bot Unit Windows user(s) on RPA server(s)</span>
+<span class="hljs-comment"># The user(s) must be present before installation on each RPA server from rpa_hostnames list</span>
+<span class="hljs-comment"># The number of created users should be equal to the value of 'rpa_bots_per_server' setting</span>
+<span class="hljs-comment"># All Bot Unit users must have common basename and different index numbers in the end of basename</span>
+<span class="hljs-comment"># For example, if you set 'rpa_bots_per_server: 2', and 'bot_unit_base_name: BotUnit' then you should have the following users on each RPA server: BotUnit1, BotUnit2</span>
+<span class="hljs-comment"># All Bot Unit users on all RPA servers must have the same password</span>
+<span class="hljs-attr">rpa_bots_per_server:</span> <span class="hljs-number">1</span>  <span class="hljs-comment"># Number of Bots on each RPA server</span>
+<span class="hljs-attr">bot_unit_base_name:</span> <span class="hljs-string">'BotUnit'</span>
+<span class="hljs-attr">bot_unit_pass:</span>      <span class="hljs-string">'Test111'</span>
+</code></pre>
+<table>
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>bot_manager_jwt_secret</code></td>
+<td>The JWT secret for the bot_manager authentication</td>
+</tr>
+<tr class="even">
+<td><code>rpa_bot_manager_pass</code></td>
+<td>The password for the built-in springboot user "wfagent" used by Bot-manager</td>
+</tr>
+<tr class="odd">
+<td><code>bot_master_user_name</code></td>
+<td>The name of a Bot Master supervisor Windows user on the RPA servers. This user must be present before installation on each RPA server from the rpa_hostnames list </td>
+</tr>
+<tr class="even">
+<td><code>bot_master_user_pass</code></td>
+<td>The password of a Bot Master Windows user. The same password must be used for Bot Master User on each RPA server</td>
+</tr>
+<tr class="odd">
+<td><pre><code class="hljs">rpa_bots_per_server</code></pre></td>
+<td>A number of bots to be created on each RPA Bot Master. </td>
+</tr>
+<tr class="even">
+<td><code>bot_unit_base_name</code></td>
+<td>The template name of the common Bot Unit users. The number of the amount of bots specified in <code>rpa_bots_per_server</code> is added to this name as a postfix</td>
+</tr>
+<tr class="odd">
+<td><code>bot_unit_pass</code></td>
+<td>The password for <code>bot_unit_base_name</code></td>
+</tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="ms-sql"></a><a href="#ms-sql" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MS SQL</h3>
+<p>Starting from SPA 10.0, a consolidated DB server is used based on MS SQL
+Server. Thus, it is expected that MS SQL is already installed by the
+customer and configured according to <a href="/docs/spa/admin/install-spa/prepare/prepare-servers#prepare-ms-sql-server">Prepare MS SQL server</a>.</p>
+<pre><code class="hljs css language-yml"><span class="hljs-comment"># MSSQL parameters</span>
+<span class="hljs-attr">mssql_db_name:</span>   <span class="hljs-string">'workfusion'</span>   <span class="hljs-comment"># MSSQL db name</span>
+
+<span class="hljs-attr">mssql_dba_user:</span>  <span class="hljs-string">'wf_dba'</span>       <span class="hljs-comment"># db owner login for MSSQL db</span>
+<span class="hljs-attr">mssql_dba_pass:</span>  <span class="hljs-string">'f*6F123MRH7'</span>  <span class="hljs-comment"># db owner password</span>
+
+<span class="hljs-attr">mssql_ct_user:</span>   <span class="hljs-string">'workfusion'</span>   <span class="hljs-comment"># db user for Control Tower component</span>
+<span class="hljs-attr">mssql_ct_pass:</span>   <span class="hljs-string">'f*6FKvMRH7'</span>   <span class="hljs-comment"># db password for Control Tower component</span>
+
+<span class="hljs-attr">mssql_ws_user:</span>   <span class="hljs-string">'workspace'</span>    <span class="hljs-comment"># db user for Workspace component</span>
+<span class="hljs-attr">mssql_ws_pass:</span>   <span class="hljs-string">'R^Ie4MBT7^'</span>   <span class="hljs-comment"># db password for Workspace component</span>
+
+<span class="hljs-attr">mssql_sqc_user:</span>  <span class="hljs-string">'sqc'</span>          <span class="hljs-comment"># db user for SQC component</span>
+<span class="hljs-attr">mssql_sqc_pass:</span>  <span class="hljs-string">'g64twVZO@3'</span>   <span class="hljs-comment"># db password for SQC component</span>
+
+<span class="hljs-attr">mssql_ds_user:</span>   <span class="hljs-string">'ds'</span>           <span class="hljs-comment"># db user for CT datasource connection</span>
+<span class="hljs-attr">mssql_ds_pass:</span>   <span class="hljs-string">'f*6FKvMRH7'</span>   <span class="hljs-comment"># db password for CT datasource connection</span>
+
+<span class="hljs-attr">mssql_rpa_user:</span>  <span class="hljs-string">'rpa'</span>          <span class="hljs-comment"># db user for RPA component</span>
+<span class="hljs-attr">mssql_rpa_pass:</span>  <span class="hljs-string">'vYatC#cU7A'</span>   <span class="hljs-comment"># db password for RPA component</span>
+
+<span class="hljs-attr">mssql_pm_user:</span>   <span class="hljs-string">'pm'</span>           <span class="hljs-comment"># db user for monitoring tools</span>
+<span class="hljs-attr">mssql_pm_pass:</span>   <span class="hljs-string">'Xzdi*A4b4F'</span>   <span class="hljs-comment"># db password for monitoring tools. Allowed special symbols: @#^*():,.}|&lt;&gt;/</span>
+
+<span class="hljs-attr">mssql_dm_user:</span>   <span class="hljs-string">'dm'</span>           <span class="hljs-comment"># db user for analytics component</span>
+<span class="hljs-attr">mssql_dm_pass:</span>   <span class="hljs-string">'IKx66#dx0T'</span>   <span class="hljs-comment"># db password for analytics component. Allowed special symbols: @#^*():,.;}[]|/</span>
+
+<span class="hljs-attr">mssql_rapi_user:</span> <span class="hljs-string">'rapi'</span>         <span class="hljs-comment"># db user for analytics remote api</span>
+<span class="hljs-attr">mssql_rapi_pass:</span> <span class="hljs-string">'dqPUhUoT*5'</span>   <span class="hljs-comment"># db password for analytics remote api</span>
+
+<span class="hljs-attr">mssql_ocr_user:</span>  <span class="hljs-string">'ocr'</span>          <span class="hljs-comment"># db user for OCR component</span>
+<span class="hljs-attr">mssql_ocr_pass:</span>  <span class="hljs-string">'CItYS_38!sdf'</span> <span class="hljs-comment"># db password for OCR component</span>
+</code></pre>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>mssql_db_name</code></td><td>The name of the MS SQL database</td></tr>
+<tr><td><code>mssql_dba_user</code></td><td>The MS SQL db owner for the <strong>workfusion</strong> DB – full-access admin of Workfusion DB</td></tr>
+<tr><td><code>mssql_dba_pass</code></td><td>The password for <code>mssql_dba_user</code></td></tr>
+<tr><td><code>mssql_ct_user</code></td><td>The MS SQL user used by the Control Tower SPA component</td></tr>
+<tr><td><code>mssql_ct_pass</code></td><td>The password for <code>mssql_ct_user</code></td></tr>
+<tr><td><code>mssql_ws_user</code></td><td>The MS SQL user used by the Workspace SPA component</td></tr>
+<tr><td><code>mssql_ws_pass</code></td><td>The password for <code>mssql_ws_user</code></td></tr>
+<tr><td><code>mssql_sqc_user</code></td><td>The MS SQL user used by the SQC service</td></tr>
+<tr><td><code>mssql_sqc_pass</code></td><td>The password for <code>mssql_sqc_user</code></td></tr>
+<tr><td><code>mssql_ds_user</code></td><td>The MS SQL user used by the Data Store module</td></tr>
+<tr><td><code>mssql_ds_pass</code></td><td>The password for <code>mssql_ds_user</code></td></tr>
+<tr><td><code>mssql_rpa_user</code></td><td>The MS SQL user used by the RPA component</td></tr>
+<tr><td><code>mssql_rpa_pass</code></td><td>The password for <code>mssql_rpa_user</code>.</td></tr>
+<tr><td><code>mssql_pm_user</code></td><td>The MS SQL user used by the Logstash service</td></tr>
+<tr><td><code>mssql_pm_pass</code></td><td>The password for <code>mssql_pm_user</code></td></tr>
+<tr><td><code>mssql_dm_user</code></td><td>The MS SQL user used by the Analytics services</td></tr>
+<tr><td><code>mssql_dm_pass</code></td><td>The password for <code>mssql_dm_user</code></td></tr>
+<tr><td><code>mssql_rapi_user</code></td><td>The MS SQL user used by the Analytics remote API</td></tr>
+<tr><td><code>mssql_rapi_pass</code></td><td>The password for <code>mssql_rapi_user</code></td></tr>
+<tr><td><code>mssql_ocr_user</code></td><td>The MS SQL user used by the OCR component</td></tr>
+<tr><td><code>mssql_ocr_pass</code></td><td>The password for  <code>mssql_ocr_user</code></td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="advanced-configuration"></a><a href="#advanced-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Advanced configuration</h2>
+<h3><a class="anchor" aria-hidden="true" id="elasticsearch-and-kibana"></a><a href="#elasticsearch-and-kibana" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Elasticsearch and Kibana</h3>
+<p>Starting from SPA 10.0, you can use
+external <a href="https://www.elastic.co/products/elasticsearch">Elasticsearch</a> and <a href="https://www.elastic.co/products/kibana">Kibana</a> instead
+of ones provided during installation. All the saved objects (for
+example, indices, visualizations, dashboards) that are required for SPA
+Monitoring will be automatically loaded to your Kibana and Elasticsearch
+during installation.</p>
+<p>These options are commented by default, so if there are no any
+customizations here, Elasticsearch and Kibana are installed to the ELK
+server.</p>
+<pre><code class="hljs css language-yml"><span class="hljs-comment"># Uncomment lines below if you have external Elasticsearch and Kibana</span>
+<span class="hljs-comment">#elasticsearch_external:  true</span>
+<span class="hljs-comment">#kibana_url:              'http://elasticsearch-external1.example.com:5701/external_kibana'</span>
+<span class="hljs-comment">#elasticsearch_host:      'elasticsearch-external1.example.com'</span>
+<span class="hljs-comment">#elasticsearch_url:       'http://elasticsearch-external1.example.com:9210/external_elasticsearch'</span>
+<span class="hljs-comment">#elasticsearch_port:      '9210'    # uncomment and define if your port for Elasticsearch is different than 9200</span>
+</code></pre>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>elasticsearch_external</code></td>
+<td style="text-align: left;">The parameter to enable external Elasticsearch. Set to <code>true</code> to enable</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>kibana_url</code></td>
+<td style="text-align: left;">The link to your installed external Kibana</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>elasticsearch_host</code></td>
+<td style="text-align: left;">The host of your installed Elasticsearch</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>elasticsearch_url</code></td>
+<td style="text-align: left;">The link to your installed Elasticsearch</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>elasticsearch_port</code></td>
+<td style="text-align: left;">The external Elasticsearch host. Optional. <br />
+Define the port, only if you use custom ELK port other than 9200</td>
+</tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="application-ports"></a><a href="#application-ports" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Application ports</h3>
+<pre><code class="hljs css language-yml"><span class="hljs-comment"># Application ports</span>
+<span class="hljs-comment"># ALL Servers</span>
+<span class="hljs-attr">nginx_port:</span>                          <span class="hljs-string">'80'</span>   <span class="hljs-comment"># Affects all servers. All requests to nginx_port are redirected to nginx_ssl_port.</span>
+<span class="hljs-attr">nginx_port_ssl:</span>                      <span class="hljs-string">'443'</span>  <span class="hljs-comment"># The main ssl port for accessing Control Tower and other services. Affects all servers.</span>
+<span class="hljs-comment"># APP Server</span>
+<span class="hljs-attr">workfusion_mtls_port:</span>                <span class="hljs-string">'7083'</span> <span class="hljs-comment"># Receives requests and validates client certs from workers (from bep agents and rpa servers)</span>
+<span class="hljs-attr">hazelcast_port:</span>                      <span class="hljs-string">'5702'</span>
+<span class="hljs-comment"># INT Server</span>
+<span class="hljs-attr">task_dispatcher_service_mtls_port:</span>   <span class="hljs-string">'9092'</span> <span class="hljs-comment"># Receives requests and validates client certs from worker-management-service</span>
+<span class="hljs-attr">vault_port:</span>                          <span class="hljs-string">'8200'</span>
+<span class="hljs-attr">rabbitmq_api_proxy_port:</span>             <span class="hljs-string">'45672'</span>
+<span class="hljs-attr">zookeeper_port:</span>                      <span class="hljs-string">'2181'</span>
+<span class="hljs-comment"># MSSQL Server</span>
+<span class="hljs-attr">mssql_port:</span>                          <span class="hljs-string">'1433'</span>
+<span class="hljs-comment"># BEP Master</span>
+<span class="hljs-attr">worker_management_service_mtls_port:</span> <span class="hljs-string">'9093'</span> <span class="hljs-comment"># Receives requests and validates client certs from Control Tower.</span>
+<span class="hljs-attr">automl_gateway_service_mtls_port:</span>    <span class="hljs-string">'9073'</span>
+<span class="hljs-attr">marathon_proxy_port:</span>                 <span class="hljs-string">'8480'</span>
+<span class="hljs-attr">mesos_master_port:</span>                   <span class="hljs-string">'5050'</span>
+<span class="hljs-comment"># BEP Agent</span>
+<span class="hljs-attr">mesos_slave_port:</span>                    <span class="hljs-string">'5051'</span>
+<span class="hljs-attr">mesos_slave_port_range:</span>              <span class="hljs-string">'40000-44000'</span>
+</code></pre>
+<p>Application ports must be configured in accordance with <a href="/docs/spa/admin/system-requirements/application-ports">Application Ports</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="ldap"></a><a href="#ldap" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>LDAP</h3>
+<p>Note that LDAP must be configured only after the SPA installation, since
+manual actions are required on the UI before enabling LDAP. For more
+details, see <a href="/docs/spa/admin/info-sec/ldap-and-ad-integration">LDAP and AD Integration</a>.</p>
+<p>In case you set up LDAP integration after the installation, it is
+recommended to update the <strong>config.yml</strong> file with the used properties
+to simplify the upgrade process in future.</p>
+<pre><code class="hljs css language-yml"><span class="hljs-comment"># LDAP</span>
+<span class="hljs-attr">ldap_enabled:</span>                        <span class="hljs-literal">false</span>  <span class="hljs-comment"># if you're performing upgrade and already have ldap configured, set this to true</span>
+<span class="hljs-attr">ldap_internal_authorization_enabled:</span> <span class="hljs-literal">false</span>  <span class="hljs-comment"># If true, LDAP with WF roles will be used. No groups from LDAP will be used.</span>
+<span class="hljs-attr">ldap_server_url:</span>                     <span class="hljs-string">'ldaps://ldap.example.com:636'</span>   <span class="hljs-comment"># Ldap server connection url</span>
+<span class="hljs-attr">ldap_bind_dn:</span>                        <span class="hljs-string">'ldap-user-distinguished-name'</span>   <span class="hljs-comment"># Ldap server bind username</span>
+<span class="hljs-attr">ldap_bind_password:</span>                  <span class="hljs-string">'ldap-user-password'</span>             <span class="hljs-comment"># Ldap server bind password</span>
+<span class="hljs-attr">ldap_user_base:</span>                      <span class="hljs-string">'ou=People,dc=domain,dc=com'</span>     <span class="hljs-comment"># Container of LDAP users used for authentication</span>
+<span class="hljs-attr">ldap_group_base:</span>                     <span class="hljs-string">'ou=Groups,dc=domain,dc=com'</span>     <span class="hljs-comment"># Container of LDAP groups used for authorization</span>
+<span class="hljs-attr">ldap_user_filter:</span>                    <span class="hljs-string">'(sAMAccountName={0})'</span>           <span class="hljs-comment"># User filter for search, optional, example: '(uid={0})'</span>
+<span class="hljs-attr">ldap_group_filter:</span>                   <span class="hljs-string">'(member={0})'</span>                   <span class="hljs-comment"># Group filter for search, optional, example: '(memberUid={1})'</span>
+<span class="hljs-attr">ws_ldap_worker_groups:</span>               <span class="hljs-string">'CC Dev,Galiot,CC Ops'</span>           <span class="hljs-comment"># Comma separated groups from LDAP for mapping to worker users</span>
+<span class="hljs-attr">ws_ldap_requester_groups:</span>            <span class="hljs-string">'CC Admin'</span>                       <span class="hljs-comment"># Comma separated groups from LDAP for mapping to WorkSpace Requester user</span>
+</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>ldap_enabled</code></td>
+<td><div class="content-wrapper">
+<p>The option specifies whether LDAP is enabled. It's important to update this property before the upgrade, if LDAP was enabled.</p>
+<p>Boolean parameter</p>
+<div>
+<div>
+<p>The parametr must be set to <code>false</code> in case of a clean installation.</p>
+</div>
+</div>
+</div></td>
+</tr>
+<tr class="even">
+<td><code>ldap_internal_authorization_enabled</code></td>
+<td><p>The option must be set to <code>true</code>, to activate LDAP with WF roles. No groups from LDAP will be used and properties <code>ldap.group.base</code> and <code>ldap.group.filter</code> will be ignored.</p>
+<p>Boolean parameter</p></td>
+</tr>
+<tr class="odd">
+<td><code>ldap_server_url</code></td>
+<td>The LDAP server connection url</td>
+</tr>
+<tr class="even">
+<td><code>ldap_bind_dn</code></td>
+<td>The LDAP server bind username</td>
+</tr>
+<tr class="odd">
+<td><code>ldap_bind_password</code></td>
+<td>The LDAP server bind password</td>
+</tr>
+<tr class="even">
+<td><code>ldap_user_base</code></td>
+<td><div class="content-wrapper">
+<p>A container of corporate user database used for authentication</p>
+<div>
+<div>
+<p>Use the comma-separated values.</p>
+</div>
+</div>
+</div></td>
+</tr>
+<tr class="odd">
+<td><code>ldap_group_base</code></td>
+<td><div class="content-wrapper">
+<p>A container of corporate user groups used for authentication</p>
+<div>
+<div>
+<p>Use the comma-separated values.</p>
+</div>
+</div>
+</div></td>
+</tr>
+<tr class="even">
+<td><code>ldap_user_filter</code></td>
+<td>The user filter for search. Optional. Example: '(uid={0})'</td>
+</tr>
+<tr class="odd">
+<td><code>ldap_group_filter</code></td>
+<td>The group filter for search. Optional. Example: '(memberUid={1})'</td>
+</tr>
+<tr class="even">
+<td><code>ws_ldap_worker_groups</code></td>
+<td>Workspace: comma-separated group names from LDAP for mapping to the worker users</td>
+</tr>
+<tr class="odd">
+<td><code>ws_ldap_requester_groups</code></td>
+<td>Workspace: comma-separated groups from LDAP for mapping to WorkSpace Requester user</td>
+</tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="workspace-email-confirmation"></a><a href="#workspace-email-confirmation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Workspace email confirmation</h3>
+<pre><code class="hljs css language-yml"><span class="hljs-comment">#Wokfspace</span>
+<span class="hljs-attr">ws_enable_worker_email_confirmation:</span>  <span class="hljs-literal">false</span>   <span class="hljs-comment"># If true, Email confirmation for worker users will be enabled. Used by Workspace.</span>
+</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>ws_enable_worker_email_confirmation</code></td>
+<td><p>The option to enable email confirmation for the worker users during registration. Set to <code>true</code> to enable. Used by Workspace. <br />
+Note that this property must be set to <code>true</code> only if an email server is configured above</p></td>
+</tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="sso-saml"></a><a href="#sso-saml" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SSO SAML</h3>
+<p>Note that SSO must be configured only after SPA installation, since
+manual actions are required in UI before enabling SSO. For more details,
+refer to <a href="/docs/spa/admin/info-sec/sso-integration">SSO integration</a>.</p>
+<p>In case you set up SSO integration after installation, it is recommended
+to update <code>config.yml</code> file with the used properties in order to
+simplify upgrade process in future.</p>
+<pre><code class="hljs css language-yml"><span class="hljs-comment"># SSO SAML</span>
+<span class="hljs-attr">wf_sso_saml_enabled:</span>            <span class="hljs-literal">false</span>                                 <span class="hljs-comment"># Enables or disables SSO (SAML 2.0 protocol) authentification for CT</span>
+<span class="hljs-attr">wf_sso_saml_sp_metadata:</span>        <span class="hljs-string">'workfusion-metadata-id'</span>              <span class="hljs-comment"># A unique string. ID of Service Provider.</span>
+<span class="hljs-attr">wf_sso_saml_idp_metadata:</span>       <span class="hljs-string">'https://SAML_SERVICE_URL/idp/sso'</span>    <span class="hljs-comment"># URL that points to a file with IdP metadata parameters. Should be provided by customer.</span>
+<span class="hljs-attr">wf_sso_saml_idp_file_metadata:</span>  <span class="hljs-string">'/path/to/idp/file/metadata.xml'</span>      <span class="hljs-comment"># Local path to a file with IdP metadata parameters</span>
+<span class="hljs-attr">wf_sso_saml_username_attribute:</span> <span class="hljs-string">'uid'</span>                                 <span class="hljs-comment"># Name of attribute that will be used for authentication. uid for LDAP, sAMAcountName for Active Directory</span>
+
+<span class="hljs-attr">ws_sso_saml_enabled:</span>            <span class="hljs-literal">false</span>                                 <span class="hljs-comment"># Enables or disables SSO (SAML 2.0 protocol) authentification for CT (WS)</span>
+<span class="hljs-attr">ws_sso_saml_sp_metadata:</span>        <span class="hljs-string">'ws-sp-hostname'</span>                      <span class="hljs-comment"># A unique string. ID of Service Provider, for example, https://&lt;instance&gt;/workspace/saml/metadata</span>
+<span class="hljs-attr">ws_sso_saml_idp_metadata:</span>       <span class="hljs-string">'https://SAML_SERVICE_URL/idp/sso'</span>    <span class="hljs-comment"># URL that points to a file with IdP metadata parameters</span>
+<span class="hljs-attr">ws_sso_saml_idp_file_metadata:</span>  <span class="hljs-string">'/path/to/idp/file/metadata.xml'</span>      <span class="hljs-comment"># Local path to a file with IdP metadata parameters</span>
+<span class="hljs-attr">ws_sso_saml_username_attribute:</span> <span class="hljs-string">'mail'</span>                                <span class="hljs-comment"># Name of attribute that will be used for authentication. uid for LDAP, mail for Active Directory</span>
+</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>wf_sso_saml_enabled</code></td>
+<td>The parameter enables or disables SSO (SAML 2.0 protocol) authentification for CT</td>
+</tr>
+<tr class="even">
+<td><code>wf_sso_saml_sp_metadata</code></td>
+<td>An ID of a Service Provider</td>
+</tr>
+<tr class="odd">
+<td><code>wf_sso_saml_idp_metadata</code></td>
+<td>The URL that links to a file with the IdP metadata parameters. The parameter must be provided by the customer</td>
+</tr>
+<tr class="even">
+<td><code>wf_sso_saml_idp_file_metadata</code></td>
+<td>The local path to a file with the IdP metadata parameters</td>
+</tr>
+<tr class="odd">
+<td><code>wf_sso_saml_username_attribute</code></td>
+<td><p>The name of an attribute that will be used for authentication:</p>
+<ul>
+<li><strong>uid</strong> for LDAP</li>
+<li>sAMAcountName for Active Directory</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td><code>ws_sso_saml_enabled</code></td>
+<td>The parameter enables or disables SSO (SAML 2.0 protocol) authentification for CT (WS)</td>
+</tr>
+<tr class="odd">
+<td><code>ws_sso_saml_sp_metadata</code></td>
+<td>An ID of a Service Provider</td>
+</tr>
+<tr class="even">
+<td><code>ws_sso_saml_idp_metadata</code></td>
+<td>The URL that links to a file with the IdP metadata parameters.</td>
+</tr>
+<tr class="odd">
+<td><code>ws_sso_saml_idp_file_metadata</code></td>
+<td>The local path to a file with the IdP metadata parameters</td>
+</tr>
+<tr class="even">
+<td><code>ws_sso_saml_username_attribute</code></td>
+<td><p>The name of an attribute that will be used for authentication:</p>
+<ul>
+<li><strong>uid</strong> for LDAP</li>
+<li>sAMAcountName for Active Directory</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/8/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/spa/admin/analytics/using-tableau"><span class="arrow-prev">← </span><span>Setup end-to-end SSI audit chart</span></a><a class="docs-next button" href="/docs/spa/admin/advanced/hosts-yml-options"><span>hosts.yml options</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#file-format">File format</a></li><li><a href="#configuration-parameters">Configuration parameters</a><ul class="toc-headings"><li><a href="#ansible-vault-password">Ansible Vault password</a></li><li><a href="#ansible-users-used-for-a-single-point-setup">Ansible users used for a Single point setup</a></li><li><a href="#s3-storage-keys">S3 storage keys</a></li><li><a href="#ssl-certificates">SSL certificates</a></li><li><a href="#vault-certificates">Vault certificates</a></li><li><a href="#linux-runtime-user-and-group">Linux runtime user and group</a></li><li><a href="#windows-installation-properties">Windows installation properties</a></li><li><a href="#logging">Logging</a></li><li><a href="#user-credentials-and-passwords">User credentials and passwords</a></li><li><a href="#email-smtp">Email/SMTP</a></li><li><a href="#nexus">Nexus</a></li><li><a href="#tableau-bi">Tableau (BI)</a></li><li><a href="#ocr">OCR</a></li><li><a href="#workspace">Workspace</a></li><li><a href="#rpa">RPA</a></li><li><a href="#ms-sql">MS SQL</a></li></ul></li><li><a href="#advanced-configuration">Advanced configuration</a><ul class="toc-headings"><li><a href="#elasticsearch-and-kibana">Elasticsearch and Kibana</a></li><li><a href="#application-ports">Application ports</a></li><li><a href="#ldap">LDAP</a></li><li><a href="#workspace-email-confirmation">Workspace email confirmation</a></li><li><a href="#sso-saml">SSO SAML</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/wf-logo.svg" alt="Knowledgebase" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://www.workfusion.com/reports-whitepapers/">Reports &amp; Whitepapers</a></div><div><h5>Community</h5><a href="https://forum.workfusion.com/" target="_blank" rel="noreferrer noopener">Forum</a><a href="http://automationacademy.com/">Automation Academy</a><a href="https://partners.workfusion.com/">Partners Portal</a></div><div><h5>More</h5><a href="https://www.workfusion.com/iac/">Intelligent Automation Cloud</a></div></section><section class="copyright">Copyright © 2019 WorkFusion, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: 'PNQGK7RZR5',
+                apiKey: 'ba828b974aad37836106a37d2432da4b',
+                indexName: 'search-config',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en","version:undefined"]}
+              });
+            </script></body></html>

@@ -1,0 +1,730 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Datastore Plugins · Knowledgebase</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;datastore-plugins&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#datastore-plugins&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Datastore Plugins&lt;/h2&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Datastore Plugins · Knowledgebase"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docusaurus.workfusion.com//"/><meta property="og:description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;datastore-plugins&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#datastore-plugins&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Datastore Plugins&lt;/h2&gt;
+"/><meta property="og:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.4/fuse.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/WorkFusion_H_5_RGB.png" alt="Knowledgebase"/><h2 class="headerTitleWithLogo">Knowledgebase</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/terra" target="_self">WorkFusion 10.0</a></li><li class="siteNavGroupActive"><a href="/docs/spa" target="_self">SPA</a></li><li class=""><a href="/docs/spa/admin/install-spa/prepare/overview" target="_self">Administrator&#x27;s Guide</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>SPA</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">SPA<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa">SPA Intro</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/spa/spa/datastore-plugins">Datastore Plugins</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://git.workfusion.com/projects/DOC/repos/documentation/browse/docs/spa/spa/datastore-plugins.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Datastore Plugins</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="datastore-plugins"></a><a href="#datastore-plugins" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Datastore Plugins</h2>
+<p>DataStore plugins can be of two types:</p>
+<ul>
+<li>execution (perform some action, generally database queries)</li>
+<li>transaction (transaction management and configuration)</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="execution-plugins"></a><a href="#execution-plugins" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Execution Plugins</h3>
+<h4><a class="anchor" aria-hidden="true" id="datastore"></a><a href="#datastore" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>datastore</h4>
+<p>This plugin is used to select data from Data Stores (or execute any
+query).</p>
+<h5><a class="anchor" aria-hidden="true" id="attributes"></a><a href="#attributes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Attributes</h5>
+<table>
+<thead>
+<tr class="header">
+<th><div>
+Name
+</div></th>
+<th><div>
+Required
+</div></th>
+<th><div>
+Default
+</div></th>
+<th><div>
+Description
+</div></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>name</strong></td>
+<td>yes</td>
+<td> </td>
+<td>Data Store name.</td>
+</tr>
+<tr class="even">
+<td><strong>max</strong></td>
+<td>no</td>
+<td> </td>
+<td>Max row count in result.</td>
+</tr>
+</tbody>
+</table>
+<p>This plugin returns a
+<a href="http://web-harvest.sourceforge.net/doc/org/webharvest/runtime/variables/ListVariable.html">ListVariable</a>
+that contains a query result from the Data Store.</p>
+<p>Example:</p>
+<pre><code class="hljs css language-xml"><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">config</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">var-def</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"state"</span>&gt;</span>
+      colorado
+    <span class="hljs-tag">&lt;/<span class="hljs-name">var-def</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">var-def</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"result"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">datastore</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"States data store"</span>&gt;</span>
+          select state_id from @this where state_name = '${state}';
+        <span class="hljs-tag">&lt;/<span class="hljs-name">datastore</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">var-def</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">export</span> <span class="hljs-attr">include-original-data</span>=<span class="hljs-string">"false"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">single-column</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"result"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"${result}"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">export</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">config</span>&gt;</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
+<p>See how to work with result set retrieved by SQL query</p>
+<pre><code class="hljs css language-xml"><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">config</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">var-def</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"private_equity_datastore_name"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>${private_equity_datastore_name}<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">var-def</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">var-def</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"priority"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>${priority}<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">var-def</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">var-def</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"datastoreColumns"</span>&gt;</span>          
+        name,nation,website,type,deeplink,priority,website_status,first_time_processing,screenshot_hash,last_checked,screenshot_url,last_processed_time
+    <span class="hljs-tag">&lt;/<span class="hljs-name">var-def</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">var-def</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"statusColumn"</span>&gt;</span>
+        last_checked_status
+    <span class="hljs-tag">&lt;/<span class="hljs-name">var-def</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">var-def</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"websiteStatusColumn"</span>&gt;</span>
+        website_status
+    <span class="hljs-tag">&lt;/<span class="hljs-name">var-def</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">var-def</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"query"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>select @id, ${datastoreColumns} from @this
+            where
+              (${websiteStatusColumn}='ACTIVE' or ${websiteStatusColumn}='' or ${websiteStatusColumn} is null)
+              and (${statusColumn} is null or ${statusColumn} = '')                              
+              and priority='${priority.toString()}';
+        <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">var-def</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="handlebars"><span class="xml">&lt;![CDATA[
+      String[] outputColumns = org.apache.commons.lang.StringUtils.split(datastoreColumns.toString(), ",");
+      List exportItems = new ArrayList();
+      List ids = new ArrayList();
+    ]]&gt;</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">loop</span> <span class="hljs-attr">item</span>=<span class="hljs-string">"companyRow"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">list</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">datastore</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"${private_equity_datastore_name}"</span>&gt;</span>
+                ${query}
+            <span class="hljs-tag">&lt;/<span class="hljs-name">datastore</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">list</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="handlebars"><span class="xml">&lt;![CDATA[
+              ids.add(companyRow.get(0));
+              Map exportItem = new HashMap();
+
+              for (String column : outputColumns) {
+                exportItem.put(column, companyRow.get(column).toString());
+              }
+
+              exportItem.put("private_equity_datastore_name", private_equity_datastore_name.toString());
+
+              exportItems.add(exportItem);
+            ]]&gt;</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">loop</span>&gt;</span>
+
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">case</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">if</span> <span class="hljs-attr">condition</span>=<span class="hljs-string">"${ids.size() &amp;lt;  0 }"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">datastore</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"${private_equity_datastore_name}"</span>&gt;</span>
+                update @this set ${statusColumn} = 'NEW' where @id in (${org.apache.commons.lang.StringUtils.join(ids, ",")});
+            <span class="hljs-tag">&lt;/<span class="hljs-name">datastore</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">if</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">case</span>&gt;</span>
+
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">export</span> <span class="hljs-attr">include-original-data</span>=<span class="hljs-string">"false"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">multi-column</span> <span class="hljs-attr">list</span>=<span class="hljs-string">"${exportItems}"</span> <span class="hljs-attr">split-results</span>=<span class="hljs-string">"true"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">loop</span> <span class="hljs-attr">item</span>=<span class="hljs-string">"column"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">list</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">return</span>=<span class="hljs-string">"outputColumns"</span> /&gt;</span><span class="handlebars"><span class="xml">
+                <span class="hljs-tag">&lt;/<span class="hljs-name">list</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">put-to-column-getter</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"${column}"</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"${column}"</span> /&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">loop</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">multi-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">export</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">config</span>&gt;</span>
+</span></span></code></pre>
+<h3><a class="anchor" aria-hidden="true" id="create-datastore"></a><a href="#create-datastore" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>create-datastore</h3>
+<p>This plugin is used to create a Data Store (db table)</p>
+<h4><a class="anchor" aria-hidden="true" id="attributes-1"></a><a href="#attributes-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Attributes</h4>
+<table>
+<thead>
+<tr class="header">
+<th><div>
+Name
+</div></th>
+<th><div>
+Required
+</div></th>
+<th><div>
+Default
+</div></th>
+<th><div>
+Description
+</div></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>name</strong></td>
+<td>yes</td>
+<td> </td>
+<td>Data Store name.</td>
+</tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="child-elements"></a><a href="#child-elements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Child Elements</h4>
+<table>
+<thead>
+<tr class="header">
+<th><div>
+Name
+</div></th>
+<th><div>
+Required
+</div></th>
+<th><div>
+Default
+</div></th>
+<th><div>
+Description
+</div></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>datastore-column</strong></td>
+<td>no</td>
+<td> </td>
+<td><p>New column description with the following attributes:</p>
+<ul>
+<li><strong>name</strong></li>
+<li><strong>type</strong> - TEXT, INTEGER, DATE, or TIMESTAMP (default - TEXT)</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<pre><code class="hljs css language-xml"><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">config</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">create-datastore</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"data store name"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">datastore-column</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"a"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">create-datastore</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">export</span> <span class="hljs-attr">include-original-data</span>=<span class="hljs-string">"false"</span>/&gt;</span>  
+<span class="hljs-tag">&lt;/<span class="hljs-name">config</span>&gt;</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="insert-datastore"></a><a href="#insert-datastore" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>insert-datastore</h3>
+<p>This plugin is used to insert a single record into your Data Store.</p>
+<h4><a class="anchor" aria-hidden="true" id="attributes-2"></a><a href="#attributes-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Attributes</h4>
+<table>
+<thead>
+<tr class="header">
+<th><div>
+Name
+</div></th>
+<th><div>
+Required
+</div></th>
+<th><div>
+Default
+</div></th>
+<th><div>
+Description
+</div></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>datastore-name</strong></td>
+<td>yes</td>
+<td> </td>
+<td>Data Store name.</td>
+</tr>
+<tr class="even">
+<td><strong>json-value-map</strong></td>
+<td>no</td>
+<td> </td>
+<td><p>java.util.Map instance converted to JSON (or com.freedomoss.crowdcontrol.webharvest.plugin.datastore.dto.DataStoreRow since version 7.0;</p>
+<p>json format like {"values":[{"columnName":"column1","columnType":"TEXT","value":"value1"},{"columnName":"column2","columnType":"INTEGER","value":"5"}]});</p>
+<p>in case of a simple "<span class="underline">column-name:value</span>" map, TEXT type is selected by default.</p>
+<p>Available types : TEXT, INTEGER, DATE, or TIMESTAMP.</p></td>
+</tr>
+<tr class="odd">
+<td><strong>create</strong></td>
+<td>no</td>
+<td>false</td>
+<td>If set to true - Data Store will be automatically created if does not exist, missing columns will be automatically added to the Data Store.</td>
+</tr>
+</tbody>
+</table>
+<p>As a result, a new Record is inserted into specified Data Store. Map
+entry keys are column names and map entry values are values to be
+inserted into the appropriate column.</p>
+<p><strong>Example</strong></p>
+<pre><code class="hljs css language-xml"><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">config</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="handlebars"><span class="xml">&lt;![CDATA[
+        Map insertedParamMap = new HashMap();
+        insertedParamMap.put("col_1", "col_1_val");
+        jsonValueMap = new com.google.gson.Gson().toJson(insertedParamMap);
+    ]]&gt;</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">insert-datastore</span> <span class="hljs-attr">datastore-name</span>=<span class="hljs-string">"datastore_name"</span>
+                      <span class="hljs-attr">json-value-map</span>=<span class="hljs-string">"${jsonValueMap}"</span>/&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">&lt;![CDATA[
+        <span class="hljs-built_in">String</span> dateFormat = <span class="hljs-string">"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"</span>;
+        com.freedomoss.crowdcontrol.webharvest.plugin.datastore.dto.DataStoreRow row = <span class="hljs-keyword">new</span> com.freedomoss.crowdcontrol.webharvest.plugin.datastore.dto.DataStoreRow();
+        row.addValue(<span class="hljs-string">"column1"</span>, com.freedomoss.crowdcontrol.webharvest.plugin.datastore.enums.DataStoreColumnType.TEXT, <span class="hljs-string">"value1"</span>);
+        row.addValue(<span class="hljs-string">"column2"</span>, com.freedomoss.crowdcontrol.webharvest.plugin.datastore.enums.DataStoreColumnType.INTEGER, <span class="hljs-number">5</span>);
+        row.addValue(<span class="hljs-string">"column3"</span>, com.freedomoss.crowdcontrol.webharvest.plugin.datastore.enums.DataStoreColumnType.DATE, <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(), dateFormat);
+        row.addValue(<span class="hljs-string">"column4"</span>, com.freedomoss.crowdcontrol.webharvest.plugin.datastore.enums.DataStoreColumnType.TIMESTAMP, <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(), dateFormat);
+        com.google.gson.Gson gson = <span class="hljs-keyword">new</span> com.google.gson.GsonBuilder()
+                .setDateFormat(dateFormat).create();
+        jsonValueMap2 = gson.toJson(row);
+    ]]&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">insert-datastore</span> <span class="hljs-attr">datastore-name</span>=<span class="hljs-string">"datastore_name"</span>
+                      <span class="hljs-attr">json-value-map</span>=<span class="hljs-string">"${jsonValueMap2}"</span>/&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">insert-datastore</span> <span class="hljs-attr">datastore-name</span>=<span class="hljs-string">"${datastoreName}"</span> <span class="hljs-attr">create</span>=<span class="hljs-string">"true"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">return</span>=<span class="hljs-string">"hit_submission_data_item.getWrappedObject().getItemValueMap()"</span>/&gt;</span><span class="handlebars"><span class="xml">
+    <span class="hljs-tag">&lt;/<span class="hljs-name">insert-datastore</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">config</span>&gt;</span>
+</span></span></code></pre>
+<h2><a class="anchor" aria-hidden="true" id="datastore-connection"></a><a href="#datastore-connection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>datastore-connection</h2>
+<p>By default, when using the &lt;datastore&gt; plugin, you are connecting to a
+database that is configured on the WF server. When running a config
+locally from <a href="https://kb.workfusion.com/display/WF/WorkFusion+Studio">WorkFusion
+Studio</a>, data
+stores are searched in the datastores directory.</p>
+<p>The <strong>&lt;datastore-connection&gt;</strong> plugin is intended for connecting to an
+external database and performing queries of its child plugins
+(datastore, create-datastore, insert-datastore).</p>
+<h5><a class="anchor" aria-hidden="true" id="attributes-3"></a><a href="#attributes-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Attributes</h5>
+<p>Name</p>
+<p>Required</p>
+<p>Default</p>
+<p>Description</p>
+<p><strong>url</strong></p>
+<p>yes</p>
+<p>Database connection URL (JDBC URL)</p>
+<p><strong>username</strong></p>
+<p>no</p>
+<p>credentials, if needed</p>
+<p><strong>password</strong></p>
+<p>no</p>
+<p>The following example contains instructions to:</p>
+<ol>
+<li>connect to an external PostgreSQL database;</li>
+<li>find a Data Store with the &quot;Countries_Lookup&quot; name;</li>
+<li>and perform a query &quot;select * from @this&quot;.</li>
+</ol>
+<p><strong>Example</strong></p>
+<pre><code class="hljs css language-xml"><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">config</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">datastore-connection</span> <span class="hljs-attr">url</span>=<span class="hljs-string">"jdbc:postgresql://localhost/wf_datastore"</span>
+                          <span class="hljs-attr">username</span>=<span class="hljs-string">"use_secure_store_plugin"</span>
+                          <span class="hljs-attr">password</span>=<span class="hljs-string">"use_secure_store_plugin"</span> &gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">var-def</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"result"</span>&gt;</span>                   
+            <span class="hljs-tag">&lt;<span class="hljs-name">datastore</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Countries_Lookup"</span>&gt;</span>
+                select * from @this;
+            <span class="hljs-tag">&lt;/<span class="hljs-name">datastore</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">var-def</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">datastore-connection</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">config</span>&gt;</span>
+</code></pre>
+<p>This plugin returns a list variable that contains a query result from
+the Data Store.</p>
+<h1><a class="anchor" aria-hidden="true" id="transaction-plugins"></a><a href="#transaction-plugins" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Transaction Plugins</h1>
+<p>Data Store transactions can be of two types:</p>
+<ul>
+<li>implicit (transaction starts implicitly, by declaration in execution
+plugins) with defined commit part</li>
+<li>explicit (everything inside plugin body is executed inside one
+transaction).</li>
+</ul>
+<p>Data Store creation and schema update are non-transactional operations.</p>
+<h2><a class="anchor" aria-hidden="true" id="datastore-transaction"></a><a href="#datastore-transaction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>datastore-transaction</h2>
+<p>This plugin explicitly defines a transaction. It supports nested
+transactions (in this case nested transaction is executed like a
+separate transaction). The result of inner datastore plugin execution is
+committed only at the end of body execution.</p>
+<h5><a class="anchor" aria-hidden="true" id="attributes-4"></a><a href="#attributes-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Attributes</h5>
+<table>
+<thead>
+<tr class="header">
+<th><div>
+Name
+</div></th>
+<th><div>
+Required
+</div></th>
+<th><div>
+Default
+</div></th>
+<th><div>
+Description
+</div></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>id</strong></td>
+<td>no</td>
+<td> </td>
+<td>Transaction id.</td>
+</tr>
+<tr class="even">
+<td><strong>isolation</strong></td>
+<td>no</td>
+<td> </td>
+<td><p>Transaction isolation level (possible values: READ_COMMITTED, READ_UNCOMMITTED, REPEATABLE_READ).</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<pre><code class="hljs css language-xml"><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>                
+<span class="hljs-tag">&lt;<span class="hljs-name">config</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">var-def</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"result"</span>&gt;</span>                   
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="handlebars"><span class="xml">&lt;![CDATA[
+                Map insertedParamMap = new HashMap();
+                insertedParamMap.put("col_1", "col_1_val");
+                jsonValueMap = new com.google.gson.Gson().toJson(insertedParamMap);
+                var dataStoreName="new original test Data Store";
+            ]]&gt;</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">datastore-transaction</span> <span class="hljs-attr">isolation</span>=<span class="hljs-string">"READ_COMMITTED"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">var-def</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"newRecordId"</span>&gt;</span>      
+                    <span class="hljs-tag">&lt;<span class="hljs-name">insert-datastore</span> <span class="hljs-attr">datastore-name</span>=<span class="hljs-string">"${dataStoreName}"</span>
+                                      <span class="hljs-attr">json-value-map</span>=<span class="hljs-string">"${jsonValueMap}"</span> /&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">var-def</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">datastore</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"${dataStoreName}"</span>&gt;</span>
+                  UPDATE @this SET col_1 = 'changed0' WHERE @id = ${newRecordId};
+                <span class="hljs-tag">&lt;/<span class="hljs-name">datastore</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">datastore-transaction</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"2"</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">var-def</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"newRecordId2"</span>&gt;</span>      
+                        <span class="hljs-tag">&lt;<span class="hljs-name">insert-datastore</span> <span class="hljs-attr">datastore-name</span>=<span class="hljs-string">"${dataStoreName}"</span>
+                                          <span class="hljs-attr">json-value-map</span>=<span class="hljs-string">"${jsonValueMap}"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">var-def</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">datastore</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"${dataStoreName}"</span>&gt;</span>
+                      UPDATE @this SET col_1 = 'changed2' WHERE @id = ${newRecordId2};
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">datastore</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">datastore-transaction</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">datastore</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"${dataStoreName}"</span>&gt;</span>
+                  UPDATE @this SET col_1 = 'changed1' WHERE @id = ${newRecordId};
+                <span class="hljs-tag">&lt;/<span class="hljs-name">datastore</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">datastore-transaction</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">var-def</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">config</span>&gt;</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="commit-transaction"></a><a href="#commit-transaction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>commit-transaction</h2>
+<p>This plugin is used in conjunction with an implicit transaction
+declaration. When an implicit transaction is used, it will be committed
+only when this plugin is used (for specified transaction).</p>
+<h5><a class="anchor" aria-hidden="true" id="attributes-5"></a><a href="#attributes-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Attributes</h5>
+<table>
+<thead>
+<tr class="header">
+<th><div>
+Name
+</div></th>
+<th><div>
+Required
+</div></th>
+<th><div>
+Default
+</div></th>
+<th><div>
+Description
+</div></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>transaction-id</strong></td>
+<td>yes</td>
+<td> </td>
+<td>Transaction id.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<pre><code class="hljs css language-xml"><span class="hljs-meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>                
+<span class="hljs-tag">&lt;<span class="hljs-name">config</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">var-def</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"result"</span>&gt;</span>                   
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="handlebars"><span class="xml">&lt;![CDATA[
+                Map insertedParamMap = new HashMap();
+                insertedParamMap.put("col_1", "col_1_val");
+                jsonValueMap = new com.google.gson.Gson().toJson(insertedParamMap);
+                var dataStoreName="new original test Data Store";
+            ]]&gt;</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">var-def</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"newRecordId"</span>&gt;</span>      
+                <span class="hljs-tag">&lt;<span class="hljs-name">insert-datastore</span> <span class="hljs-attr">datastore-name</span>=<span class="hljs-string">"${dataStoreName}"</span>
+                                  <span class="hljs-attr">json-value-map</span>=<span class="hljs-string">"${jsonValueMap}"</span>
+                                  <span class="hljs-attr">transaction-id</span>=<span class="hljs-string">"1"</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">var-def</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">var-def</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"newRecordId2"</span>&gt;</span>      
+                <span class="hljs-tag">&lt;<span class="hljs-name">insert-datastore</span> <span class="hljs-attr">datastore-name</span>=<span class="hljs-string">"${dataStoreName}"</span>
+                                  <span class="hljs-attr">json-value-map</span>=<span class="hljs-string">"${jsonValueMap}"</span>
+                                  <span class="hljs-attr">transaction-id</span>=<span class="hljs-string">"2"</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">var-def</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">datastore</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"${dataStoreName}"</span> <span class="hljs-attr">transaction-id</span>=<span class="hljs-string">"1"</span>&gt;</span>
+              UPDATE @this SET col_1 = 'changed1' WHERE @id = ${newRecordId};
+            <span class="hljs-tag">&lt;/<span class="hljs-name">datastore</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">datastore</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"${dataStoreName}"</span> <span class="hljs-attr">transaction-id</span>=<span class="hljs-string">"2"</span>&gt;</span>
+              UPDATE @this SET col_1 = 'changed2' WHERE @id = ${newRecordId2};
+            <span class="hljs-tag">&lt;/<span class="hljs-name">datastore</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">commit-transaction</span> <span class="hljs-attr">transaction-id</span>=<span class="hljs-string">"2"</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">commit-transaction</span> <span class="hljs-attr">transaction-id</span>=<span class="hljs-string">"1"</span> /&gt;</span>    
+        <span class="hljs-tag">&lt;/<span class="hljs-name">var-def</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">config</span>&gt;</span>
+</code></pre>
+<h1><a class="anchor" aria-hidden="true" id="datastore-date-and-timestamp-types"></a><a href="#datastore-date-and-timestamp-types" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DataStore Date and Timestamp Types</h1>
+<p>WorkFusion 7.5 introduces new Data Store column types: <strong>Date</strong> and
+<strong>Timestamp</strong>. Pay attention to DateTime formats provided as input, they
+are required to parse date and time correctly.</p>
+<p><strong>DateTime Example</strong>  Expand source</p>
+<pre><code class="hljs css language-bash">&lt;?xml version=<span class="hljs-string">"1.0"</span> encoding=<span class="hljs-string">"UTF-8"</span>?&gt;
+&lt;config charset=<span class="hljs-string">"UTF-8"</span>&gt;
+
+    &lt;create-datastore name=<span class="hljs-string">"DifferentDataStoreTypes2"</span>&gt;
+        &lt;datastore-column name=<span class="hljs-string">"text_field"</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"text"</span>/&gt;
+        &lt;datastore-column name=<span class="hljs-string">"integer_field"</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"integer"</span>/&gt;
+        &lt;datastore-column name=<span class="hljs-string">"date_field"</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"date"</span>/&gt;
+        &lt;datastore-column name=<span class="hljs-string">"timestamp_field"</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"timestamp"</span>/&gt;
+    &lt;/create-datastore&gt;
+
+     &lt;var-def name=<span class="hljs-string">"result"</span>&gt;                  
+
+            &lt;script&gt;&lt;![CDATA[
+                com.freedomoss.crowdcontrol.webharvest.plugin.datastore.dto.DataStoreRow row = new com.freedomoss.crowdcontrol.webharvest.plugin.datastore.dto.DataStoreRow();
+                row.addValue(<span class="hljs-string">"text_field"</span>, com.freedomoss.crowdcontrol.webharvest.plugin.datastore.enums.DataStoreColumnType.TEXT, <span class="hljs-string">"value1"</span>);
+                row.addValue(<span class="hljs-string">"integer_field"</span>, com.freedomoss.crowdcontrol.webharvest.plugin.datastore.enums.DataStoreColumnType.INTEGER, 5);
+                row.addValue(<span class="hljs-string">"date_field"</span>, com.freedomoss.crowdcontrol.webharvest.plugin.datastore.enums.DataStoreColumnType.DATE, <span class="hljs-string">"06/10/1989"</span>, <span class="hljs-string">"MM/dd/yyyy"</span>);
+                row.addValue(<span class="hljs-string">"timestamp_field"</span>, com.freedomoss.crowdcontrol.webharvest.plugin.datastore.enums.DataStoreColumnType.TIMESTAMP, <span class="hljs-string">"06/10/1989 15:35"</span>, <span class="hljs-string">"MM/dd/yyyy hh:mm"</span>);
+                jsonValueMap = new com.google.gson.Gson().toJson(row);
+            ]]&gt;&lt;/script&gt;
+
+            &lt;insert-datastore create=<span class="hljs-string">"true"</span> datastore-name=<span class="hljs-string">"DifferentDataStoreTypes2"</span>
+                              json-value-map=<span class="hljs-string">"<span class="hljs-variable">${jsonValueMap}</span>"</span> /&gt;
+      &lt;/var-def&gt;
+
+    &lt;<span class="hljs-built_in">export</span> include-original-data=<span class="hljs-string">"true"</span>&gt;
+    &lt;/<span class="hljs-built_in">export</span>&gt;
+
+&lt;/config&gt;
+</code></pre>
+<h1><a class="anchor" aria-hidden="true" id="adding-index-to-datastore-column"></a><a href="#adding-index-to-datastore-column" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adding INDEX to DataStore Column</h1>
+<p>This trick can be helpful for Data Stores containing reference data
+(e.g. for Select One answer type).</p>
+<p>Index names for PostgreSQL are public, so make sure that there is no
+duplication (suggested naming: ds_DataStoreName_ColumnName_idx). Name
+can't start from a digit.</p>
+<p><strong>DateTime Example</strong>  Expand source</p>
+<pre><code class="hljs css language-bash">&lt;!-- Add INDEX --&gt;
+&lt;datastore name=<span class="hljs-string">"50k autosuggest"</span>&gt;
+      CREATE INDEX ds_50k_autosuggest_name_idx ON @this (name);
+&lt;/datastore&gt;
+
+&lt;datastore name=<span class="hljs-string">"50k autosuggest"</span>&gt;
+      CREATE UNIQUE INDEX ds_50k_autosuggest_id_idx ON @this (id);
+&lt;/datastore&gt;
+ 
+ 
+&lt;!-- Drop INDEX --&gt;
+&lt;datastore name=<span class="hljs-string">"50k autosuggest"</span>&gt;
+      DROP INDEX ds_50k_autosuggest_name_idx;
+&lt;/datastore&gt;
+
+&lt;datastore name=<span class="hljs-string">"50k autosuggest"</span>&gt;
+      DROP INDEX ds_50k_autosuggest_id_idx;
+&lt;/datastore&gt;
+</code></pre>
+<h1><a class="anchor" aria-hidden="true" id="passing-data-store-records-to-export"></a><a href="#passing-data-store-records-to-export" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Passing Data Store records to Export</h1>
+<p><strong>Data Store to Export plugin</strong>  Expand source</p>
+<pre><code class="hljs css language-bash">&lt;?xml version=<span class="hljs-string">"1.0"</span> encoding=<span class="hljs-string">"UTF-8"</span>?&gt;
+&lt;config xmlns=<span class="hljs-string">"http://web-harvest.sourceforge.net/schema/1.0/config"</span>
+    charset=<span class="hljs-string">"UTF-8"</span> scriptlang=<span class="hljs-string">"groovy"</span>&gt;
+
+    &lt;script&gt;&lt;![CDATA[
+        result = new ArrayList();
+        columns = [
+            <span class="hljs-string">"emp_id"</span>,
+            <span class="hljs-string">"emp_first_name"</span>,
+            <span class="hljs-string">"emp_last_name"</span>
+        ];
+    ]]&gt;&lt;/script&gt;
+    &lt;loop item=<span class="hljs-string">"row"</span>&gt;
+        &lt;list&gt;
+            &lt;datastore name=<span class="hljs-string">"emp"</span>&gt;
+                select * from @this;
+            &lt;/datastore&gt;
+        &lt;/list&gt;
+        &lt;body&gt;
+            &lt;script&gt;&lt;![CDATA[
+                Map conversionMap = new HashMap();
+                <span class="hljs-keyword">for</span> (column <span class="hljs-keyword">in</span> columns) {
+                    conversionMap.put(column, row.get(column).toString());
+                }
+                result.add(conversionMap);
+            ]]&gt;&lt;/script&gt;
+        &lt;/body&gt;
+    &lt;/loop&gt;
+
+    &lt;<span class="hljs-built_in">export</span> include-original-data=<span class="hljs-string">"true"</span>&gt;
+        &lt;multi-column list=<span class="hljs-string">"<span class="hljs-variable">${result}</span>"</span> split-results=<span class="hljs-string">"true"</span>&gt;
+            &lt;loop item=<span class="hljs-string">"column"</span>&gt;
+                &lt;list&gt;
+                    &lt;script <span class="hljs-built_in">return</span>=<span class="hljs-string">"columns"</span> /&gt;
+                &lt;/list&gt;
+                &lt;body&gt;
+                    &lt;put-to-column-getter name=<span class="hljs-string">"<span class="hljs-variable">${column.toString()}</span>"</span>
+                        property=<span class="hljs-string">"<span class="hljs-variable">${column.toString()}</span>"</span> /&gt;
+                &lt;/body&gt;
+            &lt;/loop&gt;
+        &lt;/multi-column&gt;
+    &lt;/<span class="hljs-built_in">export</span>&gt;
+&lt;/config&gt;
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="comments"></a><a href="#comments" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Comments:</h2>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><p>How to escape ' character in datastore plugin queries?</p>
+<div class="smallfont" data-align="left" style="color: #666666; width: 98%; margin-bottom: 10px;">
+<img src="images/icons/contenttypes/comment_16.png" width="16" height="16" /> Posted by wsoltys at Jul 13, 2017 10:28
+</div></td>
+</tr>
+<tr class="even">
+<td><p><a href="https://kb.workfusion.com/display/%7Ewsoltys" class="url fn userlink-3">Wojciech Soltys</a>, add one more quote. So instead of "Joe's" you should have "Joe''s"</p>
+<div class="smallfont" data-align="left" style="color: #666666; width: 98%; margin-bottom: 10px;">
+<img src="images/icons/contenttypes/comment_16.png" width="16" height="16" /> Posted by ihrachou at Jul 13, 2017 10:39
+</div></td>
+</tr>
+<tr class="odd">
+<td><p>Alexander Zinchuk, what is expected behavior of the <strong>create-datastore</strong> plugin if the data store already exists?</p>
+<div class="smallfont" data-align="left" style="color: #666666; width: 98%; margin-bottom: 10px;">
+<img src="images/icons/contenttypes/comment_16.png" width="16" height="16" /> Posted by ydrozdov at Sep 21, 2017 08:14
+</div></td>
+</tr>
+<tr class="even">
+<td><p>Ilya Hrachou it works thanks!!!</p>
+<div class="smallfont" data-align="left" style="color: #666666; width: 98%; margin-bottom: 10px;">
+<img src="images/icons/contenttypes/comment_16.png" width="16" height="16" /> Posted by vyevtushenko at Jul 18, 2018 06:56
+</div></td>
+</tr>
+<tr class="odd">
+<td><p>There is limitation for insert datastore plugin: its not working inside &lt;loop&gt; Webharvest plugin</p>
+<div class="smallfont" data-align="left" style="color: #666666; width: 98%; margin-bottom: 10px;">
+<img src="images/icons/contenttypes/comment_16.png" width="16" height="16" /> Posted by ahlushkou at Aug 29, 2018 12:50
+</div></td>
+</tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/16/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/spa"><span class="arrow-prev">← </span><span>SPA Intro</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#datastore-plugins">Datastore Plugins</a><ul class="toc-headings"><li><a href="#execution-plugins">Execution Plugins</a></li><li><a href="#example">Example</a></li><li><a href="#create-datastore">create-datastore</a></li><li><a href="#insert-datastore">insert-datastore</a></li></ul></li><li><a href="#datastore-connection">datastore-connection</a></li><li><a href="#datastore-transaction">datastore-transaction</a></li><li><a href="#commit-transaction">commit-transaction</a></li><li><a href="#comments">Comments:</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/wf-logo.svg" alt="Knowledgebase" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://www.workfusion.com/reports-whitepapers/">Reports &amp; Whitepapers</a></div><div><h5>Community</h5><a href="https://forum.workfusion.com/" target="_blank" rel="noreferrer noopener">Forum</a><a href="http://automationacademy.com/">Automation Academy</a><a href="https://partners.workfusion.com/">Partners Portal</a></div><div><h5>More</h5><a href="https://www.workfusion.com/iac/">Intelligent Automation Cloud</a></div></section><section class="copyright">Copyright © 2019 WorkFusion, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: 'PNQGK7RZR5',
+                apiKey: 'ba828b974aad37836106a37d2432da4b',
+                indexName: 'search-config',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en","version:undefined"]}
+              });
+            </script></body></html>

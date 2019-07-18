@@ -1,0 +1,402 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Statistics · Knowledgebase</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;To better understand the model results, AutoML SDK provides &lt;em&gt;comprehensive statistics&lt;/em&gt; for further analysis and model tuning.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Statistics · Knowledgebase"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docusaurus.workfusion.com//"/><meta property="og:description" content="&lt;p&gt;To better understand the model results, AutoML SDK provides &lt;em&gt;comprehensive statistics&lt;/em&gt; for further analysis and model tuning.&lt;/p&gt;
+"/><meta property="og:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.4/fuse.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/WorkFusion_H_5_RGB.png" alt="Knowledgebase"/><h2 class="headerTitleWithLogo">Knowledgebase</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/terra" target="_self">WorkFusion 10.0</a></li><li class=""><a href="/docs/spa" target="_self">SPA</a></li><li class=""><a href="/docs/spa/admin/install-spa/prepare/overview" target="_self">Administrator&#x27;s Guide</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Components</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">AutoML Concepts<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/what-can-automl-do">What Can AutoML Do?</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Models</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/models-overview">Models Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/information-extraction">Information Extraction</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/checker-model">Checker Model</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/classification">Classification</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/data-set">Data Set</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/automl-glossary">AutoML Glossary</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/automl-delivery">Complete View on AutoML Delivery</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Hardware Requirements<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/automl/10x-hardware-requirements">Hardware Requirements</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/zookeeper-settings">ZooKeeper Settings</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">AutoML SDK<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/introduction">Introduction</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Components</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/components">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/parser">Parser</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/annotators">Annotators</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/feature-extractors">Feature Extractors</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/post-processing">Post-Processing</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/spa/automl/automl-sdk/statistics">Statistics</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/model-configuration">Model Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/search-engine">Search Engine</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Getting Started</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/getting-started">Developing with AutoML SDK</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/environment-configuration">Environment Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/project-configuration">Project Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/automl-sdk-configuration">AutoML SDK Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/model-training">Model Training</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/model-execution">Model Execution</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/automl-sdk-api">AutoML SDK API</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/code-examples">Code Examples</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/e2e-automl-sdk-walkthrough">End-to-End AutoML SDK Walkthrough</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Data Analyst Manual<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/da-introduction">Data Analyst Manual</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">What does Data Analyst do?</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/da-job">Data Analyst Job</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/da-responsibilities">Data Analyst Responsibilities</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/da-workflow">Data Analyst Workflow</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/customer-data-protection">Customer Data Protection</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Customer documents basics</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/input-docs-characteristics">Input Documents Characteristics</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/input-docs-formats">Formats of Input Documents</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/labeling-requirements">Labeling Requirements</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Analyst runbook</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/input-docs-analysis">Input Documents Analysis</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://git.workfusion.com/projects/DOC/repos/documentation/browse/docs/spa/automl/automl-sdk/statistics.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Statistics</h1></header><article><div><span><p>To better understand the model results, AutoML SDK provides <em>comprehensive statistics</em> for further analysis and model tuning.</p>
+<p>For statistics calculation, AutoML SDK applies a standard <a href="https://en.wikipedia.org/wiki/MapReduce">MapReduce</a> approach.</p>
+<ol>
+<li>Statistics calculator processes one document with gold and extracted fields at a time, and then creates a data transfer object (DTO) — a lightweight representation of statistics for the processed document.</li>
+<li>Statistics is calculated based on a collection of DTOs created previously.</li>
+</ol>
+<p>With a number of interfaces for custom calculations we also provide a basic reference implementation of statistics calculator for Information Extraction and Classification use cases. See the following sections for details.</p>
+<p>Visual representation of the calculated statistics is produced via a set of OOTB <a href="#printers">Printers</a>. Although, ML Engineers can create their own printers and plug them into the reference implementation of statistics calculator to generate various types of reports: CSV, Excel document, etc.</p>
+<h2><a class="anchor" aria-hidden="true" id="main-interfaces"></a><a href="#main-interfaces" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Main Interfaces</h2>
+<p><strong><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/statistics/StatisticsCalculator.html">StatisticsCalculator&lt;I extends Document, O extends
+DocumentResult&gt;</a></strong> is the main interface for statistics calculation and should be as well implemented for <em>custom</em> statistics calculation.</p>
+<h3><a class="anchor" aria-hidden="true" id="o-processi-document"></a><a href="#o-processi-document" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>O process(I document)</h3>
+<p><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/statistics/StatisticsCalculator.html#process-I-"><code>O process(I document)</code></a> gets Document as an input parameter and returns a DTO which extends DocumentResult. ML Engineer manually implements mapping from Document to DocumentResult.</p>
+<p>Method is called for each document in a training set.</p>
+<h3><a class="anchor" aria-hidden="true" id="void-calculatecollection-o-results"></a><a href="#void-calculatecollection-o-results" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>void calculate(Collection<O> results)</h3>
+<p>With <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/statistics/StatisticsCalculator.html#calculate-java.util.Collection-"><code>void calculate(Collection&lt;O&gt; results)</code></a> the input parameter is a collection of DocumentResults calculated during the above-mentioned Process method call. ML Engineer implements the main statistics calculator and execution of the provided Printers.</p>
+<p>Method is called only once in the end of execution.</p>
+<p><strong><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/statistics/DocumentResult.html">DocumentResult</a></strong> is an interface for DTO returned by the Process method during the mapping of Document to its statistics result.</p>
+<h3><a class="anchor" aria-hidden="true" id="string-getdocumentid"></a><a href="#string-getdocumentid" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>String getDocumentId()</h3>
+<p><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/statistics/DocumentResult.html#getDocumentId--"><code>String getDocumentId()</code></a> returns ID of the Document for which the results were calculated.</p>
+<h3><a class="anchor" aria-hidden="true" id="information-extraction"></a><a href="#information-extraction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Information Extraction</h3>
+<p><strong><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/statistics/IeStatisticsCalculator.html">IeStatisticsCalculator</a></strong> is an implementation for StatisticsCalculator for the Information Extraction use case. It accepts IeDocument as an input parameter and outputs IeDocumentResult.</p>
+<p>Using the
+<a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/statistics/IeStatisticsCalculator.html#enable-com.workfusion.vds.sdk.nlp.component.statistics.StatisticsEvaluationType-">Enable</a>/<a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/statistics/IeStatisticsCalculator.html#disable-com.workfusion.vds.sdk.nlp.component.statistics.StatisticsEvaluationType-">Disable</a> methods of the calculator you can enable/disable the following 3 different
+evaluation types:</p>
+<ul>
+<li><strong>Value based</strong> (enabled by default). Gold and extracted results evaluated by the <code>data-value</code> attribute of the corresponding Field and GoldField.</li>
+<li><strong>Position based</strong>. Gold and extracted results evaluated by the <code>begin</code> and <code>end</code> position of the corresponding Field and GoldField.</li>
+<li><strong>Text based</strong>. Gold and extracted results evaluated by the extracted <code>text</code> of the corresponding <em>Field</em> and <em>GoldField</em>.</li>
+</ul>
+<p>See <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/statistics/StatisticsEvaluationType.html">StatisticsEvaluationType</a> for more details.</p>
+<p>The Calculator produces statistics based on the provided strategies. It
+maps the extracted result of all Fields and gold result of
+all GoldFields for each <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/configuration/FieldInfo.html">FieldInfo</a> to create an object-based DTOs structure representing the result of mapping.</p>
+<p><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/statistics/model/IeDocumentResult.html">IeDocumentResult</a> contains information about the mapping result of extracted and gold fields. This information is represented as DTO to store all the needed data from the corresponding Field/GoldField with a corresponding <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/statistics/model/ResultType.html">result type</a>.</p>
+
+    <div class="admonition admonition-note">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div> note</h5>
+      </div>
+      <div class="admonition-content">
+    <p><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/statistics/StatisticsCalculator.html">StatisticCalculator</a> transforms the Field/GoldField data into a lightweight DTO that is included into DocumentResult to prevent memory issues.</p>
+</div></div><table>
+<thead>
+<tr><th>Method</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>Collection&lt;GroupFieldResult&gt; getGroupResults()</code></td><td>Returns a mapping results for group fields. Group field is a field represented as a collection of children fields.</td></tr>
+<tr><td><code>Collection&lt;FieldResult&gt; getResults()</code></td><td>Returns mapping results between Field and GoldField aggregated into DTO.</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="classification"></a><a href="#classification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Classification</h2>
+<p><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/statistics/ClassificationStatisticsCalculator.html">ClassificationStatisticsCalculator</a> is an implementation of StatisticsCalculator for the Classification use case. It accepts <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/ClassificationDocument.html">ClassificationDocument</a> as an input parameter and outputs <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/statistics/model/ClassificationDocumentResult.html">ClassificationDocumentResult</a>.</p>
+<p>ClassificationDocumentResult contains information about the mapping
+result between the extracted Label and GoldLabel. This information is
+represented as DTOs to store data from the corresponding
+Label/GoldLabel.</p>
+<table>
+<thead>
+<tr><th>Method</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>Collection&lt;LabelResult&gt; getLabels()</code></td><td>Returns a mapping result for Label/GoldLabel classification.</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="printers"></a><a href="#printers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Printers</h2>
+<p>Reference implementation contains a basic interface for all printers.
+Any number of printers can be plugged into the corresponding
+StatisticsCalculator.</p>
+<p><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/statistics/printer/StatisticsPrinter.html"><strong>StatisticsPrinter&lt;D extends DocumentResult&gt;</strong></a> is
+an interface for statistics printer. It should be implemented in order
+to print statistics in a custom format.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p><code>void print(Collection&lt;D&gt; results, Path output)</code></p></td>
+<td><p>Input parameters: collection of statistics DTOs and a path to a target folder. By default, this method is called for each evaluation type and in each statistics calculator where it's plugged in.</p>
+<p>This method is called during the statistics calculation.</p></td>
+</tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="iegoldvsextractedcsvprinter"></a><a href="#iegoldvsextractedcsvprinter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>IeGoldVsExtractedCSVPrinter</h3>
+<p><strong><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/statistics/printer/IeGoldVsExtractedCSVPrinter.html">IeGoldVsExtractedCSVPrinter</a></strong>
+provides statistics for the Information Extraction use case and
+represents the mapping result between the gold and model extracted
+values.</p>
+<ul>
+<li><strong>Input</strong>: collection of
+<a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/statistics/model/IeDocumentResult.html">IeDocumentResult</a>.</li>
+<li><strong>Output</strong>: mapping result between <strong>each</strong> Gold and Extracted
+field.</li>
+</ul>
+<p>This printer can be configured to store results for all field names into
+one file (enabled by default), or into separate files where each file
+corresponds to one field name
+(set <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/statistics/printer/BaseIeGoldVsExtractedPrinter.html#filePerField-boolean-">filePerField(true)</a>).
+The result will be stored in <strong>gold-vs-extracted.csv</strong> or
+<strong>fieldName-gold-vs-extracted.csv</strong> where <code>fieldName</code> is a name of field
+when <code>filePerField</code> is set to <code>true</code>.</p>
+<p><img src="/docs/assets/automl/sdk/iegoldvsextarcted.png" alt=""></p>
+<ul>
+<li><strong>FILE_NAME</strong> — a name of document file from training/evaluation set.</li>
+<li><strong>FIELD_NAME</strong> — a name of field.</li>
+<li><strong>GOLD</strong> — gold value of field. Value of this column depends on the evaluation type.</li>
+<li><strong>EXTRACTED</strong> — extracted value of field. Value of this column depends on the evaluation type.</li>
+<li><strong>RESULT</strong> — type of mapping between the Gold and Extracted value. It can have the following values:
+<ul>
+<li>TP (True Positive) means that Gold and Extracted values are identical.</li>
+<li>FP (False Positive) means that the field was extracted, but does not map to any Gold value.</li>
+<li>FP, FN (False Positive, False Negative) means that both Gold and Extracted values are present, but differ.</li>
+<li>FN (False Negative) means that the Gold value is present but does not map to any Extracted field.</li>
+</ul></li>
+<li><strong>REASON</strong> represents information about what caused the RESULT. It can have the following values:
+<ul>
+<li>EXTRACT_MODEL means that Gold and Extracted values are identical, and were extracted by a model. <strong>Extracted by model</strong> means that value and text in extracted field are identical.</li>
+<li>EXTRACT_RULES means that Gold and Extracted values are identical, and were extracted by rules. <strong>Extracted by rules</strong> means that value and text in extracted field are different.</li>
+<li>FAIL_MODEL means that Gold and Extracted values are different, and failed by a model. <strong>Failed by model</strong> means that value and text in extracted field are identical.</li>
+<li>FAIL_RULES means that Gold and Extracted values are identical, and failed by rules. <strong>Failed by rules</strong> means that value and text in extracted field are different.</li>
+</ul></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="iegoldvsextractedpergroupcsvprinter"></a><a href="#iegoldvsextractedpergroupcsvprinter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>IeGoldVsExtractedPerGroupCSVPrinter</h3>
+<p><strong><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/statistics/printer/IeGoldVsExtractedPerGroupCSVPrinter.html">IeGoldVsExtractedPerGroupCSVPrinter</a></strong>
+provides statistics for the Information Extraction use case and
+represents the mapping result between the gold and model extracted group
+field values.</p>
+<ul>
+<li><strong>Input</strong>: collection
+of <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/statistics/model/IeDocumentResult.html">IeDocumentResult</a>.</li>
+<li><strong>Output</strong>: mapping result between each Gold and Extracted
+<strong>group fields</strong>.<br>
+Group field is a collection of multi-value child fields associated
+via the <code>tabNumber</code> attribute.</li>
+</ul>
+<p>This printer can be configured to store results for all field names into
+one file (enabled by default), or into separate files where each file
+created for one field name
+(set <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/statistics/printer/BaseIeGoldVsExtractedPrinter.html#filePerField-boolean-">filePerField(true)</a>).
+The result will be written into <strong>group-gold-vs-extracted.csv</strong> or
+<strong>fieldName-group-gold-vs-extracted.csv</strong> where <code>fieldName</code> is a name of
+field when <code>filePerField</code> is set to <code>true</code>.</p>
+<p><img src="/docs/assets/automl/sdk/group-gold-vs-extracted.png" alt=""></p>
+<ul>
+<li><strong>FILE_NAME</strong> — name of a document file from training/evaluation set.</li>
+<li><strong>GROUP_NAME</strong> — name of a group field.</li>
+<li><strong>GOLD_TABNUMBER</strong> — value of the <code>tabnumber</code> attribute of all child fields of gold group field.</li>
+<li><strong>EXTRACTED_TABNUMBER</strong> — value of the <code>tabnumber</code> attribute of all child fields in the extracted group field.</li>
+<li><strong>EXTRACTED</strong> — extracted value of field. Value of this column depends on the evaluation type.</li>
+<li><strong>RESULT</strong> — type of mapping between the Gold and Extracted value. It can have the following values:
+<ul>
+<li>TP (True Positive) means that Gold and Extracted values are identical.</li>
+<li>FP (False Positive) means that the field was extracted, but does not map to any Gold value.</li>
+<li>FP, FN (False Positive, False Negative) means that both Gold and Extracted values are present, but differ.</li>
+<li>FN (False Negative) means that the Gold value is present but does not map to any Extracted field.</li>
+</ul></li>
+<li><strong>CHILD_NAME</strong> — name of a child field.</li>
+<li><strong>CHILD_GOLD</strong> — Gold value of a child field. Value of this column depends on the evaluation type.</li>
+<li><strong>CHILD_EXTRACTED</strong> — extracted value of a child field. Value of this column depends on the evaluation type.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="ieperfieldcsvprinter"></a><a href="#ieperfieldcsvprinter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>IePerFieldCSVPrinter</h3>
+<p><strong><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/statistics/printer/IePerFieldCSVPrinter.html">IePerFieldCSVPrinter</a></strong> provides statistics for the Information Extraction use case.</p>
+<ul>
+<li><strong>Input</strong>: collection of <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/statistics/model/IeDocumentResult.html">IeDocumentResult</a>.</li>
+<li><strong>Output</strong>: metrics for <strong>each field</strong> name based on the mapping result between each Gold and Extracted field.</li>
+</ul>
+<p>The result is written to the <strong>per-field.csv</strong> file, as in the following
+example.</p>
+<p><img src="/docs/assets/automl/sdk/per-field-statistic.png" alt=""></p>
+<ul>
+<li><strong>FIELD</strong> — name of a field.</li>
+<li><strong>TP —</strong> True Positive. Number of correctly extracted fields.</li>
+<li><strong>TN</strong> — True Negative. Always zero for Information Extraction tasks.</li>
+<li><strong>FP</strong> — False Positive. Number of extracted fields that are not identical to any gold field.</li>
+<li><strong>FN</strong> — False Negative. Number of gold fields that are not identical to any extracted fields.</li>
+<li><strong>P</strong> — <a href="https://en.wikipedia.org/wiki/Precision_and_recall">Precision</a>.</li>
+<li><strong>R</strong> — <a href="https://en.wikipedia.org/wiki/Precision_and_recall">Recall</a>.</li>
+<li><strong>F1</strong> — <a href="https://en.wikipedia.org/wiki/F1_score">F<sub>1</sub>score</a>.</li>
+<li><strong>A</strong> — Accuracy.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="iepergroupfieldcsvprinter"></a><a href="#iepergroupfieldcsvprinter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>IePerGroupFieldCSVPrinter</h3>
+<p><strong><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/statistics/printer/PerGroupFieldCSVPrinter.html">IePerGroupFieldCSVPrinter</a></strong> provides
+statistics for the Information Extraction use case.</p>
+<ul>
+<li><strong>Input</strong>: collection
+of <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/statistics/model/IeDocumentResult.html">IeDocumentResult</a>.</li>
+<li><strong>Output</strong>: metrics for <strong>each group field</strong> name based on the
+mapping result between each Gold and Extracted group field.</li>
+</ul>
+<p>The result is written into <strong>per-group-field.csv</strong> file.</p>
+<ul>
+<li><strong>FIELD</strong> — name of a field.</li>
+<li>**TP — **True Positive. Number of correctly extracted fields.</li>
+<li><strong>TN</strong> — True Negative. Always zero for Information Extraction
+tasks.</li>
+<li><strong>FP</strong> — False Positive. Number of extracted fields that are not
+identical to any gold field.</li>
+<li><strong>FN</strong> — False Negative. Number of gold fields that are not
+identical to any extracted fields.</li>
+<li><strong>P</strong> — <a href="https://en.wikipedia.org/wiki/Precision_and_recall">Precision</a>.</li>
+<li><strong>R</strong> — <a href="https://en.wikipedia.org/wiki/Precision_and_recall">Recall</a>.</li>
+<li><strong>F1</strong> — <a href="https://en.wikipedia.org/wiki/F1_score">F<sub>1</sub> score</a>.</li>
+<li><strong>A</strong> — Accuracy.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="classificationgoldvsextractedcsvprinter"></a><a href="#classificationgoldvsextractedcsvprinter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ClassificationGoldVsExtractedCSVPrinter</h3>
+<p><strong><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/statistics/printer/ClassificationGoldVsExtractedCSVPrinter.html">ClassificationGoldVsExtractedCSVPrinter</a></strong> provides statistics for the Classification use case.</p>
+<ul>
+<li><strong>Input</strong>: collection of <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/statistics/model/ClassificationDocumentResult.html">ClassificationDocumentResult</a></li>
+<li><strong>Output</strong>: mapping result between each Gold and Extracted label for each file.</li>
+</ul>
+<p>Results are written to <strong>label-gold-vs-extracted.csv</strong> file.</p>
+<p><img src="/docs/assets/automl/sdk/pergroup.png" alt=""></p>
+<ul>
+<li><strong>FILE_NAME</strong> — name of a document file from training/evaluation set.</li>
+<li><strong>GOLD_LABEL</strong> — Gold value of label for a document.</li>
+<li><strong>EXTRACTED_LABEL</strong> — Extracted value of label for a document.</li>
+<li><strong>RESULT</strong> — type of mapping between the Gold and Extracted value. It can have the following values:
+<ul>
+<li>TP (True Positive) means that Gold and Extracted values are identical.</li>
+<li>FP (False Positive) means that the field was extracted, but does not map to any Gold value.</li>
+<li>FP, FN (False Positive, False Negative) means that both Gold and Extracted values are present, but differ.</li>
+<li>FN (False Negative) means that the Gold value is present but does not map to any Extracted field.</li>
+</ul></li>
+<li><strong>REASON</strong> represents information about what caused the RESULT. It can have the following values:
+<ul>
+<li>EXTRACT_MODEL means that Gold and Extracted values are identical, and were extracted by a model.</li>
+<li>FAIL_MODEL means that Gold and Extracted values are different, and failed by a model.</li>
+</ul></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="classificationperlabelcsvprinter"></a><a href="#classificationperlabelcsvprinter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ClassificationPerLabelCSVPrinter</h3>
+<p><strong><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/statistics/printer/ClassificationPerLabelCSVPrinter.html">ClassificationPerLabelCSVPrinter</a></strong> provides statistics for the Classification use case.</p>
+<ul>
+<li><strong>Input</strong>: collection of <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/statistics/model/ClassificationDocumentResult.html">ClassificationDocumentResult</a>.</li>
+<li><strong>Output</strong>: metrics for each label in the mapping result between each gold and extracted labels for each document.</li>
+</ul>
+<p>Results are written to <strong>per-label.csv</strong> file.</p>
+<p><img src="/docs/assets/automl/sdk/statisticslabel.png" alt=""></p>
+<ul>
+<li><strong>LABEL</strong> — Name of a label.</li>
+<li><strong>TP</strong> — True Positive. Number of correctly extracted fields.</li>
+<li><strong>TN</strong> — True Negative. Always zero for Information Extraction tasks.</li>
+<li><strong>FP</strong> — False Positive. Number of extracted fields that are not identical to any gold field.</li>
+<li><strong>FN</strong> — False Negative. Number of gold fields that are not identical to any extracted fields.</li>
+<li><strong>P</strong> — <a href="https://en.wikipedia.org/wiki/Precision_and_recall">Precision</a>.</li>
+<li><strong>R</strong> — <a href="https://en.wikipedia.org/wiki/Precision_and_recall">Recall</a>.</li>
+<li><strong>F1</strong> — <a href="https://en.wikipedia.org/wiki/F1_score">F<sub>1</sub> score</a>.</li>
+<li><strong>A</strong> — Accuracy.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="statistics-configuration"></a><a href="#statistics-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Statistics Configuration</h2>
+<p>To configure statistics calculators, define a <code>@Named</code> component in your model configuration which returns a list of <code>StatisticsCalculator</code>.</p>
+<p>The following code sample can be applied to an Information Extraction model.</p>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.List;
+
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.ModelConfiguration;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.Named;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.statistics.StatisticsCalculator;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.nlp.component.statistics.IeStatisticsCalculator;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.nlp.component.statistics.StatisticsEvaluationType;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.nlp.component.statistics.printer.IeGoldVsExtractedCSVPrinter;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.nlp.component.statistics.printer.IeGoldVsExtractedPerGroupCSVPrinter;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.nlp.component.statistics.printer.IePerFieldCSVPrinter;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.nlp.component.statistics.printer.IePerGroupFieldCSVPrinter;
+
+<span class="hljs-meta">@ModelConfiguration</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CustomStatisticConfiguration</span> </span>{
+
+    <span class="hljs-meta">@Named</span>(<span class="hljs-string">"customStatistics"</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;StatisticsCalculator&gt; <span class="hljs-title">statisticsCalculators</span><span class="hljs-params">()</span> </span>{
+        List&lt;StatisticsCalculator&gt; calculators = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        <span class="hljs-comment">// add any number of OOTB or custom calculators</span>
+        calculators.add(<span class="hljs-keyword">new</span> IeStatisticsCalculator()
+                <span class="hljs-comment">// enable evaluation type (VALUE_BASED is enabled by default)</span>
+                .enable(StatisticsEvaluationType.VALUE_BASED).enable(StatisticsEvaluationType.POSITION_BASED)
+                .enable(StatisticsEvaluationType.TEXT_BASED)
+                <span class="hljs-comment">// add any number of OOTB or custom printers</span>
+                <span class="hljs-comment">// field printers</span>
+                .printer(<span class="hljs-keyword">new</span> IeGoldVsExtractedCSVPrinter())
+                .printer(<span class="hljs-keyword">new</span> IePerFieldCSVPrinter())
+                <span class="hljs-comment">// group field printers</span>
+                .printer(<span class="hljs-keyword">new</span> IeGoldVsExtractedPerGroupCSVPrinter())
+                .printer(<span class="hljs-keyword">new</span> IePerGroupFieldCSVPrinter()));
+        <span class="hljs-keyword">return</span> calculators;
+    }
+
+}
+</code></pre>
+<p>The next code sample can be applied in a Classification model.</p>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.List;
+
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.ModelConfiguration;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.Named;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.statistics.StatisticsCalculator;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.nlp.component.statistics.ClassificationStatisticsCalculator;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.nlp.component.statistics.printer.ClassificationGoldVsExtractedCSVPrinter;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.nlp.component.statistics.printer.ClassificationPerLabelCSVPrinter;
+
+<span class="hljs-meta">@ModelConfiguration</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CustomStatisticConfiguration</span> </span>{
+
+    <span class="hljs-meta">@Named</span>(<span class="hljs-string">"customStatistics"</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;StatisticsCalculator&gt; <span class="hljs-title">statisticsCalculators</span><span class="hljs-params">()</span> </span>{
+        List&lt;StatisticsCalculator&gt; calculators = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        <span class="hljs-comment">// add any number of calculators OOTB or custom</span>
+        calculators.add(<span class="hljs-keyword">new</span> ClassificationStatisticsCalculator()
+                <span class="hljs-comment">// add any number of printers OOTB or custom</span>
+                .printer(<span class="hljs-keyword">new</span> ClassificationGoldVsExtractedCSVPrinter())
+                .printer(<span class="hljs-keyword">new</span> ClassificationPerLabelCSVPrinter()));
+        <span class="hljs-keyword">return</span> calculators;
+    }
+
+}
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/10/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/spa/automl/automl-sdk/post-processing"><span class="arrow-prev">← </span><span>Post-Processing</span></a><a class="docs-next button" href="/docs/spa/automl/automl-sdk/model-configuration"><span>Model Configuration</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#main-interfaces">Main Interfaces</a><ul class="toc-headings"><li><a href="#o-processi-document">O process(I document)</a></li><li><a href="#void-calculatecollection-o-results">void calculate(Collection&lt;O&gt; results)</a></li><li><a href="#string-getdocumentid">String getDocumentId()</a></li><li><a href="#information-extraction">Information Extraction</a></li></ul></li><li><a href="#classification">Classification</a></li><li><a href="#printers">Printers</a><ul class="toc-headings"><li><a href="#iegoldvsextractedcsvprinter">IeGoldVsExtractedCSVPrinter</a></li><li><a href="#iegoldvsextractedpergroupcsvprinter">IeGoldVsExtractedPerGroupCSVPrinter</a></li><li><a href="#ieperfieldcsvprinter">IePerFieldCSVPrinter</a></li><li><a href="#iepergroupfieldcsvprinter">IePerGroupFieldCSVPrinter</a></li><li><a href="#classificationgoldvsextractedcsvprinter">ClassificationGoldVsExtractedCSVPrinter</a></li><li><a href="#classificationperlabelcsvprinter">ClassificationPerLabelCSVPrinter</a></li></ul></li><li><a href="#statistics-configuration">Statistics Configuration</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/wf-logo.svg" alt="Knowledgebase" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://www.workfusion.com/reports-whitepapers/">Reports &amp; Whitepapers</a></div><div><h5>Community</h5><a href="https://forum.workfusion.com/" target="_blank" rel="noreferrer noopener">Forum</a><a href="http://automationacademy.com/">Automation Academy</a><a href="https://partners.workfusion.com/">Partners Portal</a></div><div><h5>More</h5><a href="https://www.workfusion.com/iac/">Intelligent Automation Cloud</a></div></section><section class="copyright">Copyright © 2019 WorkFusion, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: 'PNQGK7RZR5',
+                apiKey: 'ba828b974aad37836106a37d2432da4b',
+                indexName: 'search-config',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en","version:undefined"]}
+              });
+            </script></body></html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Heartbeat configuration guide · Knowledgebase</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;Service details are available at &lt;a href=&quot;/docs/spa/admin/maintenance/common-services#heartbeat&quot;&gt;Common services&lt;/a&gt;.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Heartbeat configuration guide · Knowledgebase"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docusaurus.workfusion.com//"/><meta property="og:description" content="&lt;p&gt;Service details are available at &lt;a href=&quot;/docs/spa/admin/maintenance/common-services#heartbeat&quot;&gt;Common services&lt;/a&gt;.&lt;/p&gt;
+"/><meta property="og:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.4/fuse.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/WorkFusion_H_5_RGB.png" alt="Knowledgebase"/><h2 class="headerTitleWithLogo">Knowledgebase</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/terra" target="_self">WorkFusion 10.0</a></li><li class=""><a href="/docs/spa" target="_self">SPA</a></li><li class="siteNavGroupActive"><a href="/docs/spa/admin/install-spa/prepare/overview" target="_self">Administrator&#x27;s Guide</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Monitoring</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">System requirements<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/system-requirements">System requirements</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/infrastructure-capacity-planning">Infrastructure capacity planning</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/application-ports">Applications&#x27; ports</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/dns-names-configuration">DNS names configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/env-readiness-checklist">Environment readiness checklist</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Installation<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/overview-install">Overview</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Prepare for installation</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/overview">Prerequisites</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/create-users">Create users</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/prepare-tls-certificates">Prepare TLS certificates</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/prepare-servers">Prepare servers</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/install-spa">Install SPA</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/post-install">Post-installation tasks</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/uninstall-win">Uninstall WF components from Windows servers</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Maintenance<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/restart-servers">Restart servers</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/backup-and-restore-data">Backup and restore data</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/update-tls-certificates">Update TLS certificates</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/update-passwords">Update passwords</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Logs management</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/aggregate-and-view-logs">Aggregate and view logs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/filebeat-configuration">Filebeat configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/search-a-specific-message-in-logs">Search a specific message in logs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/archive-logs">Archive logs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/change-a-component-s-log-level">Change a component&#x27;s log level</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/reference-log-configuration-of-components">Reference: log configuration of components</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/reference-log-rotation">Reference: log rotation</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Service information</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/general-services-information">General services Information</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/inorder-and-deps-checker">Inorder and deps_checker</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/common-services">Common services</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/app">APP</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/int">INT</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/ocr">OCR</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/bep">BEP</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Monitoring<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/monitoring-overview">Monitoring overview</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/сhange-elk-admin-password">Сhange ELK admin password in Kibana</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/investigate-performance-hot-spot">Investigate performance hot spot in environment</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/spa/admin/monitoring/heartbeat-configuration-guide">Heartbeat configuration guide</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/metricbeat-configuration-guide">Metricbeat configuration guide</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/connect-external-elk">Integrate external ELK</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">License management<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/manage-workfusion-analytics-license">Manage WorkFusion Analytics license</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/activate-the-ocr-license">Activate OCR license</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/update-the-elk-license">Update ELK license</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/workfusion-libraries-and-tools">WorkFusion libraries and tools</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">OCR<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/ocr/scale-ocr">Scale OCR</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/ocr/install-second-ocr-server-in-same-spa-instance">Install second OCR server</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/ocr/migration-notes">OCR Migration Notes</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/ocr/advanced-configuration">Advanced Configuration</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Information security<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/info-sec/sso-integration">SSO integration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/info-sec/ldap-and-ad-integration">LDAP and AD integration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/info-sec/import-root-or-intermediate-ca-to-store">Import Root or Intermediate CA to Store</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/info-sec/manage-secure-properties">Manage secure properties</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Analytics<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/analytics/backup-restore-custom-dashboards">Backup and restore custom Analytics dashboards</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/analytics/using-tableau">Setup end-to-end SSI audit chart</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Advanced configuration<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/config-yml-options">config.yml options</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/hosts-yml-options">hosts.yml options</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/secret-vault-properties">Secrets vault properties</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/health-сheck-messages">Health сheck messages</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/configuration-and-health-check">Configuration and health check</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/crontab-jobs">Crontab jobs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/notifications-via-email">Notifications via email</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/prepare-rpa-ocrwin-and-bi-configurations">Prepare RPA, OCRWIN and BI configurations</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://git.workfusion.com/projects/DOC/repos/documentation/browse/docs/spa/admin/monitoring/heartbeat-configuration-guide.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Heartbeat configuration guide</h1></header><article><div><span><p>Service details are available at <a href="/docs/spa/admin/maintenance/common-services#heartbeat">Common services</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="general-configuration"></a><a href="#general-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>General Configuration</h2>
+<p>Configuration file <strong>heartbeat.yml</strong></p>
+<h3><a class="anchor" aria-hidden="true" id="input-config"></a><a href="#input-config" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Input config</h3>
+<pre><code class="hljs css language-bash">heartbeat.config.monitors:
+  <span class="hljs-comment"># Directory + glob pattern to search for configuration files</span>
+  path: {{ heartbeat.path.monitor + <span class="hljs-string">'/*.yml'</span> }}
+  reload.enabled: <span class="hljs-literal">true</span>
+  <span class="hljs-comment"># How often to check for changes</span>
+  reload.period: 60
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="output-config"></a><a href="#output-config" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Output config</h3>
+<pre><code class="hljs css language-bash">output.logstash:
+  <span class="hljs-comment"># The Logstash hosts</span>
+  hosts: [<span class="hljs-string">"{{ logstash_host }}:{{ logstash_heartbeat_port }}"</span>]
+
+  <span class="hljs-comment"># Optional SSL. By default is off.</span>
+  <span class="hljs-comment"># List of root certificates for HTTPS server verifications</span>
+  ssl.certificate_authorities: [<span class="hljs-string">"{{ heartbeat.path.home + '/ssl/ca.crt' }}"</span>]
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="input-configuration"></a><a href="#input-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Input Configuration</h2>
+<p>Configuration files <strong>monitors.d</strong> and <strong>*.yml</strong></p>
+<h3><a class="anchor" aria-hidden="true" id="http-monitors"></a><a href="#http-monitors" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>HTTP monitors</h3>
+<h4><a class="anchor" aria-hidden="true" id="workfusion"></a><a href="#workfusion" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Workfusion</h4>
+<p>Configuration file <strong>heartbeat-workfusion.yml</strong>.</p>
+<p>This monitor checks status of the <strong>workfusion</strong> service.</p>
+<pre><code class="hljs css language-bash">- <span class="hljs-built_in">type</span>: http
+  urls:
+  - <span class="hljs-string">"https://{{ app_hostname }}:{{ nginx_port_ssl }}/workfusion"</span>
+  schedule: <span class="hljs-string">'@every {{ heartbeat_monitors_http_schedule }}'</span>
+  timeout: 30s
+  name: <span class="hljs-string">'workfusion'</span>
+  ssl:
+    certificate_authorities: [<span class="hljs-string">'{{ heartbeat_home }}/ssl/ca.crt'</span>]
+    supported_protocols: [<span class="hljs-string">"TLSv1.2"</span>]
+  check.request:
+    method: GET
+  check.response:
+    status: 200
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="marathon"></a><a href="#marathon" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Marathon</h4>
+<p>Configuration file <strong>heartbeat-marathon.yml</strong>.</p>
+<p>This monitor checks status of marathon service.</p>
+<pre><code class="hljs css language-bash">- <span class="hljs-built_in">type</span>: http
+  urls:
+  - <span class="hljs-string">"https://{{ vds_master_hostname }}:{{ marathon_proxy_port }}/ui"</span>
+  schedule: <span class="hljs-string">'@every {{ heartbeat_monitors_http_schedule }}'</span>
+  timeout: 30s
+  name: <span class="hljs-string">'marathon'</span>
+  ssl:
+    certificate_authorities: [<span class="hljs-string">'{{ heartbeat_home }}/ssl/ca.crt'</span>]
+    supported_protocols: [<span class="hljs-string">"TLSv1.2"</span>]
+  check.request:
+    method: GET
+  check.response:
+    status: 200
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="tcp-monitors"></a><a href="#tcp-monitors" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>TCP monitors</h3>
+<h4><a class="anchor" aria-hidden="true" id="zookeeper"></a><a href="#zookeeper" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Zookeeper</h4>
+<p>Configuration file<strong>heartbeat-zookeeper.yml</strong>.</p>
+<p>This monitor checks status of zookeeper service.</p>
+<pre><code class="hljs css language-bash">- <span class="hljs-built_in">type</span>: tcp
+  hosts: [<span class="hljs-string">"{{ zookeeper_host }}"</span>]
+  ports: [{{ zookeeper_port }}]
+  schedule: <span class="hljs-string">'@every {{ heartbeat_monitors_http_schedule }}'</span>
+  timeout: 30s
+  name: <span class="hljs-string">'zookeeper'</span>
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/8/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/spa/admin/monitoring/investigate-performance-hot-spot"><span class="arrow-prev">← </span><span>Investigate performance hot spot in environment</span></a><a class="docs-next button" href="/docs/spa/admin/monitoring/metricbeat-configuration-guide"><span>Metricbeat configuration guide</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#general-configuration">General Configuration</a><ul class="toc-headings"><li><a href="#input-config">Input config</a></li><li><a href="#output-config">Output config</a></li></ul></li><li><a href="#input-configuration">Input Configuration</a><ul class="toc-headings"><li><a href="#http-monitors">HTTP monitors</a></li><li><a href="#tcp-monitors">TCP monitors</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/wf-logo.svg" alt="Knowledgebase" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://www.workfusion.com/reports-whitepapers/">Reports &amp; Whitepapers</a></div><div><h5>Community</h5><a href="https://forum.workfusion.com/" target="_blank" rel="noreferrer noopener">Forum</a><a href="http://automationacademy.com/">Automation Academy</a><a href="https://partners.workfusion.com/">Partners Portal</a></div><div><h5>More</h5><a href="https://www.workfusion.com/iac/">Intelligent Automation Cloud</a></div></section><section class="copyright">Copyright © 2019 WorkFusion, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: 'PNQGK7RZR5',
+                apiKey: 'ba828b974aad37836106a37d2432da4b',
+                indexName: 'search-config',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en","version:undefined"]}
+              });
+            </script></body></html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>LDAP and AD integration · Knowledgebase</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;overview&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#overview&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Overview&lt;/h2&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="LDAP and AD integration · Knowledgebase"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docusaurus.workfusion.com//"/><meta property="og:description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;overview&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#overview&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Overview&lt;/h2&gt;
+"/><meta property="og:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.4/fuse.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/WorkFusion_H_5_RGB.png" alt="Knowledgebase"/><h2 class="headerTitleWithLogo">Knowledgebase</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/terra" target="_self">WorkFusion 10.0</a></li><li class=""><a href="/docs/spa" target="_self">SPA</a></li><li class="siteNavGroupActive"><a href="/docs/spa/admin/install-spa/prepare/overview" target="_self">Administrator&#x27;s Guide</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Information security</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">System requirements<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/system-requirements">System requirements</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/infrastructure-capacity-planning">Infrastructure capacity planning</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/application-ports">Applications&#x27; ports</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/dns-names-configuration">DNS names configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/env-readiness-checklist">Environment readiness checklist</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Installation<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/overview-install">Overview</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Prepare for installation</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/overview">Prerequisites</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/create-users">Create users</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/prepare-tls-certificates">Prepare TLS certificates</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/prepare-servers">Prepare servers</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/install-spa">Install SPA</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/post-install">Post-installation tasks</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/uninstall-win">Uninstall WF components from Windows servers</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Maintenance<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/restart-servers">Restart servers</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/backup-and-restore-data">Backup and restore data</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/update-tls-certificates">Update TLS certificates</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/update-passwords">Update passwords</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Logs management</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/aggregate-and-view-logs">Aggregate and view logs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/filebeat-configuration">Filebeat configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/search-a-specific-message-in-logs">Search a specific message in logs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/archive-logs">Archive logs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/change-a-component-s-log-level">Change a component&#x27;s log level</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/reference-log-configuration-of-components">Reference: log configuration of components</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/reference-log-rotation">Reference: log rotation</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Service information</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/general-services-information">General services Information</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/inorder-and-deps-checker">Inorder and deps_checker</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/common-services">Common services</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/app">APP</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/int">INT</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/ocr">OCR</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/bep">BEP</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Monitoring<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/monitoring-overview">Monitoring overview</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/сhange-elk-admin-password">Сhange ELK admin password in Kibana</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/investigate-performance-hot-spot">Investigate performance hot spot in environment</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/heartbeat-configuration-guide">Heartbeat configuration guide</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/metricbeat-configuration-guide">Metricbeat configuration guide</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/connect-external-elk">Integrate external ELK</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">License management<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/manage-workfusion-analytics-license">Manage WorkFusion Analytics license</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/activate-the-ocr-license">Activate OCR license</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/update-the-elk-license">Update ELK license</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/workfusion-libraries-and-tools">WorkFusion libraries and tools</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">OCR<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/ocr/scale-ocr">Scale OCR</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/ocr/install-second-ocr-server-in-same-spa-instance">Install second OCR server</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/ocr/migration-notes">OCR Migration Notes</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/ocr/advanced-configuration">Advanced Configuration</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Information security<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/info-sec/sso-integration">SSO integration</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/spa/admin/info-sec/ldap-and-ad-integration">LDAP and AD integration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/info-sec/import-root-or-intermediate-ca-to-store">Import Root or Intermediate CA to Store</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/info-sec/manage-secure-properties">Manage secure properties</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Analytics<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/analytics/backup-restore-custom-dashboards">Backup and restore custom Analytics dashboards</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/analytics/using-tableau">Setup end-to-end SSI audit chart</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Advanced configuration<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/config-yml-options">config.yml options</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/hosts-yml-options">hosts.yml options</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/secret-vault-properties">Secrets vault properties</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/health-сheck-messages">Health сheck messages</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/configuration-and-health-check">Configuration and health check</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/crontab-jobs">Crontab jobs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/notifications-via-email">Notifications via email</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/prepare-rpa-ocrwin-and-bi-configurations">Prepare RPA, OCRWIN and BI configurations</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://git.workfusion.com/projects/DOC/repos/documentation/browse/docs/spa/admin/info-sec/ldap-and-ad-integration.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">LDAP and AD integration</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="overview"></a><a href="#overview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h2>
+<p><strong>Lightweight Directory Access Protocol</strong> (<strong>LDAP</strong>) is an open,
+vendor-neutral, industry standard application protocol for accessing and
+maintaining distributed directory information services over an IP
+network. Directory services play an important role in developing
+intranet and Internet applications by allowing the sharing of
+information about users, systems, networks, services, and applications
+throughout the network. As examples, directory services may provide any
+organized set of records, often with a hierarchical structure, such as a
+corporate email directory. Similarly, a telephone directory is a list of
+subscribers with an address and a phone number.</p>
+<p><strong>Active Directory</strong> (<strong>AD</strong>) is a directory service that
+Microsoft developed for Windows domain networks. It is included in most
+Windows Server operating systems as a set of processes and
+services. Initially, Active Directory was only in charge of centralized
+domain management. Starting with Windows Server 2008, however, Active
+Directory became an umbrella title for a broad range of directory-based
+identity-related services.</p>
+<p><strong>WorkFusion Control Tower</strong> and <strong>WorkSpace</strong> can provide security
+(authentication and authorization) through LDAP / AD integration.
+Authentication is based on Spring Security standard provider.</p>
+<p><img src="/docs/assets/spa/admin-guide/LDAP-diagram.png" alt=""></p>
+<h2><a class="anchor" aria-hidden="true" id="control-tower-configuration"></a><a href="#control-tower-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Control Tower Configuration</h2>
+<p>By default, Control Tower provides local user/groups/role management.
+LDAP / AD integration can be enabled by setting the following parameters
+in:</p>
+<ul>
+<li><p><strong>&lt;install-dir&gt;/workfusion/conf/workfusion.properties:</strong></p>
+<pre><code class="hljs css language-bash"><span class="hljs-comment"># ldap properties</span>
+ldap.enabled=<span class="hljs-literal">true</span>
+<span class="hljs-comment"># to activate LDAP with WF roles switch this property to true. No groups from LDAP will be used.</span>
+<span class="hljs-comment">#Properties ldap.group.base and ldap.group.filter will be ignored</span>
+ldap.internal.authorization.enabled=<span class="hljs-literal">false</span>
+
+<span class="hljs-comment"># container of corporate user database used for authentication</span>
+<span class="hljs-comment"># support several base directories pipe separated &lt;baseDN1&gt;|&lt;baseDN2&gt;|...</span>
+ldap.user.base=ou=People,dc=somecompanydomain,dc=com
+
+<span class="hljs-comment"># container of corporate user groups used for authorization</span>
+<span class="hljs-comment"># support several base directories pipe separated &lt;baseDN1&gt;|&lt;baseDN2&gt;|...</span>
+ldap.group.base=ou=Groups,dc=somecompanydomain,dc=com
+
+<span class="hljs-comment"># user filter for search, optional, alternative = (uid={0})</span>
+ldap.user.filter=(sAMAccountName={0})
+
+<span class="hljs-comment"># group filter for search, optional, alternative = (memberUid={1})</span>
+ldap.group.filter=(member={0})
+
+
+<span class="hljs-comment"># page size to load big amount of records to avoid size limit error</span>
+ldap.search.page.size=500
+<span class="hljs-comment"># group filter for list of all group names</span>
+ldap.search.all.groups.filter=(|(objectClass=group)(objectClass=groupOfNames)(objectClass=groupOfUniqueNames)(objectclass=posixGroup))
+<span class="hljs-comment"># ldap object attribute name that contains group name</span>
+ldap.search.groups.name.attribute=cn
+</code></pre></li>
+<li><p><strong>Default configuration:</strong></p>
+<pre><code class="hljs css language-bash"><span class="hljs-comment"># ldap properties</span>
+ldap.enabled=<span class="hljs-literal">false</span>
+ldap.internal.authorization.enabled=<span class="hljs-literal">false</span>
+ldap.user.filter=(sAMAccountName={0})
+ldap.group.filter=(member={0})
+ldap.search.page.size=500
+ldap.search.all.groups.filter=(|(objectClass=group)(objectClass=groupOfNames)(objectClass=groupOfUniqueNames)(objectclass=posixGroup))
+ldap.search.groups.name.attribute=cn
+</code></pre></li>
+<li><p><strong>Secure properties:</strong></p>
+<pre><code class="hljs css language-bash"><span class="hljs-comment"># ldap server url</span>
+ldap.server.url=ldaps://{host}:{port}
+
+<span class="hljs-comment"># system user cridentials</span>
+ldap.bind.dn=&lt;User distinguished name&gt;
+ldap.bind.password=&lt;User password&gt;
+</code></pre></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="external-authorization"></a><a href="#external-authorization" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>External authorization</h2>
+<p>Before enabling LDAP, at least one group must be mapped.</p>
+<p><img src="/docs/assets/spa/admin-guide/edit-user-group.png" alt=""></p>
+<p>User groups are mapped in Control Tower during create/edit a User Group
+(default user roles you can find in <a href="https://kb.workfusion.com/display/WF/User+Management">Role Management</a>):</p>
+<ul>
+<li><p>After successful login, a user will be created/updated with data fetched from LDAP / AD.</p></li>
+<li><p>The user properties cannot be changed in Control Tower, if LDAP configuration is enabled, only available filters can be added. The direct role selection is unavailable too.</p>
+<p><img src="/docs/assets/spa/admin-guide/edit-ldap-user.png" alt="Edit LDAP user"></p></li>
+</ul>
+<p>If LDAP is enabled,</p>
+<ul>
+<li>A user cannot be created, deleted, or disabled in Control
+Tower. The <strong>Create</strong>, <strong>Delete</strong>, and <strong>Disable</strong> buttons are unavailable.</li>
+<li>Sections <strong>System Preferences</strong> → <strong>User Settings</strong>: <strong>Account Details</strong>, and <strong>Change Password</strong> are disabled too.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="internal-authorization"></a><a href="#internal-authorization" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Internal authorization</h3>
+<p>To enable internal authorization, set property <code>ldap.internal.authorization.enabled</code> to <code>true</code>.</p>
+<p>Common assumptions:</p>
+<ul>
+<li>If LDAP authentication is passed successfully, a user is checked for existence in Control Tower, and Control Tower Roles are applied to the user, if such user exists. Otherwise, unable to login.</li>
+<li>User Properties cannot be changed in Control Tower, if LDAP Internal configuration is enabled. You can only edit roles and enable/disable the user.</li>
+<li>User can be created, deleted, and disabled in Control Tower. The <strong>Create</strong>, <strong>Delete</strong>, and <strong>Disable</strong> buttons on the <strong>User Management</strong> page are available, if LDAP with internal authorization is enabled.</li>
+<li>The <strong>System Preferences</strong> → <strong>User Settings</strong>: <strong>Account Details</strong>, and <strong>Change Password</strong> sections are disabled too.</li>
+<li>The following properties are not used, if LDAP with internal authorization is enabled:
+<ul>
+<li><code>ldap.group.base</code></li>
+<li><code>ldap.group.filt</code></li>
+</ul></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="integrate-ldap-ad"></a><a href="#integrate-ldap-ad" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Integrate LDAP / AD</h3>
+<p>This is an example to give an overview of LDAP / AD integration.</p>
+<ol>
+<li><p>You must have <code>distinqueshedName</code> and <code>password</code> of the &quot;system user&quot; to initialize the connection properties. It can be any user with privileges to read the directory tree and the object attributes.</p>
+<pre><code class="hljs css language-bash">ldap.bind.dn=CN=System User,OU=demo,DC=somecompany,DC=<span class="hljs-built_in">local</span>
+ldap.bind.password=********
+</code></pre>
+<p><img src="/docs/assets/spa/admin-guide/system-user.png" alt="System user"></p></li>
+<li><p>Configure the base directories for users and groups.</p>
+<pre><code class="hljs css language-bash">ldap.group.base=OU=Groups,OU=demo,DC=somecompany,DC=<span class="hljs-built_in">local</span>
+ldap.user.base=OU=Minsk,OU=Users,OU=demo,DC=somecompany,DC=<span class="hljs-built_in">local</span>
+</code></pre>
+<p>It supports multi values with pipe separator for users and groups.</p>
+<pre><code class="hljs css language-bash">ldap.user.base=OU=Minsk,OU=Users,OU=demo,DC=somecompany,DC=<span class="hljs-built_in">local</span>|OU=New York,OU=Users,OU=demo,DC=somecompany,DC=<span class="hljs-built_in">local</span>
+</code></pre>
+<p>When the base directories are configured properly, it can help reducing time for searching users and/or groups. <strong>ldap.group.base</strong> is a base directory for loading user's groups during login and a list of groups for &quot;External Group Name&quot; mapping on the <strong>Edit User Group</strong> page.</p>
+<p><img src="/docs/assets/spa/admin-guide/user-groups.png" alt="User groups"></p>
+<p><img src="/docs/assets/spa/admin-guide/user-groups-2.png" alt="User groups"></p></li>
+<li><p>Configure user filter.</p>
+<p><img src="/docs/assets/spa/admin-guide/user-filter.png" alt="User filter"></p>
+<p>Usually, a username attribute for Microsoft Active Directory is <code>sAMAccountName</code>. In this case <code>ldap.user.filter=(sAMAccountName={0})</code>.</p>
+<p>For example, if we are going to use the email for login, so the filter looks as <code>ldap.user.filter=(mail={0})</code>. Keep in mind, that a user filter must return a unique result, otherwise it is configured incorrectly.</p></li>
+<li><p>Configure a user groups filter.</p>
+<p><img src="/docs/assets/spa/admin-guide/user-groups-filter.png" alt="User groups filter"></p>
+<p><code>ldap.group.filter=(member={0})</code>. In this case the <code>{0}</code> parameter is <code>distinqueshedName</code> of the logging in user.</p>
+<p>For example, an alternative filter <code>ldap.group.filter=(memberUid={1}</code>), In this case the <code>{1}</code> parameter is <code>username</code> of the logging in user.</p></li>
+<li><p>Configure the filter to fetch all group names. For that in <strong>Control Tower</strong> →  <strong>Create/Edit User Group</strong> page, fill <strong>External Group Name</strong>.</p>
+<p><code>ldap.search.all.groups.filter=(objectClass=groupOfNames)</code>
+<code>[ldap.search.groups.name](http://ldap.search.groups.name/).attribute=cn</code></p>
+<p><img src="/docs/assets/spa/admin-guide/fetch-group-names.png" alt="Fetch group names"></p></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="workspace-configuration"></a><a href="#workspace-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>WorkSpace configuration</h2>
+<p>By default, WorkSpace provides local user/role management. LDAP / AD integration can be enabled by setting the following parameters:</p>
+<ul>
+<li><p>In  <strong>&lt;install-dir&gt;/workspace/conf/workspace.properties</strong> or <strong>workspace-sandbox.properties</strong>:</p>
+<pre><code class="hljs css language-bash"><span class="hljs-comment"># ldap properties</span>
+ldap.enabled=<span class="hljs-literal">true</span>
+
+<span class="hljs-comment"># activate internal authorization if swithed to true with ldap.enabled</span>
+ldap.internal.authorization.enabled=<span class="hljs-literal">false</span>
+
+<span class="hljs-comment"># Comma separated group names from LDAP for mapping to worker users</span>
+ldap.worker.groups=CC Dev,Galiot,CC Ops
+
+<span class="hljs-comment"># Comma separated group of roles from LDAP which are mapped to the WorkSpace Requester role</span>
+ldap.requester.groups=CC Admin
+
+<span class="hljs-comment"># Name of license that is set to requester if new requester is created</span>
+ldap.requester.license=license_name
+
+<span class="hljs-comment"># container of corporate user database used for authentication</span>
+<span class="hljs-comment"># support several base directories pipe separated &lt;baseDN1&gt;|&lt;baseDN2&gt;|...</span>
+ldap.user.base=ou=People,dc=crowdcomputingsystems,dc=com
+
+<span class="hljs-comment"># container of corporate user groups used for authorization</span>
+<span class="hljs-comment"># support several base directories pipe separated &lt;baseDN1&gt;|&lt;baseDN2&gt;|...</span>
+ldap.group.base=ou=Groups,dc=crowdcomputingsystems,dc=com
+
+<span class="hljs-comment"># user filter for search, optional, alternative= (uid={0})</span>
+ldap.user.filter=(sAMAccountName={0})
+
+<span class="hljs-comment"># group filter for search, optional, alternative = (memberUid={1})</span>
+ldap.group.filter=(member={0})
+
+<span class="hljs-comment"># optional block</span>
+ldap.user.attribute.email=mail
+ldap.user.attribute.firstName=givenname
+ldap.user.attribute.lastName=sn
+ldap.user.attribute.country=country
+</code></pre>
+<p><em>User group mapping is configured through <strong>ldap.worker.groups</strong></em></p></li>
+<li><p><strong>Default configuration</strong>:</p>
+<pre><code class="hljs css language-bash"><span class="hljs-comment"># ldap properties</span>
+ldap.enabled=<span class="hljs-literal">false</span>
+ldap.internal.authorization.enabled=<span class="hljs-literal">false</span>
+ldap.user.filter=(sAMAccountName={0})
+ldap.group.filter=(member={0})
+ldap.user.attribute.email=mail
+ldap.user.attribute.firstName=givenname
+ldap.user.attribute.lastName=sn
+ldap.user.attribute.country=country
+</code></pre></li>
+<li><p><strong>Secure properties</strong>:</p>
+<pre><code class="hljs css language-bash">ws.secure.ldap.server.url=ldaps://{host}:{port}
+<span class="hljs-comment"># system user cridentials</span>
+ws.secure.ldap.bind.dn=&lt;User distinguished name&gt;
+ws.secure.ldap.bind.password=&lt;User password&gt;
+</code></pre></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="external-authorization-1"></a><a href="#external-authorization-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>External authorization</h3>
+<p>After successful login, a user will be created/updated with data fetched from LDAP / AD.</p>
+<p><em>Register</em> and <em>Forgot password</em> functionality is unavailable, if LDAP /
+AD is integrated.</p>
+<p><img src="/docs/assets/spa/admin-guide/workspace-login.png" alt="workspace-login"></p>
+<h3><a class="anchor" aria-hidden="true" id="internal-authorization-1"></a><a href="#internal-authorization-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Internal authorization</h3>
+<p>To enable internal authorization, set property <code>ldap.internal.authorization.enabled</code> to <code>true</code>.</p>
+<p>Common assumptions:</p>
+<ul>
+<li>If LDAP authentication is passed successfully, a user is checked for existence in WorkSpace, and WorkSpace Roles are applied to the user, if such user exists. Otherwise, unable to login.</li>
+<li>User Properties cannot be changed in WorkSpace, if LDAP Internal configuration is enabled. You can only enable and disable the user.</li>
+<li>A user can be created, deleted, or disabled in WorkSpace. The <strong>Create</strong>, <strong>Delete</strong>, and <strong>Disable</strong> buttons on the Workers and Requesters pages are available for requesters.</li>
+<li>The following properties are not used, if LDAP with internal authorization is enabled:
+<ul>
+<li><code>ldap.group.base</code></li>
+<li><code>ldap.group.filter</code></li>
+</ul></li>
+</ul>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 6/28/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/spa/admin/info-sec/sso-integration"><span class="arrow-prev">← </span><span>SSO integration</span></a><a class="docs-next button" href="/docs/spa/admin/info-sec/import-root-or-intermediate-ca-to-store"><span>Import Root or Intermediate CA to Store</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#overview">Overview</a></li><li><a href="#control-tower-configuration">Control Tower Configuration</a></li><li><a href="#external-authorization">External authorization</a><ul class="toc-headings"><li><a href="#internal-authorization">Internal authorization</a></li><li><a href="#integrate-ldap-ad">Integrate LDAP / AD</a></li></ul></li><li><a href="#workspace-configuration">WorkSpace configuration</a><ul class="toc-headings"><li><a href="#external-authorization-1">External authorization</a></li><li><a href="#internal-authorization-1">Internal authorization</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/wf-logo.svg" alt="Knowledgebase" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://www.workfusion.com/reports-whitepapers/">Reports &amp; Whitepapers</a></div><div><h5>Community</h5><a href="https://forum.workfusion.com/" target="_blank" rel="noreferrer noopener">Forum</a><a href="http://automationacademy.com/">Automation Academy</a><a href="https://partners.workfusion.com/">Partners Portal</a></div><div><h5>More</h5><a href="https://www.workfusion.com/iac/">Intelligent Automation Cloud</a></div></section><section class="copyright">Copyright © 2019 WorkFusion, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: 'PNQGK7RZR5',
+                apiKey: 'ba828b974aad37836106a37d2432da4b',
+                indexName: 'search-config',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en","version:undefined"]}
+              });
+            </script></body></html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Prepare servers · Knowledgebase</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;prepare-ms-sql-server&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#prepare-ms-sql-server&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Prepare MS SQL server&lt;/h2&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Prepare servers · Knowledgebase"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docusaurus.workfusion.com//"/><meta property="og:description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;prepare-ms-sql-server&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#prepare-ms-sql-server&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Prepare MS SQL server&lt;/h2&gt;
+"/><meta property="og:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.4/fuse.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/WorkFusion_H_5_RGB.png" alt="Knowledgebase"/><h2 class="headerTitleWithLogo">Knowledgebase</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/terra" target="_self">WorkFusion 10.0</a></li><li class=""><a href="/docs/spa" target="_self">SPA</a></li><li class="siteNavGroupActive"><a href="/docs/spa/admin/install-spa/prepare/overview" target="_self">Administrator&#x27;s Guide</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Prepare for installation</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">System requirements<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/system-requirements">System requirements</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/infrastructure-capacity-planning">Infrastructure capacity planning</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/application-ports">Applications&#x27; ports</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/dns-names-configuration">DNS names configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/env-readiness-checklist">Environment readiness checklist</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Installation<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/overview-install">Overview</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Prepare for installation</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/overview">Prerequisites</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/create-users">Create users</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/prepare-tls-certificates">Prepare TLS certificates</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/prepare-servers">Prepare servers</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/install-spa">Install SPA</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/post-install">Post-installation tasks</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/uninstall-win">Uninstall WF components from Windows servers</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Maintenance<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/restart-servers">Restart servers</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/backup-and-restore-data">Backup and restore data</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/update-tls-certificates">Update TLS certificates</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/update-passwords">Update passwords</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Logs management</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/aggregate-and-view-logs">Aggregate and view logs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/filebeat-configuration">Filebeat configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/search-a-specific-message-in-logs">Search a specific message in logs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/archive-logs">Archive logs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/change-a-component-s-log-level">Change a component&#x27;s log level</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/reference-log-configuration-of-components">Reference: log configuration of components</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/reference-log-rotation">Reference: log rotation</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Service information</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/general-services-information">General services Information</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/inorder-and-deps-checker">Inorder and deps_checker</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/common-services">Common services</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/app">APP</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/int">INT</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/ocr">OCR</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/bep">BEP</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Monitoring<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/monitoring-overview">Monitoring overview</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/сhange-elk-admin-password">Сhange ELK admin password in Kibana</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/investigate-performance-hot-spot">Investigate performance hot spot in environment</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/heartbeat-configuration-guide">Heartbeat configuration guide</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/metricbeat-configuration-guide">Metricbeat configuration guide</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/connect-external-elk">Integrate external ELK</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">License management<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/manage-workfusion-analytics-license">Manage WorkFusion Analytics license</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/activate-the-ocr-license">Activate OCR license</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/update-the-elk-license">Update ELK license</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/workfusion-libraries-and-tools">WorkFusion libraries and tools</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">OCR<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/ocr/scale-ocr">Scale OCR</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/ocr/install-second-ocr-server-in-same-spa-instance">Install second OCR server</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/ocr/migration-notes">OCR Migration Notes</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/ocr/advanced-configuration">Advanced Configuration</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Information security<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/info-sec/sso-integration">SSO integration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/info-sec/ldap-and-ad-integration">LDAP and AD integration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/info-sec/import-root-or-intermediate-ca-to-store">Import Root or Intermediate CA to Store</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/info-sec/manage-secure-properties">Manage secure properties</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Analytics<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/analytics/backup-restore-custom-dashboards">Backup and restore custom Analytics dashboards</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/analytics/using-tableau">Setup end-to-end SSI audit chart</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Advanced configuration<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/config-yml-options">config.yml options</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/hosts-yml-options">hosts.yml options</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/secret-vault-properties">Secrets vault properties</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/health-сheck-messages">Health сheck messages</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/configuration-and-health-check">Configuration and health check</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/crontab-jobs">Crontab jobs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/notifications-via-email">Notifications via email</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/prepare-rpa-ocrwin-and-bi-configurations">Prepare RPA, OCRWIN and BI configurations</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://git.workfusion.com/projects/DOC/repos/documentation/browse/docs/spa/admin/install-spa/prepare/prepare-servers.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Prepare servers</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="prepare-ms-sql-server"></a><a href="#prepare-ms-sql-server" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Prepare MS SQL server</h2>
+<p>For Workfusion SPA installation you need to have an existing activated
+instance of the MS SQL server. The server must be up and running during
+the Workfusion SPA installation.</p>
+<p>To prepare a MS SQL server:</p>
+<ol>
+<li><p>Create the <strong>&lt;mssql_db_name&gt;</strong> database, and specify the database name. For other options you may use the default values.</p>
+<p><img src="/docs/assets/spa/admin-guide/create-db.png" alt="Create DB"></p></li>
+<li><p>Create the <strong>&lt;mssql_dba_user&gt;</strong> owner with the full-access permissions for the  database. This user must be later specified in <strong>config.yml</strong>. To create:</p>
+<ol>
+<li><p>On a MS SQL server, create the <strong>mssql</strong> login, specify the <strong>login</strong> name, and then make sure that the <strong>Enforce password policy</strong> check box is not selected.</p></li>
+<li><p>In the <strong>Default database</strong> box, specify the  database, and then choose English as <strong>Default language</strong>.</p></li>
+<li><p>In the <strong>Select a page</strong> group, click <strong>User mapping</strong>, and then select the <strong>&lt;mssql_dba_user&gt;</strong> check box to map the user to the <strong>&lt;mssql_db_name&gt;</strong> database. Leave all other options unchanged.</p>
+<p><img src="/docs/assets/spa/admin-guide/create-db-user.png" alt="Create DB User"></p></li>
+<li><p>In the database <strong>Users</strong>, select the <strong>db_owner</strong> check box to assign <strong>&lt;mssql_dba_user&gt;</strong> to the <strong>db_owner</strong> role.</p>
+<p><img src="/docs/assets/spa/admin-guide/assign-to-group.png" alt="Assign to group"></p></li>
+</ol></li>
+<li><p>Create the following MS SQL login names and passwords for the
+Workfusion components:</p>
+<ul>
+<li><p>mssql_dba_user</p></li>
+<li><p>mssql_ct_user</p></li>
+<li><p>mssql_ws_user</p></li>
+<li><p>mssql_sqc_user</p></li>
+<li><p>mssql_ds_user</p></li>
+<li><p>mssql_rpa_user</p></li>
+<li><p>mssql_pm_user</p></li>
+<li><p>mssql_dm_user</p></li>
+<li><p>mssql_rapi_user</p></li>
+<li><p>mssql_ocr_user</p></li>
+</ul>
+<p>For the description of these parameters, see <a href="/docs/spa/admin/advanced/config-yml-options">config.yml options</a>.</p></li>
+<li><p>For each login, specify the following parameters:</p>
+<ul>
+<li><p>If you use the <strong>SQL Server authentication</strong>,</p>
+<ol>
+<li>Specify the <strong>login</strong> name.</li>
+<li>Make sure that the <strong>Enforce password policy</strong> check box is not selected.</li>
+<li>In the <strong>Default database</strong> box, specify the database.</li>
+<li>Choose English as <strong>Default language</strong>.</li>
+</ol>
+<p><img src="/docs/assets/spa/admin-guide/sql-auth.png" alt="SQL auth"></p></li>
+<li><p>If you use <strong>Windows authentication</strong>,</p>
+<ol>
+<li>Select a corresponding <strong>login</strong> name.</li>
+<li>In the <strong>Default database</strong> box, specify the database.</li>
+<li>Choose English as <strong>Default language</strong>.</li>
+<li>For other options leave the default values.</li>
+</ol>
+<p><img src="/docs/assets/spa/admin-guide/win-auth.png" alt="Win auth"></p></li>
+</ul></li>
+<li><p>When <a href="#configure-installation">configuring</a> the Integration server, on the <strong>INT</strong> server, in the <strong>config.yml</strong> file, in the <strong><code>#MSSQL</code></strong> section, remember to specify the corresponding login names and passwords, that you have created on the previous step.</p></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="prepare-integration-server"></a><a href="#prepare-integration-server" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Prepare Integration server</h2>
+<h3><a class="anchor" aria-hidden="true" id="extract-installation-packages"></a><a href="#extract-installation-packages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Extract installation packages</h3>
+<p>To extract installation packages:</p>
+<ol>
+<li><p>Log in to the Integration server as a <a href="/docs/spa/admin/install-spa/prepare/create-users#on-the-int-server">Linux installation user</a>, by using Linux Terminal, Windows PuTTY, or any other SSH client:</p>
+<pre><code class="hljs css language-bash">$ ssh -i &lt;path-to-private-key.pem&gt; &lt;username&gt;@&lt;hostname.example.com&gt;
+</code></pre></li>
+<li><p>In <strong>&lt;install-dir&gt;</strong>, create a directory for the WorkFusion installation package, for example, <strong>/opt/workfusion/wf_installer</strong>. Grant the read access for this directory to all users:</p>
+<pre><code class="hljs css language-bash">$ sudo mkdir -p /opt/workfusion/wf_installer
+$ sudo chmod 0755 /opt/workfusion/wf_installer
+</code></pre></li>
+<li><p>Make sure that the Linux installation user is an owner of the installation directory:</p>
+<pre><code class="hljs css language-bash">$ sudo chown -R &lt;username&gt;:&lt;username&gt; /opt/workfusion/
+</code></pre></li>
+<li><p>Download the provided installation package with any file retrieving tool, for example, <code>wget</code> or <code>curl</code>:</p>
+<ul>
+<li><p>If the Internet access is available on the server:</p>
+<pre><code class="hljs css language-bash">$ curl <span class="hljs-string">'https://link_to_installer'</span> --output /opt/workfusion/workfusion-full-package-&lt;version&gt;.tar.gz
+</code></pre></li>
+<li><p>If the Internet access is not available on the Integration server, download the SPA installer and copy it
+as <strong>/opt/workfusion/workfusion-full-package-.tar.gz</strong> on the Integration server.</p></li>
+</ul></li>
+<li><p>Extract the downloaded package to the directory:</p>
+<pre><code class="hljs css language-bash">$ tar -xzvf /opt/workfusion/workfusion-full-package-&lt;version&gt;.tar.gz --strip 1 -C /opt/workfusion/wf_installer
+</code></pre></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="configure-installation"></a><a href="#configure-installation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configure installation</h3>
+<p>To configure installation:</p>
+<ol>
+<li><p>In your <strong>&lt;package-dir&gt;</strong> directory, edit the <strong>hosts.yml</strong> configuration file. The <strong>vi</strong> text editor is used in the example below:</p>
+<pre><code class="hljs css language-bash">$ vi hosts.yml
+</code></pre>
+<p>Refer to the <a href="/docs/spa/admin/advanced/hosts-yml-options">hosts.yml options</a> section for more details on each option.</p></li>
+<li><p>In the same directory, change the permissions for the <strong>config.yml</strong> file:</p>
+<pre><code class="hljs css language-bash">$ sudo chmod 644 config.yml
+</code></pre></li>
+<li><p>Open the <strong>&lt;package-dir&gt;/config.yml</strong> file, and in the parameter <code>ansible_vault_password</code>, change the ansible vault password:</p>
+<pre><code class="hljs css language-bash">$ vi config.yml
+</code></pre>
+<p>The password is used for encrypting the <strong>config.yml</strong> at the following step and will be asked several times during the installation of the components. We strongly recommend to secure and memorize it. When creating passwords, make sure they are strong enough and meet the following requirements:</p>
+<p><img src="/docs/assets/spa/admin-guide/ansible-pass.png" alt="Ansible pass"></p>
+<p>Optionally, on the <strong>INT</strong> server, run the following command to automatically generate passwords for the WorkFusion internal services according to product policies. We strongly recommend to change them manually for security reasons. Note that the command doesn't generate end-user password.</p>
+<pre><code class="hljs css language-bash">$ ./install.sh passwords generate
+</code></pre>
+<p>As a result, in <strong>config.yml</strong>, the passwords for most services, except for the following end-user ones, are created:</p>
+<pre><code class="hljs css language-text">"wf_password"
+"ldap_bind_password"
+"mail_pass"
+"tableau_dashboard_pass"
+"tableau_automation_pass"
+"windows_installation_pass"
+"elk_admin_pass"
+"ansible_vault_password”
+"bot_relay_user_pass"
+"bot_user_pass"
+</code></pre>
+<p>If needed, change other secrets and parameters, as well. After that,
+save and close the file.</p>
+<p>Remember, in the <code>#MSSQL</code> section, specify the corresponding MS SQL login names and passwords, that you have created earlier.</p></li>
+<li><p>In your <strong>&lt;package-dir&gt;</strong>, encrypt the <strong>config.yml</strong> file:</p>
+<pre><code class="hljs css language-bash">$ ./install.sh encrypt config
+</code></pre>
+<p>Note that WorkFusion SPA 10 installer will not let you start the installation until <strong>config.yml</strong> is encrypted.</p>
+<p>If needed, you can later edit the encrypted file with the following commands:</p>
+<pre><code class="hljs css language-bash">$ <span class="hljs-built_in">cd</span> /opt/workfusion/wf_installer
+$ ./install.sh edit_config int
+</code></pre>
+<p>Refer to the <a href="/docs/spa/admin/advanced/config-yml-options">config.yml options</a> section for more details on each
+configuration option.</p></li>
+<li><p>Prepare the TLS certificates, as described in <a href="/docs/spa/admin/install-spa/prepare/prepare-tls-certificates">Prepare TLS certificates for installation</a>.</p></li>
+<li><p>Copy the provided <strong>license.properties</strong> file to the installation directory to install the WorkFusion license, for example, <strong>/opt/workfusion/wf_installer/license.properties</strong>.</p>
+<p>If you perform installation on your own, request the license file from your WorkFusion Account Manager in the same way, as you receive the Tableau license.</p></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="prepare-windows-servers"></a><a href="#prepare-windows-servers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Prepare Windows servers</h2>
+<p>The following operations must be performed on all Windows servers.</p>
+<p>To configure access for SPA installation:</p>
+<ol>
+<li><p>Connect to the remote Windows server via Remote Desktop or any other client as a Windows installation user (see <a href="/docs/spa/admin/install-spa/prepare/create-users#on-windows-servers">Create installation users</a>).</p></li>
+<li><p>Run <strong>PowerShell</strong> as Administrator.</p></li>
+<li><p>In <strong>PowerShell</strong>, run the following commands:</p>
+<pre><code class="hljs css language-powershell"><span class="hljs-variable">$url</span> = <span class="hljs-string">"https://s3.amazonaws.com/workfusion-installer/blobs/artifacts/winrm-config/ConfigureRemotingForAnsible.ps1"</span>
+<span class="hljs-variable">$file</span> = <span class="hljs-string">"<span class="hljs-variable">$env:c</span>\ConfigureRemotingForAnsible.ps1"</span>
+(<span class="hljs-built_in">New-Object</span> -TypeName System.Net.WebClient).DownloadFile(<span class="hljs-variable">$url</span>, <span class="hljs-variable">$file</span>)
+powershell.exe -ExecutionPolicy ByPass -File <span class="hljs-variable">$file</span> -Verbose
+</code></pre>
+<p>The script checks the current WinRM (PS Remoting), enables CredSSP
+authentication, creates SSL listener and configures firewall for
+WinRM HTTPS connections to allow Ansible to connect, authenticate,
+and execute PowerShell commands.</p></li>
+</ol>
+<p>If the Internet access is not available on the target server:</p>
+<ol>
+<li><p>Download the script from <a href="https://s3.amazonaws.com/workfusion-installer/blobs/artifacts/winrm-config/ConfigureRemotingForAnsible.ps1">https://s3.amazonaws.com/workfusion-installer/blobs/artifacts/winrm-config/ConfigureRemotingForAnsible.ps1</a> and save it to the target windows server manually, for example,     to <strong>C:\tmp\ConfigureRemotingForAnsible.ps</strong>1.</p></li>
+<li><p>Run <strong>PowerShell</strong> as Administrator.</p></li>
+<li><p>In <strong>PowerShell</strong>, run the following command:</p>
+<pre><code class="hljs css language-powershell">powershell.exe -ExecutionPolicy ByPass C:\tmp\ConfigureRemotingForAnsible.ps1
+</code></pre></li>
+</ol>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/9/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/spa/admin/install-spa/prepare/prepare-tls-certificates"><span class="arrow-prev">← </span><span>Prepare TLS certificates</span></a><a class="docs-next button" href="/docs/spa/admin/install-spa/install-spa"><span>Install SPA</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#prepare-ms-sql-server">Prepare MS SQL server</a></li><li><a href="#prepare-integration-server">Prepare Integration server</a><ul class="toc-headings"><li><a href="#extract-installation-packages">Extract installation packages</a></li><li><a href="#configure-installation">Configure installation</a></li></ul></li><li><a href="#prepare-windows-servers">Prepare Windows servers</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/wf-logo.svg" alt="Knowledgebase" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://www.workfusion.com/reports-whitepapers/">Reports &amp; Whitepapers</a></div><div><h5>Community</h5><a href="https://forum.workfusion.com/" target="_blank" rel="noreferrer noopener">Forum</a><a href="http://automationacademy.com/">Automation Academy</a><a href="https://partners.workfusion.com/">Partners Portal</a></div><div><h5>More</h5><a href="https://www.workfusion.com/iac/">Intelligent Automation Cloud</a></div></section><section class="copyright">Copyright © 2019 WorkFusion, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: 'PNQGK7RZR5',
+                apiKey: 'ba828b974aad37836106a37d2432da4b',
+                indexName: 'search-config',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en","version:undefined"]}
+              });
+            </script></body></html>

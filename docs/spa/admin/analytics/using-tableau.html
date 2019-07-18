@@ -1,0 +1,163 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Setup end-to-end SSI audit chart · Knowledgebase</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;This guide describes the usage of the WorkFusion Analytics Desktop, WorkFusion Analytics Server, and WorkFusion application integration. You&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Setup end-to-end SSI audit chart · Knowledgebase"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docusaurus.workfusion.com//"/><meta property="og:description" content="&lt;p&gt;This guide describes the usage of the WorkFusion Analytics Desktop, WorkFusion Analytics Server, and WorkFusion application integration. You&lt;/p&gt;
+"/><meta property="og:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.4/fuse.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/WorkFusion_H_5_RGB.png" alt="Knowledgebase"/><h2 class="headerTitleWithLogo">Knowledgebase</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/terra" target="_self">WorkFusion 10.0</a></li><li class=""><a href="/docs/spa" target="_self">SPA</a></li><li class="siteNavGroupActive"><a href="/docs/spa/admin/install-spa/prepare/overview" target="_self">Administrator&#x27;s Guide</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Analytics</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">System requirements<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/system-requirements">System requirements</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/infrastructure-capacity-planning">Infrastructure capacity planning</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/application-ports">Applications&#x27; ports</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/dns-names-configuration">DNS names configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/env-readiness-checklist">Environment readiness checklist</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Installation<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/overview-install">Overview</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Prepare for installation</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/overview">Prerequisites</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/create-users">Create users</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/prepare-tls-certificates">Prepare TLS certificates</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/prepare-servers">Prepare servers</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/install-spa">Install SPA</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/post-install">Post-installation tasks</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/uninstall-win">Uninstall WF components from Windows servers</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Maintenance<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/restart-servers">Restart servers</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/backup-and-restore-data">Backup and restore data</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/update-tls-certificates">Update TLS certificates</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/update-passwords">Update passwords</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Logs management</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/aggregate-and-view-logs">Aggregate and view logs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/filebeat-configuration">Filebeat configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/search-a-specific-message-in-logs">Search a specific message in logs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/archive-logs">Archive logs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/change-a-component-s-log-level">Change a component&#x27;s log level</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/reference-log-configuration-of-components">Reference: log configuration of components</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/reference-log-rotation">Reference: log rotation</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Service information</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/general-services-information">General services Information</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/inorder-and-deps-checker">Inorder and deps_checker</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/common-services">Common services</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/app">APP</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/int">INT</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/ocr">OCR</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/bep">BEP</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Monitoring<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/monitoring-overview">Monitoring overview</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/сhange-elk-admin-password">Сhange ELK admin password in Kibana</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/investigate-performance-hot-spot">Investigate performance hot spot in environment</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/heartbeat-configuration-guide">Heartbeat configuration guide</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/metricbeat-configuration-guide">Metricbeat configuration guide</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/connect-external-elk">Integrate external ELK</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">License management<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/manage-workfusion-analytics-license">Manage WorkFusion Analytics license</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/activate-the-ocr-license">Activate OCR license</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/update-the-elk-license">Update ELK license</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/workfusion-libraries-and-tools">WorkFusion libraries and tools</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">OCR<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/ocr/scale-ocr">Scale OCR</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/ocr/install-second-ocr-server-in-same-spa-instance">Install second OCR server</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/ocr/migration-notes">OCR Migration Notes</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/ocr/advanced-configuration">Advanced Configuration</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Information security<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/info-sec/sso-integration">SSO integration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/info-sec/ldap-and-ad-integration">LDAP and AD integration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/info-sec/import-root-or-intermediate-ca-to-store">Import Root or Intermediate CA to Store</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/info-sec/manage-secure-properties">Manage secure properties</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Analytics<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/analytics/backup-restore-custom-dashboards">Backup and restore custom Analytics dashboards</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/spa/admin/analytics/using-tableau">Setup end-to-end SSI audit chart</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Advanced configuration<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/config-yml-options">config.yml options</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/hosts-yml-options">hosts.yml options</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/secret-vault-properties">Secrets vault properties</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/health-сheck-messages">Health сheck messages</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/configuration-and-health-check">Configuration and health check</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/crontab-jobs">Crontab jobs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/notifications-via-email">Notifications via email</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/prepare-rpa-ocrwin-and-bi-configurations">Prepare RPA, OCRWIN and BI configurations</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://git.workfusion.com/projects/DOC/repos/documentation/browse/docs/spa/admin/analytics/using-tableau.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Setup end-to-end SSI audit chart</h1></header><article><div><span><p>This guide describes the usage of the WorkFusion Analytics Desktop, WorkFusion Analytics Server, and WorkFusion application integration. You
+can explore the end-to-end usage process based on simple Area Charts
+setup for one PostgreSQL table.</p>
+<p>The guide shows how the quantity of processed human tasks versus automation tasks changes in the course of time.</p>
+<h2><a class="anchor" aria-hidden="true" id="workfusion-analytics-desktop"></a><a href="#workfusion-analytics-desktop" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>WorkFusion Analytics Desktop</h2>
+<h3><a class="anchor" aria-hidden="true" id="prepare"></a><a href="#prepare" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Prepare</h3>
+<ol>
+<li>Install <strong>WorkFusion Analytics Desktop</strong> on your local machine.</li>
+<li>Obtain access to the <strong>database</strong> on the environment where you will deploy your chart. In this example, the credentials to the 'wf_datastore' PostgreSQL database are required.<br>
+Alternatively you can work with your local file (text, Excel, etc.).</li>
+<li>Obtain access to the <strong>WorkFusion Analytics Server</strong> integrated with the environment where you will deploy your chart.</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="connect-to-the-db"></a><a href="#connect-to-the-db" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Connect to the DB</h3>
+<ol>
+<li><p>Launch the WorkFusion Analytics Desktop.</p></li>
+<li><p>In the top left corner, click <strong>Connect to Data</strong> &gt; <strong>PostgreSQL</strong>, and then
+enter the DB credentials.</p>
+<p>If you cannot connect to your DB, try to install the appropriate DB drivers from <a href="https://www.tableau.com/support/drivers">https://www.tableau.com/support/drivers</a>.</p></li>
+<li><p>Now you can see the tables of your database. Drag the <strong>ds_SSI_AUDIT_TRAIL</strong> table to the white area.</p></li>
+<li><p>Click <strong>Update Now</strong>. The actual data from your table is displayed.</p>
+<p><img src="/docs/assets/spa/admin-guide/tableau-postgres-connect.png" alt="Update now"></p>
+<p>In this example, it is important to change the type in the <strong>Ssi Upload Timestamp</strong> column from <strong>String</strong> to <strong>Date &amp; time</strong> to be able to take
+advantage of WorkFusion Analytics Date features.</p></li>
+</ol>
+<p>After you setup the data source, proceed to the chart visual editor. For that, in the center of the window, click <strong>Go to Worksheet</strong>.</p>
+<h3><a class="anchor" aria-hidden="true" id="setup-worksheet"></a><a href="#setup-worksheet" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setup Worksheet</h3>
+<p>The Worksheet contains the following working areas:</p>
+<p>a. <strong>Dimensions/Measures</strong>;</p>
+<p>b. <strong>Pages/Filters/Marks</strong>;</p>
+<p>c. <strong>Chart Preview Area</strong>;</p>
+<p>d. <strong>Columns/Rows</strong>;</p>
+<p>e. <strong>Chart Type (Show Me)</strong>.</p>
+<p><img src="/docs/assets/spa/admin-guide/tableau-workbook.png" alt="tableau-workbook.png"></p>
+<p>To setup a worksheet:</p>
+<ol>
+<li><p>Drag the following elements:</p>
+<ol>
+<li><strong>Dimensions</strong> &gt; <strong>Ssi Upload Timestamp</strong> to <strong>Columns</strong></li>
+<li><strong>Measures</strong> &gt; <strong>Number of Records</strong> to <strong>Rows</strong>.</li>
+</ol></li>
+<li><p>In the <strong>Columns (d)</strong> area, right-click the <strong>Ssi Upload Timestamp</strong> element and select the <strong>Day</strong> option.</p>
+<p><img src="/docs/assets/spa/admin-guide/tableau-context-menu.png" alt="Upload timestamp"></p></li>
+<li><p>In the <strong>Marks (b)</strong> toolbox, select the <strong>Area</strong> type. The area under the chart will be filled with color.</p></li>
+<li><p>To add chart differentiation by the <strong>Processed By</strong> column, drag the <strong>Processed By</strong> column from <strong>Dimensions (a)</strong> to the bottom of the <strong>Marks (b)</strong> toolbox. Select <strong>Color</strong> from the left context menu left.</p>
+<p><img src="/docs/assets/spa/admin-guide/tableau-marks.png" alt="tableau-marks.png"></p></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="setup-dashboard"></a><a href="#setup-dashboard" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setup Dashboard</h3>
+<p>As the Chart is ready, you can polish it with some filters.</p>
+<p>To setup Dashboard:</p>
+<ol>
+<li><p>Create a Dashboard for the chart. For that, in the main menu, select <strong>Dashboard</strong> &gt; <strong>New Dashboard</strong>.</p></li>
+<li><p>On the <strong>Dashboard</strong> view, drag your chart from the <strong>Dashboard</strong> section to the design area. The Chart opens.</p>
+<p><img src="/docs/assets/spa/admin-guide/tableau-dashboard.png" alt="tableau-dashboard"></p></li>
+<li><p>From the Chart context menu, add <strong>filter by Ssi Upload Timestamp</strong> and change the position of filter and the legend.</p>
+<p><img src="/docs/assets/spa/admin-guide/tableau-filter.png" alt="tableau-filter"></p></li>
+<li><p>It's important to meet markup guides for charts in WF application. Change the Size as shown below.</p>
+<p><img src="/docs/assets/spa/admin-guide/tableau-width.png" alt="tableau-width"></p></li>
+<li><p>Change the locale by clicking <strong>File</strong> &gt; <strong>Workbook Locale</strong> &gt; <strong>English (United States)</strong>.</p></li>
+<li><p>Edit chart colors, fonts, labels, etc., if needed.</p></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="deploy-dashboard"></a><a href="#deploy-dashboard" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deploy Dashboard</h3>
+<p>After the above operations, you are ready to deploy the Dashboard on the WorkFusion Analytics
+Server.</p>
+<p>To deploy Dashboard:</p>
+<ol>
+<li><p>Connect to the server. For that, in the main meny, select <strong>Server</strong> &gt; <strong>Sign In</strong>, and then enter the server name.</p></li>
+<li><p>To start the deployment, select <strong>Server</strong> &gt; <strong>Publish Workbook</strong>, and then select your site from the drop-down menu.</p></li>
+<li><p>Give a name to your Workbook for the WorkFusion Analytics Server.</p>
+<p>It's important to use '_custom' postfix in name to meet WF Dashboard configuration requirements. The name must not start with a digit. The name of project must be the same as the name of the instance.</p></li>
+<li><p>In the <strong>Views to Share</strong> panel, check only the <strong>SSI Dashboard</strong>.</p></li>
+<li><p>Click <strong>Authentication</strong> button, and then select the <strong>Embedded password</strong> to let users see the chart in WF without entering the WorkFusion Analytics Server password.</p>
+<p><img src="/docs/assets/spa/admin-guide/tableau-publish.png" alt="tableau-publish.png"></p></li>
+<li><p>Click <strong>Publish</strong>. The confirmation dialog with the preview appears.</p></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="workfusion-analytics-server"></a><a href="#workfusion-analytics-server" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>WorkFusion Analytics Server</h2>
+<p>To manage the deployed chart, sign in to the WorkFusion Analytics Server web Admin with the same credentials as for WorkFusion Analytics Desktop.</p>
+<p>Here you can delete and change permissions to the Workbook.</p>
+<h2><a class="anchor" aria-hidden="true" id="wf-application-dashboard"></a><a href="#wf-application-dashboard" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>WF Application Dashboard</h2>
+<p>The published chart appears on the <strong>WorkFusion Analytics</strong> &gt; <strong>Custom page</strong>.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/1/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/spa/admin/analytics/backup-restore-custom-dashboards"><span class="arrow-prev">← </span><span>Backup and restore custom Analytics dashboards</span></a><a class="docs-next button" href="/docs/spa/admin/advanced/config-yml-options"><span>config.yml options</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#workfusion-analytics-desktop">WorkFusion Analytics Desktop</a><ul class="toc-headings"><li><a href="#prepare">Prepare</a></li><li><a href="#connect-to-the-db">Connect to the DB</a></li><li><a href="#setup-worksheet">Setup Worksheet</a></li><li><a href="#setup-dashboard">Setup Dashboard</a></li><li><a href="#deploy-dashboard">Deploy Dashboard</a></li></ul></li><li><a href="#workfusion-analytics-server">WorkFusion Analytics Server</a></li><li><a href="#wf-application-dashboard">WF Application Dashboard</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/wf-logo.svg" alt="Knowledgebase" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://www.workfusion.com/reports-whitepapers/">Reports &amp; Whitepapers</a></div><div><h5>Community</h5><a href="https://forum.workfusion.com/" target="_blank" rel="noreferrer noopener">Forum</a><a href="http://automationacademy.com/">Automation Academy</a><a href="https://partners.workfusion.com/">Partners Portal</a></div><div><h5>More</h5><a href="https://www.workfusion.com/iac/">Intelligent Automation Cloud</a></div></section><section class="copyright">Copyright © 2019 WorkFusion, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: 'PNQGK7RZR5',
+                apiKey: 'ba828b974aad37836106a37d2432da4b',
+                indexName: 'search-config',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en","version:undefined"]}
+              });
+            </script></body></html>

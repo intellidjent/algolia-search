@@ -1,0 +1,322 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>SPA Lumen 9.2 · Knowledgebase</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;WorkFusion SPA 9.2 release concludes 2018 themes of the major Lumen (9.0) release, further enhancing performance, security and experience for business users&#x27; AI-powered automation journey.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="SPA Lumen 9.2 · Knowledgebase"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docusaurus.workfusion.com//"/><meta property="og:description" content="&lt;p&gt;WorkFusion SPA 9.2 release concludes 2018 themes of the major Lumen (9.0) release, further enhancing performance, security and experience for business users&#x27; AI-powered automation journey.&lt;/p&gt;
+"/><meta property="og:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.4/fuse.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/WorkFusion_H_5_RGB.png" alt="Knowledgebase"/><h2 class="headerTitleWithLogo">Knowledgebase</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/terra" target="_self">WorkFusion 10.0</a></li><li class=""><a href="/docs/spa" target="_self">SPA</a></li><li class=""><a href="/docs/spa/admin/install-spa/prepare/overview" target="_self">Administrator&#x27;s Guide</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>SPA Lumen</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">SPA Terra<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/releases/terra/terra-10-0">SPA Terra 10.0</a></li><li class="navListItem"><a class="navItem" href="/docs/releases/terra/terra-10-1">SPA Terra 10.1</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">SPA Lumen<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem navListItemActive"><a class="navItem" href="/docs/releases/lumen/lumen-9-2">SPA Lumen 9.2</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://git.workfusion.com/projects/DOC/repos/documentation/browse/docs/releases/lumen/lumen-9-2.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">SPA Lumen 9.2</h1></header><article><div><span><p>WorkFusion SPA 9.2 release concludes 2018 themes of the major Lumen (9.0) release, further enhancing performance, security and experience for business users' AI-powered automation journey.</p>
+<p>The AutoML search engine 2.0 reduces model training time from 2 hours (in 9.1 release) down to only 15 minutes — one more step closer to real-time training of models created to address the ongoing changes in data that modern enterprises must keep up with.</p>
+<p>Security is another big theme of the 9.2 release, with filters being added to the Secrets Vault, as well as more tools available to analyze code and systems for vulnerabilities.</p>
+<p>Further, Dashboards and Analytics are now optimized for faster updates and loading, providing users with even quicker access to the insights they are seeking.</p>
+<p>Additionally, more capabilities were added and improved, such as Studio enhancements, OCR for Windows, and more.</p>
+<h2><a class="anchor" aria-hidden="true" id="control-tower"></a><a href="#control-tower" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Control Tower</h2>
+<h3><a class="anchor" aria-hidden="true" id="filters-for-secrets-vault"></a><a href="#filters-for-secrets-vault" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Filters for Secrets Vault</h3>
+<p>Previously, all Secrets Vault entries were visible to all users in Control Tower. For security reasons, Secrets Vault now offers standard SPA filtering, already used for all entities in Control Tower. Users can create their filter rule based on Alias (name of the secret entry) and limit visibility of secret entries that fall under this rule to certain user groups.</p>
+<p>Filters are very helpful when multiple teams use the same Control Tower environment. Now, secret entries are available only to users authorized to access them for business purposes, and hidden from the others. This helps to protect secure information and control its distribution.</p>
+<p>In addition to this, users can filter entries to narrow down the search for a required entry in a large list. Learn more about Using Filters for Collaborative Work.</p>
+<h3><a class="anchor" aria-hidden="true" id="secrets-vault-permissions"></a><a href="#secrets-vault-permissions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Secrets Vault Permissions</h3>
+<p>New user permissions were introduced to allow granular access to secret entries. These permissions are:</p>
+<ul>
+<li>View Secrets Vault Aliases</li>
+<li>Manage Secrets Vault Aliases</li>
+<li>View Secrets Vault Entries</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: View Secrets Vault Entries permission is not granted to anyone by default and needs to be explicitly assigned by the SPA administrator.</p>
+</blockquote>
+<p>Multi-level user permissions enable secure access to Secrets Vault and ensure appropriate handling of sensitive information. Learn more about Secrets Vault and Role Management.</p>
+<h3><a class="anchor" aria-hidden="true" id="activity-log"></a><a href="#activity-log" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Activity Log</h3>
+<p>To conduct transparent security audits of user actions, new types of activity events are now collected and displayed in Activity Log. These events include the following actions:</p>
+<ul>
+<li>Change of user groups in the system</li>
+<li>Change of Secure Vault entries</li>
+<li>Change of user password</li>
+</ul>
+<p>Beginning with this release, IP address is logged for every user action. Learn more about Activity Log.</p>
+<h2><a class="anchor" aria-hidden="true" id="ai"></a><a href="#ai" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>AI</h2>
+<h3><a class="anchor" aria-hidden="true" id="automl-search-engine-20"></a><a href="#automl-search-engine-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>AutoML Search Engine 2.0</h3>
+<p>Sticking to one of the major goals of 9.2—namely, performance—AutoML models were improved by applying new advanced search algorithms. This significantly reduces the time to search the best components combination — <strong>from 2 hours to just 15 minutes</strong> per field without compromising the quality.</p>
+<p>Given that frequent changes of input require constant re-training, this optimization is a major step toward <strong>real-time training</strong>.</p>
+<h3><a class="anchor" aria-hidden="true" id="new-ootb-post-processors"></a><a href="#new-ootb-post-processors" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>New OOTB Post-Processors</h3>
+<p>AutoML SDK extended its range of post-processing capabilities by adding a number of out-of-the-box normalizers. These are the commonly used normalizers added in 9.2:</p>
+<ul>
+<li>Normalizers for handling uppercase and lowercase, as well as capitalization: LowerCaseNormalizer, UpperCaseNormalizer, CapitalizeNormalizer.<br>
+For example, the following transformation: &quot;caliFornia&quot; → &quot;California&quot; can be performed by applying two normalizers that handle lowercase and capitalization.</li>
+<li>Normalizers for replacing, trimming and removing characters: PatternReplacerNormalizer, TrimmerNormalizer, HtmlSpecialCharactersRemoverNormalizer.<br>
+For example, &quot;100€&quot; → &quot;100&quot; transformation by applying a normalizer that removes special HTML characters.</li>
+</ul>
+<p>For detailed information, refer to Normalizer Javadocs.</p>
+<p>Back to top</p>
+<p>Robotics
+WorkFusion Studio
+Studio enhancements aim for more stable and convenient work both for business users and developers. Object recording covers more cases from user feedback, including a bunch of improvements when inspecting/recording in Windows (cmd, Start Menu components, Calculator) and a number of applications (Excel, Outlook, SwingSet, Total Commander).</p>
+<p>To avoid possible confusion, disabled actions with no functionality were removed from the Actions Library. See more in Actions Library for WorkFusion Studio.</p>
+<p>Excel Automation
+Excel actions were improved, thus broadening the capabilities of Excel scripts execution.</p>
+<p>The Get Cell Value action for Excel is enabled to work for calculated values (formulas).</p>
+<p>Numeric value can be set into an Excel cell in Number format.
+Fixed number variables for Excel actions are parsed in Big Decimal format (not in Scientific as before).
+See more about Excel automation in Actions Library for WorkFusion Studio.</p>
+<p>Inspector
+Inspector was improved for more effective work by simplifying and accelerating the exploring properties and values of the target objects.</p>
+<p>Inspector supports collections of selectors corresponding to the search criteria. The feature is especially useful when inspecting similar elements in tables or lists for further automation. The Selector field now has Back &quot;&lt;&quot; and Forward &quot;&gt;&quot; arrows to switch between elements and choose the required selector.</p>
+<p>Inspector guarantees selector uniqueness to ensure the selected UI control is clicked during the script execution. When selecting the element, the user explicitly sees its unique selector with a &quot;1 of 1&quot; match.</p>
+<p>CSS selector is introduced as the most brief and clearly expressed one. The Type filter enables the user to choose between either an Object or a CSS selector. When selecting the needed type, the selector string is rebuilt to match the given notation.</p>
+<p>In case an &quot;Access denied&quot; error is detected (for example, a process is run under the Admin permissions), the user is notified to either run Inspector as Administrator or disable the user account control to continue inspecting the selected application.</p>
+<p>See more about Inspector.</p>
+<p>Robotics API
+API improvements contribute to easier and faster work with complex use cases.</p>
+<p>When scripting in the Code perspective, the user can find window handles by their attributes: class, title, etc. Three new attributes have been introduced — parentPID, processName, commandLine. With this improvement, script execution accelerates for cases with multiple windows: 18 times faster for 8 windows and 36 times faster for 16 windows. See code examples in Finding Window Handles by Criteria.
+Process ID can be identified when starting a program. That makes it handy in case the user needs to know and save the ID of the process created by the open command. For example, to detect all child windows of the opened application and perform further actions with them. See more in Identifying Process ID.
+Clicking on a UI component with offset facilitates automating complex controls like trees or tables with checkboxes, where a click is done not only in the center of the element, but somewhere else (say, the top-left corner or custom offset). The feature is valid for any mouse click (double, triple, wheel) with offset counted from top left and works for desktop automation only. Learn more about Clicking on Element with Offset.</p>
+<p>ABBYY OCR Checkmarks API for Windows
+Previously OCR capabilities in SPA were available only on Linux machines. Now, ABBYY OCR on Windows is deployed in SPA with a full set of features available on Linux: REST API endpoints, Barcode Recognition, etc. Besides this, OCR on Windows offers Optical Mark Recognition, specifically designed for checkmarks. OCR on Windows machines has a robust infrastructure with a possibility of horizontal scaling for OCR throughput increase. Learn How To Recognize Checkmarks and more about OCR on Windows and Linux.</p>
+<p>Other Improvements
+RPA Installation on 32-bit
+RPA Server can now be installed on Windows 7 32-bit environment.</p>
+<p>Only manual installation is supported. See more in the RPA Server Installation on Windows 7 32-bit guide.</p>
+<p>AutoML SDK Wizard
+AutoML SDK Wizard enhancements include:</p>
+<p>Display of model default values for secured repository.
+Ability to save Server Profile if a user is offline.
+Improved wizard performance with local archetype catalog.
+Switching to Java perspective by default.
+Configurable Bot Manager Timeout
+A new feature enables to modify Bot Manager timeout. It is used to provide more time for execution, for example, when the number of threads for a business process step is bigger than the number of available bots. See how to configure Bot Manager timeout in Bot Manager.</p>
+<p>Drag and Drop Automation
+Automating web applications is made easier with drag and drop actions. For the feature to work as expected, it is recommended to edit code in the bot task. See code workaround in Automating Drag and Drop.</p>
+<p>Back to top</p>
+<p>Installation
+Centralized Log Aggregation
+Components of the system generate a multitude of logs distributed over different sources and locations. To analyze and solve problems in the most effective and timely way, these logs need to be gathered in one place. Previously, users had to determine the necessary log sources, then manually export selected logs one by one. Now execution of simple command is enough to get relevant logs for any day, component or server.</p>
+<p>Filebeat is used for automatic log forwarding, and Logstash for log storage. All application logs from all servers of SPA environment (APP, DB, OCR, AutoML, RPA, BI) are seamlessly pushed to the APM server. Users can set log level for all SPA components before installation using a variable (prod or dev).</p>
+<p>Default log level is prod, unless set otherwise by the user before installation. Only error messages and warnings are displayed for the most heavy production log sources.</p>
+<p>Learn more about Working with Logs.</p>
+<p>Effective log aggregation helps to accelerate troubleshooting and reduces system's idle time during incidents from days to hours.</p>
+<p>Other Improvements
+Default nginx ports for DB, APP, OCR, and APM servers are changed from 8080/8443 to 80/443. Added a redirect from 80 to SSL port (by default 443).
+loader.sh script was improved to remove accidental spaces at the end of lines in properties files during the update of Secret Vault entries.
+Embedded Health-Check business process now includes an additional check for AutoML components. See Environment Health Check section.
+It is now possible to update MySQL admin password and Java TrustStore password during the normal upgrade procedure.
+Multi-user functionality is now available for Object Storage (Minio s3 emulator).
+Back to top</p>
+<p>Security
+WorkFusion offers an enterprise product that uses best-in-class techniques and frameworks to secure customers' sensitive data. In order to meet high industry standards, we've installed special tools to analyze code and systems for vulnerabilities, performed internal testing, engaged well-respected companies in external testing and collected customer feedback. Security issues reports were aggregated and appropriately addressed. The 9.2 release includes the following security improvements:</p>
+<p>DataStore API is now covered by existing permissions: Manage Data Stores and View Data Stores.
+CSRF (Cross-Site Request Forgery) Protection enabled for all pages in CT and WS.
+Fixed WS Cross-site Scripting (XSS) vulnerability in use case name and reply to messages.
+Direct PM sign-in is disabled. PM authentication now happens via CT login page by default. Learn more about Deprecations.
+The following new permissions were introduced:
+For Secrets Vault:
+View Secrets Vault Aliases
+Manage Secrets Vault Aliases
+View Secrets Vault Entries
+For Manual Task AutoML Settings Configuration:
+Manage AutoML Settings
+Analytics
+Optimized Analytics computing pipeline allows decreased visualization time so that a user's interaction with the data is quicker and more convenient. High load testing shows that the Analytics Dashboards page now loads 20% faster. Learn more about OOTB Dashboards.</p>
+<p>Back to top</p>
+<p>Deprecated Components and Functionality</p>
+<p>CT
+Master Password feature was removed from Control Tower as a part of Secrets Vault improvements. Replaced with filters and multi-level permissions. Learn more about Secrets Vault.</p>
+<p>REMOVED</p>
+<p>CT and Analytics    Manage Dashboard permission was removed because Analytics Screen introduced in 9.1 does not require such function.
+REMOVED</p>
+<p>Analytics   Detailed WF-Automation and Gold\Extracted dashboards were removed as obsolete.
+REMOVED</p>
+<p>PM  PM login page is removed. Authentication and PM sign-in/sign-out happen only via CT login page.
+REMOVED</p>
+<p>RPA API
+getCompletePageAsZip(), getCompletePagesWithPaginationAsZip() methods were removed because they were never used by customers.
+enableTypeOnScreen() method was removed as it added instability to bot typing.
+REMOVED</p>
+<h2><a class="anchor" aria-hidden="true" id="bug-fixes-and-improvements"></a><a href="#bug-fixes-and-improvements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bug Fixes and Improvements</h2>
+<h3><a class="anchor" aria-hidden="true" id="control-tower-and-workspace"></a><a href="#control-tower-and-workspace" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Control Tower and WorkSpace</h3>
+<p>LDAP: Resolved an issue with users and group limit.
+LDAP: User can now log into the system after LDAP is switched off.
+Secrets Vault: Fixed objects special symbols to be readable in RPAx 2.0.
+Secrets Vault: Resolved an issue with master password removed.
+Secrets Vault: In case the same secret variable is used in several bot tasks, BP execution does not fail anymore.
+Secrets Vault: Disabled export of Secret type variables for security purposes.
+Labeling: Resolved an issue with saving date after validation if year is in the two-digit format.
+Labeling: Multi value manual answers are displayed as expected.
+Labeling: Tagged text is restored correctly in a document with <style> tags with content.
+Labeling: Nearby tags are displayed correctly.
+Manual Task Preview: Secured document now renders on preview.
+Control Tower: Migration works as expected if the bot config name is greater than 128 characters.
+WorkSpace: Resolved an issue with WS Preview option lost during MT import/export.
+WorkSpace: Fixed an issue with a label in the footer (&quot;RPA Express&quot; as opposed to &quot;Smart Process Automation&quot; in the previous version).
+Workspace: Fixed an error on attempt to update worker's profile using a name (with slash).
+Workflow Designer: Resolved an exception issue when clicking on the Edit in WF Studio menu action.
+Permissions: Copy results to Datastore is now displayed under Manage Data Store permission only.
+Permissions: Create New button for Training Set is now displayed under Manage Data Store permission only.
+PM Commands API: Execution of commands using ID only is deprecated. Replaced with a new version with namespace.
+AutoML: Fixed 500 Error code on the Configure AutoML tab in case of failed response.
+AutoML: Configure AutoML settings are not reset after importing a package with a model that does not exist on S3.
+AutoML: Fixed an issue where incorrect values in Data Store ds_automation_stat_<Campaign ID> caused AutoML dashboards to crash in case some fields were not extracted by the model.
+AutoML: Fixed an issue where Workflow tab could sometimes be empty after Cognitive bot activation.
+AutoML: Fixed an issue when model training could not run if WF username contained a dot (.) character.
+AutoML: Fixed an issue where PresentationIEModel could not be saved in a manual task.
+AutoML: Training set wouldn't be displayed after clicking Save in the Configure AutoML tab.
+AutoML: Saving an extraction Business Process could cause a model execution failure due to a null value in the modelVersion column of the Manual Task.
+AutoML: Fixed an issue with errors written to logs after making changes to AutoML Training Configuration.
+AutoML: Fixed incorrect behavior of a Cognitive Bot with fields in case non-existing values are passed as an input.
+AutoML: For Classification Models with AutoML Search Engine, &quot;0&quot; is set as numberOfParallelFields.
+AutoML: No indication was displayed when applying a Training Set in a Business Process.
+AutoML: Fixed an issue where it's impossible to rename or copy a Training Set with a short name on the Configure AutoML tab.
+AutoML: Saving a Manual Task from the Configure AutoML tab didn't change the task name.
+AutoML: Fixed an issue where it was possible to save a Manual Task with a missing workflow, in case the workflow was previously manually disabled.
+AutoML: Group ID was filled with the previous value after validation.
+AutoML: Fixed a 500 Error when opening a hidden task with a direct URL.
+AutoML: Training set Data Completeness always showed 0% for Classification tasks.
+Robotics
+Resolved an issue with closing driver processes on session shutdown.
+Resolved an issue with closeAllAnotherWindows closing all windows.
+Fixed getDriverLogs failing on all log types.
+Fixed an error when sending <code>null</code> to the clipboard.
+Resolved an issue with an incorrect log to pressEnter() method (node logs).
+Resolved an issue with UiElement.getRect(); not working in Chrome.
+Resolved an issue with the hardcoded path to the RPA install directory.
+Fixed an issue with selectAllTextAndCopy() method not working in cmd.
+RPA API: Resolved an issue with UIConditions methods not working.
+RPA API: Fixed sendKeys(CharSequence... charSequence) performance.
+RPA API: Resolved an issue with element.pressSpace() not working for Firefox.
+RPA API: Resolved an issue with failure on getting the source of a page.
+RPA API: Resolved an issue with Chrome driver not performing clear() operation when setting value.
+RPA API: Resolved an issue with element condition check.
+RPA API: Resolved an issue with matchRegexp always returning true.
+Studio: Resolved an issue with different library versions in Control Tower, Nexus, WorkFusion Studio.
+Studio: Imported bot task pushing back to Control Tower performs without failure.</p>
+<p>Studio: &quot;Show this window&quot; checkbox works as expected if the welcome page was closed.</p>
+<p>Studio: Fixed BadPositionCategoryException while templates formatting.
+Studio: Fixed an issue with failures when adding templates.
+Studio: Resolved an issue with exception when saved credentials tab is opened.
+Studio: Fixed a bot task launch in BCB project.
+Studio: Resolved an issue with opening config after import an existing project.
+Studio: Resolved an issue with invalid Groovy code after export to bot task.
+Studio: Resolved an issue with actual version displayed in UI.
+Studio: Resolved an issue with syntax highlighting after two closing squared brackets.
+Studio: Resolved an issue with navigation to error line after exception.</p>
+<p>Studio: Resolved an issue with Custom action execution at the end of the workflow in exported bot task.
+Studio: Replaced label for validation message (Bot Relay URL instead of RPA Hub URL).</p>
+<p>Studio: Resolved an issue with bot task not working with the robotics-flow plugin.
+Inspector: Resolved an issue with connection to SwingSet applet.
+Inspector: Resolved an issue with SwingSet applet components in dropdowns not displayed.
+Inspector: Highlight of menu components perform as expected in certain applications (SwingSet, Total Commander).</p>
+<p>Inspector: Selectors for Outlook trees are defined correctly, i.e. different folders have different unique selectors.
+Inspector: Resolved an issue with non-unique instance generation.</p>
+<p>Inspector: Fixed table cell coordinates enumeration.</p>
+<p>Inspector: Resolved a freezing issue when connecting to a not responding process.
+Recorder: Fixed drag and drop in actions flow.
+Recorder: Resolved an issue with mouse clicks on web elements for Internet Explorer and Firefox.
+Recorder: Fixed If-Else condition to work correctly with decimal numbers.
+Recorder: Keystrokes actions are executed as expected on VM through RDP connection.
+Recorder: Resolved an issue with Get row &gt; last row action being enabled to search for the last row that has values.
+Recorder: Resolved an issue with actions not recorded after resume.
+Recorder: Resolved an issue with playback window showing incorrect digits.</p>
+<p>Recorder: Improved bot execution for clicking actions (Start Menu components, File menu level 2 in Notepad++, Calculator).</p>
+<p>Recorder: Fixed bot typing in Windows.
+Recorder: Resolved an issue with global timeout not used for Window action.
+OCR
+Resolved an issue with activated license not applied.
+OCR action is executed as expected if the capture region is blank.
+Platform type is added for generated OCR license request email to understand what type to trigger in Jenkins job.
+OCR API: GET processDocument is superseded with POST processDocument request method to its length limitations.
+Installation
+Fixed installation fail on pre-check of SSL certificates when an intermediate certificate is used.</p>
+<p>Fixed installation fail on uploading secure properties to Secrets Vault when another instance of Java is already installed on the server. Now loader.sh script uses Java explicitly embedded in the installer.</p>
+<p>Fixed incorrect APP server certificate generation with generate-certificates.sh script in case when s3_hostname and app_hostname are not in the same domain.</p>
+<p>Previously Marathon bound port for ZooKeper connectivity randomly. This resulted in installation fails in rare cases when the port was intended for other service, so the port is assigned statically now.</p>
+<p>Security: Fixed incorrect &quot;Content-Security-Policy&quot; HTTP header setting in nginx config file for S3 storage.</p>
+<p>Security: After installation is completed, the file with all sensitive settings (secrets.yml) is encrypted and saved to installation directory for later usage during subsequent product updates. Decryption password for this file is saved to &lt;package_dir&gt;/VAULT_PASSWORD.DELETE_ME file.</p>
+<p>Security: BI Server now uses read-only user for connection to application databases.</p>
+<p>Security: Authentication to Secrets Vault with username/password is impossible now which improves security. Only TLS based authentication is available.</p>
+<p>Security: &lt;install_dir&gt;/wf-sec-storage directory is now cleaned up on OCR and VDS servers after installation. It is now only available on DB server.</p>
+<p>Stability: Embedded Ansible version is updated to from 2.6.4 to 2.6.6.</p>
+<p>Installation Speed: Installation speed of DB server is improved due to more accurate logic of task execution.</p>
+<p>AI
+AutoML SDK: Fixed an issue where OcrDateNormalizer worked incorrectly with dates having 2-digit years.
+AutoML SDK: AutoML SDK now doesn't require administrator rights to launch local model training on Windows.
+AutoML SDK: Fixed an issue where NbLanguageModelFE produced features with null in the feature name.
+AutoML SDK: Fixed an issue where a number of Feature Extractors produced features with the same feature name.
+Back to top</p>
+<h2><a class="anchor" aria-hidden="true" id="known-issues"></a><a href="#known-issues" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Known Issues</h2>
+<p>For a full list, refer to Version 9.2 Known Issues.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/16/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/releases/terra/terra-10-1"><span class="arrow-prev">← </span><span>SPA Terra 10.1</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#control-tower">Control Tower</a><ul class="toc-headings"><li><a href="#filters-for-secrets-vault">Filters for Secrets Vault</a></li><li><a href="#secrets-vault-permissions">Secrets Vault Permissions</a></li><li><a href="#activity-log">Activity Log</a></li></ul></li><li><a href="#ai">AI</a><ul class="toc-headings"><li><a href="#automl-search-engine-20">AutoML Search Engine 2.0</a></li><li><a href="#new-ootb-post-processors">New OOTB Post-Processors</a></li></ul></li><li><a href="#bug-fixes-and-improvements">Bug Fixes and Improvements</a><ul class="toc-headings"><li><a href="#control-tower-and-workspace">Control Tower and WorkSpace</a></li></ul></li><li><a href="#known-issues">Known Issues</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/wf-logo.svg" alt="Knowledgebase" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://www.workfusion.com/reports-whitepapers/">Reports &amp; Whitepapers</a></div><div><h5>Community</h5><a href="https://forum.workfusion.com/" target="_blank" rel="noreferrer noopener">Forum</a><a href="http://automationacademy.com/">Automation Academy</a><a href="https://partners.workfusion.com/">Partners Portal</a></div><div><h5>More</h5><a href="https://www.workfusion.com/iac/">Intelligent Automation Cloud</a></div></section><section class="copyright">Copyright © 2019 WorkFusion, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: 'PNQGK7RZR5',
+                apiKey: 'ba828b974aad37836106a37d2432da4b',
+                indexName: 'search-config',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en","version:undefined"]}
+              });
+            </script></body></html>

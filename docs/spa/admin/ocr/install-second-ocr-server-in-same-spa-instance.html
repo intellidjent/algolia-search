@@ -1,0 +1,292 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Install second OCR server · Knowledgebase</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;The guide describes the process of installation of another Linux or&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Install second OCR server · Knowledgebase"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docusaurus.workfusion.com//"/><meta property="og:description" content="&lt;p&gt;The guide describes the process of installation of another Linux or&lt;/p&gt;
+"/><meta property="og:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.4/fuse.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/WorkFusion_H_5_RGB.png" alt="Knowledgebase"/><h2 class="headerTitleWithLogo">Knowledgebase</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/terra" target="_self">WorkFusion 10.0</a></li><li class=""><a href="/docs/spa" target="_self">SPA</a></li><li class="siteNavGroupActive"><a href="/docs/spa/admin/install-spa/prepare/overview" target="_self">Administrator&#x27;s Guide</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>OCR</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">System requirements<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/system-requirements">System requirements</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/infrastructure-capacity-planning">Infrastructure capacity planning</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/application-ports">Applications&#x27; ports</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/dns-names-configuration">DNS names configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/env-readiness-checklist">Environment readiness checklist</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Installation<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/overview-install">Overview</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Prepare for installation</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/overview">Prerequisites</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/create-users">Create users</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/prepare-tls-certificates">Prepare TLS certificates</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/prepare-servers">Prepare servers</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/install-spa">Install SPA</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/post-install">Post-installation tasks</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/uninstall-win">Uninstall WF components from Windows servers</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Maintenance<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/restart-servers">Restart servers</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/backup-and-restore-data">Backup and restore data</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/update-tls-certificates">Update TLS certificates</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/update-passwords">Update passwords</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Logs management</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/aggregate-and-view-logs">Aggregate and view logs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/filebeat-configuration">Filebeat configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/search-a-specific-message-in-logs">Search a specific message in logs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/archive-logs">Archive logs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/change-a-component-s-log-level">Change a component&#x27;s log level</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/reference-log-configuration-of-components">Reference: log configuration of components</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/reference-log-rotation">Reference: log rotation</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Service information</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/general-services-information">General services Information</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/inorder-and-deps-checker">Inorder and deps_checker</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/common-services">Common services</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/app">APP</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/int">INT</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/ocr">OCR</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/bep">BEP</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Monitoring<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/monitoring-overview">Monitoring overview</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/сhange-elk-admin-password">Сhange ELK admin password in Kibana</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/investigate-performance-hot-spot">Investigate performance hot spot in environment</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/heartbeat-configuration-guide">Heartbeat configuration guide</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/metricbeat-configuration-guide">Metricbeat configuration guide</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/connect-external-elk">Integrate external ELK</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">License management<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/manage-workfusion-analytics-license">Manage WorkFusion Analytics license</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/activate-the-ocr-license">Activate OCR license</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/update-the-elk-license">Update ELK license</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/workfusion-libraries-and-tools">WorkFusion libraries and tools</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">OCR<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/ocr/scale-ocr">Scale OCR</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/spa/admin/ocr/install-second-ocr-server-in-same-spa-instance">Install second OCR server</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/ocr/migration-notes">OCR Migration Notes</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/ocr/advanced-configuration">Advanced Configuration</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Information security<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/info-sec/sso-integration">SSO integration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/info-sec/ldap-and-ad-integration">LDAP and AD integration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/info-sec/import-root-or-intermediate-ca-to-store">Import Root or Intermediate CA to Store</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/info-sec/manage-secure-properties">Manage secure properties</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Analytics<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/analytics/backup-restore-custom-dashboards">Backup and restore custom Analytics dashboards</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/analytics/using-tableau">Setup end-to-end SSI audit chart</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Advanced configuration<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/config-yml-options">config.yml options</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/hosts-yml-options">hosts.yml options</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/secret-vault-properties">Secrets vault properties</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/health-сheck-messages">Health сheck messages</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/configuration-and-health-check">Configuration and health check</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/crontab-jobs">Crontab jobs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/notifications-via-email">Notifications via email</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/prepare-rpa-ocrwin-and-bi-configurations">Prepare RPA, OCRWIN and BI configurations</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://git.workfusion.com/projects/DOC/repos/documentation/browse/docs/spa/admin/ocr/install-second-ocr-server-in-same-spa-instance.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Install second OCR server</h1></header><article><div><span><p>The guide describes the process of installation of another Linux or
+Windows OCR instance on existing SPA.</p>
+<p>Note that this is not <a href="/docs/spa/admin/ocr/scale-ocr">OCR scaling procedure</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="prepare"></a><a href="#prepare" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Prepare</h2>
+
+    <div class="admonition admonition-important">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></div> important</h5>
+      </div>
+      <div class="admonition-content">
+    <p>Run all commands as installation-user.</p>
+</div></div><p>To prepare for remore installation of an additional OCR server:</p>
+<ol>
+<li><p>Connect to the INT server via SSH.</p></li>
+<li><p>To prepare the environment, run the following commands one by one:</p>
+<pre><code class="hljs css language-bash">$ <span class="hljs-built_in">cd</span> /opt/workfusion/wf_installer
+$ <span class="hljs-built_in">export</span> ANSIBLE_REMOTE_USER=<span class="hljs-string">"ec2-user"</span>
+$ <span class="hljs-built_in">export</span> ANSIBLE_PRIVATE_KEY_FILE=<span class="hljs-string">"id_rsa"</span>
+</code></pre>
+<p>Here,</p>
+<ul>
+<li><p><code>/opt/workfusion/wf_installer</code>: the path to the Workfusion
+Installer that contains the main installation script
+<strong>install.sh</strong>.</p></li>
+<li><p><code>export ANSIBLE_REMOTE_USER=&quot;ec2-user&quot;</code>:  the <strong>ec2-user</strong> user
+is used for the remote access to the OCR Linux machine.
+Depending on the selected OCR platform:</p>
+<ul>
+<li><strong>OCR Linux</strong>: the user must be specified in file <strong>sudoers</strong> without password</li>
+<li><strong>OCR Windows</strong>: the user must have permissions to connect             remotely, and be in the Administrators group.</li>
+</ul></li>
+<li><p><code>export ANSIBLE_PRIVATE_KEY_FILE=&quot;id_rsa&quot;</code>: the <strong>id_rsa</strong>
+private key is applied for <strong>ec2-user</strong>. The public key must be
+located in the <strong>.ssh/authorized_keys</strong> file in the home
+directory of the user on the remote OCR machine.</p></li>
+</ul></li>
+<li><p>Verify the user:</p>
+<pre><code class="hljs css language-bash">$ ls -la id_rsa
+</code></pre></li>
+<li><p>When installing an additional instance of OCR Windows, make sure that the winOCR installer is located in <strong>/opt/workfusion/wf_installer/sources/</strong>.</p>
+<pre><code class="hljs css language-bash">$ curl <span class="hljs-string">"link_to_ocrWin_package"</span> -o /opt/workfusion/wf_installer/sources/OCRInstaller-10.0.0.0-X.zip
+</code></pre></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="install"></a><a href="#install" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install</h2>
+
+    <div class="admonition admonition-tip">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"/></svg></div> tip</h5>
+      </div>
+      <div class="admonition-content">
+    <p><strong>vi/vim commands</strong>:</p>
+<ul>
+<li>To open a file in the edit mode, in the vi/vim editor, press
+'<strong>i</strong>'.</li>
+<li>To exit the edit mode in vi/vim, click <strong>Escape</strong>, and then type
+without quotes '<strong>:wq</strong>' + Enter.</li>
+<li>To exit without changes, click Escape, then type '<strong>:q!</strong>' + Enter</li>
+</ul>
+</div></div><p>To install the second OCR server:</p>
+<ol>
+<li><p>In the <strong>hosts.yml</strong> file, change the <code>ocr_hostname/ocrwin_hostname</code>
+parameter with OCR Linux or Windows hostname, according to the
+selected OCR platform.</p>
+<pre><code class="hljs css language-bash">$ vi hosts.yml
+</code></pre></li>
+<li><p>In the <strong>config.yml</strong> file, change the MS SQL credentials and
+RabbitMQ password for the new OCR environment.</p>
+<pre><code class="hljs css language-bash">$ vi config.yml
+</code></pre>
+<p>The following parameters are to be changed:</p>
+<ul>
+<li><code>rabbitmq_ocr_pass: NewPWDveryStrong</code></li>
+<li><code>ocr_platform: 'windows' (according to the type of the additional OCR platform)</code></li>
+<li><code>mssql_ocr_user: ocr2</code></li>
+<li><code>mssql_ocr_pass: Str0nGp@sswd</code></li>
+</ul>
+<p>If <strong>config.yml</strong> is encrypted, run the following command.</p>
+<pre><code class="hljs css language-bash">$ ./install.sh edit_config int
+</code></pre>
+<p>When the prompt appears, enter the password for Secrets Vault. Note
+that the entered password is not displayed.</p>
+<p>Use the same commands to update <strong>windows_installation_user</strong>
+and <strong>windows_installation_pass</strong>.</p></li>
+<li><p>Modify the MS SQL OCR schema name.</p>
+<pre><code class="hljs css language-bash">$ vi group_vars/all/vars.yml
+</code></pre>
+<p>The following parameters are to be changed:</p>
+<ul>
+<li><code>rabbitmq_ocr_user: 'ocr2'</code></li>
+<li><code>mssql_ocr_schema_name: ocr2</code></li>
+</ul></li>
+<li><p>Change the OCR Linux templates.</p>
+<pre><code class="hljs css language-bash">$ vi roles/ocr2/templates/properties/ocr-worker.yml.j2
+$ vi roles/ocr2/templates/properties/ocr-rest.yml.j2
+</code></pre>
+<p>The following parameters are be changed:</p>
+<ul>
+<li><code>spring.rabbitmq.username: ${sms.ocr.spring.rabbitmq.username2}</code></li>
+<li><code>spring.rabbitmq.password: ${sms.ocr.spring.rabbitmq.password2}</code></li>
+<li><code>spring.rabbitmq.virtualHost: ocr2</code></li>
+<li><code>spring.datasource.username: ${sms.ocr.spring.datasource.username2}</code></li>
+<li><code>spring.datasource.password: ${sms.ocr.spring.datasource.password2}</code></li>
+</ul></li>
+<li><p>Change the RabbitMQ OCR username and the vhost name:</p>
+<pre><code class="hljs css language-bash">$ vi roles/rabbitmq/defaults/main.yml
+</code></pre>
+<p>The following parameters are to be changed:</p>
+<ul>
+<li><code>rabbitmq_ocr_user: ocr2</code></li>
+<li><code>rabbitmq_ocr_pass: NewPWDveryStrong</code></li>
+<li><code>ocr:</code></li>
+<li><code>vhost: ocr2</code></li>
+</ul></li>
+<li><p><strong>Note</strong>: skip this step, if the user in DB was not created in
+advance.</p>
+<p>Temporary disable all other MS SQL user credentials (except for
+<strong>mssql_ocr_user</strong>) with the &quot;#&quot; symbol to prevent users and
+tables recreation.</p>
+<pre><code class="hljs css language-bash">$ vi roles/mssql-win/tasks/create-users.yml
+</code></pre>
+<p>For example:</p>
+<pre><code class="hljs css language-bash">      with_items:
+
+<span class="hljs-comment">#        - {user: '{{ mssql_ct_user }}',   pass: '{{ mssql_ct_pass }}',   schema: '{{ mssql_ct_schema_name }}'     }</span>
+<span class="hljs-comment">#        - {user: '{{ mssql_ws_user }}',   pass: '{{ mssql_ws_pass }}',   schema: '{{ mssql_ws_schema_name }}'     }</span>
+<span class="hljs-comment">#        - {user: '{{ mssql_sqc_user }}',  pass: '{{ mssql_sqc_pass }}',  schema: '{{ mssql_sqc_schema_name }}'    }</span>
+<span class="hljs-comment">#        - {user: '{{ mssql_rpa_user }}',  pass: '{{ mssql_rpa_pass }}',  schema: '{{ mssql_rpa_schema_name }}'    }</span>
+<span class="hljs-comment">#        - {user: '{{ mssql_pm_user }}',   pass: '{{ mssql_pm_pass }}',   schema: '{{ mssql_pm_schema_name }}'     }</span>
+<span class="hljs-comment">#        - {user: '{{ mssql_dm_user }}',   pass: '{{ mssql_dm_pass }}',   schema: '{{ mssql_dm_schema_name }}'     }</span>
+         - {user: <span class="hljs-string">'{{ mssql_ocr_user }}'</span>,  pass: <span class="hljs-string">'{{ mssql_ocr_pass }}'</span>,  schema: <span class="hljs-string">'{{ mssql_ocr_schema_name }}'</span>    }
+<span class="hljs-comment">#        - {user: '{{ mssql_ds_user }}',   pass: '{{ mssql_ds_pass }}',   schema: '{{ mssql_ds_schema_name }}'     }</span>
+<span class="hljs-comment">#        - {user: '{{ mssql_rapi_user }}', pass: '{{ mssql_rapi_pass }}', schema: '{{ mssql_rapi_v1_schema_name }}'}</span>
+</code></pre></li>
+<li><p>Add new credentials to Secrets Vault.</p>
+<p><strong>For WinOCR</strong></p>
+<pre><code class="hljs css language-bash">$ vi roles/ocr-config-win/templates/properties/ocr-rest-secure.properties.j2
+$ vi roles/ocr-config-win/templates/properties/ocr-worker-secure.properties.j2
+</code></pre>
+<p><strong>For OCR Linux</strong></p>
+<pre><code class="hljs css language-bash">$ vi roles/ocr2/templates/properties/ocr-rest-secure.properties.j2
+$ vi roles/ocr2/templates/properties/ocr-worker-secure.properties.j2
+</code></pre>
+<p>The following parameters are to be changed:</p>
+<ul>
+<li><code>ocr.spring.datasource.username2={{ mssql_ocr_user }}</code></li>
+<li><code>ocr.spring.datasource.password2={{ mssql_ocr_pass }}</code></li>
+<li><code>ocr.spring.rabbitmq.username2={{ rabbitmq_ocr_user }}</code></li>
+<li><code>ocr.spring.rabbitmq.password2={{ rabbitmq_ocr_pass }}</code></li>
+</ul></li>
+<li><p>Change the following parameters (for Windows OCR only):</p>
+<pre><code class="hljs css language-bash">vi roles/ocr-win/templates/ocr_conf.ini.j2
+</code></pre>
+<p>The following parameters are to be changed:</p>
+<ul>
+<li><code>spring.datasource.username=${sms.ocr.spring.datasource.username2}</code></li>
+<li><code>spring.datasource.password=${sms.ocr.spring.datasource.password2}</code></li>
+<li><code>spring.rabbitmq.password=${sms.ocr.spring.rabbitmq.password2}</code></li>
+<li><code>spring.rabbitmq.username=${sms.ocr.spring.rabbitmq.username2}</code></li>
+<li><code>spring.rabbitmq.virtualHost=ocr2</code></li>
+</ul></li>
+<li><p>Run the following commands.</p>
+<p><strong>Note</strong>: the second command in the
+section must be run, only if step 6 has been done.</p>
+<pre><code class="hljs css language-bash">$ ./install.sh configure rabbitmq -e @config_overrides.yml
+
+$ ./install.sh install mssql -e @config_overrides.yml
+</code></pre></li>
+<li><p>Perform the following operation, according to the chosen OCR
+platfrom:</p>
+<p><strong>For additional Windows OCR</strong>:</p>
+<p>Run the following commands:</p>
+<pre><code class="hljs css language-bash">$ ./install.sh preinstall ocrwin -e @config_overrides.yml
+$ ./install.sh configure ocrwin -e @config_overrides.yml
+$ ./install.sh install ocrwin -e @config_overrides.yml
+</code></pre>
+<p>If the installation is successful, WinOCR starts automatically.
+Still, you need to add parameters to the <strong>ocr-rest.yml</strong> and
+<strong>ocr-worker.yml</strong> files.</p>
+<p>For that:</p>
+<ol>
+<li><p>Log in to WinOCR VM, and edit the following
+files: <strong>C:\workfusion\OCR\etc\ocr-rest.yml</strong> and <strong>C:\workfusion\OCR\etc\ocr-worker.yml</strong>.<br>
+The following lines should be added:</p>
+<ul>
+<li><code>spring.datasource.username: ${sms.ocr.spring.datasource.username2}</code></li>
+<li><code>spring.datasource.password: ${sms.ocr.spring.datasource.password2}</code></li>
+<li><code>spring.jpa.properties.hibernate.default_schema: ocr2</code></li>
+</ul>
+<p>Server restart is required.</p></li>
+<li><p>On Windows Server, in <strong>cmd</strong>, run the following commands to
+prepare a license for correct license generation:</p>
+<pre><code class="hljs css language-bash"><span class="hljs-built_in">cd</span> /d <span class="hljs-string">"path to ocr folder"</span>
+
+curl -X POST http://127.0.0.1:9002/api/v1/cloud/prepareLicense &gt; license_request.txt
+</code></pre></li>
+</ol>
+<p><strong>For additional Linux OCR</strong>:</p>
+<ol>
+<li><p>Verify that SSH connection to Linux server is successful.</p>
+<pre><code class="hljs css language-bash">$ ./install.sh preinstall ocr -e @config_overrides.yml
+$ ./install.sh install ocr -e @config_overrides.yml
+$ ./install.sh check ocr -e @config_overrides.yml
+</code></pre></li>
+<li><p>Check that everything (except for the license) is fine, wait for
+one minute after the service restart, and then in your browser,
+open the <a href="https://your.newocr.hostname/api/v1/health-check">https://your.newocr.hostname/api/v1/health-check</a>.</p></li>
+</ol></li>
+</ol>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/8/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/spa/admin/ocr/scale-ocr"><span class="arrow-prev">← </span><span>Scale OCR</span></a><a class="docs-next button" href="/docs/spa/admin/ocr/migration-notes"><span>OCR Migration Notes</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#prepare">Prepare</a></li><li><a href="#install">Install</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/wf-logo.svg" alt="Knowledgebase" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://www.workfusion.com/reports-whitepapers/">Reports &amp; Whitepapers</a></div><div><h5>Community</h5><a href="https://forum.workfusion.com/" target="_blank" rel="noreferrer noopener">Forum</a><a href="http://automationacademy.com/">Automation Academy</a><a href="https://partners.workfusion.com/">Partners Portal</a></div><div><h5>More</h5><a href="https://www.workfusion.com/iac/">Intelligent Automation Cloud</a></div></section><section class="copyright">Copyright © 2019 WorkFusion, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: 'PNQGK7RZR5',
+                apiKey: 'ba828b974aad37836106a37d2432da4b',
+                indexName: 'search-config',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en","version:undefined"]}
+              });
+            </script></body></html>

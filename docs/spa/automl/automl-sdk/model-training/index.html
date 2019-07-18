@@ -1,0 +1,332 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Model Training · Knowledgebase</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;A model generated from an archetype contains a local runner to allow the developer to train the configured model. The runner is located at &lt;strong&gt;&lt;em&gt;.../run/ModelTrainingRunner.java&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Model Training · Knowledgebase"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docusaurus.workfusion.com//"/><meta property="og:description" content="&lt;p&gt;A model generated from an archetype contains a local runner to allow the developer to train the configured model. The runner is located at &lt;strong&gt;&lt;em&gt;.../run/ModelTrainingRunner.java&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+"/><meta property="og:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.4/fuse.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/WorkFusion_H_5_RGB.png" alt="Knowledgebase"/><h2 class="headerTitleWithLogo">Knowledgebase</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/terra" target="_self">WorkFusion 10.0</a></li><li class=""><a href="/docs/spa" target="_self">SPA</a></li><li class=""><a href="/docs/spa/admin/install-spa/prepare/overview" target="_self">Administrator&#x27;s Guide</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Getting Started</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">AutoML Concepts<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/what-can-automl-do">What Can AutoML Do?</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Models</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/models-overview">Models Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/information-extraction">Information Extraction</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/checker-model">Checker Model</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/classification">Classification</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/data-set">Data Set</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/automl-glossary">AutoML Glossary</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/automl-delivery">Complete View on AutoML Delivery</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Hardware Requirements<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/automl/10x-hardware-requirements">Hardware Requirements</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/zookeeper-settings">ZooKeeper Settings</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">AutoML SDK<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/introduction">Introduction</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Components</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/components">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/parser">Parser</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/annotators">Annotators</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/feature-extractors">Feature Extractors</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/post-processing">Post-Processing</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/statistics">Statistics</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/model-configuration">Model Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/search-engine">Search Engine</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Getting Started</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/getting-started">Developing with AutoML SDK</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/environment-configuration">Environment Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/project-configuration">Project Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/automl-sdk-configuration">AutoML SDK Configuration</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/spa/automl/automl-sdk/model-training">Model Training</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/model-execution">Model Execution</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/automl-sdk-api">AutoML SDK API</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/code-examples">Code Examples</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/e2e-automl-sdk-walkthrough">End-to-End AutoML SDK Walkthrough</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Data Analyst Manual<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/da-introduction">Data Analyst Manual</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">What does Data Analyst do?</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/da-job">Data Analyst Job</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/da-responsibilities">Data Analyst Responsibilities</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/da-workflow">Data Analyst Workflow</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/customer-data-protection">Customer Data Protection</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Customer documents basics</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/input-docs-characteristics">Input Documents Characteristics</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/input-docs-formats">Formats of Input Documents</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/labeling-requirements">Labeling Requirements</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Analyst runbook</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/input-docs-analysis">Input Documents Analysis</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://git.workfusion.com/projects/DOC/repos/documentation/browse/docs/spa/automl/automl-sdk/model-training.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Model Training</h1></header><article><div><span><p>A model generated from an archetype contains a local runner to allow the developer to train the configured model. The runner is located at <strong><em>.../run/ModelTrainingRunner.java</em></strong>.</p>
+<p>The <code>ModelTrainingRunner</code> class contains a single method. You need to provide a path to the dataset and a working directory, and then specify a list of <code>FieldInfo</code> for the Information Extraction use case.</p>
+<p>When training is finished, the resulting model will be available at <strong><em>workingDir/training/output/model</em></strong>. This path should be passed to the execution runner to check model quality.</p>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">import</span> java.nio.file.Path;
+<span class="hljs-keyword">import</span> java.nio.file.Paths;
+<span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.HashMap;
+<span class="hljs-keyword">import</span> java.util.List;
+<span class="hljs-keyword">import</span> java.util.Map;
+
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.configuration.FieldInfo;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.configuration.FieldType;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.run.ModelRunner;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.run.config.LocalTrainingConfiguration;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ModelTrainingRunner</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        System.setProperty(<span class="hljs-string">"WORKFLOW_LOG_FOLDER"</span>, <span class="hljs-string">"./logs/"</span>);
+
+        <span class="hljs-comment">//Configure input and output</span>
+        Path inputDirPath = Paths.get(<span class="hljs-string">"TODO add path to folder with training set"</span>);
+        Path outputDirPath = Paths.get(<span class="hljs-string">"TODO add path to output folder"</span>);
+
+        <span class="hljs-comment">//Configure the fields according to your use case</span>
+        List&lt;FieldInfo&gt; fields = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        fields.add(<span class="hljs-keyword">new</span> FieldInfo.Builder(<span class="hljs-string">"invoice_number"</span>)
+            .type(FieldType.INVOICE_TYPE)
+            .build());
+        fields.add(<span class="hljs-keyword">new</span> FieldInfo.Builder(<span class="hljs-string">"total_amount"</span>)
+            .type(FieldType.PRICE)
+            .build());
+        <span class="hljs-comment">//Add parameters, if needed</span>
+        Map&lt;String, Object&gt; parameters = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+
+        LocalTrainingConfiguration configuration = LocalTrainingConfiguration.builder()
+                .inputDir(inputDirPath)
+                .outputDir(outputDirPath)
+                .fields(fields)
+                .parameters(parameters)
+                .build();
+        <span class="hljs-comment">//Run your model specified by the Hypermodel class and configuration</span>
+        ModelRunner.run(TrainingIeModel.class, configuration);
+    }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="local-model-training"></a><a href="#local-model-training" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Local Model Training</h2>
+<h3><a class="anchor" aria-hidden="true" id="running-modeltrainingrunner"></a><a href="#running-modeltrainingrunner" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Running ModelTrainingRunner</h3>
+<p>To make the runner work, provide the following parameters:</p>
+<ol>
+<li>Path to the folder with training set files — <code>inputDirPath</code>.</li>
+<li>Path to the output folder where trained model artifacts will be stored — <code>outputDirPath</code>.</li>
+<li>In case of Information Extraction, provide a list of <code>FieldInfo</code> fields which represent your IE configuration.</li>
+<li>Provide your custom model class to <code>ModelRunner.run()</code>.</li>
+<li><em>Optional</em>. Add additional parameters (for example, HPO limits, additional training configuration, etc.).</li>
+<li><em>Optional</em>. For v9.1+. Add additional inputs, such as dictionaries, reference data, etc. using the <code>addResource(targetFolder, sourceFile/Folder)</code> method.</li>
+</ol>
+<p>Here is an example of a ModelTrainingRunner configuration for <strong>one field</strong> <code>invoice_number</code> and a corresponding type:</p>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">import</span> java.nio.file.Path;
+<span class="hljs-keyword">import</span> java.nio.file.Paths;
+<span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.HashMap;
+<span class="hljs-keyword">import</span> java.util.List;
+<span class="hljs-keyword">import</span> java.util.Map;
+
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.configuration.FieldInfo;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.configuration.FieldType;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.run.ModelRunner;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.run.config.LocalTrainingConfiguration;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ModelTrainingRunner</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        System.setProperty(<span class="hljs-string">"WORKFLOW_LOG_FOLDER"</span>, <span class="hljs-string">"./logs/"</span>);
+
+        Path inputDirPath = Paths.get(<span class="hljs-string">"/home/ie-example/input"</span>);
+        Path outputDirPath = Paths.get(<span class="hljs-string">"/home/ie-example/output"</span>);
+
+        List&lt;FieldInfo&gt; fields = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        fields.add(<span class="hljs-keyword">new</span> FieldInfo.Builder(<span class="hljs-string">"invoice_number"</span>)
+                .type(FieldType.INVOICE_NUMBER)
+                .required(<span class="hljs-keyword">true</span>)
+                .multiValue(<span class="hljs-keyword">false</span>)
+                .build());
+
+        Map&lt;String, Object&gt; parameters = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+
+        LocalTrainingConfiguration configuration = LocalTrainingConfiguration.builder()
+                .inputDir(inputDirPath)
+                .outputDir(outputDirPath)
+                .fields(fields)
+                .parameters(parameters)
+                .addResource(<span class="hljs-string">"dictionary"</span>, Paths.get(<span class="hljs-string">"home/ie-example/dictionary/InvoiceNumbers.csv"</span>))
+                .build();
+
+        ModelRunner.run(ExampleIeModel.class, configuration);
+    }
+}
+</code></pre>
+<p>Here is an example of a ModelTrainingRunner configuration for a <strong>group field</strong> <code>invoice_group</code> and a corresponding type:</p>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">import</span> java.nio.file.Path;
+<span class="hljs-keyword">import</span> java.nio.file.Paths;
+<span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.HashMap;
+<span class="hljs-keyword">import</span> java.util.List;
+<span class="hljs-keyword">import</span> java.util.Map;
+
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.configuration.FieldInfo;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.configuration.FieldType;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.run.ModelRunner;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.run.config.LocalTrainingConfiguration;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ModelTrainingRunner</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        System.setProperty(<span class="hljs-string">"WORKFLOW_LOG_FOLDER"</span>, <span class="hljs-string">"./logs/"</span>);
+
+        Path inputDirPath = Paths.get(<span class="hljs-string">"/home/ie-example/input"</span>);
+        Path outputDirPath = Paths.get(<span class="hljs-string">"/home/ie-example/output"</span>);
+
+
+        List&lt;FieldInfo&gt; fields = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        fields.add(<span class="hljs-keyword">new</span> FieldInfo.Builder(<span class="hljs-string">"invoice_group"</span>).type(FieldType.GROUP)
+                    .child(<span class="hljs-keyword">new</span> FieldInfo.Builder(<span class="hljs-string">"invoice_number"</span>)
+                        .type(FieldType.INVOICE_TYPE)
+                        .build())
+                    .child(<span class="hljs-keyword">new</span> FieldInfo.Builder(<span class="hljs-string">"invoice_date"</span>)
+                        .type(FieldType.INVOICE_DATE)
+                        .build())
+                .build());
+
+        Map&lt;String, Object&gt; parameters = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+
+        LocalTrainingConfiguration configuration = LocalTrainingConfiguration.builder()
+                .inputDir(inputDirPath)
+                .outputDir(outputDirPath)
+                .fields(fields)
+                .parameters(parameters)
+                .addResource(<span class="hljs-string">"dictionary"</span>, Paths.get(<span class="hljs-string">"home/ie-example/dictionary/InvoiceNumbers.csv"</span>))
+                .build();
+
+        ModelRunner.run(ExampleIeModel.class, configuration);
+    }
+}
+</code></pre>
+<p>Refer to the <a href="/docs/spa/automl/automl-sdk/resource-estimation">Resources Estimation documentation</a> for more details.</p>
+<h3><a class="anchor" aria-hidden="true" id="model-training-results"></a><a href="#model-training-results" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Model Training Results</h3>
+<p>After a successful model training your output folder should contain
+a <strong><em>training</em></strong> sub-folder with following folders:</p>
+<ol>
+<li><strong>output</strong> — A folder with model output (statistics, trained model artifact, etc.).</li>
+<li><strong>process</strong> — A folder with model training details (status files, training logs, etc.).</li>
+<li><strong>work</strong> — A working folder for model training (feature files, temporary files, etc.).</li>
+</ol>
+<p>The trained model artifact will be placed in the following folder: <strong><em>&lt;%output_folder%&gt;/training/output/model.</em></strong></p>
+<h2><a class="anchor" aria-hidden="true" id="cluster-model-training"></a><a href="#cluster-model-training" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cluster Model Training</h2>
+<p>Versioning Info</p>
+<p>Available from version 9.0.0</p>
+<p>A model generated from an archetype contains a special class for model
+training — <strong>ModelTrainingRunner</strong>.</p>
+<h3><a class="anchor" aria-hidden="true" id="running-modeltrainingrunner-1"></a><a href="#running-modeltrainingrunner-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Running ModelTrainingRunner</h3>
+<p><strong>To make the runner work, proceed with the following steps:</strong></p>
+<ol>
+<li>Generate public and private SSH keys. You can use PuTTYgen as a key generation tool for creating SSH keys for PuTTY. It is similar to the ssh-keygen tool used in other SSH implementations.</li>
+<li>Send your public key to your system administrator and request access to the cluster.</li>
+<li>Provide the following information to MarathonTrainingConfiguration.builder():
+<ul>
+<li>Path to a folder with training set files.</li>
+<li>In case of Information Extraction use case: List of FieldInfo fields which represent your IE configuration.</li>
+<li>Provide your custom model Class to method run.</li>
+</ul></li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" id="configuring-model-training-on-marathon-cluster"></a><a href="#configuring-model-training-on-marathon-cluster" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuring Model Training on Marathon Cluster</h4>
+<p>The configuration class for model training on the Marathon cluster has the following parameters.</p>
+<p>Required:</p>
+<ol>
+<li><code>inputDir</code> — A path to a folder with training set files.</li>
+<li><code>endpoint</code> — URL to cluster.</li>
+<li><code>sshHost</code> — Name of Apache Mesos master node.</li>
+<li><code>sshKey</code> — SSH key path.</li>
+<li><code>clusterSharedWorkerDir</code> — Path to workers handled by the worker management service. Defaults to <em>opt/workfusion/vds-data/workers/app/</em>.</li>
+<li><code>clusterWorkingDir</code> — Path to Marathon and Mesos on a cluster where your training starts. Defaults to <em>opt/workfusion/vds-data/eval/</em>.</li>
+<li><code>id</code> — Training ID. Set a unique and verbose name to avoid collisions.</li>
+<li><code>fields</code> — List of FieldInfo fields which represent your IE configuration.</li>
+</ol>
+<p>Optional:</p>
+<ol>
+<li><code>sshPort</code> — Gets SSH port. Default: <code>22</code>.</li>
+<li><code>sshKeyPassphrase</code> — SSH key passphrase, if your SSH key is password protected.</li>
+<li><code>testSetDir</code> — A path to a folder with test set files.</li>
+<li><code>sshUserName</code> — SSH username for connection. Default: <code>wfuser</code>.</li>
+<li><code>parameters</code> — Additional parameters (for example, Search Engine limits, additional training configuration, etc.).</li>
+</ol>
+<p>Here is an example of cluster model runner configuration.</p>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">import</span> java.nio.file.Paths;
+<span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.HashMap;
+<span class="hljs-keyword">import</span> java.util.List;
+<span class="hljs-keyword">import</span> java.util.Map;
+
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.configuration.FieldInfo;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.configuration.FieldType;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.run.ModelRunner;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.run.config.MarathonTrainingConfiguration;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ModelTrainingRunner</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        System.setProperty(<span class="hljs-string">"WORKFLOW_LOG_FOLDER"</span>, <span class="hljs-string">"./logs/"</span>);
+
+        List&lt;FieldInfo&gt; fields = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        fields.add(<span class="hljs-keyword">new</span> FieldInfo.Builder(<span class="hljs-string">"transaction_data"</span>).type(FieldType.DATE).build());
+
+        Map&lt;String, Object&gt; parameters = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+
+        ClusterTrainingConfiguration configuration = ClusterTrainingConfiguration.builder()
+            .inputDir(Paths.get(<span class="hljs-string">"training_set"</span>))
+            .testSetDir(Paths.get(<span class="hljs-string">"test_set"</span>))
+            .endpoint(<span class="hljs-string">"url_to_cluster"</span>)
+            .sshHost(<span class="hljs-string">"host"</span>)
+            .sshUsername(<span class="hljs-string">"user"</span>)
+            .sshPort(<span class="hljs-number">22</span>)
+            .sshKey(<span class="hljs-string">"ssh_private_key_path"</span>)
+            .sshKeyPassphrase(<span class="hljs-string">"ssh_password"</span>)
+            .clusterSharedWorkerDir(<span class="hljs-string">"wms_shared_folder"</span>)
+            .clusterWorkingDir(<span class="hljs-string">"cluster_working_dir"</span>)
+            .id(<span class="hljs-string">"trainingId"</span>)
+            .parameters(parameters)
+            .fields(fields)
+            .build();
+        ModelRunner.run(YourIeModel.class, configuration);
+    }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="model-training-results-1"></a><a href="#model-training-results-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Model Training Results</h3>
+<p>After a successful model training the Marathon folder will contain a training sub-folder with the following folders:</p>
+<ol>
+<li><strong>output</strong> — a folder with model output (statistics, trained model artifact, etc.).</li>
+<li><strong>process</strong> — a folder with model training details (status files, training logs, etc.).</li>
+<li><strong>work</strong> — a working folder for model training (feature files, temporary files, etc.).</li>
+</ol>
+<p>The trained model artifact will be placed in the following folder: <strong><em><training MM.dd-hh.mm>/training/output/model</em></strong>.</p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="additional-resources"></a><a href="#additional-resources" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Additional Resources</h2>
+<ul>
+<li><a href="/docs/spa/automl/automl-sdk/resource-estimation">Resource Estimation</a></li>
+<li><a href="/docs/spa/automl/automl-sdk/local-run">Local Run</a></li>
+</ul>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/8/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/spa/automl/automl-sdk/automl-sdk-configuration"><span class="arrow-prev">← </span><span class="function-name-prevnext">AutoML SDK Configuration</span></a><a class="docs-next button" href="/docs/spa/automl/automl-sdk/model-execution"><span>Model Execution</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#local-model-training">Local Model Training</a><ul class="toc-headings"><li><a href="#running-modeltrainingrunner">Running ModelTrainingRunner</a></li><li><a href="#model-training-results">Model Training Results</a></li></ul></li><li><a href="#cluster-model-training">Cluster Model Training</a><ul class="toc-headings"><li><a href="#running-modeltrainingrunner-1">Running ModelTrainingRunner</a></li><li><a href="#model-training-results-1">Model Training Results</a></li></ul></li><li><a href="#additional-resources">Additional Resources</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/wf-logo.svg" alt="Knowledgebase" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://www.workfusion.com/reports-whitepapers/">Reports &amp; Whitepapers</a></div><div><h5>Community</h5><a href="https://forum.workfusion.com/" target="_blank" rel="noreferrer noopener">Forum</a><a href="http://automationacademy.com/">Automation Academy</a><a href="https://partners.workfusion.com/">Partners Portal</a></div><div><h5>More</h5><a href="https://www.workfusion.com/iac/">Intelligent Automation Cloud</a></div></section><section class="copyright">Copyright © 2019 WorkFusion, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: 'PNQGK7RZR5',
+                apiKey: 'ba828b974aad37836106a37d2432da4b',
+                indexName: 'search-config',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en","version:undefined"]}
+              });
+            </script></body></html>

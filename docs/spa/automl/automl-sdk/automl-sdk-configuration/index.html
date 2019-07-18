@@ -1,0 +1,744 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>AutoML SDK Configuration · Knowledgebase</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;&lt;strong&gt;AutoML SDK configuration&lt;/strong&gt; is a Java Spring-like set of definitions&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="AutoML SDK Configuration · Knowledgebase"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docusaurus.workfusion.com//"/><meta property="og:description" content="&lt;p&gt;&lt;strong&gt;AutoML SDK configuration&lt;/strong&gt; is a Java Spring-like set of definitions&lt;/p&gt;
+"/><meta property="og:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.4/fuse.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/WorkFusion_H_5_RGB.png" alt="Knowledgebase"/><h2 class="headerTitleWithLogo">Knowledgebase</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/terra" target="_self">WorkFusion 10.0</a></li><li class=""><a href="/docs/spa" target="_self">SPA</a></li><li class=""><a href="/docs/spa/admin/install-spa/prepare/overview" target="_self">Administrator&#x27;s Guide</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Getting Started</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">AutoML Concepts<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/what-can-automl-do">What Can AutoML Do?</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Models</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/models-overview">Models Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/information-extraction">Information Extraction</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/checker-model">Checker Model</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/classification">Classification</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/data-set">Data Set</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/automl-glossary">AutoML Glossary</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/automl-delivery">Complete View on AutoML Delivery</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Hardware Requirements<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/automl/10x-hardware-requirements">Hardware Requirements</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/zookeeper-settings">ZooKeeper Settings</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">AutoML SDK<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/introduction">Introduction</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Components</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/components">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/parser">Parser</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/annotators">Annotators</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/feature-extractors">Feature Extractors</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/post-processing">Post-Processing</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/statistics">Statistics</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/model-configuration">Model Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/search-engine">Search Engine</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Getting Started</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/getting-started">Developing with AutoML SDK</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/environment-configuration">Environment Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/project-configuration">Project Configuration</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/spa/automl/automl-sdk/automl-sdk-configuration">AutoML SDK Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/model-training">Model Training</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/model-execution">Model Execution</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/automl-sdk-api">AutoML SDK API</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/code-examples">Code Examples</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/e2e-automl-sdk-walkthrough">End-to-End AutoML SDK Walkthrough</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Data Analyst Manual<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/da-introduction">Data Analyst Manual</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">What does Data Analyst do?</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/da-job">Data Analyst Job</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/da-responsibilities">Data Analyst Responsibilities</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/da-workflow">Data Analyst Workflow</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/customer-data-protection">Customer Data Protection</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Customer documents basics</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/input-docs-characteristics">Input Documents Characteristics</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/input-docs-formats">Formats of Input Documents</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/labeling-requirements">Labeling Requirements</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Analyst runbook</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/input-docs-analysis">Input Documents Analysis</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://git.workfusion.com/projects/DOC/repos/documentation/browse/docs/spa/automl/automl-sdk/automl-sdk-configuration.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">AutoML SDK Configuration</h1></header><article><div><span><p><strong>AutoML SDK configuration</strong> is a Java Spring-like set of definitions
+for AutoML SDK <a href="/docs/spa/automl/automl-sdk/components">components</a> — <a href="/docs/spa/automl/automl-sdk/annotators">Annotators</a>, <a href="/docs/spa/automl/automl-sdk/feature-extractors">Feature Extractors</a>, <a href="/docs/spa/automl/automl-sdk/post-processing">Post-Processors</a>, etc.</p>
+<p>AutoML SDK configuration is created declaratively using Java Annotations. There are two main annotations: <code>@ModelConfiguration</code> and <code>@Named</code> (similar to
+Spring's <code>@Configuration</code> and <code>@Bean</code> annotations). Annotating a class with <code>@ModelConfiguration</code> indicates that the class can be used as a source of component definitions. The <code>@Named</code> annotation declares a component and tells that a method will return an actual component which should be registered in ComponentRegistry.</p>
+<p>Your <code>@ModelConfiguration</code> class can have a declaration for more than one <code>@Named</code>. Once your classes are defined, you can use the configuration for model training.</p>
+<h2><a class="anchor" aria-hidden="true" id="configuration"></a><a href="#configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuration</h2>
+<p>Let's start with a basic configuration:</p>
+<ol>
+<li>First, use <code>@ModelConfiguration</code> to declare a class as a configuration instance.</li>
+<li>Next, add the main configuration class <code>@HypermodelConfiguration</code> to the hyper-model declaration.</li>
+</ol>
+<pre><code class="hljs css language-java"><span class="hljs-meta">@ModelConfiguration</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ExampleConfiguration</span> </span>{
+}
+
+<span class="hljs-meta">@HypermodelConfiguration</span>(ExampleConfiguration.class)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ExampleHypermodel</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">GenericIeHypermodel</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">ExampleHypermodel</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        <span class="hljs-keyword">super</span>();
+    }
+
+}
+</code></pre>
+<p>Note, that the previous configuration example extends the default <code>GenericIeHypermodel</code> configuration. This can be changed during the <a href="/docs/spa/automl/automl-sdk/project-configuration">project configuration</a> by specifying the <code>importConfigurationFromGenericModel</code> parameter.</p>
+<h2><a class="anchor" aria-hidden="true" id="components-configuration"></a><a href="#components-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Components Configuration</h2>
+<p>To declare one or multiple AutoML SDK components,
+use <code>@Named</code> annotation with a string value to attach a name identifier
+to a component. Note, that <code>@Named</code> can return a single component or a
+list of components. Components are recognized based on the <em>response
+type</em>.</p>
+<p>The following example declares 3 named components: <code>basePostProcessors</code>, <code>featureExtractors</code>, and a list of <code>annotators</code>.</p>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.List;
+
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.ModelConfiguration;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.Named;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.annotator.Annotator;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.fe.FeatureExtractor;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.model.Cell;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.model.Element;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.model.IeDocument;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.processing.Processor;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.nlp.component.annotator.EntityBoundaryAnnotator;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.nlp.component.annotator.tokenizer.SplitterTokenAnnotator;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.nlp.component.fe.ner.IsFirstNerInFocusElementFE;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.nlp.component.processing.grouping.RowBasedGroupingProcessor;
+
+<span class="hljs-meta">@ModelConfiguration</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ExampleConfiguration</span> </span>{
+
+    <span class="hljs-meta">@Named</span>(<span class="hljs-string">"basePostProcessors"</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Processor&lt;IeDocument&gt; <span class="hljs-title">postProcessors</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> RowBasedGroupingProcessor();
+    }
+
+    <span class="hljs-meta">@Named</span>(<span class="hljs-string">"featureExtractors"</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> FeatureExtractor&lt;Element&gt; <span class="hljs-title">featureExtractors</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> IsFirstNerInFocusElementFE(Cell.class);
+    }
+
+    <span class="hljs-meta">@Named</span>(<span class="hljs-string">"annotators"</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;Annotator&gt; <span class="hljs-title">annotators</span><span class="hljs-params">()</span> </span>{
+        List&lt;Annotator&gt; annotators = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        annotators.add(<span class="hljs-keyword">new</span> SplitterTokenAnnotator(<span class="hljs-string">"\\s+"</span>));
+        annotators.add(<span class="hljs-keyword">new</span> EntityBoundaryAnnotator());
+        <span class="hljs-keyword">return</span> annotators;
+    }
+
+}
+</code></pre>
+<p>The result of this configuration will be: Post-Processor from <code>basePostProcessors</code>, Feature Extractor from <code>featureExtractors</code> and two Annotators from <code>annotators</code>.</p>
+<p><a href="#advanced-configuration-components">Advanced components</a> are described in the following chapters of the document.</p>
+<h2><a class="anchor" aria-hidden="true" id="configuration-context"></a><a href="#configuration-context" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuration Context</h2>
+<p>ConfigurationContext is an interface that provides a map of initial configuration parameters and a reference to the field object. Field value is used to specify settings for a concrete sub-model configuration. For example, apply specific annotators only for field with type — ADDRESS.</p>
+<p><code>@Named</code> methods can accept a ConfigurationContext object or an IeConfigurationContext object in case of information extraction models.</p>
+<p>ConfigurationContext and IeConfigurationContext contain methods to access different properties. The most commonly used property is <code>FieldInfo</code> — a class for information extraction, which contains information about the current <em>sub-model</em> configuration. Using this property one <code>@Named</code> method can produce different sets of AutoML SDK components for different sub-models using a switch case or an if-else statement.</p>
+<p>The following <code>ConfigurationContext</code> methods are considered the most useful. For a full list of methods, refer to <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/hypermodel/ConfigurationContext.html">ConfigurationContext</a> documentation.</p>
+<h3><a class="anchor" aria-hidden="true" id="getfield-method"></a><a href="#getfield-method" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getField Method</h3>
+<p><code>getField</code> gets <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/configuration/FieldInfo.html">FieldInfo</a> associated with the current sub-model configuration. For ConfigurationContext that
+isn't related to the particular field, getField returns empty FieldInfo with code — default.</p>
+<pre><code class="hljs css language-java"><span class="hljs-function">FieldInfo <span class="hljs-title">getField</span><span class="hljs-params">()</span>
+</span></code></pre>
+<p>The following example contains an <code>IeConfigurationContext</code> object. In this case, each AutoML SDK configuration produces a different set of Annotators depending on the code type: <code>invoice_number</code> or <code>address</code>.</p>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.List;
+
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.ModelConfiguration;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.Named;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.annotator.Annotator;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.configuration.IeConfigurationContext;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.nlp.component.annotator.EntityBoundaryAnnotator;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.nlp.component.annotator.ner.BaseRegexNerAnnotator;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.nlp.component.annotator.tokenizer.SplitterTokenAnnotator;
+
+<span class="hljs-meta">@ModelConfiguration</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TrainingIeModelConfiguration</span> </span>{
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String REGEX_SPLITTER_TOKEN = <span class="hljs-string">"\\s+"</span>;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String REGEX_ZIP = <span class="hljs-string">"[0-9]{5}(-[0-9]{4,5})?"</span>;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String REGEX_CITY = <span class="hljs-string">"[A-Z][a-z]{3,18}"</span>;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String REGEX_INVOICE_NUMBER = <span class="hljs-string">"([\\d]{10,11})"</span>;
+
+    <span class="hljs-meta">@Named</span>(<span class="hljs-string">"annotators"</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;Annotator&gt; <span class="hljs-title">annotators</span><span class="hljs-params">(IeConfigurationContext context)</span> </span>{
+        List&lt;Annotator&gt; annotators = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        annotators.add(<span class="hljs-keyword">new</span> SplitterTokenAnnotator(REGEX_SPLITTER_TOKEN));
+        annotators.add(<span class="hljs-keyword">new</span> EntityBoundaryAnnotator());
+
+        String codeType = context.getField().getCode();
+        <span class="hljs-keyword">switch</span> (codeType) {
+            <span class="hljs-keyword">case</span> <span class="hljs-string">"invoice_number"</span>: {
+                annotators.add(BaseRegexNerAnnotator.getJavaPatternRegexNerAnnotator(<span class="hljs-string">"invoice_number"</span>, REGEX_INVOICE_NUMBER));
+                <span class="hljs-keyword">break</span>;
+            }
+            <span class="hljs-keyword">case</span> <span class="hljs-string">"address"</span>: {
+                annotators.add(BaseRegexNerAnnotator.getJavaPatternRegexNerAnnotator(<span class="hljs-string">"city"</span>, REGEX_CITY));
+                annotators.add(BaseRegexNerAnnotator.getJavaPatternRegexNerAnnotator(<span class="hljs-string">"zip"</span>, REGEX_ZIP));
+                <span class="hljs-keyword">break</span>;
+            }
+        }
+        <span class="hljs-keyword">return</span> annotators;
+    }
+
+}
+
+</code></pre>
+<p>For more information, refer to <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/configuration/FieldInfo.html">FieldInfo</a> documentation.</p>
+<h3><a class="anchor" aria-hidden="true" id="getresource-method"></a><a href="#getresource-method" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getResource Method</h3>
+<pre><code class="hljs css language-java"><span class="hljs-function">Resource <span class="hljs-title">getResource</span><span class="hljs-params">(String path)</span>
+</span></code></pre>
+<p><code>getResource</code> provides a <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/hypermodel/Resource.html">Resource</a> instance
+for a specified path:</p>
+<ul>
+<li>Classpath resource, for example <strong><em>classpath:test.csv</em></strong>.</li>
+<li>Model resource, for example <strong><em>/ref-data/test.csv</em></strong>, <strong><em>/dictionaries/test.csv</em></strong>, <strong><em>/corrections/test.csv</em></strong>.</li>
+</ul>
+<p>Here's an example of <code>getResource</code> usage with a dictionary.</p>
+<pre><code class="hljs css language-java"><span class="hljs-meta">@Named</span>(<span class="hljs-string">"annotators"</span>)
+<span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;Annotator&gt; <span class="hljs-title">annotators</span><span class="hljs-params">(IeConfigurationContext context)</span> </span>{
+    List&lt;Annotator&gt; annotators = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+    annotators.add(<span class="hljs-keyword">new</span> AhoCorasickDictionaryNerAnnotator(<span class="hljs-string">"company_name"</span>,
+        <span class="hljs-keyword">new</span> CsvDictionaryKeywordProvider(context.getResource(<span class="hljs-string">"/dictionaries/CompanyNames.csv"</span>))));
+    <span class="hljs-keyword">return</span> annotators;
+}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="inputstream"></a><a href="#inputstream" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>InputStream</h4>
+<pre><code class="hljs css language-java"><span class="hljs-function">InputStream <span class="hljs-title">openInputStream</span><span class="hljs-params">()</span>
+</span></code></pre>
+<p>In case, the <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/hypermodel/Resource.html">Resource</a> instance is provided by an external WorkFusion source, for example attached to human
+task, use an input stream to read data. The <code>try-with-resources</code> construct should be used to ensure that the opened stream is closed at the end of the statement.</p>
+<h3><a class="anchor" aria-hidden="true" id="getparameter-method"></a><a href="#getparameter-method" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getParameter Method</h3>
+<p><code>getParameter</code> gets a configuration parameter (for example, parameter name) acquired externally from a WorkFusion service. This parameter can be used for further advanced model configuration.</p>
+<pre><code class="hljs css language-java"><span class="hljs-function">Object <span class="hljs-title">getParameter</span><span class="hljs-params">(String name)</span>
+</span></code></pre>
+<p>For more information, refer to <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/hypermodel/ConfigurationContext.html#getParameter-java.lang.String-">getParameter()</a> documentation.</p>
+<h2><a class="anchor" aria-hidden="true" id="component-registry"></a><a href="#component-registry" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Component Registry</h2>
+<p><code>ComponentRegistry</code> is an interface to provide access to <code>@Named</code> components as Java Objects. An instance of such object can be obtained in a <code>@Named</code> method. Using this interface, you can obtain a Component instance by ID or internal return type (for example, <code>FeatureExtactor.class</code> ). In some cases, this can simplify the configuration code.</p>
+<p><code>ComponentRegistry</code> default implementation contains the following methods:</p>
+<ol>
+<li><code>getComponent</code></li>
+<li><code>getComponents</code></li>
+</ol>
+<p>For usage information, refer to <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/hypermodel/ComponentRegistry.html">ComponentRegistry</a> documentation.</p>
+<h3><a class="anchor" aria-hidden="true" id="getcomponent"></a><a href="#getcomponent" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getComponent</h3>
+<p><code>getComponent</code> gets a single component based on a unique component ID.</p>
+<pre><code class="hljs css language-java"><span class="hljs-function">Component <span class="hljs-title">getComponent</span><span class="hljs-params">(String componentName)</span>
+</span></code></pre>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>@componentName</code></td><td><code>@Named</code> component annotation value.</td></tr>
+<tr><td><code>@return</code></td><td>Single component.</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="getcomponents"></a><a href="#getcomponents" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getComponents</h3>
+<p><code>getComponents</code> gets a collection of <code>@Named</code> components based on the return type.</p>
+<pre><code class="hljs css language-java"><span class="hljs-function">Collection&lt;Component&gt; <span class="hljs-title">getComponents</span><span class="hljs-params">(Class&lt;?&gt; type)</span>
+</span></code></pre>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>@type</code></td><td>Components type.</td></tr>
+<tr><td><code>@return</code></td><td>Collection of components.</td></tr>
+</tbody>
+</table>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">import</span> com.workfusion.vds.nlp.model.configuration.DefaultComponentRegistry;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hpo.Dimensions;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hpo.ParameterSpace;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.ModelConfiguration;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.Named;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.annotator.Annotator;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.configuration.IeConfigurationContext;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.nlp.component.annotator.ner.BaseRegexNerAnnotator;
+
+<span class="hljs-meta">@ModelConfiguration</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Config</span> </span>{
+
+   <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String REGEX_ZIP = <span class="hljs-string">"[0-9]{5}(-[0-9]{4,5})?"</span>;
+   <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String REGEX_CITY = <span class="hljs-string">"[A-Z][a-z]{3,18}"</span>;
+   <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String REGEX_INVOICE_NUMBER = <span class="hljs-string">"([\\d]{10,11})"</span>;
+
+   <span class="hljs-meta">@Named</span>(<span class="hljs-string">"a1"</span>)
+   <span class="hljs-function"><span class="hljs-keyword">public</span> Annotator <span class="hljs-title">a1</span><span class="hljs-params">()</span> </span>{
+       <span class="hljs-keyword">return</span> BaseRegexNerAnnotator.getJavaPatternRegexNerAnnotator(<span class="hljs-string">"invoice_number"</span>, REGEX_INVOICE_NUMBER);
+   }
+
+   <span class="hljs-meta">@Named</span>(<span class="hljs-string">"a2"</span>)
+   <span class="hljs-function"><span class="hljs-keyword">public</span> Annotator <span class="hljs-title">a2</span><span class="hljs-params">()</span> </span>{
+       <span class="hljs-keyword">return</span> BaseRegexNerAnnotator.getJavaPatternRegexNerAnnotator(<span class="hljs-string">"zip"</span>, REGEX_ZIP);
+   }
+
+   <span class="hljs-meta">@Named</span>(<span class="hljs-string">"a3"</span>)
+   <span class="hljs-function"><span class="hljs-keyword">public</span> Annotator <span class="hljs-title">a3</span><span class="hljs-params">()</span> </span>{
+       <span class="hljs-keyword">return</span> BaseRegexNerAnnotator.getJavaPatternRegexNerAnnotator(<span class="hljs-string">"city"</span>, REGEX_CITY);
+   }
+
+   <span class="hljs-meta">@Named</span>(<span class="hljs-string">"featureExtractorsParameterSpace"</span>)
+   <span class="hljs-function"><span class="hljs-keyword">public</span> ParameterSpace <span class="hljs-title">configureHPO</span><span class="hljs-params">(DefaultComponentRegistry registry, IeConfigurationContext configurationContext)</span> </span>{
+       <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ParameterSpace.Builder()
+               .add(Dimensions.selectOne(registry.getComponent(<span class="hljs-string">"a1"</span>), registry.getComponent(<span class="hljs-string">"a3"</span>)))
+               .build();
+   }
+
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="importing-a-configuration"></a><a href="#importing-a-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Importing a Configuration</h2>
+<p>One or multiple configurations can be imported into another configuration to avoid writing it from scratch. In this case, the imported configuration is considered a <em>child</em> and the target configuration is considered a <em>parent</em>. The resulting configuration contains all components from child configurations and a parent configuration.</p>
+<p>To import a configuration(-s) to another configuration, use <code>@Import</code> class-level annotation together with <code>@ModelConfiguration</code>. The latter contains a reference to the child configuration class.</p>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.Import;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.ModelConfiguration;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.Named;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.processing.Processor;
+
+<span class="hljs-meta">@ModelConfiguration</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PostProcessorConfig</span> </span>{
+
+   <span class="hljs-meta">@Named</span>(<span class="hljs-string">"presentationPostProcessor"</span>)  
+   <span class="hljs-function"><span class="hljs-keyword">public</span> Processor <span class="hljs-title">getPostProcessors</span><span class="hljs-params">()</span> </span>{
+       <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ExamplePostProcessing1();
+   }
+
+   <span class="hljs-meta">@Named</span>(<span class="hljs-string">"basePostProcessor"</span>)  
+   <span class="hljs-function"><span class="hljs-keyword">public</span> Processor <span class="hljs-title">postProcessors</span><span class="hljs-params">()</span> </span>{
+       <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ExamplePostProcessing2();
+   }
+
+}
+
+<span class="hljs-meta">@ModelConfiguration</span>
+<span class="hljs-meta">@Import</span>(configurations = {
+       <span class="hljs-meta">@Import</span>.Configuration(PostProcessorConfig.class)
+})
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GenericPostProcessorConfig</span> </span>{
+
+   <span class="hljs-meta">@Named</span>(<span class="hljs-string">"basePostProcessor"</span>)  
+   <span class="hljs-function"><span class="hljs-keyword">public</span> Processor <span class="hljs-title">postProcessors</span><span class="hljs-params">()</span> </span>{
+       <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ExamplePostProcessing3();
+   }
+
+}
+</code></pre>
+<p>The result of <code>GenericPostProcessorConfig</code> processing will consist of all named components from the child <code>PostProcessorConfig</code> configuration and all components from the parent <code>GenericPostProcessorConfig</code> configuration.</p>
+
+    <div class="admonition admonition-note">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div> note</h5>
+      </div>
+      <div class="admonition-content">
+    <p>Both configurations contain a Post-Processor <code>basePostProcessor</code>. In this case, the component declared in the parent <code>GenericPostProcessorConfig</code> configuration will override the component with the same name declared in the child <code>PostProcessorConfig</code> configuration.</p>
+</div></div><p>The resulting configuration will contain the following Components:</p>
+<ul>
+<li><code>presentationPostProcessor</code> from <code>PostProcessorConfig</code></li>
+<li><code>basePostProcessor</code> from <code>GenericPostProcessorConfig</code></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="hyper-parameter-optimization"></a><a href="#hyper-parameter-optimization" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Hyper Parameter Optimization</h2>
+<p>Configuration described in previous sections is an example of fixed configuration with a strictly pre-defined set of components. Starting with v9.0 AutoML SDK enables configuring <strong>Hyper Parameter Optimization</strong> which significantly extends the capabilities of a configuration allowing smart selection of components. For example, a configuration can have a number of declared Annotators, but only a particular combination of these Annotators performs the best result.</p>
+<p>To configure HPO within your model configuration, proceed with the following steps:</p>
+<ol>
+<li><p>Declare a class as a configuration instance using the <code>@ModelConfiguration</code> annotation, just like in a fixed configuration.</p></li>
+<li><p>Declare your named components. For example, a couple of Annotators and a list of Feature Extractors.</p>
+<ol>
+<li>Alternatively, import a child configuration(-s) with a ready-to-go set of components.</li>
+</ol></li>
+<li><p>Declare a @Named component with some unique ID (for example, <code>annotatorParameterSpace</code>), and then add a method producing ParameterSpace.</p></li>
+<li><p>Use <code>ParameterSpace.Builder()</code> to define the dimensions—component selection strategy—according to the following criteria:</p>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Description</th><th>Example</th></tr>
+</thead>
+<tbody>
+<tr><td><code>required</code></td><td>Component is required at all times.</td><td><code>required(&quot;annotator1&quot;)</code></td></tr>
+<tr><td><code>selectOne</code></td><td>Only one component from a subset is required.</td><td><code>selectOne(&quot;annotator2&quot;, &quot;annotator3&quot;)</code></td></tr>
+<tr><td><code>optionalOne</code></td><td>None or only one component from a subset is required.</td><td><code>optionalOne(&quot;annotator2&quot;, &quot;annotator3&quot;)</code></td></tr>
+<tr><td><code>optional</code></td><td>Component is optional.</td><td><code>optional(&quot;annotator3&quot;)</code></td></tr>
+</tbody>
+</table>
+</li>
+</ol>
+
+    <div class="admonition admonition-warning">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></div> warning</h5>
+      </div>
+      <div class="admonition-content">
+    <p>Configuring HPO requires explicit selection strategy setup. This means that components not mentioned in HPO configuration <em>will not</em> be processed.</p>
+</div></div><p>The following configuration with HPO will result in finding the best combination of Annotators.</p>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.List;
+
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hpo.Dimensions;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hpo.ParameterSpace;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.ModelConfiguration;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.Named;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.annotator.Annotator;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.fe.FeatureExtractor;
+
+<span class="hljs-meta">@ModelConfiguration</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ExampleConfiguration</span> </span>{
+
+    <span class="hljs-meta">@Named</span>(<span class="hljs-string">"annotator1"</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Annotator <span class="hljs-title">getAnnotator1</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> AnnotatorExample1();
+    }
+
+    <span class="hljs-meta">@Named</span>(<span class="hljs-string">"annotator2"</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Annotator <span class="hljs-title">getAnnotator2</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> AnnotatorExample2();
+    }
+
+    <span class="hljs-meta">@Named</span>(<span class="hljs-string">"annotator3"</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Annotator <span class="hljs-title">getAnnotator3</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> AnnotatorExample3();
+    }
+
+    <span class="hljs-meta">@Named</span>(<span class="hljs-string">"fes"</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;FeatureExtractor&gt; <span class="hljs-title">getPostProcessors</span><span class="hljs-params">()</span> </span>{
+        List&lt;FeatureExtractor&gt; fes = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        fes.add(<span class="hljs-keyword">new</span> FeatureExtractorExample1());
+        fes.add(<span class="hljs-keyword">new</span> FeatureExtractorExample2());
+        <span class="hljs-keyword">return</span> fes;
+    }
+
+    <span class="hljs-meta">@Named</span>(<span class="hljs-string">"annotatorParameterSpace"</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ParameterSpace <span class="hljs-title">configureParameterSpace</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ParameterSpace.Builder()
+                .add(Dimensions.required(<span class="hljs-string">"annotator1"</span>))
+                .add(Dimensions.selectOne(<span class="hljs-string">"annotator2"</span>, <span class="hljs-string">"annotator3"</span>))
+                .add(Dimensions.required(<span class="hljs-string">"fes"</span>))
+                .build();
+    }
+
+}
+</code></pre>
+<p>The above-mentioned configuration can be further extended by adding <a href="#configuration-context">ConfigurationContext</a> to choose the best configuration for each field by adding dimensions as in the following example.</p>
+<ul>
+<li>For <code>invoice_amount</code> the configuration will always use <code>fes</code> and <code>annotator1</code>, and then choose the best from <code>annotator2</code> or <code>annotator3</code>.</li>
+<li>For <code>client_address</code> the configuration will always use <code>fes</code> and <code>annotator1</code>, and then optionally choose <code>annotator4</code>.</li>
+</ul>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.List;
+
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hpo.Dimensions;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hpo.ParameterSpace;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.ModelConfiguration;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.Named;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.annotator.Annotator;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.configuration.IeConfigurationContext;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.fe.FeatureExtractor;
+
+<span class="hljs-meta">@ModelConfiguration</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ExampleConfiguration</span> </span>{
+
+    <span class="hljs-meta">@Named</span>(<span class="hljs-string">"annotator1"</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Annotator <span class="hljs-title">getAnnotator1</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Annotator1();
+    }
+
+    <span class="hljs-meta">@Named</span>(<span class="hljs-string">"annotator2"</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Annotator <span class="hljs-title">getAnnotator2</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Annotator2();
+    }
+
+    <span class="hljs-meta">@Named</span>(<span class="hljs-string">"annotator3"</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Annotator <span class="hljs-title">getAnnotator3</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Annotator3();
+    }
+
+    <span class="hljs-meta">@Named</span>(<span class="hljs-string">"annotator4"</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Annotator <span class="hljs-title">getAnnotator4</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Annotator4();
+    }
+
+    <span class="hljs-meta">@Named</span>(<span class="hljs-string">"fes"</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;FeatureExtractor&gt; <span class="hljs-title">getPostProcessors</span><span class="hljs-params">()</span> </span>{
+        List&lt;FeatureExtractor&gt; fes = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        fes.add(<span class="hljs-keyword">new</span> FeatureExtractorExample1());
+        fes.add(<span class="hljs-keyword">new</span> FeatureExtractorExample2());
+        <span class="hljs-keyword">return</span> fes;
+    }
+
+    <span class="hljs-meta">@Named</span>(<span class="hljs-string">"annotatorParameterSpace"</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ParameterSpace <span class="hljs-title">configureParameterSpace</span><span class="hljs-params">(IeConfigurationContext context)</span> </span>{
+        ParameterSpace.Builder builder = <span class="hljs-keyword">new</span> ParameterSpace.Builder();
+        builder.add(Dimensions.required(<span class="hljs-string">"annotator1"</span>)).add(Dimensions.required(<span class="hljs-string">"fes"</span>));
+
+        <span class="hljs-keyword">switch</span> (context.getField().getCode()) {
+            <span class="hljs-keyword">case</span> <span class="hljs-string">"invoice_amount"</span>:
+                builder.add(Dimensions.selectOne(<span class="hljs-string">"annotator2"</span>, <span class="hljs-string">"annotator3"</span>));
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-string">"client_address"</span>:
+                builder.add(Dimensions.optional(<span class="hljs-string">"annotator4"</span>));
+                <span class="hljs-keyword">break</span>;
+        }
+        <span class="hljs-keyword">return</span> builder.build();
+    }
+
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="fixed-serialized-configuration"></a><a href="#fixed-serialized-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fixed Serialized Configuration</h2>
+<p>By default AutoML SDK in-built <code>GenericIeHypermodel</code> configuration produces a set of HPO experiments. Each HPO experiment results in a list of JSON files with serialized configurations, each related to a particular field in a document. A configuration may have serialized configurations imported for specific fields to avoid repeated HPO selection and thus reduce training time.</p>
+<p>To create a fixed serialized configuration, proceed with the following steps:</p>
+<ol>
+<li>Put all serialized JSON files into CLASSPATH.</li>
+<li>Create a new <code>@ModelConfiguration</code> class. This class should import the default main generic configuration class where serialized configurations were created from.</li>
+<li>Add the <code>resources</code> property to the <code>@Import</code> annotation. Provide a list of inner <code>@Import.Resource</code> annotations.</li>
+</ol>
+
+    <div class="admonition admonition-note">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div> note</h5>
+      </div>
+      <div class="admonition-content">
+    <p>Each <code>@Import.Resource</code> annotation produces a configuration for <em>one</em> field and contains the following properties:</p>
+<ol>
+<li><code>value</code> — a path to a file with fixed serialized configuration.</li>
+<li><code>condition</code> — <code>@Filter</code> annotation which contains a <a href="https://docs.spring.io/spring/docs/4.3.12.RELEASE/spring-framework-reference/html/expressions.html">SpEL</a> expression that produces a boolean value. This expression checks the field value to indicate whether a fixed serialized configuration needs to be applied.</li>
+</ol>
+<p>The condition is optional. If it is not specified then fixed serialized configuration will be applied every time. This can be used for classification models as there is no field check.</p>
+</div></div><p>Here's an example:</p>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">import</span> com.workfusion.vds.nlp.hypermodel.ie.generic.config.GenericIeHypermodelConfiguration;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.Filter;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.Import;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.ModelConfiguration;
+
+<span class="hljs-meta">@ModelConfiguration</span>
+<span class="hljs-meta">@Import</span>(
+       configurations = {
+               <span class="hljs-meta">@Import</span>.Configuration(GenericIeHypermodelConfiguration.class)
+       },
+       resources = {
+               <span class="hljs-meta">@Import</span>.Resource(value=<span class="hljs-string">"/path/to/file/for/date/field/parameters.json"</span>,
+                                condition = <span class="hljs-meta">@Filter</span>(expression = <span class="hljs-string">"field.code eq 'invoice_date'"</span>)),
+               <span class="hljs-meta">@Import</span>.Resource(value=<span class="hljs-string">"/path/to/file/for/amount/field/parameters.json"</span>,
+                                condition = <span class="hljs-meta">@Filter</span>(expression = <span class="hljs-string">"field.code eq 'invoice_amount'"</span>))
+       }      
+)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FixedConfiguration</span> </span>{
+}
+</code></pre>
+<p>Depending on the <code>condition</code> expression result various configurations can be built:</p>
+<ol>
+<li>If each condition expression returns <code>false</code>, the resulting configuration is built using the default <code>GenericIeHypermodelConfiguration</code> class.</li>
+<li>If one <code>condition</code> expression returns <code>true</code>, the configuration is built using the serialized configuration from the corresponding <code>value</code> parameter.</li>
+<li>If multiple <code>condition</code> expressions return <code>true</code>, the configuration is built using the FIRST imported serialized configuration, all consequent serialized configurations are ignored.</li>
+</ol>
+
+    <div class="admonition admonition-note">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div> note</h5>
+      </div>
+      <div class="admonition-content">
+    <p>The described configuration can have additional <code>FixedConfiguration</code> components. The resulting configuration will aggregate both the <code>@Import.Resource</code> configuration (if any) and <code>FixedConfiguration</code>.</p>
+</div></div><h2><a class="anchor" aria-hidden="true" id="filtering-configuration-imports"></a><a href="#filtering-configuration-imports" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Filtering Configuration Imports</h2>
+<p><a href="#importing-a-configuration">Importing a configuration</a> allows filtering out certain components, HPO in child configuration(-s), or even sub-child configurations, if any.</p>
+<p>The following two examples display two cases: Example 1 with <code>@Filter</code> disabled, Example 2 with <code>@Filter</code> enabled.</p>
+<h3><a class="anchor" aria-hidden="true" id="example-1"></a><a href="#example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example #1</h3>
+<p>There are 2 configurations each containing some named components and HPO. <code>ChildAnnotatorConfig</code> is imported to <code>ParentAnnotatorConfig</code> with <code>@Filter</code> disabled. What is the result of the configured HPO in that case?</p>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hpo.Dimensions;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hpo.ParameterSpace;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.Import;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.ModelConfiguration;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.Named;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.annotator.Annotator;
+
+<span class="hljs-meta">@ModelConfiguration</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ChildAnnotatorConfig</span> </span>{
+
+    <span class="hljs-meta">@Named</span>(<span class="hljs-string">"annotatorA"</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Annotator <span class="hljs-title">testAnnotatorA</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> AnnotatorA();
+    }
+
+    <span class="hljs-meta">@Named</span>(<span class="hljs-string">"annotatorB"</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Annotator <span class="hljs-title">testAnnotatorB</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> AnnotatorB();
+    }
+
+    <span class="hljs-meta">@Named</span>(<span class="hljs-string">"annotatorParameterSpace"</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ParameterSpace <span class="hljs-title">configureParameterSpace</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ParameterSpace.Builder()
+                .add(Dimensions.optional(<span class="hljs-string">"annotatorA"</span>))
+                .add(Dimensions.required(<span class="hljs-string">"annotatorB"</span>))
+                .build();
+    }
+
+}
+
+<span class="hljs-meta">@ModelConfiguration</span>
+<span class="hljs-meta">@Import</span>(configurations = {<span class="hljs-meta">@Import</span>.Configuration(ChildAnnotatorConfig.class)})
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ParentAnnotatorConfig</span> </span>{
+
+    <span class="hljs-meta">@Named</span>(<span class="hljs-string">"annotatorC"</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Annotator <span class="hljs-title">testAnnotatorC</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> AnnotatorC();
+    }
+
+    <span class="hljs-meta">@Named</span>(<span class="hljs-string">"additionalAnnotatorParameterSpace"</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ParameterSpace <span class="hljs-title">configureParameterSpace</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ParameterSpace.Builder()
+                .add(Dimensions.required(<span class="hljs-string">"annotatorC"</span>))
+                .build();
+    }
+
+}
+
+</code></pre>
+<p>HPO in <code>ChildAnnotatorConfig</code>  is processed first, HPO in <code>ParentAnnotatorConfig</code> is processed next. The result is a merged configuration from both the child and parent configurations which contains the following components:</p>
+<ol>
+<li>Optional <code>annotatorA</code> as a result of ChildAnnotatorConfig HPO.</li>
+<li>Fixed <code>annotatorB</code> as a result of ChildAnnotatorConfig HPO.</li>
+<li>Fixed <code>annotatorC</code> as a result of ParentAnnotatorConfig HPO.</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="example-2"></a><a href="#example-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example #2</h3>
+<p>There are 2 configurations each containing some named components and HPO. ChildAnnotatorConfig is imported to ParentAnnotatorConfig but this time with enabled @Filter so the child's HPO is ignored. What is the result of the configured HPO in that case?</p>
+<p>To enable the filter, use <code>@Filter</code> in the <code>@Import</code> annotation.</p>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hpo.Dimensions;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hpo.ParameterSpace;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.Filter;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.Import;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.ModelConfiguration;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.Named;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.annotator.Annotator;
+
+<span class="hljs-meta">@ModelConfiguration</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ChildAnnotatorConfig</span> </span>{
+
+   <span class="hljs-meta">@Named</span>(<span class="hljs-string">"annotatorA"</span>)
+   <span class="hljs-function"><span class="hljs-keyword">public</span> Annotator <span class="hljs-title">testAnnotatorA</span><span class="hljs-params">()</span> </span>{
+       <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> AnnotatorA();
+   }
+
+   <span class="hljs-meta">@Named</span>(<span class="hljs-string">"annotatorB"</span>)
+   <span class="hljs-function"><span class="hljs-keyword">public</span> Annotator <span class="hljs-title">testAnnotatorB</span><span class="hljs-params">()</span> </span>{
+       <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> AnnotatorB();
+   }
+
+   <span class="hljs-meta">@Named</span>(<span class="hljs-string">"annotatorParameterSpace"</span>)
+   <span class="hljs-function"><span class="hljs-keyword">public</span> ParameterSpace <span class="hljs-title">configureParameterSpace</span><span class="hljs-params">()</span> </span>{
+       <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ParameterSpace.Builder()
+               .add(Dimensions.optional(<span class="hljs-string">"annotatorA"</span>))
+               .add(Dimensions.required(<span class="hljs-string">"annotatorB"</span>))
+               .build();
+   }
+
+}
+
+<span class="hljs-meta">@ModelConfiguration</span>
+<span class="hljs-meta">@Import</span>(configurations = {
+       <span class="hljs-meta">@Import</span>.Configuration(value = ChildAnnotatorConfig.class, exclude = {<span class="hljs-meta">@Filter</span>(type = ParameterSpace.class)}),
+})
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ParentAnnotatorConfig</span> </span>{
+
+   <span class="hljs-meta">@Named</span>(<span class="hljs-string">"annotatorC"</span>)
+   <span class="hljs-function"><span class="hljs-keyword">public</span> Annotator <span class="hljs-title">testAnnotatorC</span><span class="hljs-params">()</span> </span>{
+       <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> AnnotatorC();
+   }
+
+   <span class="hljs-meta">@Named</span>(<span class="hljs-string">"parentAnnotatorParameterSpace"</span>)
+   <span class="hljs-function"><span class="hljs-keyword">public</span> ParameterSpace <span class="hljs-title">configureParameterSpace</span><span class="hljs-params">()</span> </span>{
+       <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ParameterSpace.Builder()
+               .add(Dimensions.selectOne(<span class="hljs-string">"annotatorA"</span>, <span class="hljs-string">"annotatorB"</span>))
+               .add(Dimensions.required(<span class="hljs-string">"annotatorC"</span>))
+               .build();
+   }
+
+}
+</code></pre>
+<p>The resulting configuration contains the following components:</p>
+<ol>
+<li>Fixed annotatorC from ParentAnnotatorConfig HPO.</li>
+<li>Either annotatorA or <code>annotatorB</code> from ParentAnnotatorConfig HPO. Child's HPO is ignored.</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="advanced-configuration-components"></a><a href="#advanced-configuration-components" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Advanced Configuration Components</h2>
+<p>Apart from regular components like Annotators, Feature Extractors and Post-Processors a model may contain fundamental components for advanced configuration. These components may require a deeper understanding of AutoML SDK. Furthermore, these components are not subject to HPO selection.</p>
+
+    <div class="admonition admonition-caution">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z"/></svg></div> caution</h5>
+      </div>
+      <div class="admonition-content">
+    <p>Any of the following components can be declared only once, otherwise, errors may occur.</p>
+</div></div><p>Advanced components include:</p>
+<ol>
+<li>HpoConfiguration</li>
+<li>Liblinear Classifier, Vowpal Wabbit Classifier</li>
+<li>PipelineConfiguration</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="hpoconfiguration"></a><a href="#hpoconfiguration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>HpoConfiguration</h3>
+<p>HpoConfiguration is a set of configurable global parameters for HPO. An instance is created via HpoConfiguration.Builder.</p>
+<p>Here's an example of <code>HpoConfiguration</code>.</p>
+<pre><code class="hljs css language-java"><span class="hljs-meta">@Named</span>(<span class="hljs-string">"hpoConfig"</span>)
+<span class="hljs-function"><span class="hljs-keyword">public</span> HpoConfiguration <span class="hljs-title">hpoConfig</span><span class="hljs-params">(ConfigurationContext context)</span> </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> HpoConfiguration.Builder()
+            .timeLimit(<span class="hljs-number">1</span>, TimeUnit.HOURS)
+            .maxExperimentsWithSameScore(<span class="hljs-number">10</span>)
+            .targetScore(<span class="hljs-number">0.7</span>)
+            .build();
+}
+</code></pre>
+<p>For more information, refer to <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/hpo/HpoConfiguration.html">HpoConfiguration</a> documentation.</p>
+<h3><a class="anchor" aria-hidden="true" id="liblinear-classifier-and-vowpal-wabbit-classifier"></a><a href="#liblinear-classifier-and-vowpal-wabbit-classifier" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Liblinear Classifier and Vowpal Wabbit Classifier</h3>
+<p><code>LiblinearClassifier</code> and <code>VWClassifier</code> are utility classes to store possible training arguments of Liblinear and Vowpal Wabbit.</p>
+<pre><code class="hljs css language-java"><span class="hljs-meta">@Named</span>(<span class="hljs-string">"mlConfig"</span>)
+<span class="hljs-function"><span class="hljs-keyword">public</span> LiblinearClassifier <span class="hljs-title">mlConfig</span><span class="hljs-params">()</span></span>{
+   <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> LiblinearClassifier.Builder()
+            .solver(Solver.L2R_L2LOSS_SVC)
+            .quietMode()
+            .build();
+}
+</code></pre>
+
+    <div class="admonition admonition-warning">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></div> warning</h5>
+      </div>
+      <div class="admonition-content">
+    <p>Only one classifier at a time can be used in a configuration. Otherwise, errors may occur.</p>
+</div></div><p>For more information, refer to <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/ml/liblinear/LiblinearClassifier.html">LIBSVM</a> and <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/ml/vw/VowpalWabbitClassifier.html">Vowpal Wabbit</a> documentation.</p>
+<h3><a class="anchor" aria-hidden="true" id="pipelineconfiguration"></a><a href="#pipelineconfiguration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>PipelineConfiguration</h3>
+<p><code>PipelineConfiguration</code> is a set of parameters that are used to build a pipeline. The defined parameters remain unchanged across all configurations created for experiments.</p>
+<p>The following <code>pipelineConfiguration</code> example sets the <code>NORMALIZE_SCORE</code> and <code>CASE_SENSITIVE</code> parameters to <code>true</code>.</p>
+<pre><code class="hljs css language-java"><span class="hljs-meta">@Named</span>(<span class="hljs-string">"pipelineConfiguration"</span>)
+<span class="hljs-function"><span class="hljs-keyword">public</span> PipelineConfiguration <span class="hljs-title">pipelineConfiguration</span><span class="hljs-params">()</span> </span>{
+   <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> PipelineConfiguration.Builder()
+            .parameter(GenericPipelineConfiguration.NORMALIZE_SCORE, <span class="hljs-keyword">true</span>)
+            .parameter(GenericPipelineConfiguration.CASE_SENSITIVE, <span class="hljs-keyword">true</span>)
+            .build();
+}
+</code></pre>
+<p>For more information, refer to <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/hypermodel/pipeline/PipelineConfiguration.html">PipelineConfiguration</a> and <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/model/nlp/generic/GenericPipelineConfiguration.html">GenericPipelineConfiguration</a> documentation.</p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="additional-resources"></a><a href="#additional-resources" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Additional Resources</h2>
+<ul>
+<li><a href="python-classifiers">Python Classifiers</a></li>
+</ul>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/8/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/spa/automl/automl-sdk/project-configuration"><span class="arrow-prev">← </span><span>Project Configuration</span></a><a class="docs-next button" href="/docs/spa/automl/automl-sdk/model-training"><span>Model Training</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#configuration">Configuration</a></li><li><a href="#components-configuration">Components Configuration</a></li><li><a href="#configuration-context">Configuration Context</a><ul class="toc-headings"><li><a href="#getfield-method">getField Method</a></li><li><a href="#getresource-method">getResource Method</a></li><li><a href="#getparameter-method">getParameter Method</a></li></ul></li><li><a href="#component-registry">Component Registry</a><ul class="toc-headings"><li><a href="#getcomponent">getComponent</a></li><li><a href="#getcomponents">getComponents</a></li></ul></li><li><a href="#importing-a-configuration">Importing a Configuration</a></li><li><a href="#hyper-parameter-optimization">Hyper Parameter Optimization</a></li><li><a href="#fixed-serialized-configuration">Fixed Serialized Configuration</a></li><li><a href="#filtering-configuration-imports">Filtering Configuration Imports</a><ul class="toc-headings"><li><a href="#example-1">Example #1</a></li><li><a href="#example-2">Example #2</a></li></ul></li><li><a href="#advanced-configuration-components">Advanced Configuration Components</a><ul class="toc-headings"><li><a href="#hpoconfiguration">HpoConfiguration</a></li><li><a href="#liblinear-classifier-and-vowpal-wabbit-classifier">Liblinear Classifier and Vowpal Wabbit Classifier</a></li><li><a href="#pipelineconfiguration">PipelineConfiguration</a></li></ul></li><li><a href="#additional-resources">Additional Resources</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/wf-logo.svg" alt="Knowledgebase" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://www.workfusion.com/reports-whitepapers/">Reports &amp; Whitepapers</a></div><div><h5>Community</h5><a href="https://forum.workfusion.com/" target="_blank" rel="noreferrer noopener">Forum</a><a href="http://automationacademy.com/">Automation Academy</a><a href="https://partners.workfusion.com/">Partners Portal</a></div><div><h5>More</h5><a href="https://www.workfusion.com/iac/">Intelligent Automation Cloud</a></div></section><section class="copyright">Copyright © 2019 WorkFusion, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: 'PNQGK7RZR5',
+                apiKey: 'ba828b974aad37836106a37d2432da4b',
+                indexName: 'search-config',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en","version:undefined"]}
+              });
+            </script></body></html>

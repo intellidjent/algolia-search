@@ -1,0 +1,487 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Install BI Windows Server · Knowledgebase</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;prerequisites&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#prerequisites&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Prerequisites&lt;/h2&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Install BI Windows Server · Knowledgebase"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docusaurus.workfusion.com//"/><meta property="og:description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;prerequisites&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#prerequisites&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Prerequisites&lt;/h2&gt;
+"/><meta property="og:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.4/fuse.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/WorkFusion_H_5_RGB.png" alt="Knowledgebase"/><h2 class="headerTitleWithLogo">Knowledgebase</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/terra" target="_self">WorkFusion 10.0</a></li><li class=""><a href="/docs/spa" target="_self">SPA</a></li><li class=""><a href="/docs/spa/admin/install-spa/prepare/overview" target="_self">Administrator&#x27;s Guide</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Installation – legacy way</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Installation – legacy way<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Prepare for installation</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/admin/legacy/legacy-overview">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/legacy/prepare-for-installation">Prepare for installation</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/legacy/run-preinstall-manually">Prepare for installation manually</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/admin/legacy/install-linux-servers">Install Linux servers</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Install RPA server</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/admin/legacy/rpa-server-overview">RPA server overview</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/legacy/install-rpa-windows-server">Install RPA Windows server</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/legacy/install-rpa-windows-server-using-generated-configs">Install RPA Windows servers with generated configs</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/admin/legacy/install-ocr-windows-server">Install OCR Windows server</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/spa/admin/legacy/bi-windows-server-installation">Install BI Windows Server</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/legacy/run-post-installation-procedures">Run post-installation procedures</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://git.workfusion.com/projects/DOC/repos/documentation/browse/docs/spa/admin/legacy/bi-windows-server-installation.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Install BI Windows Server</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="prerequisites"></a><a href="#prerequisites" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Prerequisites</h2>
+<ul>
+<li><p>Installation packages are uploaded to one or several servers and unarchived. <strong>WorkFusionAnalyticsInstaller.zip</strong> contains the following directories with installers:</p>
+<ul>
+<li><strong>WorkfusionAnalyticsServer</strong></li>
+<li><strong>WorkfusionAnalyticsDesktop</strong></li>
+</ul></li>
+<li><p>License keys for WorkFusion Analytics Server and Desktop (optional) are provided by Workfusion Team.</p></li>
+<li><p>The predefined common variables are the following:</p>
+<ul>
+<li><code>\&lt;wf-group\&gt;</code>. WorkFusion group. Default is <strong>wfuser</strong>.</li>
+<li><code>\&lt;wf-user\&gt;</code>. WorkFusion user. Default is <strong>wfuser</strong>.</li>
+<li><code>\&lt;install-dir\&gt;</code>. WorkFusion home directory <strong>C:\workfusion</strong>.</li>
+<li>Defaults directories are the following:
+<ul>
+<li>WorkfusionAnalyticsServer – <strong>C:\workfusion\WorkFusionServer</strong></li>
+<li>WorkfusionAnalyticsDesktop – <strong>C:\workfusion\WorkFusionDesktop</strong></li>
+</ul></li>
+<li><code>\&lt;package-dir\&gt;</code>. WorkFusion Installer Directory. Default is <strong>C:\workfusion\WorkfusionAnalyticsServer</strong>.</li>
+<li>&lt;app-hostname&gt;**. DNS of Application server (APP), for example, <a href="http://app.example.com">app.example.com</a>.</li>
+</ul></li>
+<li><p><strong>&lt;filebeat-dir&gt;</strong> - FileBeat installation directory. Default is <strong>C:\workfusion\filebeat</strong>.</p>
+<ul>
+<li><strong>&lt;bi-hostname&gt;</strong> - Analytics server hostname, for example, <a href="http://bi.example.com">bi.example.com</a>.</li>
+<li><strong>&lt;int-hostname&gt;</strong> - Integration server hostname, for example,<a href="http://int.example.com">int.example.com</a>.</li>
+<li><strong>&lt;port&gt;</strong> - port of INT Logstash service. Default port is <strong>4567</strong>.</li>
+</ul></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="install-workfusion-analytics-server"></a><a href="#install-workfusion-analytics-server" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install WorkFusion Analytics Server</h2>
+<p>Always run installation of WorkFusion Analytics Server as a <strong>Windows Administrator</strong> user. The Installation process takes about 20-25 minutes.</p>
+<p>Before the installation, the Analytics databases must be migrated. To migrate the databases, run:</p>
+<pre><code class="hljs css language-bash">./install.sh migrate bi
+</code></pre>
+<p>The databases can also be migrated after the installation. In this case, run the earlier command and restart the Analytics server to apply the changes.</p>
+<p>To install the Analytics Server:</p>
+<ol>
+<li><p>On your prepared server, start the <strong>Command Prompt</strong> (not PowerShell) and, in the unpacked installation package, go to the <strong>WorkfusionAnalyticsServer</strong> directory.</p></li>
+<li><p>Set the following environment variables:</p>
+<pre><code class="hljs css language-bash">SET win_user=ec2-user
+SET win_pass=1q2w3e!
+SET TABLEAU_USER=tableau_user
+SET TABLEAU_PASS=tab1q2w!
+</code></pre>
+<p>Here,</p>
+<ul>
+<li><code>win\_user</code> is a user with Administrator rights under which installation is performed.</li>
+<li><code>win\_pass</code> is a password of a <code>win\_user</code>.</li>
+<li><code>TABLEAU\_USER</code> is a <code>tableau\_dashboard\_user</code> of Workfsion Analitycs Server.</li>
+<li><code>TABLEAU\_PASS</code> is a <code>tableau_dashboard_pass</code> of a TABLEAU_USER. Note that special symbols are not allowed in the password.</li>
+</ul></li>
+<li><p>Copy the <strong>bi.crt</strong> and <strong>bi.key</strong> certificate files to the <strong>&lt;install-dir&gt;</strong> directory.</p>
+<p><strong>Note</strong>: SSL configuration is mandatory starting from SPA version 10.0.</p></li>
+<li><p>Run the installation Batch file <strong>install_server.bat</strong> with the specified installation directory and APP host name.</p>
+<pre><code class="hljs css language-bash">install_server.bat &lt;INSTALL_DIR&gt; &lt;APP_HOSTNAME&gt;
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="hljs css language-bash">install_server.bat C:\workfusion\WorkFusionServer app.exapmle.com
+</code></pre></li>
+<li><p>Log in to the server and activate it with the license key. Optional.</p>
+<pre><code class="hljs css language-bash">tsm login -u &lt;WF_USER&gt;
+
+tsm licenses activate -k &lt;product key&gt;
+</code></pre>
+<p>By default, the <strong>install_server.bat</strong> script activates the trial Tableau license for two weeks. Thus the step is optional.</p></li>
+<li><p>On the BI server, in a browser, open <a href="https://localhost">https://localhost</a>.</p>
+<p><img src="/docs/assets/spa/admin-guide/workfusionanalyticsserver-createaccount.jpg" alt="CReate Tableau acc"></p></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="install-workfusion-analytics-desktop"></a><a href="#install-workfusion-analytics-desktop" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install WorkFusion Analytics Desktop</h2>
+<p>To install the Analytics Desktop:</p>
+<ol>
+<li><p>On your server, start the <strong>Command Prompt</strong> (not PowerShell) and go to the <strong>WorkfusionAnalyticsDesktop</strong> directory in the unpacked installation package.</p></li>
+<li><p>Run the installation Batch file <strong>install_desktop.bat</strong> with the specified installation directory:</p>
+<pre><code class="hljs css language-bash">install_desktop.bat &lt;INSTALL_DIR&gt;
+
+<span class="hljs-comment"># Example: install_desktop.bat C:\workfusion\WorkFusionDesktop</span>
+</code></pre></li>
+<li><p>Click the <strong>WorkFusion Analytics Desktop</strong> shortcut to start the application, and then enter the license key.</p>
+<p><img src="/docs/assets/spa/admin-guide/workfusionanalyticsdesktop-enterproductkey.jpg" alt="Enter key"></p>
+<p>For more information on Activation options, see <a href="/docs/spa/admin/licenses/manage-workfusion-analytics-license">Manage the WorkFusion Analytics license</a>.</p></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="install-workfusion-analytics-filebeat"></a><a href="#install-workfusion-analytics-filebeat" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install WorkFusion Analytics Filebeat</h2>
+<p>To install Filebeat:</p>
+<ol>
+<li><p>Start the <strong>Command Prompt</strong> (not PowerShell) and go to the <strong>Filebeat</strong> directory in the unpacked installation package.</p></li>
+<li><p>To enable log gathering, run the installation file <strong>install_filebeat.bat</strong> with the specified parameters. Specify <strong>&lt;install-dir&gt;</strong> as a directory on WorkfusionAnalyticsServer.</p>
+<pre><code class="hljs css language-bash">install_filebeat.bat &lt;FILEBEAT_DIR&gt; &lt;INSTALL_DIR&gt; &lt;BI_HOSTNAME&gt; &lt;INT_HOSTNAME&gt;:&lt;PORT&gt;
+
+<span class="hljs-comment"># Example: install_filebeat.bat C:\workfusion\filebeat C:\workfusion\WorkFusionServer bi.example.com int.example.com:4567</span>
+</code></pre></li>
+<li><p>Copy the root certificate <strong>ca.crt</strong> file, which has been generated <a href="/docs/spa/admin/legacy/prepare-for-installation">earlier</a>, to the BI server's directory <strong>&lt;filebeat-dir&gt;</strong>, and in the <strong>&lt;filebeat-dir&gt;/filebeat.yml</strong> config file, add the path to the certificate.<br>
+<img src="/docs/assets/spa/admin-guide/filebeat.png" alt="Filebeat"></p></li>
+<li><p>Start the Filebeat service:</p>
+<pre><code class="hljs css language-actionscript3">sc <span class="hljs-literal">start</span> filebeat
+</code></pre></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="install-workfusion-analytics-metricbeat"></a><a href="#install-workfusion-analytics-metricbeat" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install WorkFusion Analytics Metricbeat</h2>
+<p>To install Metricbeat:</p>
+<ol>
+<li><p>Start the <strong>Command Prompt</strong> (not PowerShell) and go to the <strong>metricbeat</strong> directory in the unpacked installation package.</p></li>
+<li><p>To enable metrics gathering, run the installation file <strong>install_metricbeat.bat</strong> with the specified parameters. Specify <strong>&lt;install-dir&gt;</strong> as a directory on WorkfusionAnalyticsServer.</p>
+<pre><code class="hljs css language-bash">install_metricbeat.bat &lt;METRICBEAT_DIR&gt; &lt;INSTALL_DIR&gt; &lt;BI_HOSTNAME&gt; &lt;INT_HOSTNAME&gt;:&lt;PORT&gt;
+
+<span class="hljs-comment"># Example: install_metricbeat.bat C:\workfusion\metricbeat C:\workfusion\WorkFusionServer bi.example.com INT.example.com:4569</span>
+</code></pre></li>
+<li><p>Copy the root certificate <strong>ca.crt</strong> file, which was generated <a href="/docs/spa/admin/legacy/prepare-for-installation">earlier</a>, to BI server's directory <code>&lt;metricbeat-dir&gt;</code>and in the <strong>&lt;metricbeat-dir&gt;/metricbeat.yml</strong> config file, add the path to the certificate:</p>
+<p><img src="/docs/assets/spa/admin-guide/metricbeat.png" alt="Metricbeat"></p></li>
+<li><p>Start the etricbeat service:</p>
+<pre><code class="hljs css language-actionscript3">sc <span class="hljs-literal">start</span> metricbeat
+</code></pre></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="deploy-workbooks-to-workfusion-analytics-server"></a><a href="#deploy-workbooks-to-workfusion-analytics-server" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deploy workbooks to WorkFusion Analytics Server</h2>
+<p>This section describes deployment of Tableau workbooks to Tableau 2018.3
+Server OEM on WorkFusion Analytics Server.</p>
+<p>The following workbooks must be uploaded to WorkFusion Analytics Server:</p>
+<ul>
+<li>Overview_WB</li>
+<li>Capacity_WB</li>
+<li>AutoML_WB</li>
+<li>RPA_WB</li>
+<li>Process_WB</li>
+<li>Speed_WB</li>
+<li>Manual_WB</li>
+<li>AA_ETL_Scheduler</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="prerequisites-1"></a><a href="#prerequisites-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Prerequisites</h3>
+<p>Pre-installed software:</p>
+<ul>
+<li>Microsoft Server 2008 R2 or newer</li>
+<li>WorkFusion Analytics Server 2018.3.2 or newer</li>
+</ul>
+<p>Workbooks packages are uploaded to the servers and unarchived. The <strong>WorkFusionAnalitycsWorkbooks.zip</strong> archive contains the following directories:</p>
+<ul>
+<li><strong>deploy_scripts</strong></li>
+<li><strong>dashboards</strong></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="deploy-workbooks"></a><a href="#deploy-workbooks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deploy workbooks</h3>
+<p>To deploy workbooks, log in to the BI server with the installed WorkFusion Analytics Server and perform the following steps:</p>
+<ol>
+<li><p>Create the <strong>c:\workfusion\tdeploy_home\install</strong> directory and copy files from the <strong>deploy_scripts</strong> directory to it.</p>
+<p><strong>Pre-installation directories after unpacking .zip</strong></p>
+<pre><code class="hljs css language-actionscript3"><span class="hljs-symbol">c:</span>\workfusion\tdeploy_home
+    \install    (<span class="hljs-symbol">file:</span> install.cmd)
+        \<span class="hljs-class"><span class="hljs-keyword">lib</span>    (<span class="hljs-title">installation</span> <span class="hljs-title">file</span> <span class="hljs-title">pack</span>)</span>
+</code></pre></li>
+<li><p>Open the <strong>Command Prompt</strong> (not PowerShell), and run the following installation command:</p>
+<pre><code class="hljs css language-actionscript3">cd c:<span class="hljs-symbol">\w</span>orkfusion<span class="hljs-symbol">\t</span>deploy_home<span class="hljs-symbol">\i</span>nstall
+
+install.cmd c:<span class="hljs-symbol">\w</span>orkfusion<span class="hljs-symbol">\t</span>deploy_home
+</code></pre>
+<p><strong>Created files and directories after install.cmd</strong></p>
+<pre><code class="hljs css language-bash">c:\workfusion\tdeploy_home
+    \deploy        (files: create_sitefolder.cmd, publish.cmd, manage_server.cmd)
+        \config    (files: config._sample_.cmd, deploy_config.cmd, import_users.csv)
+        \lib       (files: deploy_workbook.cmd, deploy_datasource.cmd, get_datetime.vbs, get_logfile.cmd, log_echo.cmd, replace_str.vbs)
+        \to_deploy (empty)
+        \deployed  (empty)
+        \<span class="hljs-built_in">log</span>       (empty)
+</code></pre>
+<p>The installation log file in the <strong>install_YYYY-MMDD-HHMI.log</strong> format is created in <strong>c:\workfusion\tdeploy_home\install\</strong>.</p></li>
+<li><p>Create directories for a New website:</p>
+<pre><code class="hljs css language-bash"><span class="hljs-built_in">cd</span> c:\workfusion\tdeploy_home\deploy
+
+create_sitefolder.cmd site_name
+</code></pre>
+<p>Here, <code>site_name</code> is a part of the APP instance host. For example, if APP is hosted at <a href="https://site1.company.com/">https://wfapp.company.com/</a>, the command parameter is <code>wfapp</code>. A website and a project with the same name will be created on the WorkFusion Analytics Server.</p>
+<p>To create several site folders, specify parameters for the <strong>create_sitefolder.cmd</strong> command. The command creates the new configuration file and new directories. The configuration file is copied from <strong>deploy\config\config._sample_.cmd</strong>.</p>
+<p><strong>New files and directories after create_sitefloder.cmd</strong></p>
+<pre><code class="hljs css language-bash">c:\workfusion\tdeploy_home
+    \deploy
+        \config
+            config.site_name.cmd      (settings <span class="hljs-keyword">for</span> the site <span class="hljs-string">"site_name"</span>)
+        \to_deploy
+            \site_name                (dashboards <span class="hljs-keyword">for</span> deploying)
+                 \dashboard           (generic dashboard)
+                 \datasource          (data sources <span class="hljs-keyword">for</span> generic dashboard)
+        \deployed
+            \site_name                (already deployed dashboards: are being moved from \to_deploy\site_name during deploy process)
+                 \dashboard
+                 \datasource
+</code></pre>
+<p><strong>Final directory structure</strong></p>
+<pre><code class="hljs css language-actionscript3"><span class="hljs-symbol">c:</span>\workfusion\tdeploy_home
+    \install
+        \<span class="hljs-class"><span class="hljs-keyword">lib</span></span>
+    \deploy        
+        \config    
+        \<span class="hljs-class"><span class="hljs-keyword">lib</span>       </span>
+        \to_deploy 
+            \site_name
+                 \dashboard
+                 \datasource
+        \deployed
+            \site_name
+                 \dashboard
+                 \datasource
+        \log
+</code></pre></li>
+<li><p>Prepare configuration files.</p>
+<p>You can download the configuration files from the APP Server. For more information, see <a href="/docs/spa/admin/advanced/prepare-rpa-ocrwin-and-bi-configurations">Prepare RPA, OCRWIN and BI configurations</a>.</p>
+<p><details>
+<summary><font color="#FD4810">
+If needed, change the files manually.
+</font></summary></p>
+<p>To edit the configuration files manually, in <strong>c:\workfusion\tdeploy_home\deploy\config\</strong>, open
+<strong>config.site_name.cmd</strong>, and specify the appropriate values.</p>
+<p><strong>Common config parameters</strong></p>
+<pre><code class="hljs css language-bash">REM MSSQL DB options
+SET DATABASE_SERVER_NAME=servername     (MSSQL_HOSTNAME)
+SET DATABASE_NAME=workfusion
+SET DATABASE_PORT=1433
+SET DATABASE_USERNAME=dbuser
+SET DATABASE_PASSWORD=dbpass
+REM WorkFusion Analytics Dashboard option
+SET REQUIRE_SSL=1
+REM WorkFusion Analytics (Tableau) Server options
+SET TABLEAU_SERVER_URL=<span class="hljs-string">"https://tableau.com"</span>
+SET TABLEAU_SITE=usersite               (site_name)
+SET TABLEAU_USERNAME=tabuser            (user role must be Server Administrator)
+SET TABLEAU_PASSWORD=tabpass
+</code></pre>
+<p><table>
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 29%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Config parameter</th>
+<th><p>Values for Control Tower<br />
+config.site_name.cmd</p>
+<p>{{ x }} - Ansible variable defined earlier</p></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><pre><code class="hljs">DATABASE_SERVER_NAME</code></pre></td>
+<td><p><code>MSSQL_HOSTNAME</code></p>
+<p><code>{{ mssql_hostname }}</code></p></td>
+<td>A DNS name of the MS SQL database server</td>
+</tr>
+<tr class="even">
+<td><pre><code class="hljs">DATABASE_NAME</code></pre></td>
+<td><p><code>workfusion</code></p></td>
+<td>An MS SQL database name</td>
+</tr>
+<tr class="odd">
+<td><pre><code class="hljs">DATABASE_PORT</code></pre></td>
+<td><p><code>1433</code></p>
+<p><code>{{ mssql_port }}</code></p></td>
+<td>The default value is 1433 for MS SQL</td>
+</tr>
+<tr class="even">
+<td><pre><code class="hljs">DATABASE_USERNAME</code></pre></td>
+<td><pre><code class="hljs">{{ mssql_dm_user }}</code></pre></td>
+<td>mssql_dm_user from secrets.yml</td>
+</tr>
+<tr class="odd">
+<td><pre><code class="hljs">DATABASE_PASSWORD</code></pre></td>
+<td><code>{{ mssql_dm_pass }}</code></td>
+<td>mssql_dm_pass from secrets.yml</td>
+</tr>
+<tr class="even">
+<td><pre><code class="hljs">REQUIRE_SSL</code></pre></td>
+<td>1</td>
+<td>The option for dashboard connection to require SSL.<br />
+Possible values are 0 or 1. Default value is 1</td>
+</tr>
+<tr class="odd">
+<td><pre><code class="hljs">TABLEAU_SERVER_URL</code></pre></td>
+<td><pre><code class="hljs">&quot;https://{{ bi_hostname }}&quot;</code></pre></td>
+<td>The URL of the Tableau Server</td>
+</tr>
+<tr class="even">
+<td><pre><code class="hljs">TABLEAU_SITE</code></pre></td>
+<td><p><code>site_name</code></p>
+<pre><code class="hljs">{{ wf_tableau_site }}</code></pre></td>
+<td><div class="content-wrapper">
+<p>A part of the <code>APP_HOSTNAME</code></p>
+<div class="rwui_text_box rwui_text_small rwui_type_info rwui_id_a142b449-2b37-4bfc-af16-2ec468c86e1f">
+if APP is hosted at  <a href="https://wfapp.company.com/">https://wfapp.company.com/</a> the value will be wfapp
+</div>
+</div></td>
+</tr>
+<tr class="odd">
+<td><pre><code class="hljs">TABLEAU_USERNAME</code></pre></td>
+<td><pre><code class="hljs">{{ bi_user }}</code></pre></td>
+<td>A Tableau Server user name with &quot;Server Administrator&quot; rights</td>
+</tr>
+<tr class="even">
+<td><pre><code class="hljs">TABLEAU_PASSWORD</code></pre></td>
+<td><pre><code class="hljs">{{ bi_pass }}</code></pre></td>
+<td>The &quot;Server Administrator&quot; user's password</td>
+</tr>
+</tbody>
+</table>
+</details></p></li>
+<li><p>In <strong>c:\workfusion\tdeploy_home\deploy\config\</strong>, open <strong>import_users.csv</strong>, and specify the appropriate values. A new user is created on WorkFusion Analytics Server and must be used for Control Tower – Analytics integration. The new user is added with the 'Viewer' role.</p>
+<p>Also, replace the existing values with already configured credentials. <code>Name</code> and <code>Password</code> must be equal to
+<code>{{wf\_tableau\_dashboard\_username}}</code> and <code>{{wf\_tableau\_dashboard\_password}}</code> properties generated in
+<strong>config.yml</strong> file during <a href="/docs/spa/admin/legacy/prepare-for-installation">preparation</a>.</p>
+<p><strong>import_users.csv</strong></p>
+<pre><code class="hljs css language-bash">tableau_user,tableau_pass,,,,,email@example.com
+</code></pre>
+<p>Do not use '%', '&amp;', '^' or '=' characters and other special symbols in the password. The '$' symbol is allowed.Do not add or delete any commas in <strong>import_users.csv</strong>.</p></li>
+<li><p>Create a WorkFusion Analytics website, a project and a new user by running the following command in the command-line tool:</p>
+<pre><code class="hljs css language-bash"><span class="hljs-built_in">cd</span> c:\workfusion\tdeploy_home\deploy
+
+manage_server.cmd site_name
+</code></pre>
+<p>A website and a project are created on WorkFusion Analytics Server as <code>site_name</code> and <code>WF-Automation</code> respectively. The new user is added to a newly created website. To create several websites on the Server, specify the required parameters for the <strong>manage_server.cmd</strong> command.</p></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="publish-workbooks"></a><a href="#publish-workbooks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Publish workbooks</h3>
+<p>To publish workbooks:</p>
+<ol>
+<li><p>Download the Workbook packages, which are provided by the WorkFusion team, and copy files from folder <strong>dashboards</strong>/<strong>workbook</strong> to the <strong>c:\workfusion\tdeploy_home\deploy\to_deploy\site_name\dashboard</strong> directory. The <strong>datasource</strong> directory must remain unchanged for backward compatibility.</p></li>
+<li><p>Run <strong>publish.cmd</strong> to consequently publish (add or replace) each file on WorkFusion Analytics Server.</p>
+<pre><code class="hljs css language-bash"><span class="hljs-built_in">cd</span> c:\workfusion\tdeploy_home\deploy
+publish.cmd site_name
+</code></pre>
+<p>To publish workbooks on several websites on WorkFusion Analytics Server, specify the corresponding parameters for <strong>publish.cmd</strong> command. This command also moves the published file to the <strong>c:\workfusion\deploy\deployed\site_name\dashboard</strong> directory.  As a result, the updated workbooks appear at WorkFusion <strong>Analytics</strong> page.The log file is created in <strong>\deploy\log</strong>.</p>
+<p>Do not use TWB / TWBX files located in the <strong>\deploy\to_deploy</strong> or <strong>\deploy\deployed</strong> directories repeatedly. Reload them from the delivery package each time.</p></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="schedule-configuration"></a><a href="#schedule-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Schedule Configuration</h3>
+<p>A user with the administrator privileges configures a Schedule on WorkFusion Analytics Server. The new Schedule must be added to the Server along with other already existing pre-configured Schedules.</p>
+<p>To create a schedule:</p>
+<ol>
+<li><p>In Tableau, in the main menu, click <strong>Schedules</strong>, and then click <strong>New Schedule</strong>.</p>
+<p><img src="/docs/assets/spa/admin-guide/schedules.png" alt="Schedules"></p></li>
+<li><p>Specify the following options:</p>
+<ul>
+<li><strong>Name</strong>.</li>
+<li><strong>Execution: serial</strong>. Select this option for correct data update.</li>
+<li><strong>Frequency</strong>: minimum 15 minutes.</li>
+</ul>
+<p><img src="/docs/assets/spa/admin-guide/new-schedule.png" alt="New schedule"></p></li>
+<li><p>Assign a Schedule to a Workbook:</p>
+<ol>
+<li><p>Go to <strong>Content</strong> → <strong>Workbooks</strong>, select a required Workbook, click More (<strong>...</strong>) to expand the options, and then click <strong>Refresh Extracts</strong>. The Schedule must be assigned to the <strong>AA_ETL_Scheduler</strong> and all <strong>*_WB</strong> Workbooks.</p>
+<p><img src="/docs/assets/spa/admin-guide/refresh.png" alt="Refresh"></p></li>
+<li><p>Go to the <strong>Schedule a Refresh</strong> tab, select the required refresh time and click <strong>Schedule Refreshes</strong>.</p>
+<p><img src="/docs/assets/spa/admin-guide/schedule.png" alt="Schedule"></p>
+<p>A Schedule is now created for the selected Workbook.</p></li>
+</ol></li>
+<li><p>Specify the Workbooks refresh order. The priority for ETL workbook mustbe changed to prevent data gap. For that:</p>
+<ol>
+<li><p>Go to <strong>Tasks</strong> → <strong>Extract Refreshes</strong>, select the <strong>AA_ETL_Scheduler</strong> workbook, and then click More
+(<strong>...</strong>) → <strong>Change Priority</strong>.</p>
+<p><img src="/docs/assets/spa/admin-guide/extract.png" alt="Change priority"></p></li>
+<li><p>Set priority to <strong>10</strong> and click <strong>Change Priority</strong>.</p>
+<p><img src="/docs/assets/spa/admin-guide/priority.png" alt="Priority"></p>
+<p>The ETL workbook will be refreshed first.</p></li>
+</ol></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="enable-workfusion-analytics-dashboard-in-control-tower"></a><a href="#enable-workfusion-analytics-dashboard-in-control-tower" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enable WorkFusion Analytics Dashboard in Control Tower</h2>
+<p>To enable <strong>BI Analytics Server</strong> on WorkFusion platform:</p>
+<ol>
+<li><p>Install WorkFusion Analytics server, as described in <a href="#install-workfusion-analytics-server">Install WorkFusion Analytics Server</a>.</p></li>
+<li><p>Deploy workbooks to WorkFusion Analytics server, as described in <a href="#deploy-workbooks-to-workfusion-analytics-server">Deploying Workbooks to WorkFusion Analytics Server</a>.</p></li>
+<li><p>Enable WorkFusion Analytics server on WorkFusion platform:</p>
+<ol>
+<li><p>On the INT Server, check and configure the <strong>Vault</strong> secure properties file. The file must already be configured before the installation.</p>
+<pre><code class="hljs css language-c#">&lt;!-- Set DNS name of BI server --&gt;
+tableau.dashboard.host=https:<span class="hljs-comment">//bi.example.com</span>
+tableau.automation.host=https:<span class="hljs-comment">//bi.example.com</span>
+
+&lt;!-- Set login and password <span class="hljs-keyword">for</span> connection to BI server --&gt;
+tableau.dashboard.username=tableau_user
+tableau.dashboard.password=tableau_pass
+tableau.automation.username=tableau_user
+tableau.automation.password=tableau_pass
+</code></pre>
+<table>
+<thead>
+<tr><th>Property Name</th><th>Example Value</th><th>Description</th><th>Required for</th></tr>
+</thead>
+<tbody>
+<tr><td><code>tableau.dashboard.host</code></td><td><a href="https://bi.example.com">https://bi.example.com</a></td><td>WorkFusion Analytics Server website url for Dashboard</td><td>WorkFusion Analytics Dashboard</td></tr>
+<tr><td><code>tableau.automation.host</code></td><td><a href="https://bi.example.com">https://bi.example.com</a></td><td>WorkFusion Analytics Server website url</td><td>WorkFusion Analytics UI</td></tr>
+<tr><td><code>tableau.dashboard.username</code></td><td>tableau_user</td><td>WorkFusion Analytics Server website username for Dashboard (was used in import_users.csv)</td><td>WorkFusion Analytics Dashboard</td></tr>
+<tr><td><code>tableau.dashboard.password</code></td><td>tableau_pass</td><td>WorkFusion Analytics Server website password for Dashboard (was used in import_users.csv)</td><td>WorkFusion Analytics Dashboard</td></tr>
+<tr><td><code>tableau.automation.username</code></td><td>tableau_user</td><td>WorkFusion Analytics Server website username for WF-Automation. Automation is published on the same server so the same credentials as for tableau.dashboard should be used.</td><td>WorkFusion Analytics UI</td></tr>
+<tr><td><code>tableau.automation.password</code></td><td>tableau_pass</td><td>WorkFusion Analytics Server website password for WF-Automation. Automation is published on the same server so the same credentials as for tableau.dashboard should be used.</td><td>WorkFusion Analytics UI</td></tr>
+</tbody>
+</table>
+</li>
+<li><p>On the APP Server, restart the Workfusion service:</p>
+<pre><code class="hljs css language-bash">sudo su - wfuser; wfmanager restart workfusion
+</code></pre></li>
+<li><p>Wait for about one minute and check that there are no any errors in the Control Tower's application logs:</p>
+<pre><code class="hljs css language-bash">sudo su - wfuser; tailf -n 50 /opt/workfusion/supervisord/<span class="hljs-built_in">log</span>/workfusion.out.log
+</code></pre></li>
+</ol></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="check-the-installation"></a><a href="#check-the-installation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Check the installation</h2>
+<p>To check the installation:</p>
+<ol>
+<li><p>In a browser, open URL <a href="https://%3Chostname%3E/">https://&lt;hostname&gt;/&gt;</a> to go to the APP instance. The following menu appears:</p>
+<p><img src="/docs/assets/spa/admin-guide/ct-menu.png" alt="ct-menu"></p></li>
+<li><p>In the main menu, go to the <strong>Analytics</strong> group to check that the the dashboard is displayed.</p>
+<p><img src="/docs/assets/spa/admin-guide/check-dashboard.png" alt="check-dashboard"></p></li>
+</ol>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/8/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/spa/admin/legacy/install-ocr-windows-server"><span class="arrow-prev">← </span><span>Install OCR Windows server</span></a><a class="docs-next button" href="/docs/spa/admin/legacy/run-post-installation-procedures"><span>Run post-installation procedures</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#install-workfusion-analytics-server">Install WorkFusion Analytics Server</a></li><li><a href="#install-workfusion-analytics-desktop">Install WorkFusion Analytics Desktop</a></li><li><a href="#install-workfusion-analytics-filebeat">Install WorkFusion Analytics Filebeat</a></li><li><a href="#install-workfusion-analytics-metricbeat">Install WorkFusion Analytics Metricbeat</a></li><li><a href="#deploy-workbooks-to-workfusion-analytics-server">Deploy workbooks to WorkFusion Analytics Server</a><ul class="toc-headings"><li><a href="#prerequisites-1">Prerequisites</a></li><li><a href="#deploy-workbooks">Deploy workbooks</a></li><li><a href="#publish-workbooks">Publish workbooks</a></li><li><a href="#schedule-configuration">Schedule Configuration</a></li></ul></li><li><a href="#enable-workfusion-analytics-dashboard-in-control-tower">Enable WorkFusion Analytics Dashboard in Control Tower</a></li><li><a href="#check-the-installation">Check the installation</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/wf-logo.svg" alt="Knowledgebase" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://www.workfusion.com/reports-whitepapers/">Reports &amp; Whitepapers</a></div><div><h5>Community</h5><a href="https://forum.workfusion.com/" target="_blank" rel="noreferrer noopener">Forum</a><a href="http://automationacademy.com/">Automation Academy</a><a href="https://partners.workfusion.com/">Partners Portal</a></div><div><h5>More</h5><a href="https://www.workfusion.com/iac/">Intelligent Automation Cloud</a></div></section><section class="copyright">Copyright © 2019 WorkFusion, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: 'PNQGK7RZR5',
+                apiKey: 'ba828b974aad37836106a37d2432da4b',
+                indexName: 'search-config',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en","version:undefined"]}
+              });
+            </script></body></html>

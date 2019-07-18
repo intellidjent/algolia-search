@@ -1,0 +1,176 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>SPA Terra 10.0 · Knowledgebase</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;&lt;strong&gt;WorkFusion&#x27;s latest 10.0&lt;/strong&gt; release is the first in a series of groundbreaking releases with a number of fundamental technology and UX overhauls. As such, it serves as a bridge to WorkFusion&#x27;s &lt;a href=&quot;https://www.workfusion.com/iac/&quot;&gt;Intelligent Automation Cloud&lt;/a&gt;, the only platform powered by artificial intelligence (AI) and built for the enterprise for simpler automation at scale.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="SPA Terra 10.0 · Knowledgebase"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docusaurus.workfusion.com//"/><meta property="og:description" content="&lt;p&gt;&lt;strong&gt;WorkFusion&#x27;s latest 10.0&lt;/strong&gt; release is the first in a series of groundbreaking releases with a number of fundamental technology and UX overhauls. As such, it serves as a bridge to WorkFusion&#x27;s &lt;a href=&quot;https://www.workfusion.com/iac/&quot;&gt;Intelligent Automation Cloud&lt;/a&gt;, the only platform powered by artificial intelligence (AI) and built for the enterprise for simpler automation at scale.&lt;/p&gt;
+"/><meta property="og:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.4/fuse.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/WorkFusion_H_5_RGB.png" alt="Knowledgebase"/><h2 class="headerTitleWithLogo">Knowledgebase</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/terra" target="_self">WorkFusion 10.0</a></li><li class=""><a href="/docs/spa" target="_self">SPA</a></li><li class=""><a href="/docs/spa/admin/install-spa/prepare/overview" target="_self">Administrator&#x27;s Guide</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>SPA Terra</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">SPA Terra<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem navListItemActive"><a class="navItem" href="/docs/releases/terra/terra-10-0">SPA Terra 10.0</a></li><li class="navListItem"><a class="navItem" href="/docs/releases/terra/terra-10-1">SPA Terra 10.1</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">SPA Lumen<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/releases/lumen/lumen-9-2">SPA Lumen 9.2</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://git.workfusion.com/projects/DOC/repos/documentation/browse/docs/releases/terra/terra-10-0.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">SPA Terra 10.0</h1></header><article><div><span><p><strong>WorkFusion's latest 10.0</strong> release is the first in a series of groundbreaking releases with a number of fundamental technology and UX overhauls. As such, it serves as a bridge to WorkFusion's <a href="https://www.workfusion.com/iac/">Intelligent Automation Cloud</a>, the only platform powered by artificial intelligence (AI) and built for the enterprise for simpler automation at scale.</p>
+<p>One of the biggest architectural changes in Terra 10.0 is the new bot orchestration platform designed to address current scalability limitations, as well as to reduce complexity and improve fault-tolerance.</p>
+<p>Another major improvement is replacing 3 databases (MySQL, PostgreSQL, MongoDB) with a single unified database — MS SQL. This fundamental change allowed us to decrease maintenance complexity and enable consistent data backup, as well as to address security and high availability issues.</p>
+<h2><a class="anchor" aria-hidden="true" id="bot-execution-platform"></a><a href="#bot-execution-platform" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bot Execution Platform</h2>
+<p>Imagine your business operations grow and expand and you need to process twice as many tasks as you currently have. How do you scale WorkFusion SPA? What if you need to scale but the task load is hardly predictable and depends on multiple factors?</p>
+<h3><a class="anchor" aria-hidden="true" id="v9x-state"></a><a href="#v9x-state" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>v9.x State</h3>
+<p>In SPA v9.x, the correct answer is add another Control Tower with its infrastructure, services, etc. And then maybe another one.</p>
+<p>Now that you have 3 Control Towers, how do you manage, track and distribute the task load between them? The answer is custom setup and orchestration.</p>
+<p>Needless to say, each Control Tower deployment is quite a time- and resource-consuming operation which requires custom actions for every specific use case. We knew, this could not last too long as such monolithic architecture was obviously too complex for large enterprise clients.</p>
+<p><img src="/docs/assets/releases/custom-orchestration.png" alt=""></p>
+<h3><a class="anchor" aria-hidden="true" id="v100-state"></a><a href="#v100-state" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>v10.0 State</h3>
+<p>In SPA v10.0, the very core concept of architecture has undergone a major re-thinking. Introducing the new state-of-the-art bot execution platform for a horizontally scalable, predictable, and fault-tolerant system. Here's three immediate benefits you get:</p>
+<ul>
+<li>First off, now the platform dynamically scales the number of workers depending on the task load. This results in lean utilization of resources, which can be available for other tasks. No need to add more Control Tower to handle task load spikes.</li>
+<li>Second, tasks are performed by completely isolated workers. This allows to avoid situations when one failed task could lead to unexpected behavior or Control Tower being stuck, thus improving the overall system fault tolerance.</li>
+<li>Finally, we drew an explicit line between the application, such as Control Tower, and the execution platform itself. Now, the platform exposes API that triggers cluster execution, orchestration, monitoring, and analytics.</li>
+</ul>
+<p><img src="/docs/assets/releases/BEP.png" alt=""></p>
+<h2><a class="anchor" aria-hidden="true" id="consolidated-database"></a><a href="#consolidated-database" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Consolidated Database</h2>
+<p>9.x architecture utilized PostgreSQL, MySQL and MongoDB databases. SPA 10.0 is fundamentally rethinked to use a consolidated Microsoft SQL database. Let's put it simply: to install SPA 9.x, you had to have at least three different databases. In SPA 10.0, you only need one, and that is MS SQL — a solid enterprise solution.</p>
+<p>Microsoft SQL is an enterprise-grade solution — comprehensive, well-supported, reliable and trusted by customers across all industries. Consolidated Database introduction brings the following benefits:</p>
+<ul>
+<li>A single set of tools and single expertise.</li>
+<li>Less maintenance and troubleshooting effort for more effective support.</li>
+<li>Less potential failure points — easier identification of security issues.</li>
+<li>Consistent data backup in adherence to High Availability and Disaster Recovery standards.</li>
+</ul>
+<p><img src="/docs/assets/releases/consolidated-DB.png" alt=""></p>
+<h2><a class="anchor" aria-hidden="true" id="monitoring"></a><a href="#monitoring" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Monitoring</h2>
+<p>SPA v10.0 changes the logs collecting approach by introducing a single point for logs and metrics aggregation — a well-known enterprise-grade solution ELK stack that replaces o ur good old Platform Monitor. Earlier, when investigating an incident, to collect logs and figure out what's going on in the system, you had to go to several servers for chunks of information and glue together pieces into  a single picture.</p>
+<p>ELK is shipped as an out-of-the-box tool and provides centralized logging. You can collect logs via Logstash and beautifully vizualize them on Kibana dashboards. The environment health metrics will also help you to understand the current state of your infrastructure and the possible bottlenecks that may affect the performance.</p>
+<p>ELK includes but is not limited to the following dashboards:</p>
+<ul>
+<li><strong>System Overview</strong> to assess the CPU/Memory/Disk space load on servers.</li>
+<li><strong>Application Logs</strong> to browse applications' logs.</li>
+<li><strong>Environment Status</strong> to display the health status of the environment and list events that provide information about recent changes in health status.</li>
+</ul>
+<p><img src="/docs/assets/releases/monitoring-analytics.png" alt=""></p>
+<h2><a class="anchor" aria-hidden="true" id="robotics"></a><a href="#robotics" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Robotics</h2>
+<p>In Terra v10.0, we improved the governance and performance of our bots by applying the Bot Execution Platform architecture to manage RPA Windows workers. This change opened ways to the following improvements:</p>
+<ul>
+<li>faster RPA execution – the speed has been increased by 36%</li>
+<li>simplified bot installation and configuration</li>
+<li>enhanced security and stable performance due to execution of all task instructions on the same machine</li>
+<li>one unified method of task routing – Bot Fleets</li>
+</ul>
+<p><img src="/docs/assets/releases/rpa-execution.png" alt=""></p>
+<p>Based on results of 175 Bot runs.</p>
+<h2><a class="anchor" aria-hidden="true" id="tagging-over-document"></a><a href="#tagging-over-document" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tagging over Document</h2>
+<p>One of the main stages of an automation use case development is dataset tagging. Preparing and labeling a high-quality training set is time-consuming. It equals to human worker teaching bot to mimic human work, that is, to recognize the values such as invoice number and date. Workers are accustomed to the real-world documents structure, and therefore can perform swiftly and effectively on what's familiar to them: hard and digital copies, and scans.
+In SPA v9.x, workers tagged the plain text OCR result. It could look nothing like the original documents, because all information about sizes, fonts, positions and layouts was lost. It took significant effort to precisely identify the required values. This led to user mistakes and increased the labeling time.</p>
+<p>SPA v9.x:</p>
+<p><img src="/docs/assets/releases/tod-9x.gif" alt=""></p>
+<p>SPA v10.0 restores the natural workflow by introducing the Tagging over Document (TOD) experience. Worker views the original document with text values layered underneath. The scan is rotated and scaled, the image is optimized where needed for convenience. Word boundaries are highlighted and single value can be selected with one click.</p>
+<p>SPA v10.0:</p>
+<p><img src="/docs/assets/releases/tod-10.gif" alt=""></p>
+<p>1,100 experiments with 6 fields per document show the average tagging time decrease of 52%:</p>
+<p><img src="/docs/assets/releases/labelling-chart.png" alt=""></p>
+<p>TOD improves the overall user experience and dataset quality. It allows to double the speed of document tagging and cuts the time needed to teach a bot, thus streamlining automation use case delivery.</p>
+<p>Learn more about building a TOD use case: <a href="">OOTB TOD Use Case</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="analytics"></a><a href="#analytics" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Analytics</h2>
+<h3><a class="anchor" aria-hidden="true" id="capacity-dashboard"></a><a href="#capacity-dashboard" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Capacity Dashboard</h3>
+<p>New Capacity dashboard provides a quick and comprehensive overview of SPA components utilization for Business operations in a way that helps to understand how infrastructure resources are utilized.</p>
+<p>There are 4 dashboards explaining resource utilization data:</p>
+<ul>
+<li><strong>CPU</strong>, <strong>Memory</strong> and <strong>Disk</strong> utilization over time answer if there are enough resources to dynamically scale to process peaks in SPA workload.</li>
+<li><strong>Bot Execution Platform Agent</strong> chart visualizes how workers with different profiles (Control Tower and AutoML) share CPU and Memory resources.</li>
+</ul>
+<p><img src="/docs/assets/releases/capacity-dashboard.png" alt=""></p>
+<p>Link to be added.</p>
+<h3><a class="anchor" aria-hidden="true" id="rpa-dashboard"></a><a href="#rpa-dashboard" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>RPA Dashboard</h3>
+<p>New RPA dashboard provides an overview for bots accuracy, performance and utilization, thus allowing to find ways for improvements at process or bot levels.</p>
+<p>Here are the key metrics: <strong>Volume</strong>, <strong>RPA Accuracy Rate</strong>, <strong>Bot Availability</strong>, <strong>Fleets Utilization</strong>, <strong>Bot Units Workload</strong>.</p>
+<p><img src="/docs/assets/releases/rpa-dashboard.png" alt=""></p>
+<p>Link to be added.</p>
+<h2><a class="anchor" aria-hidden="true" id="automl"></a><a href="#automl" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>AutoML</h2>
+<h3><a class="anchor" aria-hidden="true" id="python-classifiers"></a><a href="#python-classifiers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Python Classifiers</h3>
+<p>Python is widely considered as the preferred language for teaching and learning ML because of its relative simplicity. No wonder so many ML algorithms have powerful implementations in Python making it a go-to language for this purpose.</p>
+<p>We couldn't stand aside, so starting with SPA v10.0, AutoML allows using a set of Python classifiers based on SciKit-learn and MXNet that identify to which category an object belongs to.</p>
+<p>For more details, refer to <a href="">Python Classifiers</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="single-source-installation"></a><a href="#single-source-installation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Single Source Installation</h2>
+<p>With each release we make steps to improving the process of installation and making it more simple and user-oriented. While previous versions might have required dozens of operations to set up all the components, SPA v10.0 can be installed within several hours. The basic installation of all components is now performed 50% faster, compared to previous versions, and requires about 1.5 hours of your time.</p>
+<p><img src="/docs/assets/releases/installation-chart.png" alt=""></p>
+<p>Such improvement is the result of switching to single-source approach, which means you can install all Linux and Windows components from a single server by running a single script without logging in to each server and uploading packages to them.</p>
+<p><img src="/docs/assets/releases/installation.png" alt=""></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="additional-resources"></a><a href="#additional-resources" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Additional Resources</h2>
+<ul>
+<li><a href="/docs/releases/terra/terra-10-0-deprecations">SPA 10.0 Deprecations</a></li>
+<li><a href="/docs/releases/terra/terra-10-0-bug-fixes">SPA 10.0 Bug Fixes &amp; Improvements</a></li>
+<li><a href="/docs/releases/terra/terra-10-0-known-issues">SPA 10.0 Known Issues</a></li>
+</ul>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/9/2019</em></div><div class="docs-prevnext"><a class="docs-next button" href="/docs/releases/terra/terra-10-1"><span>SPA Terra 10.1</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#bot-execution-platform">Bot Execution Platform</a><ul class="toc-headings"><li><a href="#v9x-state">v9.x State</a></li><li><a href="#v100-state">v10.0 State</a></li></ul></li><li><a href="#consolidated-database">Consolidated Database</a></li><li><a href="#monitoring">Monitoring</a></li><li><a href="#robotics">Robotics</a></li><li><a href="#tagging-over-document">Tagging over Document</a></li><li><a href="#analytics">Analytics</a><ul class="toc-headings"><li><a href="#capacity-dashboard">Capacity Dashboard</a></li><li><a href="#rpa-dashboard">RPA Dashboard</a></li></ul></li><li><a href="#automl">AutoML</a><ul class="toc-headings"><li><a href="#python-classifiers">Python Classifiers</a></li></ul></li><li><a href="#single-source-installation">Single Source Installation</a></li><li><a href="#additional-resources">Additional Resources</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/wf-logo.svg" alt="Knowledgebase" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://www.workfusion.com/reports-whitepapers/">Reports &amp; Whitepapers</a></div><div><h5>Community</h5><a href="https://forum.workfusion.com/" target="_blank" rel="noreferrer noopener">Forum</a><a href="http://automationacademy.com/">Automation Academy</a><a href="https://partners.workfusion.com/">Partners Portal</a></div><div><h5>More</h5><a href="https://www.workfusion.com/iac/">Intelligent Automation Cloud</a></div></section><section class="copyright">Copyright © 2019 WorkFusion, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: 'PNQGK7RZR5',
+                apiKey: 'ba828b974aad37836106a37d2432da4b',
+                indexName: 'search-config',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en","version:undefined"]}
+              });
+            </script></body></html>

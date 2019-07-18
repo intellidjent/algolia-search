@@ -1,0 +1,268 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Install RPA Windows servers with generated configs · Knowledgebase</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;install-rpa-package&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#install-rpa-package&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Install RPA package&lt;/h2&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Install RPA Windows servers with generated configs · Knowledgebase"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docusaurus.workfusion.com//"/><meta property="og:description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;install-rpa-package&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#install-rpa-package&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Install RPA package&lt;/h2&gt;
+"/><meta property="og:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.4/fuse.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/WorkFusion_H_5_RGB.png" alt="Knowledgebase"/><h2 class="headerTitleWithLogo">Knowledgebase</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/terra" target="_self">WorkFusion 10.0</a></li><li class=""><a href="/docs/spa" target="_self">SPA</a></li><li class=""><a href="/docs/spa/admin/install-spa/prepare/overview" target="_self">Administrator&#x27;s Guide</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Install RPA server</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Installation – legacy way<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Prepare for installation</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/admin/legacy/legacy-overview">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/legacy/prepare-for-installation">Prepare for installation</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/legacy/run-preinstall-manually">Prepare for installation manually</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/admin/legacy/install-linux-servers">Install Linux servers</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Install RPA server</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/admin/legacy/rpa-server-overview">RPA server overview</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/legacy/install-rpa-windows-server">Install RPA Windows server</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/spa/admin/legacy/install-rpa-windows-server-using-generated-configs">Install RPA Windows servers with generated configs</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/admin/legacy/install-ocr-windows-server">Install OCR Windows server</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/legacy/bi-windows-server-installation">Install BI Windows Server</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/legacy/run-post-installation-procedures">Run post-installation procedures</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://git.workfusion.com/projects/DOC/repos/documentation/browse/docs/spa/admin/legacy/install-rpa-windows-server-using-generated-configs.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Install RPA Windows servers with generated configs</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="install-rpa-package"></a><a href="#install-rpa-package" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install RPA package</h2>
+<p>Install RPA as the Administrator user on a Windows machine.</p>
+<p>To install the RPA package:</p>
+<ol>
+<li><p>Download the <a href="https://kb.workfusion.com/display/RPA/RPA+Environment+Setup#RPAEnvironmentSetup-DownloadandRunRPAInstallerlinks">installer</a> file, and then extract all files from
+the <strong>RPAInstaller-{version}.zip</strong> to any folder on your PC.</p></li>
+<li><p>Launch <strong>RPAInstaller.ex</strong>e and follow the RPA Setup Wizard steps. Allow the installer to make changes to your computer.</p></li>
+<li><p>Accept the License Agreement and proceed.</p></li>
+<li><p>Set the Destination Folder for the RPA installation and wait until the installation process is finished.</p>
+<p>By default, the destination directory for RPA installation is <strong>C:\RPA\</strong> that will be further referred to as <strong>&lt;install_dir&gt;</strong>.</p>
+<p><img src="/docs/assets/spa/admin-guide/installrpa-destination.png" alt="Destination"></p></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="configure-users"></a><a href="#configure-users" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configure Users</h2>
+<p>Before RPA Windows Server installation, users must already be created and have local profiles on the RPA machine. In case you need to create users, see the <a href="/docs/spa/admin/legacy/prepare-for-installation#create-rpa-users">instructions</a>.</p>
+<p>Run the following commands on a Windows machine, in PowerShell, as Bot Master. Bot Master is the user that triggers Bot Units.</p>
+<ol>
+<li><p>in Control Tower, register <strong>Bot Master</strong> in Secrets Vault. To do that, add two secret entries with <strong>Alias for Bot Master user</strong> and <strong>Alias for Bot Master password</strong>. The <strong>Key</strong> box must be the same as <strong>Alias</strong>, while Value stands for either username or password. Use the following format to proceed:</p>
+<ul>
+<li><p>Bot Master User secret entry</p>
+<p><img src="/docs/assets/spa/admin-guide/secretsentry-user.png" alt="secretsentry-user"></p></li>
+<li><p>Bot Master Password secret entry</p>
+<p><img src="/docs/assets/spa/admin-guide/secretsentry-password-2.png" alt="secretsentry-user"></p></li>
+</ul></li>
+<li><p>Grant RPA with full folder permissions to all created users – Bot Master, Bot Unit X. The RPA folder is the folder where your RPA is installed.</p></li>
+<li><p>Make sure that <strong>Bot Master</strong> is a member of the Administrator group. For more information on configuring groups and permissions in Windows, see <a href="https://www.ibm.com/support/knowledgecenter/en/SSZJPZ_11.7.0/com.ibm.swg.im.iis.found.admin.common.doc/topics/wsisinst_install_prmssns_grps_win5plus.html">Configuring permissions and groups</a>.</p></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="enable-rds-to-use-multiple-bots-on-one-server"></a><a href="#enable-rds-to-use-multiple-bots-on-one-server" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enable RDS to use multiple bots on one server</h2>
+<p>Multiple RDP Sessions are configured on RPA Windows Server.</p>
+<p>To enable RDS to use multiple bots:</p>
+<ol>
+<li><p>Go to <strong>Server Manager</strong> &gt; <strong>Manage</strong> &gt; <strong>Add Roles and Features</strong>.</p>
+<p><img src="/docs/assets/spa/admin-guide/servermanager-dashboard.png" alt="Dashboard"></p>
+<p>The <strong>Add Roles and Features Wizard</strong> opens.</p>
+<p><img src="/docs/assets/spa/admin-guide/addrolesandfeatureswizard.png" alt="Dashboard"></p></li>
+<li><p>Go to <strong>Server Selection</strong> &gt; <strong>Server Roles</strong> &gt; <strong>Remote Desktop Services</strong> &gt; <strong>Next</strong>.</p>
+<p><img src="/docs/assets/spa/admin-guide/pmrdp1.png" alt="Dashboard"></p></li>
+<li><p>Select <strong>Remote Desktop Session Host</strong> &gt; <strong>Next</strong> &gt; <strong>Add Features</strong>.</p>
+<p><img src="/docs/assets/spa/admin-guide/pmrdp2.png" alt="Dashboard"></p></li>
+<li><p>Restart your machine.</p>
+<p><img src="/docs/assets/spa/admin-guide/pmrdp3.png" alt="Dashboard"></p></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="verify-internet-explorer-settings-optional"></a><a href="#verify-internet-explorer-settings-optional" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Verify Internet Explorer settings (optional)</h2>
+<p>Verification is required in case Internet Explorer is used. The settings are verified for each added user. For more details, see <a href="https://kb.workfusion.com/display/RPA/Configuring+Internet+Explorer+for+RPA">Configuring Internet Explorer for RPA</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="configure-firewall-for-nginx"></a><a href="#configure-firewall-for-nginx" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configure firewall for Nginx</h2>
+<p>Nginx configuration is required to provide secure communication among RPA machines.</p>
+<p>To provide access to Nginx, configure Windows Firewall to define a port for connection:</p>
+<ol>
+<li><p>Go to <strong>Control Panel</strong> &gt; <strong>Windows Defender Firewall</strong>.</p>
+<p><img src="/docs/assets/spa/admin-guide/control-panel-windows-firewall.png" alt=""></p></li>
+<li><p>Select <strong>Advanced settings</strong> &gt; <strong>Inbound Rules</strong>, and then click <strong>New rule</strong> to
+allow inbound secure communication for applications to use the SSL connection.</p>
+<p><img src="/docs/assets/spa/admin-guide/inboundrules-addnewrule.png" alt=""></p></li>
+<li><p>Select <strong>TCP</strong> and define the <strong>local port 443</strong> to allow the connection.</p>
+<p><img src="/docs/assets/spa/admin-guide/inboundrule-specifyport.png" alt=""></p></li>
+<li><p>Specify the connection name and click <strong>Finish</strong>.</p>
+<p><img src="/docs/assets/spa/admin-guide/inboundrule-specifyname.png" alt=""></p></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="generate-configuration-files-for-rpa-windows-server"></a><a href="#generate-configuration-files-for-rpa-windows-server" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Generate configuration files for RPA Windows Server</h2>
+<p>RPA Windows Server configuration files are generated on the Integration Server.</p>
+<ol>
+<li><p>Log in to the Integration Server via SSH.</p></li>
+<li><p>Change to default user <code>wfuser</code>.</p>
+<pre><code class="hljs css language-yml"><span class="hljs-string">su</span> <span class="hljs-bullet">-</span> <span class="hljs-string">wfuser</span>
+<span class="hljs-string">cd</span> <span class="hljs-string">/opt/workfusion/wf_installer/</span>
+</code></pre>
+<p>Mind that your default username may differ. When installing SPA, you can set up the username in the <strong>config.yml</strong> file. The default value is <code>wfuser</code>.</p></li>
+<li><p>In the <strong>hosts.yml</strong> file, specify the actual hostnames for <strong>rpa_hostnames</strong>. If there is more than one hostname, use a comma to separate them.</p></li>
+<li><p>Make sure that certificates are generated and located in <strong>/certificates</strong>.</p></li>
+<li><p>In case of multiple bots, specify the <strong>rpa_bots_per_server</strong> parameter and define the number of bots.</p>
+<pre><code class="hljs css language-yml"><span class="hljs-string">./install.sh</span> <span class="hljs-string">edit_config</span> <span class="hljs-string">int</span>
+</code></pre></li>
+<li><p>Run a configuration generation command.</p>
+<pre><code class="hljs css language-yml"><span class="hljs-string">./install.sh</span> <span class="hljs-string">generate_conf</span> <span class="hljs-string">rpa</span>
+</code></pre>
+<p>Configuration files are placed to <strong>\distr\win_confs\rpa_configs</strong>.</p></li>
+</ol>
+<p>For more information, see <a href="/docs/spa/admin/advanced/prepare-rpa-ocrwin-and-bi-configurations">prepare RPA, OCRWIN and BI configurations</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="apply-generated-configuration-files"></a><a href="#apply-generated-configuration-files" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Apply generated configuration files</h2>
+<p>All the generated configuration files are formed in the corresponding RPA folder structure for each RPA server separately.</p>
+<p><img src="/docs/assets/spa/admin-guide/rpafolderstructure.png" alt=""></p>
+<p>To apply configuration files:</p>
+<ol>
+<li><p>Archive all the configuration files for each RPA server:</p>
+<pre><code class="hljs css language-yml"><span class="hljs-string">zip</span> <span class="hljs-bullet">-r</span> <span class="hljs-string">rpa-testserver-rpa2.workfusion.com.zip</span> <span class="hljs-string">./rpa-testserver-rpa2.workfusion.com</span>
+</code></pre></li>
+<li><p>Copy all the generated files from the Integration server to a required RPA server. Use the following path to the
+files: <strong>\distr\win_confs\rpa_configs</strong>.</p></li>
+<li><p>Unarchive and put all the generated configuration files to the RPA package home directory(or <strong>&lt;install_dir&gt;</strong>), while preserving the directory structure.</p></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="schedule-bot-agent-startup-on-logon"></a><a href="#schedule-bot-agent-startup-on-logon" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Schedule Bot Agent startup on logon</h2>
+<p>Scheduling of tasks can be performed using the task scheduler or advanced group policies. Bot Agent startup is scheduled to autostart an RDP session (Bot Master, Bot Unit X) by Bot Manager.</p>
+<p>To schedule Bot Agent's startup:</p>
+<ul>
+<li><p>For one Bot Unit per server:</p>
+<p>Open the Windows console and enter the following commands:</p>
+<pre><code class="hljs css language-bash">SchTasks /Create /SC onlogon /TN <span class="hljs-string">"bot-agent-BotMaster"</span> /TR <span class="hljs-string">"&lt;install_dir&gt;\bot-agent\bin\bot-agent-nordp.bat"</span> /RU BotMaster /IT /F
+</code></pre></li>
+<li><p>For several Bot Units per server:</p>
+<p>Configure tasks – one for Bot Master user and one for each Bot Unit. To do that, enter the following commands:</p>
+<pre><code class="hljs css language-bash">SchTasks /Create /SC onlogon /TN <span class="hljs-string">"bot-agent-BotMaster"</span> /TR <span class="hljs-string">"&lt;install_dir&gt;\bot-agent\bin\bot-agent-master.bat"</span> /RU BotMaster /IT /F
+SchTasks /Create /SC onlogon /TN <span class="hljs-string">"bot-agent-BotUnit1"</span> /TR <span class="hljs-string">"&lt;install_dir&gt;\bot-agent\bin\bot-agent-unit1.bat"</span> /RU BotUnit1 /IT /F
+SchTasks /Create /SC onlogon /TN <span class="hljs-string">"bot-agent-BotUnitX"</span> /TR <span class="hljs-string">"&lt;install_dir&gt;\bot-agent\bin\bot-agent-unitX.bat"</span> /RU BotUnitX /IT /F
+</code></pre></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="configure-bot-master-autostart"></a><a href="#configure-bot-master-autostart" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configure Bot Master autostart</h2>
+<p>Bot Master autostart is set up to run RDP sessions. To allow autostart, provide correct RPA Windows Server hosts.</p>
+<p>To configure Bot Master autostart:</p>
+<ol>
+<li><p>On the Application Server, go to the <strong>\bot-manager\config</strong> directory.</p></li>
+<li><p>In <strong>machines.yml</strong>, provide correct RPA Windows Server hosts.</p>
+<pre><code class="hljs css language-yml"><span class="hljs-string">machines.hosts:</span>
+<span class="hljs-bullet">  -</span> <span class="hljs-string">test1.workfusion.com</span>
+<span class="hljs-bullet">  -</span> <span class="hljs-string">test2.workfusion.com</span>
+<span class="hljs-bullet">  -</span> <span class="hljs-string">test3.workfusion.com</span>
+</code></pre></li>
+<li><p>Restart Bot Manager.</p>
+<pre><code class="hljs css language-yml"><span class="hljs-string">wfmanager</span> <span class="hljs-string">restart</span> <span class="hljs-string">bot-manager</span>
+</code></pre></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="start-bot-units"></a><a href="#start-bot-units" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Start Bot Units</h2>
+<p>Before starting Bot Units, make sure you made necessary changes. There are several ways to run Bot Units – either with Bot Manager (automatic start from Application linux server call), or by using Bot Agent.</p>
+<p>We recommend avoiding manual start. Use automatic start from the Applicationlinux server call instead.</p>
+<p><details>
+<summary><font color="#FD4810">
+To start Bot Units manually...
+</font></summary></p>
+<p>Before starting the services, select <a href="https://kb.workfusion.com/display/RPA/RPA+Deployment">Deployment Architecture</a>.</p>
+<ul>
+<li><p>For one Bot Unit per server (VDI setup):</p>
+<p>Run <strong>&lt;install_dir&gt;\bot-agent\bin\bot-agent-nordp.bat</strong> to start Nginx, Bot Master, and Bot Unit. Your user session must be active to guarantee correct work.</p></li>
+<li><p>For multiple Bot Units per server (RDP-in-RDP):</p>
+<ol>
+<li><p>Run <strong>&lt;install_dir&gt;\bot-agent\bin\bot-agent-master.bat</strong> to start Nginx, Unit RDP sessions in a separate RDP session.</p>
+<p>Make sure to change The Master-Agent configuration that depends on your sessions Unit count and create additional configs for Units. For correct work, Unit sessions must be active internally in the master session, but the master session can have the disconnected status.</p></li>
+<li><p>Run Unit agents in each Unit RDP session: <strong>&lt;install_dir&gt;\bot-agent\bin\bot-agent-unit{Unit_ID}.bat</strong>.</p></li>
+</ol></li>
+</ul>
+<p></details></p>
+<h2><a class="anchor" aria-hidden="true" id="check-rpa-installation"></a><a href="#check-rpa-installation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Check RPA Installation</h2>
+<p>There are several ways to check RPA Windows Server installation.</p>
+<p>To check installation:</p>
+<ol>
+<li><p>Make sure that Bot Units are available, and WebDrivers exist on the connected Bots. To do that, open the following link as any user on the RPA machine.</p>
+<pre><code class="hljs css language-yml"><span class="hljs-attr">http:</span><span class="hljs-string">//localhost:1500{unit_id}/grid/console</span>
+</code></pre>
+<p>On evoking the command, view the list of available Bot Units in your browser.</p></li>
+<li><p>To check RPA Worker, open the following link in your browser under as any user on the RPA machine: <a href="http://localhost:1520{unit_id}/health">http://localhost:1520{unit_id}/health</a>.</p>
+<p>You receive the following response:</p>
+<pre><code class="hljs css language-yml"><span class="hljs-string">[</span>
+  <span class="hljs-string">{</span>
+<span class="hljs-attr">    "status":</span> <span class="hljs-string">"UP"</span><span class="hljs-string">,</span>
+<span class="hljs-attr">    "details":</span> <span class="hljs-string">{</span>
+<span class="hljs-attr">      "rabbit":</span> <span class="hljs-string">{</span>
+<span class="hljs-attr">        "status":</span> <span class="hljs-string">"UP"</span><span class="hljs-string">,</span>
+<span class="hljs-attr">        "details":</span> <span class="hljs-string">{</span>
+<span class="hljs-attr">          "version":</span> <span class="hljs-string">"3.7.14"</span>
+        <span class="hljs-string">}</span>
+      <span class="hljs-string">},</span>
+<span class="hljs-attr">      "diskSpace":</span> <span class="hljs-string">{</span>
+<span class="hljs-attr">        "status":</span> <span class="hljs-string">"UP"</span><span class="hljs-string">,</span>
+<span class="hljs-attr">        "details":</span> <span class="hljs-string">{</span>
+<span class="hljs-attr">          "total":</span> <span class="hljs-number">53317988352</span><span class="hljs-string">,</span>
+<span class="hljs-attr">          "free":</span> <span class="hljs-number">25653489664</span><span class="hljs-string">,</span>
+<span class="hljs-attr">          "threshold":</span> <span class="hljs-number">10485760</span>
+        <span class="hljs-string">}</span>
+      <span class="hljs-string">},</span>
+<span class="hljs-attr">      "refreshScope":</span> <span class="hljs-string">{</span>
+<span class="hljs-attr">        "status":</span> <span class="hljs-string">"UP"</span>
+      <span class="hljs-string">},</span>
+<span class="hljs-attr">      "zookeeper":</span> <span class="hljs-string">{</span>
+<span class="hljs-attr">        "status":</span> <span class="hljs-string">"UP"</span><span class="hljs-string">,</span>
+<span class="hljs-attr">        "details":</span> <span class="hljs-string">{</span>
+<span class="hljs-attr">          "connectionString":</span> <span class="hljs-string">"hostname.workfusion.com:port"</span><span class="hljs-string">,</span>
+<span class="hljs-attr">          "state":</span> <span class="hljs-string">"STARTED"</span>
+        <span class="hljs-string">}</span>
+      <span class="hljs-string">}</span>
+    <span class="hljs-string">}</span>
+  <span class="hljs-string">}</span>
+<span class="hljs-string">]</span>
+</code></pre></li>
+<li><p>Open <a href="https://kb.workfusion.com/display/RPA/Bot+Manager">Bot Manager</a> and make sure that your RPA Windows Server hostname is available, and that you are able to send commands to Bot Unit components.</p>
+<p><img src="/docs/assets/spa/admin-guide/botmanager-1serverinstalled.png" alt=""></p></li>
+<li><p>Run any RPA task and view logs in Kibana.</p></li>
+</ol>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/8/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/spa/admin/legacy/install-rpa-windows-server"><span class="arrow-prev">← </span><span>Install RPA Windows server</span></a><a class="docs-next button" href="/docs/spa/admin/legacy/install-ocr-windows-server"><span>Install OCR Windows server</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#install-rpa-package">Install RPA package</a></li><li><a href="#configure-users">Configure Users</a></li><li><a href="#enable-rds-to-use-multiple-bots-on-one-server">Enable RDS to use multiple bots on one server</a></li><li><a href="#verify-internet-explorer-settings-optional">Verify Internet Explorer settings (optional)</a></li><li><a href="#configure-firewall-for-nginx">Configure firewall for Nginx</a></li><li><a href="#generate-configuration-files-for-rpa-windows-server">Generate configuration files for RPA Windows Server</a></li><li><a href="#apply-generated-configuration-files">Apply generated configuration files</a></li><li><a href="#schedule-bot-agent-startup-on-logon">Schedule Bot Agent startup on logon</a></li><li><a href="#configure-bot-master-autostart">Configure Bot Master autostart</a></li><li><a href="#start-bot-units">Start Bot Units</a></li><li><a href="#check-rpa-installation">Check RPA Installation</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/wf-logo.svg" alt="Knowledgebase" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://www.workfusion.com/reports-whitepapers/">Reports &amp; Whitepapers</a></div><div><h5>Community</h5><a href="https://forum.workfusion.com/" target="_blank" rel="noreferrer noopener">Forum</a><a href="http://automationacademy.com/">Automation Academy</a><a href="https://partners.workfusion.com/">Partners Portal</a></div><div><h5>More</h5><a href="https://www.workfusion.com/iac/">Intelligent Automation Cloud</a></div></section><section class="copyright">Copyright © 2019 WorkFusion, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: 'PNQGK7RZR5',
+                apiKey: 'ba828b974aad37836106a37d2432da4b',
+                indexName: 'search-config',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en","version:undefined"]}
+              });
+            </script></body></html>

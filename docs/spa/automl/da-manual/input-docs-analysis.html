@@ -1,0 +1,187 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Input Documents Analysis · Knowledgebase</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt; To understand the business logic of the Use Case and documents.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Input Documents Analysis · Knowledgebase"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docusaurus.workfusion.com//"/><meta property="og:description" content="&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt; To understand the business logic of the Use Case and documents.&lt;/p&gt;
+"/><meta property="og:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.4/fuse.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/WorkFusion_H_5_RGB.png" alt="Knowledgebase"/><h2 class="headerTitleWithLogo">Knowledgebase</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/terra" target="_self">WorkFusion 10.0</a></li><li class=""><a href="/docs/spa" target="_self">SPA</a></li><li class=""><a href="/docs/spa/admin/install-spa/prepare/overview" target="_self">Administrator&#x27;s Guide</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Data Analyst runbook</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">AutoML Concepts<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/what-can-automl-do">What Can AutoML Do?</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Models</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/models-overview">Models Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/information-extraction">Information Extraction</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/checker-model">Checker Model</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/classification">Classification</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/data-set">Data Set</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/automl-glossary">AutoML Glossary</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/automl-delivery">Complete View on AutoML Delivery</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Hardware Requirements<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/automl/10x-hardware-requirements">Hardware Requirements</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/zookeeper-settings">ZooKeeper Settings</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">AutoML SDK<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/introduction">Introduction</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Components</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/components">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/parser">Parser</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/annotators">Annotators</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/feature-extractors">Feature Extractors</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/post-processing">Post-Processing</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/statistics">Statistics</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/model-configuration">Model Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/search-engine">Search Engine</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Getting Started</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/getting-started">Developing with AutoML SDK</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/environment-configuration">Environment Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/project-configuration">Project Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/automl-sdk-configuration">AutoML SDK Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/model-training">Model Training</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/model-execution">Model Execution</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/automl-sdk-api">AutoML SDK API</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/code-examples">Code Examples</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/e2e-automl-sdk-walkthrough">End-to-End AutoML SDK Walkthrough</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Data Analyst Manual<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/da-introduction">Data Analyst Manual</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">What does Data Analyst do?</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/da-job">Data Analyst Job</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/da-responsibilities">Data Analyst Responsibilities</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/da-workflow">Data Analyst Workflow</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/customer-data-protection">Customer Data Protection</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Customer documents basics</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/input-docs-characteristics">Input Documents Characteristics</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/input-docs-formats">Formats of Input Documents</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/labeling-requirements">Labeling Requirements</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Analyst runbook</h4><ul><li class="navListItem navListItemActive"><a class="navItem" href="/docs/spa/automl/da-manual/input-docs-analysis">Input Documents Analysis</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://git.workfusion.com/projects/DOC/repos/documentation/browse/docs/spa/automl/da-manual/input-docs-analysis.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Input Documents Analysis</h1></header><article><div><span><p><strong>Goal:</strong> To understand the business logic of the Use Case and documents.</p>
+<p><strong>Input:</strong> Statement of Work (project contract with client where final success criteria must be defined), list and description of fields/classes, original documents, any other description/documentation provided by client.</p>
+<p><strong>Output</strong>: Logic defined for documents: formats, layouts, special business logic, fields/classes and their meaning, corner cases.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Understand Use Case business logic from the documents and conversations.</li>
+<li>Study documents intended to form ML training set, analyze quality and representativeness of different document structures and distribution.</li>
+<li>Study fields logic, consider answer types and rare fields.</li>
+<li>Finalize fields output format.</li>
+<li>Consider manual task design and logic.</li>
+</ol>
+<p>Most of the projects are delivered on the customer's premises, so DA needs to go to the customer. Steps at this stage can be divided into two parts:</p>
+<ol>
+<li>What you can do before you arrive.</li>
+<li>What should be done once on-site.</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="before-you-begin"></a><a href="#before-you-begin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Before you begin</h2>
+<p>Make sure all the credentials are received:</p>
+<ul>
+<li>Access to folder with original documents.</li>
+<li>S3 with full access at least on one bucket to upload documents into as well as standard AutoML model buckets to access results and configuration.</li>
+<li>Tested Control Tower/WorkSpace instances with full access.</li>
+</ul>
+<p>Make sure the required software is installed:</p>
+<ul>
+<li>S3 Browser</li>
+<li>LibreOffice, OpenOffice, Ron's Editor, or any other viewer of large .CSV files</li>
+<li>Chrome 63+</li>
+<li>Notepad++</li>
+<li>Microsoft Outlook</li>
+<li>Webex/GTM/Skype for Business or any other communication tool</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="before-arrival"></a><a href="#before-arrival" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Before arrival</h2>
+<p>First, the Data Analyst should study the SOW carefully and make sure the whole business process is clear. It's necessary to figure out the project scope and documents' workflow. Find out whether there any specific details depending on the processing period during the year (e.g., in the fourth quarter, does the flow contain the documents of some specific issuers with unique structure, or are the document structures different from period to period).</p>
+<p>Here is the list of questions to be answered:</p>
+<ol>
+<li>What type of Use Case is it — Information Extraction or Classification?</li>
+<li>What are the types of documents/how many are there?</li>
+<li>What are the formats of documents?</li>
+<li>How many pages are there in one document/what pages are needed to be processed?</li>
+<li>How many fields are to be extracted/what are they?</li>
+<li>How many classes are to be formed/what are they?</li>
+<li>How many models are required to process the document flow?</li>
+</ol>
+<p>Consider additional questions that may arise and ask them in advance.</p>
+<h2><a class="anchor" aria-hidden="true" id="on-arrival"></a><a href="#on-arrival" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>On arrival</h2>
+<p>If you have some documents' samples provided by customer, try to figure out from them as much as possible about documents' logic, structures, diversity and appearance, categories, fields' shapes and context before arrival.</p>
+<p>In most cases, the Data Analyst is able to investigate documents' logic when he or she is fully on-boarded to the project and has been granted access to the documents, which takes time and is usually done on arrival. You may ask the DM to start this process in advance to save time.</p>
+
+    <div class="admonition admonition-note">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div> note</h5>
+      </div>
+      <div class="admonition-content">
+    <p>Note that if the customer's documents include sensitive data, you need to observe security rules. Check the rules here.</p>
+</div></div><p>Here are questions to be answered when studying documents:</p>
+<ol>
+<li>What is the quality of the original documents/is it suitable for OCR/can it be improved? (for more details: OCR).</li>
+<li>What is the meaning of each class and field to be extracted from the documents?</li>
+<li>Where is each field given in the documents?</li>
+<li>Which fields are required and which are optional?</li>
+<li>Which fields are rarely given in the documents?</li>
+<li>Is there any special logic, complicated dependencies or exceptional cases?</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="work-with-smes"></a><a href="#work-with-smes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Work with SMEs</h3>
+<p>To organize work with SMEs in the most effective way, investigate the following questions:</p>
+<ol>
+<li>How many SMEs are available for tagging the documents?</li>
+<li>Are they available full-time or part-time?</li>
+<li>What are their working hours?</li>
+<li>What are their names/emails?</li>
+<li>Who is the manager of the team and what are his/her contacts?</li>
+</ol>
+<p>You may ask SMEs to fill in the following document, or fill it out on your own after discussion with SMEs.</p>
+<p>Write an e-mail for the whole team with your analysis of the documents and SMEs availability.  Example of the email:</p>
+<blockquote>
+<p><em>Hello team,</em></p>
+<p><em>After the initial analysis of the data I would like to raise some issues that need to be investigated in advance to prevent their becoming pain spots</em>:</p>
+<p><em>1. Complex document type</em></p>
+<p><em>There are purchase orders of supplier N that have table format and multiple pages. Here we can see that single-value fields (date, purchase order number and product) become multi-value fields, so we need a separate manual task for all the documents of that type. Most probably we will need to train a separate model for that or at least develop an extended model. For now there are 137 documents of that supplier, the info on volume of those documents and if there are similar cases has been requested from SMEs, waiting for response.</em></p>
+<p><em>2. Rare field</em></p>
+<p><em>The field &quot;Oiling&quot; seems to appear only in the documents of supplier X. There are only 17 documents of this supplier and not more can be provided, because it's a new supplier. The data for this field for all the other suppliers is being downloaded from Data Base. The value for this field is not constant, so there can be no guarantee that if the model trained on 17 documents will process this field in production with the required accuracy level (95%). The situation is to be talked over with the client.</em></p>
+<p><em>3. SMEs availability</em></p>
+<p><em>SMEs' team is not steady. Their manager told me that they are going to assign people each week depending on their business. That is an additional risk, because it will take extra time and effort to establish contact with them and train. We need to ask for a stable team of at least 3 SMEs with scheduled working hours at the project in order to tag all the required Data Set of 1480 documents in time.</em></p>
+<p><em>Best regards</em></p>
+</blockquote>
+<ol>
+<li><p><strong>Potential risks not raised</strong></p>
+<ul>
+<li>Cases with documents of some specific structures, where one or more fields are given in the way not very simple for extraction, conflicting data)/ are there enough examples of them?</li>
+<li>Cases that require training a separate model.</li>
+<li>Cases of rare fields.</li>
+<li>Small number of specific document structures (rare document types).</li>
+</ul>
+<p>Such complicated cases should be additionally investigated and <strong>raised to Delivery Manager as potential risks</strong>, if confirmed. Extra documents/resources may need to be requested from the customer, a special approach developed, or some complicated cases may be negotiated to be out of scope. When not reported during the early stages, there won't be enough time and resources to deal with them during later stages of the project.</p></li>
+<li><p><strong>Logic is badly investigated</strong></p>
+<p>When some dependencies or documents'/layouts' logic is not studied well, the wrong solution may be developed — for example, in tagging logic or tagging instructions or corner cases revealed during later stages of the project.</p></li>
+</ol>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="additional-materials"></a><a href="#additional-materials" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Additional Materials</h2>
+<ul>
+<li><a href="/docs/spa/automl/da-manual/sme-onsite-training">SMEs Onsite Training: Best Practices and Materials</a></li>
+</ul>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/12/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/spa/automl/da-manual/labeling-requirements"><span class="arrow-prev">← </span><span>Labeling Requirements</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#before-you-begin">Before you begin</a></li><li><a href="#before-arrival">Before arrival</a></li><li><a href="#on-arrival">On arrival</a><ul class="toc-headings"><li><a href="#work-with-smes">Work with SMEs</a></li></ul></li><li><a href="#additional-materials">Additional Materials</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/wf-logo.svg" alt="Knowledgebase" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://www.workfusion.com/reports-whitepapers/">Reports &amp; Whitepapers</a></div><div><h5>Community</h5><a href="https://forum.workfusion.com/" target="_blank" rel="noreferrer noopener">Forum</a><a href="http://automationacademy.com/">Automation Academy</a><a href="https://partners.workfusion.com/">Partners Portal</a></div><div><h5>More</h5><a href="https://www.workfusion.com/iac/">Intelligent Automation Cloud</a></div></section><section class="copyright">Copyright © 2019 WorkFusion, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: 'PNQGK7RZR5',
+                apiKey: 'ba828b974aad37836106a37d2432da4b',
+                indexName: 'search-config',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en","version:undefined"]}
+              });
+            </script></body></html>

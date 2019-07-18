@@ -1,0 +1,335 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Code Examples · Knowledgebase</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;creating-ner-annotators&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#creating-ner-annotators&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Creating NER Annotators&lt;/h2&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Code Examples · Knowledgebase"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docusaurus.workfusion.com//"/><meta property="og:description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;creating-ner-annotators&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#creating-ner-annotators&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Creating NER Annotators&lt;/h2&gt;
+"/><meta property="og:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.4/fuse.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/WorkFusion_H_5_RGB.png" alt="Knowledgebase"/><h2 class="headerTitleWithLogo">Knowledgebase</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/terra" target="_self">WorkFusion 10.0</a></li><li class=""><a href="/docs/spa" target="_self">SPA</a></li><li class=""><a href="/docs/spa/admin/install-spa/prepare/overview" target="_self">Administrator&#x27;s Guide</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>AutoML SDK</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">AutoML Concepts<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/what-can-automl-do">What Can AutoML Do?</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Models</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/models-overview">Models Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/information-extraction">Information Extraction</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/checker-model">Checker Model</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/classification">Classification</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/data-set">Data Set</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/automl-glossary">AutoML Glossary</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/automl-delivery">Complete View on AutoML Delivery</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Hardware Requirements<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/automl/10x-hardware-requirements">Hardware Requirements</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/zookeeper-settings">ZooKeeper Settings</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">AutoML SDK<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/introduction">Introduction</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Components</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/components">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/parser">Parser</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/annotators">Annotators</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/feature-extractors">Feature Extractors</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/post-processing">Post-Processing</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/statistics">Statistics</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/model-configuration">Model Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/search-engine">Search Engine</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Getting Started</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/getting-started">Developing with AutoML SDK</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/environment-configuration">Environment Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/project-configuration">Project Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/automl-sdk-configuration">AutoML SDK Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/model-training">Model Training</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/model-execution">Model Execution</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/automl-sdk-api">AutoML SDK API</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/spa/automl/automl-sdk/code-examples">Code Examples</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/e2e-automl-sdk-walkthrough">End-to-End AutoML SDK Walkthrough</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Data Analyst Manual<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/da-introduction">Data Analyst Manual</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">What does Data Analyst do?</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/da-job">Data Analyst Job</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/da-responsibilities">Data Analyst Responsibilities</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/da-workflow">Data Analyst Workflow</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/customer-data-protection">Customer Data Protection</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Customer documents basics</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/input-docs-characteristics">Input Documents Characteristics</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/input-docs-formats">Formats of Input Documents</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/labeling-requirements">Labeling Requirements</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Analyst runbook</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/input-docs-analysis">Input Documents Analysis</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://git.workfusion.com/projects/DOC/repos/documentation/browse/docs/spa/automl/automl-sdk/code-examples.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Code Examples</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="creating-ner-annotators"></a><a href="#creating-ner-annotators" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating NER Annotators</h2>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.List;
+
+<span class="hljs-keyword">import</span> com.google.common.collect.Lists;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.ModelConfiguration;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.Named;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.annotator.Annotator;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.configuration.IeConfigurationContext;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.model.Document;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.nlp.component.annotator.EntityBoundaryAnnotator;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.nlp.component.annotator.ner.AhoCorasickDictionaryNerAnnotator;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.nlp.component.annotator.ner.BaseRegexNerAnnotator;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.nlp.component.dictionary.CsvDictionaryKeywordProvider;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.nlp.component.dictionary.MultiDictionaryDataProvider;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.nlp.component.dictionary.StringDictionaryProvider;
+
+<span class="hljs-meta">@ModelConfiguration</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AnnotatorModelConfiguration</span> </span>{
+
+    <span class="hljs-meta">@Named</span>(<span class="hljs-string">"annotators"</span>)
+    <span class="hljs-keyword">public</span> List&lt;Annotator&lt;Document&gt;&gt; getAnnotators(IeConfigurationContext context) {
+        <span class="hljs-keyword">final</span> List&lt;Annotator&lt;Document&gt;&gt; annotators = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        annotators.add(<span class="hljs-keyword">new</span> EntityBoundaryAnnotator())
+        annotators.add(BaseRegexNerAnnotator.getJavaPatternRegexNerAnnotator(<span class="hljs-string">"email"</span>, <span class="hljs-string">"\\b[\\w._%+-]+@[\\w.-]+\\.[a-zA-Z]{2,}+\\b"</span>));
+        annotators.add(BaseRegexNerAnnotator.getRe2jPatternRegexNerAnnotator(<span class="hljs-string">"email"</span>, <span class="hljs-string">"\\b[\\w._%+-]+@[\\w.-]+\\.[a-zA-Z]{2,}+\\b"</span>));
+        annotators.add(<span class="hljs-keyword">new</span> AhoCorasickDictionaryNerAnnotator(<span class="hljs-string">"company"</span>,
+                <span class="hljs-keyword">new</span> StringDictionaryProvider(Lists.newArrayList(<span class="hljs-string">"Company A"</span>, <span class="hljs-string">"Company B"</span>, <span class="hljs-string">"Company C"</span>))));
+
+        annotators.add(<span class="hljs-keyword">new</span> AhoCorasickDictionaryNerAnnotator(<span class="hljs-string">"company"</span>,
+                <span class="hljs-keyword">new</span> CsvDictionaryKeywordProvider(context.getResource(<span class="hljs-string">"classpath:dictionary/company.txt"</span>))));
+
+        annotators.add(<span class="hljs-keyword">new</span> AhoCorasickDictionaryNerAnnotator(<span class="hljs-string">"company"</span>,
+                <span class="hljs-keyword">new</span> MultiDictionaryDataProvider(<span class="hljs-keyword">new</span> CsvDictionaryKeywordProvider(context.getResource(<span class="hljs-string">"classpath:dictionary/company1.txt"</span>)),
+                        <span class="hljs-keyword">new</span> CsvDictionaryKeywordProvider(context.getResource(<span class="hljs-string">"classpath:dictionary/company2.txt"</span>)))));
+        <span class="hljs-keyword">return</span> annotators;
+    }
+
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="overriding-generic-tokenizer"></a><a href="#overriding-generic-tokenizer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overriding Generic Tokenizer</h2>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">import</span> com.workfusion.vds.nlp.hypermodel.ie.generic.config.GenericIeAnnotatorConfiguration;
+<span class="hljs-keyword">import</span> com.workfusion.vds.nlp.hypermodel.ie.generic.config.GenericIeHypermodelConfiguration;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.Import;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.ModelConfiguration;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.Named;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.annotator.Annotator;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.model.Document;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.nlp.component.annotator.tokenizer.SplitterTokenAnnotator;
+
+<span class="hljs-meta">@ModelConfiguration</span>
+<span class="hljs-meta">@Import</span>(configurations = {
+        <span class="hljs-meta">@Import</span>.Configuration(value = GenericIeHypermodelConfiguration.class)
+})
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CustomModelConfiguration</span> </span>{
+
+    <span class="hljs-meta">@Named</span>(GenericIeAnnotatorConfiguration.TOKENIZER_ANNOTATOR)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Annotator&lt;Document&gt; <span class="hljs-title">getTokenizer</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> SplitterTokenAnnotator(<span class="hljs-string">"(\\s+)"</span>);
+    }
+
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="describing-how-token-looks-like"></a><a href="#describing-how-token-looks-like" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Describing How Token Looks Like</h2>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">import</span> com.workfusion.vds.nlp.hypermodel.ie.generic.config.GenericIeAnnotatorConfiguration;
+<span class="hljs-keyword">import</span> com.workfusion.vds.nlp.hypermodel.ie.generic.config.GenericIeHypermodelConfiguration;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.Import;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.ModelConfiguration;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.Named;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.annotator.Annotator;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.model.Document;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.nlp.component.annotator.tokenizer.MatcherTokenAnnotator;
+
+<span class="hljs-meta">@ModelConfiguration</span>
+<span class="hljs-meta">@Import</span>(configurations = {
+        <span class="hljs-meta">@Import</span>.Configuration(value = GenericIeHypermodelConfiguration.class)
+})
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CustomModelConfiguration</span> </span>{
+
+    <span class="hljs-meta">@Named</span>(GenericIeAnnotatorConfiguration.TOKENIZER_ANNOTATOR)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Annotator&lt;Document&gt; <span class="hljs-title">getTokenizer</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> MatcherTokenAnnotator(<span class="hljs-string">"(\\w+)"</span>);
+    }
+
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="simple-annotator"></a><a href="#simple-annotator" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Simple Annotator</h2>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">import</span> java.util.regex.Matcher;
+<span class="hljs-keyword">import</span> java.util.regex.Pattern;
+
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.annotation.OnDestroy;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.annotation.OnInit;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.annotator.Annotator;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.model.Document;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.model.Token;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTokenAnnotator</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Annotator</span>&lt;<span class="hljs-title">Document</span>&gt; </span>{
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Pattern TOKEN_PATTERN = Pattern.compile(<span class="hljs-string">"\\w+"</span>);
+
+    <span class="hljs-meta">@OnInit</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">//initialization method, executed once after constructor</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">process</span><span class="hljs-params">(Document document)</span> </span>{
+        <span class="hljs-keyword">final</span> Matcher matcher = TOKEN_PATTERN.matcher(document.getText());
+        <span class="hljs-keyword">while</span> (matcher.find()) {
+            <span class="hljs-keyword">int</span> start = matcher.start();
+            <span class="hljs-keyword">int</span> end = matcher.end();
+            document.add(Token.descriptor()
+                    .setBegin(start)
+                    .setEnd(end)
+            );
+        }
+
+    }
+
+    <span class="hljs-meta">@OnDestroy</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">destroy</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">//destroy method, executed once after documents processing is finished</span>
+    }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="simple-fe"></a><a href="#simple-fe" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Simple FE</h2>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">import</span> java.util.Collection;
+<span class="hljs-keyword">import</span> java.util.Collections;
+<span class="hljs-keyword">import</span> java.util.Map;
+
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.annotation.OnDestroy;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.annotation.OnDocumentComplete;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.annotation.OnDocumentStart;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.annotation.OnInit;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.fe.Feature;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.fe.FeatureExtractor;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.model.Document;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.model.Element;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyCoveredTextFE</span>&lt;<span class="hljs-title">T</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Element</span>&gt; <span class="hljs-keyword">implements</span> <span class="hljs-title">FeatureExtractor</span>&lt;<span class="hljs-title">T</span>&gt; </span>{
+
+    <span class="hljs-meta">@OnInit</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">(Map&lt;String, String&gt; parameters)</span> </span>{
+
+    }
+
+    <span class="hljs-meta">@OnDocumentStart</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">documentStart</span><span class="hljs-params">(Document document, Class&lt;T&gt; focusElementClass)</span> </span>{
+    }
+
+    <span class="hljs-meta">@OnDocumentComplete</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">documentComplete</span><span class="hljs-params">()</span> </span>{
+
+    }
+
+    <span class="hljs-meta">@OnDestroy</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">destroy</span><span class="hljs-params">()</span> </span>{
+
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Collection&lt;Feature&gt; <span class="hljs-title">extract</span><span class="hljs-params">(Document document, T element)</span> </span>{
+        <span class="hljs-keyword">return</span> Collections.singleton(<span class="hljs-keyword">new</span> Feature(<span class="hljs-string">"CvrdTxt_"</span> + element.getText(), <span class="hljs-number">1.0</span>));
+    }
+
+}
+
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="post-processor-to-change-the-extracted-value"></a><a href="#post-processor-to-change-the-extracted-value" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Post-Processor to Change the Extracted Value</h2>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">import</span> java.util.Collection;
+
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.model.Field;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.model.IeDocument;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.normalization.NumberNormalizer;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.processing.Processor;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.nlp.component.processing.normalization.OcrAmountNormalizer;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ChangeValuePostProcessor</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Processor</span>&lt;<span class="hljs-title">IeDocument</span>&gt; </span>{
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> NumberNormalizer normalizer = <span class="hljs-keyword">new</span> OcrAmountNormalizer();
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">process</span><span class="hljs-params">(IeDocument document)</span> </span>{
+        Collection&lt;Field&gt; amounts = document.findFields(<span class="hljs-string">"total_amount"</span>);
+        amounts.forEach(a -&gt; {
+            String normalizedValue = normalizer.normalize(a.getValue(), <span class="hljs-string">"#.00"</span>);
+            a.setValue(normalizedValue);
+        });
+    }
+}
+
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="post-processor-to-change-remove-the-extracted-value"></a><a href="#post-processor-to-change-remove-the-extracted-value" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Post-Processor to Change/Remove the Extracted Value</h2>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">import</span> java.math.BigDecimal;
+<span class="hljs-keyword">import</span> java.util.Collection;
+
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.model.Field;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.model.IeDocument;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.processing.Processor;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RemoveFieldPostProcessor</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Processor</span>&lt;<span class="hljs-title">IeDocument</span>&gt; </span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">process</span><span class="hljs-params">(IeDocument document)</span> </span>{
+        Collection&lt;Field&gt; amounts = document.findFields(<span class="hljs-string">"total_amount"</span>);
+        amounts.stream()
+                .filter(a -&gt; a.getScore().compareTo(BigDecimal.valueOf(<span class="hljs-number">0.5</span>)) &lt; <span class="hljs-number">0</span>)
+                .forEach(document::remove);
+    }
+}
+
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="post-processor-to-add-a-new-field-value"></a><a href="#post-processor-to-add-a-new-field-value" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Post-Processor to Add A New Field Value</h2>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.model.Field;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.model.IeDocument;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.processing.Processor;
+
+<span class="hljs-comment">/**
+Can be useful when you have the reference data.
+**/</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AddFieldPostProcessor</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Processor</span>&lt;<span class="hljs-title">IeDocument</span>&gt; </span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">process</span><span class="hljs-params">(IeDocument document)</span> </span>{
+        document.add(
+                Field.descriptor()
+                        .setName(<span class="hljs-string">"person_id"</span>)
+                        .setValue(<span class="hljs-string">"XSF12312"</span>)
+                        .setScore(<span class="hljs-number">1.0</span>));
+    }
+}
+
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="importing-fixed-configuration"></a><a href="#importing-fixed-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Importing Fixed Configuration</h2>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">import</span> com.workfusion.vds.nlp.hypermodel.ie.generic.config.GenericIeHypermodelConfiguration;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.Filter;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.Import;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.hypermodel.annotation.ModelConfiguration;
+
+<span class="hljs-meta">@ModelConfiguration</span>
+<span class="hljs-meta">@Import</span>(configurations = {
+        <span class="hljs-meta">@Import</span>.Configuration(value = GenericIeHypermodelConfiguration.class),
+},
+        resources = {
+                <span class="hljs-meta">@Import</span>.Resource(value = <span class="hljs-string">"/configuration/total_amount/config/parameters.json"</span>, condition = <span class="hljs-meta">@Filter</span>(expression = <span class="hljs-string">"field.code == 'total_amount'"</span>))
+        }
+)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyModelConfiguration</span> </span>{
+
+}
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/8/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/spa/automl/automl-sdk/automl-sdk-api"><span class="arrow-prev">← </span><span class="function-name-prevnext">AutoML SDK API</span></a><a class="docs-next button" href="/docs/spa/automl/automl-sdk/e2e-automl-sdk-walkthrough"><span class="function-name-prevnext">End-to-End AutoML SDK Walkthrough</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#creating-ner-annotators">Creating NER Annotators</a></li><li><a href="#overriding-generic-tokenizer">Overriding Generic Tokenizer</a></li><li><a href="#describing-how-token-looks-like">Describing How Token Looks Like</a></li><li><a href="#simple-annotator">Simple Annotator</a></li><li><a href="#simple-fe">Simple FE</a></li><li><a href="#post-processor-to-change-the-extracted-value">Post-Processor to Change the Extracted Value</a></li><li><a href="#post-processor-to-change-remove-the-extracted-value">Post-Processor to Change/Remove the Extracted Value</a></li><li><a href="#post-processor-to-add-a-new-field-value">Post-Processor to Add A New Field Value</a></li><li><a href="#importing-fixed-configuration">Importing Fixed Configuration</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/wf-logo.svg" alt="Knowledgebase" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://www.workfusion.com/reports-whitepapers/">Reports &amp; Whitepapers</a></div><div><h5>Community</h5><a href="https://forum.workfusion.com/" target="_blank" rel="noreferrer noopener">Forum</a><a href="http://automationacademy.com/">Automation Academy</a><a href="https://partners.workfusion.com/">Partners Portal</a></div><div><h5>More</h5><a href="https://www.workfusion.com/iac/">Intelligent Automation Cloud</a></div></section><section class="copyright">Copyright © 2019 WorkFusion, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: 'PNQGK7RZR5',
+                apiKey: 'ba828b974aad37836106a37d2432da4b',
+                indexName: 'search-config',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en","version:undefined"]}
+              });
+            </script></body></html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Post-Processing Examples · Knowledgebase</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;This page provides a number of Post-Processor examples covering a variety of use cases.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Post-Processing Examples · Knowledgebase"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docusaurus.workfusion.com//"/><meta property="og:description" content="&lt;p&gt;This page provides a number of Post-Processor examples covering a variety of use cases.&lt;/p&gt;
+"/><meta property="og:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.4/fuse.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/WorkFusion_H_5_RGB.png" alt="Knowledgebase"/><h2 class="headerTitleWithLogo">Knowledgebase</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/terra" target="_self">WorkFusion 10.0</a></li><li class=""><a href="/docs/spa" target="_self">SPA</a></li><li class=""><a href="/docs/spa/admin/install-spa/prepare/overview" target="_self">Administrator&#x27;s Guide</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://git.workfusion.com/projects/DOC/repos/documentation/browse/docs/spa/automl/automl-sdk/post-processing-examples.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Post-Processing Examples</h1></header><article><div><span><p>This page provides a number of Post-Processor examples covering a variety of use cases.</p>
+<h2><a class="anchor" aria-hidden="true" id="normalization-examples"></a><a href="#normalization-examples" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Normalization Examples</h2>
+
+    <div class="admonition admonition-note">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div> note</h5>
+      </div>
+      <div class="admonition-content">
+    <p>Normalizers are not standalone components and should be used within a Post-Processor instance.</p>
+</div></div><h3><a class="anchor" aria-hidden="true" id="amount-normalization"></a><a href="#amount-normalization" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Amount Normalization</h3>
+<p>For amount normalization, use the <code>OcrAmountNormalizer</code> class.</p>
+<p>This Normalizer has two main options:</p>
+<ul>
+<li>Fixing OCR errors in numbers.</li>
+<li>Formatting numbers and removing currency signs, if any.</li>
+</ul>
+<p>By default, the <strong><em>#.00</em></strong> format is used for numbers formatting, but you can provide your format. See the following example for details.</p>
+<pre><code class="hljs css language-java">OcrAmountNormalizer normalizer = <span class="hljs-keyword">new</span> OcrAmountNormalizer();
+normalizer.normalize(<span class="hljs-string">"1,178.42"</span>) =&gt; <span class="hljs-string">"1178.42"</span>;
+normalizer.normalize(<span class="hljs-string">"2,154,60"</span>) =&gt; <span class="hljs-string">"2154.60"</span>;
+normalizer.normalize(<span class="hljs-string">"$2,154,60"</span>) =&gt; <span class="hljs-string">"2154.60"</span>;
+normalizer.normalize(<span class="hljs-string">"700435.85"</span>, <span class="hljs-string">"###,###.#"</span>) =&gt; <span class="hljs-string">"700,435.8"</span>;
+</code></pre>
+<p>Sometimes a model extracts fields with a currency sign, or there may be some OCR errors in the amount field.</p>
+<p>The following implementation of a Post-Processor normalizes <strong>$1,234,56</strong> to <strong>1234.56</strong>. For more details, refer to the <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/processing/normalization/OcrAmountNormalizer.html">OcrAmountNormalizer</a> class documentation.</p>
+<pre><code class="hljs css language-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">process</span><span class="hljs-params">(IeDocument document)</span> <span class="hljs-keyword">throws</span> ProcessingException </span>{
+    Optional&lt;Field&gt; amount = document.findField(<span class="hljs-string">"invoice_amount"</span>);
+    <span class="hljs-keyword">if</span> (amount.isPresent()) {
+        Field amountField = amount.get();
+        String value = amountField.getValue();
+        OcrAmountNormalizer amountNormalizer = <span class="hljs-keyword">new</span> OcrAmountNormalizer();
+        amountField.setValue(amountNormalizer.normalize(value));
+    }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="dates-normalization"></a><a href="#dates-normalization" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dates Normalization</h3>
+<p>To modify Dates to the appropriate format and fix some OCR errors, use the <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/processing/normalization/OcrAmountNormalizer.html">OcrAmountNormalizer</a> class.</p>
+<p>By default, <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601 Date Standard</a> is used — <strong>YYYY-MM-DD</strong>. You can set your custom date format. See the following examples.</p>
+<pre><code class="hljs css language-java">OcrDateNormalizer normalizer = <span class="hljs-keyword">new</span> OcrDateNormalizer();
+normalizer.normalize(<span class="hljs-string">"30 Jun 12"</span>) =&gt; <span class="hljs-string">"2012-06-30"</span>;
+normalizer.normalize(<span class="hljs-string">"07/31/2015"</span>) =&gt; <span class="hljs-string">"2015-07-31"</span>;
+</code></pre>
+<p>Custom date format.</p>
+<pre><code class="hljs css language-java">OcrDateNormalizer normalizer = <span class="hljs-keyword">new</span> OcrDateNormalizer(<span class="hljs-string">"MM/dd/yyyy"</span>);
+normalizer.normalize(<span class="hljs-string">"23-Au0-201 5"</span>) =&gt; <span class="hljs-string">"08/23/2015"</span>;
+normalizer.normalize(<span class="hljs-string">"30 ABRIL    \n    &gt;015"</span>) =&gt; <span class="hljs-string">"04/30/2015"</span>;
+</code></pre>
+<p>Anchor date for incomplete dates.</p>
+<pre><code class="hljs css language-java">OcrDateNormalizer normalizer = <span class="hljs-keyword">new</span> OcrDateNormalizer(<span class="hljs-string">"MM/dd/yyyy"</span>, LocalDate.of(<span class="hljs-number">2017</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>));
+normalizer.normalize(<span class="hljs-string">"May 10"</span>) =&gt; <span class="hljs-string">"05/10/2017"</span>;
+</code></pre>
+<p>Year/month priority.</p>
+<pre><code class="hljs css language-java">OcrDateNormalizer normalizer = <span class="hljs-keyword">new</span> OcrDateNormalizer(<span class="hljs-string">"MM/dd/yyyy"</span>, LocalDate.of(<span class="hljs-number">2017</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>));
+normalizer.normalize(<span class="hljs-string">"May 10"</span>) =&gt; <span class="hljs-string">"05/10/2017"</span>;
+normalizer.setYearPriorDay(<span class="hljs-keyword">true</span>);
+normalizer.normalize(<span class="hljs-string">"May 10"</span>) =&gt; <span class="hljs-string">"05/01/2010"</span>;
+normalizer.setFirstDayOfMonth(<span class="hljs-keyword">false</span>);
+normalizer.normalize(<span class="hljs-string">"May"</span>) =&gt; <span class="hljs-string">"05/31/2017"</span>;
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="text-to-date-normalization"></a><a href="#text-to-date-normalization" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Text-to-Date Normalization</h3>
+<p>To normalize text to dates, use the <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/processing/normalization/TextToDateNormalizer.html">TextToDateNormalizer</a> class.</p>
+<p>It normalizes the text representation of dates to formatted dates. You can provide date format and anchor date for incomplete dates, or next/previous cases.</p>
+<pre><code class="hljs css language-java">LocalDate anchorDate = LocalDate.of(<span class="hljs-number">2011</span>, <span class="hljs-number">12</span>, <span class="hljs-number">13</span>);
+TextToDateNormalizer normalizer = <span class="hljs-keyword">new</span> TextToDateNormalizer(anchorDate);
+normalizer.normalize(<span class="hljs-string">"in 3 month"</span>) =&gt; <span class="hljs-string">"2012-03-12"</span>;
+normalizer.normalize(<span class="hljs-string">"5 days ago"</span>) =&gt; <span class="hljs-string">"2011-12-08"</span>;
+normalizer.normalize(<span class="hljs-string">"after forty one day"</span>) =&gt; <span class="hljs-string">"2012-01-23"</span>;
+normalizer.normalize(<span class="hljs-string">"this Friday"</span>) =&gt; <span class="hljs-string">"2011-12-16"</span>;
+normalizer.normalize(<span class="hljs-string">"Monday last week"</span>) =&gt; <span class="hljs-string">"2011-12-05"</span>;
+</code></pre>
+<p>Custom format.</p>
+<pre><code class="hljs css language-java">LocalDate anchorDate = LocalDate.of(<span class="hljs-number">2011</span>, <span class="hljs-number">12</span>, <span class="hljs-number">13</span>);
+normalizer = <span class="hljs-keyword">new</span> TextToDateNormalizer(<span class="hljs-string">"dd/MM/yyyy"</span>, anchorDate);
+normalizer.normalize(<span class="hljs-string">"in 3 month"</span>) =&gt; <span class="hljs-string">"12/03/2012"</span>;
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="text-to-number-normalization"></a><a href="#text-to-number-normalization" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Text-to-Number Normalization</h3>
+<p>This Normalizer provides the same functionality as the previous one, but for numbers instead of dates. For this purpose, use the <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/processing/normalization/TextToIntegerNormalizer.html">TextToIntegerNormalizer</a> class.</p>
+<pre><code class="hljs css language-java">TextToIntegerNormalizer normalizer = <span class="hljs-keyword">new</span> TextToIntegerNormalizer();
+normalizer.normalize(<span class="hljs-string">"one thousand two hundred eleven"</span>) =&gt; <span class="hljs-string">"1211"</span>;
+normalizer.normalize(<span class="hljs-string">"ninety nine thousand nine hundred ninety nine"</span>, <span class="hljs-string">"##,###.00"</span>) =&gt; <span class="hljs-string">"99,999.00"</span>;
+normalizer.normalize(<span class="hljs-string">"minus one"</span>) =&gt; -<span class="hljs-number">1</span>;
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="ocr-error-correction-example"></a><a href="#ocr-error-correction-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OCR Error Correction Example</h2>
+<p>After the model results analysis, we see that in the <code>zip_code</code> field we have some OCR errors. The following code helps us replace <strong>G</strong> &gt; <strong>6</strong>, <strong>B</strong> &gt; <strong>8</strong>, <strong>O</strong> &gt; <strong>0</strong>.</p>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">import</span> java.util.Optional;
+
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.model.Field;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.model.IeDocument;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.processing.ProcessingException;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.processing.Processor;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ZipPostProcessor</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Processor</span>&lt;<span class="hljs-title">IeDocument</span>&gt; </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">process</span><span class="hljs-params">(IeDocument document)</span> <span class="hljs-keyword">throws</span> ProcessingException </span>{
+        Optional&lt;Field&gt; zipCode = document.findField(<span class="hljs-string">"zip_code"</span>);
+        <span class="hljs-keyword">if</span> (zipCode.isPresent()) {
+            Field zipCodeField = zipCode.get();
+            String value = zipCodeField.getValue();
+            String correctedValue = value.toUpperCase()
+                .replaceAll(<span class="hljs-string">"G"</span>, <span class="hljs-string">"6"</span>)
+                .replaceAll(<span class="hljs-string">"B"</span>, <span class="hljs-string">"8"</span>)
+                .replaceAll(<span class="hljs-string">"O"</span>, <span class="hljs-string">"0"</span>);
+            zipCodeField.setValue(correctedValue);
+        }
+    }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="field-grouping"></a><a href="#field-grouping" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Field Grouping</h2>
+<p>An AutoML model can extract multiple fields of the same type (e.g. Currency, Quantity, Price) that should be joined into groups according to their connection.</p>
+<p>AutoML SDK provides 2 strategies to assign group numbers which come as out-of-the-box Post-Processors:</p>
+<ul>
+<li><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/processing/grouping/RowBasedGroupingProcessor.html">RowBasedGroupingProcessor</a></li>
+<li><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/processing/grouping/PositionBasedGroupingProcessor.html">PositionBasedGroupingProcessor</a></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="rowbasedgroupingprocessor"></a><a href="#rowbasedgroupingprocessor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>RowBasedGroupingProcessor</h3>
+<p>Row-based strategy can be applied to documents containing tables.</p>
+<ol>
+<li>RowBasedGroupingProcessor iterates through all rows in tables, and then finds field groups.</li>
+<li>If a row contains at least one group field, it assigns the same group number to all fields in this row.</li>
+</ol>
+<p>In the following example, RowBasedGroupingProcessor will assign 3 group numbers <code>tabnumber</code> to each row consisting of Account Number, Bank, and SWIFT.</p>
+<table>
+<thead>
+<tr><th>Group Number</th><th>Account Number</th><th>Bank</th><th>SWIFT</th></tr>
+</thead>
+<tbody>
+<tr><td>0</td><td>100500</td><td>Private Bank</td><td>BOPIPHMM</td></tr>
+<tr><td>1</td><td>100608</td><td>Super Bank</td><td>BNORPHMM</td></tr>
+<tr><td>2</td><td>100609</td><td>Super Bank</td><td>CHBKPHMM</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="positionbasedgroupingprocessor"></a><a href="#positionbasedgroupingprocessor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>PositionBasedGroupingProcessor</h3>
+<p>Position-based strategy can be applied to any document.</p>
+<p>PositionBasedGroupingProcessor is based on field indices in a Document. It finds group fields in a Document, and then assigns group numbers according to their indices in text. Fields with the same name can't exist in one group. The algorithm adds fields to a current group until the first field with the same name is found. Then this field is added to a new group (with incremented number), and all other fields are added to this new group.</p>
+<p>Consider the following example of a tagged text:</p>
+<!-- The following is an HTML snippet -->
+<p><span style="color: rgb(255,102,0);">Samuel Langhorne Clemens</span> (<span style="color: rgb(51,102,255);">November 30, 1835 – April 21, 1910</span>), better known by his pen name <span style="color: rgb(153,204,0);">Mark Twain</span>, was an American writer, humorist, entrepreneur, publisher, and lecturer. Among his novels are The Adventures of Tom Sawyer (1876) and its sequel, the Adventures of Huckleberry Finn (1885), the latter often called &quot;The Great American Novel&quot;. <span style="color: rgb(255,102,0);">Eric Arthur Blair</span> (<span style="color: rgb(51,102,255);">25 June 1903 – 21 January 1950</span>), better known by his pen name <span style="color: rgb(153,204,0);">George Orwell</span>, was an English novelist, essayist, journalist, and critic. He is best known for the allegorical novella Animal Farm (1945) and the dystopian novel Nineteen Eighty-Four (1949).</p><hr /><p>Fields:</p><ul><li><span style="color: rgb(255,102,0);">Name</span></li><li><span style="color: rgb(153,204,0);">Pen Name</span></li><li><span style="color: rgb(51,102,255);">Life Years</span></li></ul><p>Grouping Algorithm steps:</p><ol><li>Set the <strong>current Group Number to zero (0)</strong></li><li>Go to the 1st field (tag): <span style="color: rgb(255,102,0);">Samuel Langhorne Clemens (Name)</span><ol><li><span style="color: rgb(0,51,102);">Ckeck whether Group 0 already has a Name field → <strong>No</strong></span></li><li><span style="color: rgb(255,102,0);"><span style="color: rgb(0,51,102);">Set <strong>Group Number = 0</strong> for this field</span><br /></span></li></ol></li><li><span style="color: rgb(255,102,0);"><span style="color: rgb(0,51,102);">Go to the 2nd field: <span style="color: rgb(51,102,255);">November 30, 1835 – April 21, 1910 (Life Years)</span></span></span><ol><li><span style="color: rgb(0,51,102);">Ckeck whether Group 0 already has a Life Years field → <strong>No</strong></span></li><li><span style="color: rgb(255,102,0);"><span style="color: rgb(0,51,102);">Set <strong>Group Number = 0</strong> for this field</span></span></li></ol></li><li><span style="color: rgb(255,102,0);"><span style="color: rgb(0,51,102);"><span style="color: rgb(255,102,0);"><span style="color: rgb(0,51,102);">Go to the 3rd field: <span style="color: rgb(153,204,0);">Mark Twain (Pen Name)</span></span></span></span></span><ol><li><span style="color: rgb(0,51,102);">Ckeck whether Group 0 already has a Pen Name field → <strong>No</strong></span></li><li><span style="color: rgb(255,102,0);"><span style="color: rgb(0,51,102);">Set <strong>Group Number = 0</strong> for this field</span></span></li></ol></li><li><span style="color: rgb(255,102,0);"><span style="color: rgb(0,51,102);">Go to the 4th field (tag): <span style="color: rgb(255,102,0);">Eric Arthur Blair</span><span style="color: rgb(255,102,0);"> (Name)</span></span></span><ol><li><span style="color: rgb(0,51,102);">Ckeck whether Group 0 already has a Name field → <strong>Yes</strong></span></li><li>Set the current <strong>Group Number to one (1)</strong><span style="color: rgb(0,51,102);"><br /></span></li><li><span style="color: rgb(255,102,0);"><span style="color: rgb(0,51,102);">Set <strong>Group Number = 1</strong> for this field</span></span></li></ol></li><li><span style="color: rgb(255,102,0);"><span style="color: rgb(0,51,102);">Go to the 5th field (tag) ...<br /></span></span></li></ol>
+<h3><a class="anchor" aria-hidden="true" id="custom-grouping-processor"></a><a href="#custom-grouping-processor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Custom Grouping Processor</h3>
+<p>In some cases, you might need to implement a custom grouping strategy. Custom grouping processors are applied to documents with complex structure, such as:</p>
+<ul>
+<li>Mix of text paragraphs and tables.</li>
+<li>Records are spread over several table rows.</li>
+<li>One table column is common for all records.</li>
+</ul>
+<p>To handle such cases, you can override <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/processing/grouping/BaseGroupingProcessor.html">BaseGroupingProcessor</a> and implement your custom logic in the <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/processing/grouping/BaseGroupingProcessor.html#findGroups-com.workfusion.vds.sdk.api.nlp.model.IeDocument-java.util.Set-">findGroups()</a> method. You can use the <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/nlp/component/processing/grouping/BaseGroupingProcessor.html#insertGroupIndices-com.workfusion.vds.sdk.api.nlp.model.Field-int...-">insertGroupIndices()</a> method to set the group index for a field.</p>
+<p>For example, you have a document with tables, where one table column Country is common for all records.</p>
+<table>
+<thead>
+<tr><th>Country</th><th>Account Number</th><th>Bank Name</th><th>SWIFT</th></tr>
+</thead>
+<tbody>
+<tr><td>Belgium</td><td>100500</td><td>Private Bank</td><td>BOPIPHMM</td></tr>
+<tr><td>Belgium</td><td>100608</td><td>Super Bank</td><td>BNORPHMM</td></tr>
+<tr><td>Belgium</td><td>100609</td><td>Super Bank</td><td>CHBKPHMM</td></tr>
+</tbody>
+</table>
+<p>In this case, field grouping can be implemented using the following code sample.</p>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CustomGroupingProcessor</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">BaseGroupingProcessor</span> </span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">findGroups</span><span class="hljs-params">(IeDocument document, Set&lt;String&gt; groupCodes)</span> </span>{
+        Collection&lt;Row&gt; rowAnnotations = document.findAll(Row.class);
+        <span class="hljs-keyword">int</span> groupIdx = <span class="hljs-number">0</span>;
+
+        <span class="hljs-keyword">for</span> (Row row : rowAnnotations) {
+            List&lt;Field&gt; fields = document.findCovered(Field.class, row);
+            List&lt;Field&gt; groupFields = fields.stream()
+                    .filter(field -&gt; groupCodes.contains(field.getName()))
+                    .collect(Collectors.toList());
+            <span class="hljs-keyword">if</span> (!groupFields.isEmpty()) {
+                insertGroupIndices(groupFields, groupIdx);
+                groupIdx++;
+            }
+        }
+
+        <span class="hljs-comment">//country belongs to all groups</span>
+        Field countryField = document.findField(<span class="hljs-string">"country"</span>);
+        insertGroupIndices(countryField, IntStream.rangeClosed(<span class="hljs-number">0</span>, groupIdx).toArray());
+    }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="post-processing-for-classification-models"></a><a href="#post-processing-for-classification-models" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Post-Processing for Classification Models</h2>
+<p>Below you can find an example of processing for Classification Model where we change the Document label from 'Deutsche bank' to 'DB', and then set score to <code>1</code>.</p>
+<pre><code class="hljs css language-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">process</span><span class="hljs-params">(ClassificationDocument document)</span> <span class="hljs-keyword">throws</span> ProcessingException </span>{
+    Label bank = document.findLabels().stream()
+            .findFirst()
+            .orElse(<span class="hljs-keyword">null</span>);
+    String name = bank.getName();
+    <span class="hljs-keyword">if</span> (bank != <span class="hljs-keyword">null</span> &amp;&amp; <span class="hljs-string">"Deutsche bank"</span>.contains(name)) {
+        document.remove(bank);
+        document.add(Label.descriptor().setName(<span class="hljs-string">"DB"</span>).setScore(BigDecimal.ONE));
+    }
+}
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/8/2019</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#normalization-examples">Normalization Examples</a><ul class="toc-headings"><li><a href="#amount-normalization">Amount Normalization</a></li><li><a href="#dates-normalization">Dates Normalization</a></li><li><a href="#text-to-date-normalization">Text-to-Date Normalization</a></li><li><a href="#text-to-number-normalization">Text-to-Number Normalization</a></li></ul></li><li><a href="#ocr-error-correction-example">OCR Error Correction Example</a></li><li><a href="#field-grouping">Field Grouping</a><ul class="toc-headings"><li><a href="#rowbasedgroupingprocessor">RowBasedGroupingProcessor</a></li><li><a href="#positionbasedgroupingprocessor">PositionBasedGroupingProcessor</a></li><li><a href="#custom-grouping-processor">Custom Grouping Processor</a></li></ul></li><li><a href="#post-processing-for-classification-models">Post-Processing for Classification Models</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/wf-logo.svg" alt="Knowledgebase" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://www.workfusion.com/reports-whitepapers/">Reports &amp; Whitepapers</a></div><div><h5>Community</h5><a href="https://forum.workfusion.com/" target="_blank" rel="noreferrer noopener">Forum</a><a href="http://automationacademy.com/">Automation Academy</a><a href="https://partners.workfusion.com/">Partners Portal</a></div><div><h5>More</h5><a href="https://www.workfusion.com/iac/">Intelligent Automation Cloud</a></div></section><section class="copyright">Copyright © 2019 WorkFusion, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: 'PNQGK7RZR5',
+                apiKey: 'ba828b974aad37836106a37d2432da4b',
+                indexName: 'search-config',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en","version:undefined"]}
+              });
+            </script></body></html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Infrastructure capacity planning · Knowledgebase</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;A common concern of an enterprise is whether it has enough allocated&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Infrastructure capacity planning · Knowledgebase"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docusaurus.workfusion.com//"/><meta property="og:description" content="&lt;p&gt;A common concern of an enterprise is whether it has enough allocated&lt;/p&gt;
+"/><meta property="og:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.4/fuse.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/WorkFusion_H_5_RGB.png" alt="Knowledgebase"/><h2 class="headerTitleWithLogo">Knowledgebase</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/terra" target="_self">WorkFusion 10.0</a></li><li class=""><a href="/docs/spa" target="_self">SPA</a></li><li class="siteNavGroupActive"><a href="/docs/spa/admin/install-spa/prepare/overview" target="_self">Administrator&#x27;s Guide</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>System requirements</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">System requirements<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/system-requirements">System requirements</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/spa/admin/system-requirements/infrastructure-capacity-planning">Infrastructure capacity planning</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/application-ports">Applications&#x27; ports</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/dns-names-configuration">DNS names configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/system-requirements/env-readiness-checklist">Environment readiness checklist</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Installation<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/overview-install">Overview</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Prepare for installation</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/overview">Prerequisites</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/create-users">Create users</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/prepare-tls-certificates">Prepare TLS certificates</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/prepare/prepare-servers">Prepare servers</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/install-spa">Install SPA</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/post-install">Post-installation tasks</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/install-spa/uninstall-win">Uninstall WF components from Windows servers</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Maintenance<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/restart-servers">Restart servers</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/backup-and-restore-data">Backup and restore data</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/update-tls-certificates">Update TLS certificates</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/update-passwords">Update passwords</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Logs management</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/aggregate-and-view-logs">Aggregate and view logs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/filebeat-configuration">Filebeat configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/search-a-specific-message-in-logs">Search a specific message in logs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/archive-logs">Archive logs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/change-a-component-s-log-level">Change a component&#x27;s log level</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/reference-log-configuration-of-components">Reference: log configuration of components</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/reference-log-rotation">Reference: log rotation</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Service information</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/general-services-information">General services Information</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/inorder-and-deps-checker">Inorder and deps_checker</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/common-services">Common services</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/app">APP</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/int">INT</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/ocr">OCR</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/maintenance/bep">BEP</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Monitoring<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/monitoring-overview">Monitoring overview</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/сhange-elk-admin-password">Сhange ELK admin password in Kibana</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/investigate-performance-hot-spot">Investigate performance hot spot in environment</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/heartbeat-configuration-guide">Heartbeat configuration guide</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/metricbeat-configuration-guide">Metricbeat configuration guide</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/monitoring/connect-external-elk">Integrate external ELK</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">License management<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/manage-workfusion-analytics-license">Manage WorkFusion Analytics license</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/activate-the-ocr-license">Activate OCR license</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/update-the-elk-license">Update ELK license</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/licenses/workfusion-libraries-and-tools">WorkFusion libraries and tools</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">OCR<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/ocr/scale-ocr">Scale OCR</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/ocr/install-second-ocr-server-in-same-spa-instance">Install second OCR server</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/ocr/migration-notes">OCR Migration Notes</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/ocr/advanced-configuration">Advanced Configuration</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Information security<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/info-sec/sso-integration">SSO integration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/info-sec/ldap-and-ad-integration">LDAP and AD integration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/info-sec/import-root-or-intermediate-ca-to-store">Import Root or Intermediate CA to Store</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/info-sec/manage-secure-properties">Manage secure properties</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Analytics<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/analytics/backup-restore-custom-dashboards">Backup and restore custom Analytics dashboards</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/analytics/using-tableau">Setup end-to-end SSI audit chart</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Advanced configuration<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/config-yml-options">config.yml options</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/hosts-yml-options">hosts.yml options</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/secret-vault-properties">Secrets vault properties</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/health-сheck-messages">Health сheck messages</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/configuration-and-health-check">Configuration and health check</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/crontab-jobs">Crontab jobs</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/notifications-via-email">Notifications via email</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/admin/advanced/prepare-rpa-ocrwin-and-bi-configurations">Prepare RPA, OCRWIN and BI configurations</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://git.workfusion.com/projects/DOC/repos/documentation/browse/docs/spa/admin/system-requirements/infrastructure-capacity-planning.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Infrastructure capacity planning</h1></header><article><div><span><p>A common concern of an enterprise is whether it has enough allocated
+resources to handle an increase in users or a number of transactions.
+The capacity is defined as the maximum load that a service, system,
+or a device can handle.</p>
+<p><strong>Infrastructure capacity planning</strong> is the process of determining the
+hardware and software resources required to meet processing demand as
+for the current moment and in future.</p>
+<p><strong>Capacity Planning</strong> is a part of a wider Capacity Management domain.
+Capacity Management is concerned with ensuring that cost-effective
+capacity, which meets or exceeds the needs of the business as
+established in Service Level Agreements, exists at any given time.</p>
+<h2><a class="anchor" aria-hidden="true" id="standard-build"></a><a href="#standard-build" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Standard build</h2>
+<p>The <a href="/docs/spa/admin/system-requirements/system-requirements">System Requirements</a> page summarizes
+the recommended standard specification for the environment to run
+WorkFusion SPA.</p>
+<p>A number of factors can impact performance and scalability of the
+software. Some of the important system variables include business
+processes design, server configuration, infrastructure tuning, data
+environment, compute capacity, and networking. The following numbers
+were established in a closed network lab on automated load tests
+simulating realistic production workload.</p>
+<p>The recommended production configuration is set up to provide the
+following capacity:</p>
+<ul>
+<li>7 simultaneous OCR jobs or a total of 10 000 000 OCR pages a
+year <sup>1</sup></li>
+<li>14 simultaneous ML prediction jobs</li>
+<li>4 simultaneous Search Engine ML model training</li>
+<li>5 bots</li>
+<li>50 simultaneous Control Tower jobs</li>
+<li>50 simultaneous (unlimited of named or registered) WorkSpace workers</li>
+<li>8 simultaneous (unlimited of named or registered) Control Tower users</li>
+<li>50 simultaneous Analytics users <sup>2</sup></li>
+</ul>
+<p>For typical automation cases such set up is capable of handling of 4 000
+000 transactions a year.</p>
+<hr>
+<p><sup>1</sup> – 100 000 pages is typical bundled volume. Additional pages
+require an extra license to be purchased.</p>
+<p><sup>2</sup> – 5 named Analytics users is typical bundled volume.
+Additional users require an extra license to be purchased.</p>
+<h2><a class="anchor" aria-hidden="true" id="rpa"></a><a href="#rpa" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>RPA</h2>
+<h3><a class="anchor" aria-hidden="true" id="bot-number-estimation"></a><a href="#bot-number-estimation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bot number estimation</h3>
+<p>When planning the RPA capacity, first of all you need to estimate the
+number of bots required to handle the work.</p>
+<p>For a possible estimation approach, refer to <a href="https://kb.workfusion.com/display/RPA/Number+of+bots+estimation">Number of bots estimation</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="horizontal-scaling"></a><a href="#horizontal-scaling" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Horizontal scaling</h3>
+<p>The RPA scaling is performed by increasing horizontally the hardware
+resources (VDIs or RPA servers).</p>
+<p>Scaling to 500 bots is possible purely by adding the RPA resources. For
+higher number of bots - multiple deployments is recommended.</p>
+<h3><a class="anchor" aria-hidden="true" id="production-deployment-on-vdi"></a><a href="#production-deployment-on-vdi" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Production deployment on VDI</h3>
+<p>In case of bots deployments on the VDI technology, each bot has a
+dedicated VDI.</p>
+<p>Typical VDI capacity is the following:</p>
+<ul>
+<li>2 cores</li>
+<li>8 GB RAM (4 GB is minimum)</li>
+<li>50 GB HDD (10 GB is minimum)</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="production-deployment-on-server"></a><a href="#production-deployment-on-server" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Production deployment on server</h3>
+<p>In case of bots deployments on Windows Server, multiple bots can be
+deployed to a single server.</p>
+<p>Typical hardware requirements for bots are the following:</p>
+<table>
+<thead>
+<tr><th>Number of bots</th><th>CPU</th><th>RAM</th><th>HDD</th></tr>
+</thead>
+<tbody>
+<tr><td>5</td><td>8 cores</td><td>16 GB</td><td>250 GB</td></tr>
+<tr><td>10</td><td>16 cores</td><td>32 GB</td><td>500 GB</td></tr>
+</tbody>
+</table>
+<p>For this type of deployment the Terminal Services license is required.</p>
+<h2><a class="anchor" aria-hidden="true" id="ocr"></a><a href="#ocr" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OCR</h2>
+<p>OCR engine allows processing of incoming requests in parallel using
+multiple CPU cores.<br>
+Requirements for 1 processor are as follows:</p>
+<ul>
+<li>1 core</li>
+<li>2 GB RAM</li>
+<li>10 GB HDD</li>
+</ul>
+<p>In the OCR cluster, one CPU is reserved for orchestration (master)
+activities. On all the remaining CPU Cores, OCR requests can be
+paralleled.</p>
+<pre><code class="hljs css language-bash">workers = CPU Cores - 1
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="calculate-transaction-throughput"></a><a href="#calculate-transaction-throughput" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Calculate transaction throughput</h3>
+<p>You can calculate the minimal number of required OCR workers knowing the
+following details:</p>
+<ul>
+<li><strong>TT</strong>: transaction time – average time for processing a single item</li>
+<li><strong>N</strong>: a number of transactions per time interval</li>
+<li><strong>T</strong>: time interval in seconds</li>
+</ul>
+<pre><code class="hljs css language-bash">min(workers) = TT * N / T
+</code></pre>
+<p><strong>Example</strong>:</p>
+<p><em>OCR processing takes 20 seconds (TT = 20) for a one-page document. To
+process 30 documents (N = 30) within one minute (T = 60), you need 20 *
+30 / 60 = 10 workers minimum</em></p>
+<h4><a class="anchor" aria-hidden="true" id="scenario-a"></a><a href="#scenario-a" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Scenario A</h4>
+<ul>
+<li>10 seconds per page</li>
+<li>5 pages per document</li>
+</ul>
+<table>
+<thead>
+<tr><th>Servers</th><th>CPU</th><th>Pages / hour</th><th>Pages / day</th><th>Pages / month</th><th>Documents / hour</th><th>Documents / day</th><th>Documents / month</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>4</td><td>1080</td><td>25920</td><td>777600</td><td>216-</td><td>5184</td><td>155520</td></tr>
+<tr><td>1</td><td>8</td><td>2520</td><td>60480</td><td>1814400</td><td>504</td><td>12096</td><td>362880</td></tr>
+<tr><td>1</td><td>16</td><td>5400</td><td>129600</td><td>3888000</td><td>1080</td><td>25920</td><td>777600</td></tr>
+<tr><td>1</td><td>32</td><td>11160</td><td>267840</td><td>8035200</td><td>2232</td><td>53568</td><td>1607040</td></tr>
+<tr><td>2</td><td>4</td><td>2160</td><td>51840</td><td>1555200</td><td>432</td><td>10368</td><td>311040</td></tr>
+<tr><td>2</td><td>8</td><td>5040</td><td>120960</td><td>3628800</td><td>1008</td><td>24192</td><td>725760</td></tr>
+<tr><td>2</td><td>16</td><td>10800</td><td>259200</td><td>7776000</td><td>2160</td><td>51840</td><td>1555200</td></tr>
+<tr><td>2</td><td>32</td><td>22320</td><td>535680</td><td>16070400</td><td>4464</td><td>107136</td><td>3214080</td></tr>
+<tr><td>4</td><td>4</td><td>4320</td><td>103680</td><td>3110400</td><td>864</td><td>20736</td><td>622080</td></tr>
+<tr><td>4</td><td>8</td><td>10080</td><td>241920</td><td>7257600</td><td>2016</td><td>48384</td><td>1451520</td></tr>
+<tr><td>4</td><td>16</td><td>21600</td><td>518400</td><td>15552000</td><td>4320</td><td>103680</td><td>3110400</td></tr>
+<tr><td>4</td><td>32</td><td>44640</td><td>1071360</td><td>32140800</td><td>8928</td><td>214272</td><td>6428160</td></tr>
+<tr><td>8</td><td>4</td><td>8640</td><td>207360</td><td>6220800</td><td>1728</td><td>41472</td><td>1244160</td></tr>
+<tr><td>8</td><td>8</td><td>20160</td><td>483840</td><td>14515200</td><td>4032</td><td>96768</td><td>2903040</td></tr>
+<tr><td>8</td><td>16</td><td>43200</td><td>1036800</td><td>31104000</td><td>8640</td><td>207360</td><td>6220800</td></tr>
+<tr><td>8</td><td>32</td><td>89280</td><td>2142720</td><td>64281600</td><td>17856</td><td>428544</td><td>12856320</td></tr>
+</tbody>
+</table>
+<p><a href="example-a.xlsx"></a></p>
+<h4><a class="anchor" aria-hidden="true" id="scenario-b"></a><a href="#scenario-b" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Scenario B</h4>
+<ul>
+<li>10 seconds per page</li>
+<li>10 pages per document</li>
+</ul>
+<table>
+<thead>
+<tr><th>Servers</th><th>CPU</th><th>Pages / hour</th><th>Pages / day</th><th>Pages / month</th><th>Documents / hour</th><th>Documents / day</th><th>Documents / month</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>4</td><td>1080</td><td>25920</td><td>777600</td><td>108</td><td>2592</td><td>77760</td></tr>
+<tr><td>1</td><td>8</td><td>2520</td><td>60480</td><td>1814400</td><td>252</td><td>6048</td><td>181440</td></tr>
+<tr><td>1</td><td>16</td><td>5400</td><td>129600</td><td>3888000</td><td>540</td><td>12960</td><td>388800</td></tr>
+<tr><td>1</td><td>32</td><td>11160</td><td>267840</td><td>8035200</td><td>1116</td><td>26784</td><td>803520</td></tr>
+<tr><td>2</td><td>4</td><td>2160</td><td>51840</td><td>1555200</td><td>216</td><td>5184</td><td>155520</td></tr>
+<tr><td>2</td><td>8</td><td>5040</td><td>120960</td><td>3628800</td><td>504</td><td>12096</td><td>362880</td></tr>
+<tr><td>2</td><td>16</td><td>10800</td><td>259200</td><td>7776000</td><td>1080</td><td>25920</td><td>777600</td></tr>
+<tr><td>2</td><td>32</td><td>22320</td><td>535680</td><td>16070400</td><td>2232</td><td>53568</td><td>1607040</td></tr>
+<tr><td>4</td><td>4</td><td>4320</td><td>103680</td><td>3110400</td><td>432</td><td>10368</td><td>311040</td></tr>
+<tr><td>4</td><td>8</td><td>10080</td><td>241920</td><td>7257600</td><td>1008</td><td>24192</td><td>725760</td></tr>
+<tr><td>4</td><td>16</td><td>21600</td><td>518400</td><td>15552000</td><td>2160</td><td>51840</td><td>1555200</td></tr>
+<tr><td>4</td><td>32</td><td>44640</td><td>1071360</td><td>32140800</td><td>4464</td><td>107136</td><td>3214080</td></tr>
+<tr><td>8</td><td>4</td><td>8640</td><td>207360</td><td>6220800</td><td>864</td><td>20736</td><td>622080</td></tr>
+<tr><td>8</td><td>8</td><td>20160</td><td>483840</td><td>14515200</td><td>2016</td><td>48384</td><td>1451520</td></tr>
+<tr><td>8</td><td>16</td><td>43200</td><td>1036800</td><td>31104000</td><td>4320</td><td>103680</td><td>3110400</td></tr>
+<tr><td>8</td><td>32</td><td>89280</td><td>2142720</td><td>64281600</td><td>8928</td><td>214272</td><td>6428160</td></tr>
+</tbody>
+</table>
+<p>The following factors can affect the processing speed:</p>
+<ul>
+<li>OCR parameters, for example, the number of output document types.</li>
+<li>CPU clock speed.</li>
+<li>Document complexity.</li>
+<li>Efficiency of Business Process in loading the OCR queue. Ideally, the number of documents in the queue must be 30% more than the
+number of workers. For example, there can be 32 workers and 40 documents in the queue.</li>
+</ul>
+<p>To estimate the exact hardware requirements, we recommend to run several documents through OCR on a test server and check the OCR logs for timing details.</p>
+<h2><a class="anchor" aria-hidden="true" id="machine-learning"></a><a href="#machine-learning" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Machine Learning</h2>
+<p>Additional system resources may be required for the following cases:</p>
+<ul>
+<li>Parallel extraction with different models</li>
+<li>Scheduled parallel training</li>
+<li>Customized system requirements for model training and prediction</li>
+</ul>
+<p>You can setup the Mesos cluster on several ML servers and use all system resources of the cluster.</p>
+<p>The exact CPU/RAM requirements can be estimated during runtime. We recommend you to start with the recommended production setup.</p>
+<p>Besides that, consider the following:</p>
+<ul>
+<li>Compute intensive training or extract process is performed on demand or with intervals.</li>
+<li>Training can be run in a cloud using WorkFusion infrastructure, if input data can be supplied.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="ml-capacity-planning-components"></a><a href="#ml-capacity-planning-components" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ML capacity planning components</h3>
+<h4><a class="anchor" aria-hidden="true" id="search-engine-training"></a><a href="#search-engine-training" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Search Engine training</h4>
+<p>Running Search Engine to produce a model requires the following resources for each field:</p>
+<ul>
+<li>1 core</li>
+<li>14 GB RAM</li>
+<li>30 minutes of processing time per every field</li>
+<li>500 GB HDD</li>
+</ul>
+<p>By adding additional resources, the Search Engine can be trained for multiple fields in parallel.</p>
+<p>Training is executed on BEP Agent machines.</p>
+<p>On a single BEP Agent machine up to 2 parallel training jobs can be executed.</p>
+<h3><a class="anchor" aria-hidden="true" id="model-prediction"></a><a href="#model-prediction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Model prediction</strong></h3>
+<p>Use of the trained model (multi-field) on an unseen document to generate ML predictions requires the following resources:</p>
+<ul>
+<li>1 core</li>
+<li>4 GB RAM</li>
+<li>5 GB HDD</li>
+<li>a few seconds of the processing time (ranges from milliseconds to a minute depending on the document size) per field (prediction for a document is done sequentially, field by field)</li>
+</ul>
+<p>If server resources are available, the clustering engine automatically spins up additional model instances to process multiple incoming requests from the queue concurrently.</p>
+<p>Prediction is executed on BEP Agent machines.</p>
+<p>On a single BEP Agent one CPU and 4 GB of RAM are reserved for
+orchestration and Operating System activities. Remaining 7 CPU cores and
+28 GB of RAM are available for jobs execution.</p>
+<p>It allow executing up to 7 parallel jobs per BEP agent.</p>
+<h2><a class="anchor" aria-hidden="true" id="control-tower-tasks"></a><a href="#control-tower-tasks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Control Tower Tasks</h2>
+<p>Starting with SPA 10.0 release Control Tower tasks are executed on BEP
+Agent machines. It's the same machines where Machine Learning jobs are
+being executed.</p>
+<p>Each worker requires the following resources:</p>
+<ul>
+<li>0.25 core</li>
+<li>1 GB RAM</li>
+</ul>
+<p>Single BEP Agent machine can run up to 28 parallel workers.</p>
+<h2><a class="anchor" aria-hidden="true" id="calculator"></a><a href="#calculator" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Calculator</h2>
+<p>The studies from this page has been collected in the below calculator.</p>
+<p>The best use of the calculator and this page is to produce a high level
+estimate of the capacity required and hardware cost, especially for low
+and mid scale deployments.</p>
+<p>For optimal resources utilization and processing speed it's beneficial
+to build an independent capacity planning framework based on the
+infrastructure features, previous studies, load testing results, and
+performance optimizations applied.</p>
+<p>For high volume large scale deployments it’s recommended to perform
+additional analysis, have dedicated stages for high scale design,
+implementation, testing and load testing, configuration and
+implementation optimizations.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/8/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/spa/admin/system-requirements/system-requirements"><span class="arrow-prev">← </span><span>System requirements</span></a><a class="docs-next button" href="/docs/spa/admin/system-requirements/application-ports"><span>Applications&#x27; ports</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#standard-build">Standard build</a></li><li><a href="#rpa">RPA</a><ul class="toc-headings"><li><a href="#bot-number-estimation">Bot number estimation</a></li><li><a href="#horizontal-scaling">Horizontal scaling</a></li><li><a href="#production-deployment-on-vdi">Production deployment on VDI</a></li><li><a href="#production-deployment-on-server">Production deployment on server</a></li></ul></li><li><a href="#ocr">OCR</a><ul class="toc-headings"><li><a href="#calculate-transaction-throughput">Calculate transaction throughput</a></li></ul></li><li><a href="#machine-learning">Machine Learning</a><ul class="toc-headings"><li><a href="#ml-capacity-planning-components">ML capacity planning components</a></li><li><a href="#model-prediction"><strong>Model prediction</strong></a></li></ul></li><li><a href="#control-tower-tasks">Control Tower Tasks</a></li><li><a href="#calculator">Calculator</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/wf-logo.svg" alt="Knowledgebase" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://www.workfusion.com/reports-whitepapers/">Reports &amp; Whitepapers</a></div><div><h5>Community</h5><a href="https://forum.workfusion.com/" target="_blank" rel="noreferrer noopener">Forum</a><a href="http://automationacademy.com/">Automation Academy</a><a href="https://partners.workfusion.com/">Partners Portal</a></div><div><h5>More</h5><a href="https://www.workfusion.com/iac/">Intelligent Automation Cloud</a></div></section><section class="copyright">Copyright © 2019 WorkFusion, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: 'PNQGK7RZR5',
+                apiKey: 'ba828b974aad37836106a37d2432da4b',
+                indexName: 'search-config',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en","version:undefined"]}
+              });
+            </script></body></html>

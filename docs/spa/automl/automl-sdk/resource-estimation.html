@@ -1,0 +1,100 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Resource Estimation · Knowledgebase</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;To train an IE model on a local desktop or terminal, your machine needs at least 8 GB RAM and 2 CPU.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Resource Estimation · Knowledgebase"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docusaurus.workfusion.com//"/><meta property="og:description" content="&lt;p&gt;To train an IE model on a local desktop or terminal, your machine needs at least 8 GB RAM and 2 CPU.&lt;/p&gt;
+"/><meta property="og:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.4/fuse.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/WorkFusion_H_5_RGB.png" alt="Knowledgebase"/><h2 class="headerTitleWithLogo">Knowledgebase</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/terra" target="_self">WorkFusion 10.0</a></li><li class=""><a href="/docs/spa" target="_self">SPA</a></li><li class=""><a href="/docs/spa/admin/install-spa/prepare/overview" target="_self">Administrator&#x27;s Guide</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://git.workfusion.com/projects/DOC/repos/documentation/browse/docs/spa/automl/automl-sdk/resource-estimation.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Resource Estimation</h1></header><article><div><span><p>To train an IE model on a local desktop or terminal, your machine needs at least 8 GB RAM and 2 CPU.</p>
+<p>Depending on the IE model, here's the recommended configuration:</p>
+<table>
+<thead>
+<tr><th>Model</th><th>RAM</th><th>CPU</th></tr>
+</thead>
+<tbody>
+<tr><td>v9.2 Generic IE</td><td>16 GB</td><td>4</td></tr>
+<tr><td>v9.2 Generic Search Engine 2.0</td><td>8 GB</td><td>4</td></tr>
+<tr><td>v9.2 Generic Binary Classification *</td><td>16 GB</td><td>8</td></tr>
+<tr><td>v9.2 Generic Multi-class Classification</td><td>16 GB</td><td>8</td></tr>
+<tr><td>v9.2 Extended Generic IE Search Engine 2.0 or Generic IE</td><td>16 GB</td><td>8</td></tr>
+</tbody>
+</table>
+<p>* depends on the documents volume and amount of selected classes, estimated for a training set with less than 3000 documents and 6 classes.</p>
+<p>In some cases with huge amounts of data in a training set, local training may throw <code>OutOfMemoryException</code>. To avoid this, follow these steps:</p>
+<ol>
+<li>Edit the <code>ModelTrainingRunner</code> class as in the following code example. Model training is performed <em>per field only</em>.</li>
+</ol>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">package</span> com.workfusion.model.run;
+
+<span class="hljs-keyword">import</span> java.nio.file.Path;
+<span class="hljs-keyword">import</span> java.nio.file.Paths;
+<span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.HashMap;
+<span class="hljs-keyword">import</span> java.util.List;
+<span class="hljs-keyword">import</span> java.util.Map;
+
+<span class="hljs-keyword">import</span> com.workfusion.nlp.uima.pipeline.constants.ConfigurationConstants;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.configuration.FieldInfo;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.api.nlp.configuration.FieldType;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.run.ModelRunner;
+<span class="hljs-keyword">import</span> com.workfusion.vds.sdk.run.config.LocalTrainingConfiguration;
+
+<span class="hljs-keyword">import</span> com.workfusion.model.ExtendedModel;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ModelTrainingRunner</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">runFieldTraining</span><span class="hljs-params">(String fieldName, FieldType type, String outputPathFolder, Path inputDirPath)</span> </span>{
+
+        List&lt;FieldInfo&gt; fields = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        Map&lt;String, Object&gt; parameters = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+        parameters.put(ConfigurationConstants.HPO_TIME_LIMIT, <span class="hljs-number">60</span> * <span class="hljs-number">60</span> * <span class="hljs-number">4</span>);
+
+        <span class="hljs-keyword">try</span> {
+
+            fields.add(<span class="hljs-keyword">new</span> FieldInfo.Builder(fieldName).type(type).build());
+            LocalTrainingConfiguration configuration = LocalTrainingConfiguration.builder().inputDir(inputDirPath).outputDir(Paths.get(outputPathFolder + <span class="hljs-string">"\\model_"</span> + <span class="hljs-string">"_"</span> + fieldName)).fields(fields).parameters(parameters).build();
+            ModelRunner.run(ExtendedModel.class, configuration);
+
+        } <span class="hljs-keyword">catch</span> (Exception ex) {
+            System.out.println(ex);
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+
+        System.setProperty(<span class="hljs-string">"WORKFLOW_LOG_FOLDER"</span>, <span class="hljs-string">"./logs/"</span>);
+        System.setProperty(<span class="hljs-string">"EVAL_WORKING_DIR_IS_UNDEFINED"</span>, <span class="hljs-string">"./eval/"</span>);
+
+        Path inputDirPath = Paths.get(<span class="hljs-string">"C:\\generic\\input"</span>);
+
+        runFieldTraining(<span class="hljs-string">"full_address"</span>, FieldType.ADDRESS, inputDirPath, <span class="hljs-string">"C:\\dev\\train\\generic\\output"</span>);
+        runFieldTraining(<span class="hljs-string">"total_amount"</span>, FieldType.NUMBER, inputDirPath, <span class="hljs-string">"C:\\dev\\train\\generic\\output"</span>);
+        runFieldTraining(<span class="hljs-string">"full_name"</span>, FieldType.FREE_TEXT, inputDirPath, <span class="hljs-string">"C:\\dev\\train\\generic\\output"</span>);
+
+    }
+}
+</code></pre>
+<ol start="2">
+<li>Once <code>ModelTrainingRunner</code> has all fields training completed, merge all separate models into a single model. Refer to the <a href="https://kb.workfusion.com/display/MLCOE/Combining+Several+Models+Into+Single+One">Combining Several Models Into Single One</a> document.</li>
+</ol>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/8/2019</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/wf-logo.svg" alt="Knowledgebase" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://www.workfusion.com/reports-whitepapers/">Reports &amp; Whitepapers</a></div><div><h5>Community</h5><a href="https://forum.workfusion.com/" target="_blank" rel="noreferrer noopener">Forum</a><a href="http://automationacademy.com/">Automation Academy</a><a href="https://partners.workfusion.com/">Partners Portal</a></div><div><h5>More</h5><a href="https://www.workfusion.com/iac/">Intelligent Automation Cloud</a></div></section><section class="copyright">Copyright © 2019 WorkFusion, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: 'PNQGK7RZR5',
+                apiKey: 'ba828b974aad37836106a37d2432da4b',
+                indexName: 'search-config',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en","version:undefined"]}
+              });
+            </script></body></html>

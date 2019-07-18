@@ -1,0 +1,540 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Machine Learning Basics · Knowledgebase</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h1&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;types-of-ml-algorithms&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#types-of-ml-algorithms&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Types of ML Algorithms&lt;/h1&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Machine Learning Basics · Knowledgebase"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docusaurus.workfusion.com//"/><meta property="og:description" content="&lt;h1&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;types-of-ml-algorithms&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#types-of-ml-algorithms&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Types of ML Algorithms&lt;/h1&gt;
+"/><meta property="og:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.4/fuse.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/WorkFusion_H_5_RGB.png" alt="Knowledgebase"/><h2 class="headerTitleWithLogo">Knowledgebase</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/terra" target="_self">WorkFusion 10.0</a></li><li class=""><a href="/docs/spa" target="_self">SPA</a></li><li class=""><a href="/docs/spa/admin/install-spa/prepare/overview" target="_self">Administrator&#x27;s Guide</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://git.workfusion.com/projects/DOC/repos/documentation/browse/docs/spa/automl/concepts/machine-learning-basics.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Machine Learning Basics</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="types-of-ml-algorithms"></a><a href="#types-of-ml-algorithms" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Types of ML Algorithms</h1>
+<p>There are two types of machine learning:</p>
+<ul>
+<li><p><strong>Supervised learning</strong> – analyzes the training data and produces an
+inferred function. The training data consist of a set of training
+examples. Each example is a pair consisting of an input object and a
+desired output value.</p>
+<p>Examples: logistic regression, decision tree, naive bayes classifier, support
+vector machine, bagging (e.g. random forest), some types of neural
+networks.</p></li>
+<li><p><strong>Unsupervised machine learning</strong> – infers a function to describe
+hidden structure from &quot;unlabeled&quot; data. Since the examples given to
+the learner are unlabeled, there is no evaluation of the accuracy of
+the structure that is output by the relevant algorithm—which is one
+way of distinguishing unsupervised learning from supervised
+learning.</p>
+<p>Examples: k-means, other types of neural networks :).</p></li>
+</ul>
+<h1><a class="anchor" aria-hidden="true" id="supervised-learning"></a><a href="#supervised-learning" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Supervised Learning</h1>
+<p>Supervised machine learning:</p>
+<p>WorkFusion models are based on supervised ML algorithms which use
+training data to analyze hidden patterns and then predict results on the
+basis of its findings.</p>
+<p>Building a supervised ML model usually includes the following steps:</p>
+<ol>
+<li>Determine what type of objects should be used for training. In
+WorkFusion, most common problems
+are <strong>classification</strong> and <strong>information extraction</strong>. For
+classification, the object is a pair &quot;a document → class&quot;, for
+information extraction an object is a pair &quot;gold value (information
+that should be extracted) → field&quot;</li>
+<li>Collect the training set which represents how the function can be
+used in real world. In WorkFusion use-cases human-in-the-loop is
+used and training sets are usually collected by manual labeling
+documents for classification and gold values for information
+extraction. In rare cases training sets are tagged automatically,
+using provided historical data.</li>
+<li>Determine the features that represent the learned function. The
+model performance quality depends strongly on how the input objects
+are represented. Typically, the input object is transformed into a
+feature vector, which contains a number of features that describe
+this object. The number of features should not be too large, but
+should contain enough information to predict objects correctly. In
+WorkFusion out-of-the-box models' features are defined automatically
+while in custom models they are created manually.</li>
+<li>Determine the structure of the learned function and corresponding
+learning algorithm.</li>
+<li>Complete the development phase (isn't required for WF out-of-the-box
+models). Train the learning algorithm on available training set and
+get the model (function).</li>
+<li>Evaluate the performance of the learned function. After training
+process performance of the resulting function should be measured. In
+order to ensure the objectiveness of measurement, it is better to
+use a test set that is not part of the training set.</li>
+</ol>
+<p>These steps are completed on each use case where machine learning is
+used. Now let's see a simplified version of what is a model on an
+example of Support Vector Machine (SVM).</p>
+<p><strong>Support Vector Machines</strong> is a binary classification algorithm. Being
+given a set of objects belonging to two classes, it builds a function
+which divides objects accordingly in an n-dimensional feature
+space. Suppose we have a training set that consists of objects belonging
+to classes “red squares”and “blue circles”. Our goal is to predict the
+class for a new unseen object.</p>
+<p><strong>Support Vector Machine (1-dimensional hyper-plane in 2-dimensional space)</strong></p>
+<p>To solve this problem, we need a training set of red squares and blue
+circles representative enough to describe all real-world object of these
+classes. If the training set doesn't &quot;illustrate&quot; the real world
+adequately, the model trained on it may work incorrectly on the objects
+that are not included into the training set.<br>
+Next step is to define the features that will describe each object and
+give information that allows to build a function that can work correctly
+in the real world, not only on the training set. As we mentioned
+earlier, in WorkFusion models' features are generated automatically or
+created manually. In both cases the whole training set is used as a
+source of features. Many facts are taken into account, facts are
+transformed into features that describe objects and define each object's
+class.</p>
+<p>Therefore, each object has some features. If we try to describe the
+objects from the picture below by two features, we will get the
+following description:</p>
+<p>In WorkFusion AutoML, all the feature values are numeric values and each
+object is determined by all its feature values (the vector of features)
+and is marked by a label (class).</p>
+<p>In our example (blue circles and red squares objects described by 2
+features), all the objects are situated in 2-dimensional feature space,
+where each dimension corresponds to a certain feature. One object’s
+features define its coordinates. (Picture 1)</p>
+<p>In SVM we define the object's class by the following function:</p>
+<p>Function</p>
+<p>y<sub>i </sub>= f(x<sub>i1</sub>+x<sub>i2</sub>) = sign(w<sub>0</sub> +
+w<sub>1</sub>x<sub>i1</sub> + w<sub>2</sub>x<sub>i2</sub>)</p>
+<p>where:</p>
+<ul>
+<li>x<sub>i1</sub>, x<sub>i2</sub> - coordinates or feature values of
+i-th object,</li>
+<li>y<sub>i</sub> - class of i-th object,</li>
+<li>w<sub>0</sub>, w<sub>1</sub>, w<sub>2</sub> - feature weights.</li>
+</ul>
+<p><strong>Feature weights</strong> are coefficients that show the importance of each
+feature and the strength of its impact on a classification
+decision. Class function returns 1 or -1 that defines which class is
+assigned to the object.</p>
+<p>Now we need to build a separating hyper-plane, that divides objects into
+two classes. The process of building this function is a <em><strong>training
+process</strong>  (</em>or <strong><em>training)</em></strong>. There is more than one way to build
+such a hyper-plane. The most optimal ones are the following:</p>
+<ul>
+<li>If the data set is linearly separable, the hyper-plane should
+classify all the objects correctly and with maximum margin (red line
+on the picture).</li>
+</ul>
+<!-- -->
+<ul>
+<li>If the data set is not linearly separable, the number of incorrectly
+classified objects should be minimized.</li>
+</ul>
+<p>Separating hyper-plane is described by the following formula:</p>
+<p>Function</p>
+<p>w<sub>1</sub>*x<sub>1</sub> + w<sub>2</sub>*x<sub>2</sub> + ... +
+w<sub>n</sub>*x<sub>n</sub> + b = 0</p>
+<p>where:</p>
+<ul>
+<li>x<sub>i</sub> - feature value,</li>
+<li>w<sub>i</sub> - weights,</li>
+<li>b - constant value.</li>
+</ul>
+<p>Feature values for objects in a dataset are defined before the training
+starts, so during the training process SVM calculates feature weights,
+thus, builds a separating hyper-plane. As we mentioned before there are
+many ways of building the hyper-plane.</p>
+<h1><a class="anchor" aria-hidden="true" id="how-to-evaluate-a-model"></a><a href="#how-to-evaluate-a-model" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to Evaluate a Model</h1>
+<p>To define which way is better and what is the difference between them,
+we need to evaluate how correctly they classify objects. To do so, we
+run our model on some objects and check whether objects are classified
+correctly. If the dataset is linearly separable, all the objects of one
+class should be on the same side of a hyper-plane.</p>
+<h2><a class="anchor" aria-hidden="true" id="binary-classification"></a><a href="#binary-classification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Binary Classification</h2>
+<p>Suppose that both classes are equally interesting to us. For binary
+classification there are 4 possible results:</p>
+<table>
+<thead>
+<tr><th></th><th></th><th></th></tr>
+</thead>
+<tbody>
+<tr><td></td><td>**Predicted class red **squares****</td><td>**Predicted class blue **circles****</td></tr>
+<tr><td>**Actual class red **squares****</td><td>Correctly classified red squares</td><td>Incorrectly classified red squares</td></tr>
+<tr><td><strong>Actual class blue circles</strong></td><td>Incorrectly classified blue circles</td><td>Correctly classified blue circles</td></tr>
+</tbody>
+</table>
+<p>Here we need to separate correctly and incorrectly classified objects:
+they are <strong>true answers and false answers</strong>.</p>
+<p>Objects of two classes are usually called <strong>positives</strong> (objects of the
+first class, e.g. red squares) and <strong>negatives</strong> (objects of the second
+class, e.g. blue circles). Finally, we have:</p>
+<ul>
+<li><strong>True positives (TP)</strong> and <strong>true negatives (TN)</strong> - objects of the
+first class and the second class, that were classified correctly.</li>
+<li><strong>False positives (FP)</strong> and <strong>false negatives (FN)</strong> - objects of
+the first class and the second class, that were classified
+incorrectly.</li>
+</ul>
+<p>If one class is more interesting to us, for example we have a
+classification &quot;invoice/not invoice&quot; and want to process invoices
+(target class, relevant elements) further, the classification results
+will look as follows:</p>
+<p>Their distribution in the table form is called &quot;<strong><em>confusion matrix</em></strong>&quot;
+and looks like this:</p>
+<table>
+<thead>
+<tr><th></th><th></th><th></th></tr>
+</thead>
+<tbody>
+<tr><td></td><td>**Predicted class red **squares****</td><td>**Predicted class blue **circles****</td></tr>
+<tr><td>**Actual class red **squares****</td><td>TP</td><td>FN</td></tr>
+<tr><td>**Actual class blue **circles****</td><td>FP</td><td>TN</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="binary-classification-calculations"></a><a href="#binary-classification-calculations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Binary Classification Calculations</h3>
+<table>
+<thead>
+<tr class="header">
+<th><br />
+</th>
+<th><br />
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><div class="content-wrapper">
+<p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/26106935459abe7c266f7b1ebfa2a824b334c807" class="mwe-math-fallback-image-display" /></p>
+</div></td>
+<td>Precision (calculated per class only) shows how exact is classification: among all the objects defined by the model as red squares, which of them actually belong to this class? It's calculated the following way:<br />
+P = Correctly classified red squares/Total number of objects classified as red squares (the same for blue circles or any other class).</td>
+</tr>
+<tr class="even">
+<td><div class="content-wrapper">
+<p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4c233366865312bc99c832d1475e152c5074891b" class="mwe-math-fallback-image-display" /></p>
+</div></td>
+<td>Recall (calculated per class only) shows how complete is classification: how many real red squares were classified as red squares ? It’s calculated the following way:<br />
+R = Correctly classified red squares /Total number of all red squares in a dataset (the same formula for blue circles or any other class).</td>
+</tr>
+<tr class="odd">
+<td><div class="content-wrapper">
+<p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e2e427ec6dcf2d7882c3bbdc659a8204cba59dcc" class="mwe-math-fallback-image-display" /></p>
+</div></td>
+<td>Accuracy (calculated for the whole set) = Total number of correctly classified objects/Total number of objects . In confusion matrix it's the number of elements in diagonal/the number of elements.</td>
+</tr>
+</tbody>
+</table>
+<p>Practice</p>
+<h3><a class="anchor" aria-hidden="true" id="assignment-1-https-kbworkfusioncom-display-vds-da-training-assignment-datrainingassignment-1mltheoryp-r-aanddrawconfusionmatrixforbinaryclassification"></a><a href="#assignment-1-https-kbworkfusioncom-display-vds-da-training-assignment-datrainingassignment-1mltheoryp-r-aanddrawconfusionmatrixforbinaryclassification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong><a href="https://kb.workfusion.com/display/VDS/DA+Training+Assignment#DATrainingAssignment-1.MLTheory.P/R/AanddrawConfusionmatrixforBinaryclassification">Assignment 1</a></strong></h3>
+<h2><a class="anchor" aria-hidden="true" id="multiclass-classification-of-results"></a><a href="#multiclass-classification-of-results" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Multiclass Classification of Results</h2>
+<p>In the previous case of binary classification, there were only 2 classes
+making one class “Positive” and the other class “Negative”.</p>
+<p>In case of multiclass classification, there are two possible solutions
+of assigning relevance “Positive/Negative, True/False” to classes:</p>
+<ol>
+<li>Define “true/false” values for each class separately (analyzes only
+TPs and FPs in the extracted class sample)</li>
+<li>Set one class as a major one and treat the rest as an aggregated
+class “Others” (“negatives”, irrelevant).</li>
+</ol>
+<p>The second method is used in WorkFusion practice more frequently.</p>
+<h3><a class="anchor" aria-hidden="true" id="example-1-first-method"></a><a href="#example-1-first-method" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 1 (first method)</h3>
+<p>Let’s assume we have 30 documents belonging to 3 different classes: 10
+documents of A-class, 10 documents of B-class and 10 documents of
+C-class.</p>
+<p>The algorithm processed them and gave the following results:</p>
+<ul>
+<li>13 documents retrieved as A-class documents: 7 documents of A-class,
+4 documents of B-class and 2 documents of C-class;</li>
+<li>6 documents retrieved as B-class documents: 2 documents of A-class,
+1 document of B-class and 3 documents of C-class</li>
+<li>11 documents retrieved as C-class documents: 1 document of A-class,
+5 documents of B-class and 5 documents of C-class.</li>
+</ul>
+<p><strong>Actual class</strong></p>
+<p><strong>A</strong></p>
+<p><strong>B</strong></p>
+<p><strong>C</strong></p>
+<p>**<br>
+**</p>
+<p><strong>Predicted class</strong></p>
+<p><strong>A</strong></p>
+<p>True A</p>
+<p>False A</p>
+<p>False A</p>
+<p><strong>B</strong></p>
+<p>False B</p>
+<p>True B</p>
+<p>False B</p>
+<p><strong>C</strong></p>
+<p>False C</p>
+<p>False C</p>
+<p>True C</p>
+<p>***If all the classes are equally important. ***</p>
+<p><strong>Actual class</strong></p>
+<p><strong>A</strong></p>
+<p><strong>B</strong></p>
+<p><strong>C</strong></p>
+<p><strong>Predicted class</strong></p>
+<p><strong>A</strong></p>
+<p>7</p>
+<p>4</p>
+<p>2</p>
+<p><strong>B</strong></p>
+<p>2</p>
+<p>1</p>
+<p>3</p>
+<p><strong>C</strong></p>
+<p>1</p>
+<p>5</p>
+<p>5</p>
+<p><em>Example 1 confusion matrix:</em></p>
+<table>
+<thead>
+<tr class="header">
+<th><br />
+</th>
+<th><em>A-class</em></th>
+<th><em>B-class</em></th>
+<th><em>C-class</em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Precision</td>
+<td>7/13=53.8%</td>
+<td>1/6=16.7%</td>
+<td>5/11=45.45%</td>
+</tr>
+<tr class="even">
+<td>Recall</td>
+<td>7/10 = 70%</td>
+<td>1/10 = 10%</td>
+<td>5/10 = 50%</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>Accuracy</em></strong> (for the whole set): we use only TP values in numerator
+(documents whose classes were recognized by the algorithm correctly) and
+all the elements in denominator: Acc=13/30=43.3%</p>
+<h3><a class="anchor" aria-hidden="true" id="example-2-second-method"></a><a href="#example-2-second-method" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 2 (second method)</h3>
+<p>If we are focused on one class (e.g. class A), we can transform our
+multiclass confusion matrix into binary classification confusion matrix.
+In this case, we redraw the confusion matrix as follows:</p>
+<p><strong>Actual Class</strong></p>
+<p><strong>A</strong></p>
+<p><strong>B</strong></p>
+<p><strong>C</strong></p>
+<p>**<br>
+**</p>
+<p>**<br>
+**</p>
+<p><strong>Predicted Class</strong></p>
+<p><strong>A</strong></p>
+<p><strong>True Positive</strong></p>
+<p>False Positive</p>
+<p>False Positive</p>
+<p><strong>B</strong></p>
+<p>False Negative</p>
+<p><strong>True Negative</strong></p>
+<p><strong>True Negative</strong></p>
+<p><strong>C</strong></p>
+<p>False Negative</p>
+<p><strong>True Negative</strong></p>
+<p><strong>True Negative</strong></p>
+<p>or:</p>
+<p><strong>Actual Class</strong></p>
+<p><strong>A</strong></p>
+<p><strong>Other classes</strong></p>
+<p><strong>Predicted class</strong></p>
+<p><strong>A</strong></p>
+<p><strong>True Positive</strong></p>
+<p>False Positive</p>
+<p><strong>Other classes</strong></p>
+<p>False Negative</p>
+<p><strong>True Negative</strong></p>
+<p>According to this, the confusion matrix for Example 2 will look like
+this:</p>
+<p><strong>Actual Class</strong></p>
+<p><strong>A</strong></p>
+<p><strong>Other Classes</strong></p>
+<p><strong>Predicted Class</strong></p>
+<p><strong>A</strong></p>
+<p><strong>7</strong></p>
+<p>6</p>
+<p><strong>Other Classes</strong></p>
+<p>3</p>
+<p><strong>14</strong></p>
+<p>Precision=7/13=53.8%</p>
+<p>Recall= 7/10 = 70%</p>
+<p>Accuracy= (7+14)/30=70%</p>
+<p>Practice</p>
+<h3><a class="anchor" aria-hidden="true" id="assignment-2-https-kbworkfusioncom-display-vds-da-training-assignment-datrainingassignment-2mltheoryp-r-aandconfusionmatrixformulti-classclassification"></a><a href="#assignment-2-https-kbworkfusioncom-display-vds-da-training-assignment-datrainingassignment-2mltheoryp-r-aandconfusionmatrixformulti-classclassification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong><a href="https://kb.workfusion.com/display/VDS/DA+Training+Assignment#DATrainingAssignment-2.MLTheory.P/R/AandConfusionmatrixforMulti-classclassification">Assignment 2</a></strong></h3>
+<h2><a class="anchor" aria-hidden="true" id="information-extraction-results"></a><a href="#information-extraction-results" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Information Extraction Results</h2>
+<p>Information extraction models classify their results as TPs, FPs, TNs
+and FNs as well. The document is divided into tokens and, in the very
+beginning, each token is classified on the basis of whether it should be
+extracted or not (***positives *<em>and <strong>negatives</strong></em>). Thus, first of
+all, the model finds the set of objects that can be extracted. There can
+also be some additional conditions that the classified values should
+satisfy to be extracted. For example, we need one value for the field
+and the model found 5 values that it considers as suitable. In this
+case, it may check which object has the maximum margin to the
+hyper-plane (the margin describes how confident the model is in
+classifying the object as belonging to this class) and chooses this one
+– the object with the highest confidence or score.</p>
+<p>IE model's quality is estimated by comparing gold data and extraction
+results received after applying a particular model. We use the same
+terms and the same metrics for quality description as we do for
+classification:</p>
+<p>For estimating decision on an object:</p>
+<ul>
+<li><strong><em>True positive</em></strong> – the value <em>should</em> be extracted
+and <em>was</em> extracted correctly (result=gold≠empty).</li>
+<li><strong><em>False positive</em></strong> – the value <em>should not</em> be extracted
+(gold=empty), but <em>was</em> extracted (result≠empty).</li>
+<li><strong><em>True negative</em></strong> – the value <em>should not</em> be extracted
+(gold=empty) and <em>was not</em> extracted (result=empty).</li>
+<li><strong><em>False negative</em></strong> – the value <em>should</em> be extracted (gold≠empty)
+but <em>was not</em> extracted by the model (result=empty).</li>
+<li><strong><em>False positive, False negative</em></strong> - <em>one</em> value should have been
+extracted but the model extracted <em>another</em> (wrong) value. It
+consists of two parts:
+<ul>
+<li>The model did not extract correct value where correct value was
+available; machine missed correct value - FN</li>
+<li>Machine extracted value, but that value is incorrect - FP<br>
+<strong>!!! Please, pay attention that this mistake should be included
+into the set of FPs and the set of FNs to get the correct
+statistics.</strong></li>
+</ul></li>
+</ul>
+<p><strong><em>Example:</em></strong></p>
+<table>
+<thead>
+<tr class="header">
+<th><strong>field_name</strong></th>
+<th><strong>Gold</strong></th>
+<th><strong>Extracted</strong></th>
+<th><strong>Decision</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>invoice_date</td>
+<td>3/3/2017</td>
+<td>3/3/2017</td>
+<td>True positive</td>
+</tr>
+<tr class="even">
+<td>invoice_date</td>
+<td>5/2/2017</td>
+<td><br />
+</td>
+<td>False negative</td>
+</tr>
+<tr class="odd">
+<td>invoice_date</td>
+<td>3/7/2017</td>
+<td>3/3/2017</td>
+<td>False positive, False negative</td>
+</tr>
+<tr class="even">
+<td>invoice_date</td>
+<td><br />
+</td>
+<td>9/5/2017</td>
+<td>False positive</td>
+</tr>
+<tr class="odd">
+<td>invoice_date</td>
+<td><br />
+</td>
+<td><br />
+</td>
+<td>True negative</td>
+</tr>
+</tbody>
+</table>
+<p>True negatives are usually considered to be not a very useful metric as
+customers are usually interested only in the objects that should be
+extracted.</p>
+<p>There is a slight difference between estimating classification results
+and information extraction results. In classification, the number of
+classified objects and the total number of objects are the same. In case
+of information extraction task, imagine that you need to process 1000
+documents and only 500 of them contain a gold value for a certain field
+(e. g. e-mail). Let’s suppose that our model extracted 400. We see that:</p>
+<p>the number of documents ≠ the number of gold values ≠ the number of
+extracted values</p>
+<p>Hence, in contrast to classification tasks we have two new metrics we
+are interested in:</p>
+<ul>
+<li>how many objects we should extract (Gold values),</li>
+<li>how many objects we extracted (extracted values).</li>
+</ul>
+<p>In order to know how accurately the model extracts values, we
+calculate <strong>Precision:</strong></p>
+<ul>
+<li>Precision (P) = Correctly extracted / Extracted, or</li>
+<li>Precision (P) = TP / (TP + FP), where:<br>
+FP + (FP,FN) ∈ FP</li>
+</ul>
+<p>In order to know the percent of existing values that can be extracted by
+the model, we calculate <strong>Recall:</strong></p>
+<ul>
+<li>Recall (R) = Correctly extracted / Gold values, or</li>
+<li>Recall (R) = TP / (TP + FN), where:<br>
+FN + (FP,FN) ∈ FN</li>
+</ul>
+<p>Accuracy is not used for information extraction because it describes how
+accurate the model is for all the classes while in information
+extraction we have two classes (empty values and not empty values) and
+usually are interested in quality metrics of “not empty values” only.</p>
+<p>Let’s see how it works on our documents with e-mails. We have:</p>
+<table>
+<thead>
+<tr><th><strong>The number of documents</strong></th><th><strong>Gold values</strong></th><th><strong>Extracted values</strong></th><th><strong>TP (correctly extracted)</strong></th><th><strong>FP (model’s mistakes)</strong></th><th><strong>FN (missed gold vallues)</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>1000</td><td>500</td><td>400</td><td>350</td><td>50</td><td>150</td></tr>
+</tbody>
+</table>
+<ul>
+<li>P = TP/Extracted=350/400 = 0.875 = 87.5%</li>
+<li>R = TP/Gold = 350/500 = 0.7 = 70%</li>
+</ul>
+<p>Practice</p>
+<h3><a class="anchor" aria-hidden="true" id="assignment-3-https-kbworkfusioncom-display-vds-da-training-assignment-datrainingassignment-3mltheoryp-rforinformationextraction"></a><a href="#assignment-3-https-kbworkfusioncom-display-vds-da-training-assignment-datrainingassignment-3mltheoryp-rforinformationextraction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong><a href="https://kb.workfusion.com/display/VDS/DA+Training+Assignment#DATrainingAssignment-3.MLTheory.P/RforInformationExtraction">Assignment 3</a></strong></h3>
+<h1><a class="anchor" aria-hidden="true" id="natural-language-processing"></a><a href="#natural-language-processing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Natural Language Processing</h1>
+<p><strong>Given</strong>: unstructured text (dividend news, invoices, reports)</p>
+<p><strong>Task</strong>: extract particular fields (invoice number, date, amount,
+currency) from this unstructured text using ML.</p>
+<h2><a class="anchor" aria-hidden="true" id="phase-1-annotation-tagging"></a><a href="#phase-1-annotation-tagging" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Phase 1: Annotation (Tagging)</h2>
+<h2><a class="anchor" aria-hidden="true" id="phase-2-feature-extraction"></a><a href="#phase-2-feature-extraction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Phase 2: Feature Extraction</h2>
+<p>Sample set of <strong>Features</strong> for the Amount field:</p>
+<table>
+<thead>
+<tr><th>Feature</th><th>Value</th></tr>
+</thead>
+<tbody>
+<tr><td>is a number</td><td>yes</td></tr>
+<tr><td>position after Currency field</td><td>yes</td></tr>
+<tr><td>position before &quot;/share&quot;</td><td>yes</td></tr>
+<tr><td>can be less than zero</td><td>no</td></tr>
+<tr><td>is last word in sentence</td><td>no</td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/10/2019</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#binary-classification">Binary Classification</a><ul class="toc-headings"><li><a href="#binary-classification-calculations">Binary Classification Calculations</a></li><li><a href="#assignment-1-https-kbworkfusioncom-display-vds-da-training-assignment-datrainingassignment-1mltheoryp-r-aanddrawconfusionmatrixforbinaryclassification"><strong><a href="https://kb.workfusion.com/display/VDS/DA+Training+Assignment#DATrainingAssignment-1.MLTheory.P/R/AanddrawConfusionmatrixforBinaryclassification">Assignment 1</a></strong></a></li></ul></li><li><a href="#multiclass-classification-of-results">Multiclass Classification of Results</a><ul class="toc-headings"><li><a href="#example-1-first-method">Example 1 (first method)</a></li><li><a href="#example-2-second-method">Example 2 (second method)</a></li><li><a href="#assignment-2-https-kbworkfusioncom-display-vds-da-training-assignment-datrainingassignment-2mltheoryp-r-aandconfusionmatrixformulti-classclassification"><strong><a href="https://kb.workfusion.com/display/VDS/DA+Training+Assignment#DATrainingAssignment-2.MLTheory.P/R/AandConfusionmatrixforMulti-classclassification">Assignment 2</a></strong></a></li></ul></li><li><a href="#information-extraction-results">Information Extraction Results</a><ul class="toc-headings"><li><a href="#assignment-3-https-kbworkfusioncom-display-vds-da-training-assignment-datrainingassignment-3mltheoryp-rforinformationextraction"><strong><a href="https://kb.workfusion.com/display/VDS/DA+Training+Assignment#DATrainingAssignment-3.MLTheory.P/RforInformationExtraction">Assignment 3</a></strong></a></li></ul></li><li><a href="#phase-1-annotation-tagging">Phase 1: Annotation (Tagging)</a></li><li><a href="#phase-2-feature-extraction">Phase 2: Feature Extraction</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/wf-logo.svg" alt="Knowledgebase" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://www.workfusion.com/reports-whitepapers/">Reports &amp; Whitepapers</a></div><div><h5>Community</h5><a href="https://forum.workfusion.com/" target="_blank" rel="noreferrer noopener">Forum</a><a href="http://automationacademy.com/">Automation Academy</a><a href="https://partners.workfusion.com/">Partners Portal</a></div><div><h5>More</h5><a href="https://www.workfusion.com/iac/">Intelligent Automation Cloud</a></div></section><section class="copyright">Copyright © 2019 WorkFusion, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: 'PNQGK7RZR5',
+                apiKey: 'ba828b974aad37836106a37d2432da4b',
+                indexName: 'search-config',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en","version:undefined"]}
+              });
+            </script></body></html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Post-Processing Acceleration · Knowledgebase</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;Post-processing utilizes normalizers. Before 9.3, AutoML included a number of out-of-the-box normalizers, but the final post-processing configuration was written by Machine Learning Engineer. MLE had to choose the combination of normalizers themselves for each case.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Post-Processing Acceleration · Knowledgebase"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docusaurus.workfusion.com//"/><meta property="og:description" content="&lt;p&gt;Post-processing utilizes normalizers. Before 9.3, AutoML included a number of out-of-the-box normalizers, but the final post-processing configuration was written by Machine Learning Engineer. MLE had to choose the combination of normalizers themselves for each case.&lt;/p&gt;
+"/><meta property="og:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.4/fuse.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/WorkFusion_H_5_RGB.png" alt="Knowledgebase"/><h2 class="headerTitleWithLogo">Knowledgebase</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/terra" target="_self">WorkFusion 10.0</a></li><li class=""><a href="/docs/spa" target="_self">SPA</a></li><li class=""><a href="/docs/spa/admin/install-spa/prepare/overview" target="_self">Administrator&#x27;s Guide</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://git.workfusion.com/projects/DOC/repos/documentation/browse/docs/spa/automl/automl-sdk/post-processing-acceleration.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Post-Processing Acceleration</h1></header><article><div><span><p>Post-processing utilizes normalizers. Before 9.3, AutoML included a number of out-of-the-box normalizers, but the final post-processing configuration was written by Machine Learning Engineer. MLE had to choose the combination of normalizers themselves for each case.</p>
+<p>Normalizer Search Engine, introduced in the 9.3 release, tests different combinations of normalizers for each field to select the optimal chain. The final choice is the most useful and the safest for particular case. This minimizes the practice of designing custom post-processors, so MLE doesn't have to write a post-processor in the majority of the cases.</p>
+<p>Normalizer Search Engine works especially well on numeric fields: numbers, dates, amount, and price. Quality of these fields can improve up to 70% in comparison with the same IE flow without the post-processing. Normalizer Search Engine is also useful for select one, email, currency, address, text fields etc.</p>
+<h2><a class="anchor" aria-hidden="true" id="text-normalization-for-all-text-fields"></a><a href="#text-normalization-for-all-text-fields" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Text Normalization For All Text Fields</h2>
+<h3><a class="anchor" aria-hidden="true" id="uppercasenormalizer"></a><a href="#uppercasenormalizer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>UpperCaseNormalizer</h3>
+<p>Modifies text to contain only upper-case letters for the specified locale.</p>
+<ul>
+<li>Before: <code>aBCdE</code></li>
+<li>After: <code>ABCDE</code></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="lowercasenormalizer"></a><a href="#lowercasenormalizer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>LowerCaseNormalizer</h3>
+<p>Modifies text to contain only lower-case letters for the specified locale.s</p>
+<ul>
+<li>Before: <code>aBCdE</code></li>
+<li>After: <code>abcde</code></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="capitalizenormalizer"></a><a href="#capitalizenormalizer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CapitalizeNormalizer</h3>
+<p>Capitalizes all the whitespace separated words in a string. Only the first letter of each word is changed.</p>
+<ul>
+<li>Before: <code>aBC bcC cCD</code></li>
+<li>After: <code>ABC BcC CCD</code></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="trimmernormalizer"></a><a href="#trimmernormalizer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>TrimmerNormalizer</h3>
+<p>Removes spaces at the beginning and the end of the string.</p>
+<ul>
+<li>Before: <code>&quot; aa a &quot;</code></li>
+<li>After: <code>&quot;aa a&quot;</code></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="whitespacenormalizer"></a><a href="#whitespacenormalizer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>WhitespaceNormalizer</h3>
+<p>Replaces multiple occurrences of any whitespace symbol with one standard whitespace symbol.</p>
+<ul>
+<li>Before: <code>&quot;cat dog&quot;</code></li>
+<li>After: <code>&quot;cat dog&quot;</code></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="whitespaceremovenormalizer"></a><a href="#whitespaceremovenormalizer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>WhitespaceRemoveNormalizer</h3>
+<p>Replaces all occurrences of any whitespace symbol.</p>
+<ul>
+<li>Before: <code>&quot;cat dog &quot;</code></li>
+<li>After: <code>&quot;catdog&quot;</code></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="punctuationremovenormalizer"></a><a href="#punctuationremovenormalizer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>PunctuationRemoveNormalizer</h3>
+<p>Removes all occurrences of punctuation marks.</p>
+<ul>
+<li>Before: <code>cat,dog</code></li>
+<li>After: <code>catdog</code></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="mapdocumenttexttovaluenormalizer"></a><a href="#mapdocumenttexttovaluenormalizer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MapDocumentTextToValueNormalizer</h2>
+<p>Text normalization for select one/optional one field types based on the automatic dictionary provided in resources and the nearest neighbors strategy. Substitutes the answer for the value from the dictionary, if the similarity score between them is acceptable.</p>
+<h2><a class="anchor" aria-hidden="true" id="formatting"></a><a href="#formatting" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Formatting</h2>
+<h3><a class="anchor" aria-hidden="true" id="dateformatnormalizer"></a><a href="#dateformatnormalizer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DateFormatNormalizer</h3>
+<p>Date format normalization for date fields based on automatic date-month order determination for given locale. If date format pattern is not provided, the default one (&quot;MM/dd/yyyy&quot;) will be used.</p>
+<ul>
+<li>Before: <code>1989,10,22</code></li>
+<li>After: <code>10/22/1989</code></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="amountformatnormalizer"></a><a href="#amountformatnormalizer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>AmountFormatNormalizer</h3>
+<p>Amount formatting normalization for amount fields based on automatic locale determination used for delimeter choice. If amount format pattern is not provided, the default one (&quot;#.00&quot;) will be used.</p>
+<ul>
+<li>Before: <code>4,32</code></li>
+<li>After: <code>4.32</code></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="decimalnumberformatnormalizer"></a><a href="#decimalnumberformatnormalizer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DecimalNumberFormatNormalizer</h3>
+<p>Number formatting normalization for number fields based on automatic locale determination (used for delimiter choice).</p>
+<ul>
+<li>Before: <code>3,14159265359</code></li>
+<li>After: <code>3.14159265359</code></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="ocr-error-correction"></a><a href="#ocr-error-correction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OCR Error Correction</h2>
+<h3><a class="anchor" aria-hidden="true" id="ocrdatefixnormalizer"></a><a href="#ocrdatefixnormalizer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OcrDateFixNormalizer</h3>
+<p>Removes OCR errors from the date string.</p>
+<ul>
+<li>Before: <code>Ju1 20, 2015</code></li>
+<li>After: <code>Jul 20, 2015</code></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="dictionarycorrectionnormalizer"></a><a href="#dictionarycorrectionnormalizer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DictionaryCorrectionNormalizer</h3>
+<p>Removes OCR errors from the string based on the dictionary automatically gathered by GoldDataAnalyzers.</p>
+<ul>
+<li>Before: <code>l 5QO</code></li>
+<li>After: <code>1 500</code></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="usstatesabbreviationnormalizer"></a><a href="#usstatesabbreviationnormalizer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>UsStatesAbbreviationNormalizer</h2>
+<p>Replaces the name of the US state by its abbreviation for address fields.</p>
+<ul>
+<li>Before: <code>Oklahoma</code></li>
+<li>After: <code>OK</code></li>
+</ul>
+<p>For Data, Amount and Number fields, formatting pattern should be provided in the field info normalizationPattern attribute, otherwise the default pattern (&quot;MM/dd/yyyy&quot; for Date fields, &quot;#.00&quot; for Amount fields) will be used:</p>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">new</span> FieldInfo.Builder(<span class="hljs-string">"invoice_date"</span>)
+        .type(FieldType.DATE)
+        .multiValue(<span class="hljs-keyword">false</span>)
+        .property(GenericPipelineConfiguration.PARAM_NORMALIZATION_PATTERN, <span class="hljs-string">"MM/dd/yyyy"</span>)
+        .build();
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="configuration"></a><a href="#configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuration</h2>
+<p>The new components include:</p>
+<ol>
+<li><strong>GoldDataAnalyzersConfiguration</strong>: a set of analyzers grouped by field type. Gold Data Analyzer finds patterns and similarities in training data and stores them in resources.</li>
+<li><strong>GenericNormalizersConfiguration</strong>: a set of normalizers grouped by field type. Normalizers Search Engine uses it to find the best chain of normalizers. Normalizers use the output of gold data analyzers.</li>
+<li><strong>BestNormalizersProcessor</strong>: reads the serialized best normalizers chain and applies them to corresponding fields.</li>
+</ol>
+<pre><code class="hljs css language-java"><span class="hljs-meta">@ModelConfiguration</span>()
+<span class="hljs-meta">@Import</span>(configurations = {
+        <span class="hljs-meta">@Import</span>.Configuration(CandidateFeatureExtractorsConfiguration.class),
+        <span class="hljs-meta">@Import</span>.Configuration(GenericIeAnnotatorConfiguration.class),
+        <span class="hljs-meta">@Import</span>.Configuration(GenericNormalizersConfiguration.class),
+        <span class="hljs-meta">@Import</span>.Configuration(GoldDataAnalyzersConfiguration.class),
+        <span class="hljs-meta">@Import</span>.Configuration(GenericHpoConfiguration.class),
+        <span class="hljs-meta">@Import</span>.Configuration(GenericIePipelineConfiguration.class),
+        <span class="hljs-meta">@Import</span>.Configuration(GenericIeMlConfiguration.class),
+        <span class="hljs-meta">@Import</span>.Configuration(GenericIeParserConfiguration.class)
+})
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GenericIeHypermodelConfiguration</span> </span>{
+
+    <span class="hljs-meta">@Named</span>(<span class="hljs-string">"basePostProcessors"</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;Processor&gt; <span class="hljs-title">getPostProcessors</span><span class="hljs-params">(DefaultConfigurationContext configurationContext)</span> </span>{
+        <span class="hljs-keyword">return</span> Lists.newArrayList(<span class="hljs-keyword">new</span> BestNormalizersProcessor(configurationContext.getResource(<span class="hljs-string">"/lookup/normalizers"</span>)),
+                <span class="hljs-keyword">new</span> CheckerModelPostProcessor(),
+                <span class="hljs-keyword">new</span> DataValueNormalizationProcessor(),
+                <span class="hljs-keyword">new</span> RowBasedGroupingProcessor());
+    }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="execution-flow"></a><a href="#execution-flow" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Execution Flow</h2>
+<ol>
+<li>Gold Data Analyzer specified for the selected field is executed. The output files (<em>local.json</em>, <em>ocr-corrections.csv</em>) are stored in the resources directory.</li>
+<li>All possible combinations and permutations of fields normalizers are generated.</li>
+<li>Statistics is calculated and stored for all generated combinations in the <em>normalizer-statistics.csv</em> file.</li>
+<li>Best normalizers are serialized in the <em>best-normalizers.json</em> file.</li>
+<li>The <em>best-normalizers.json</em> file is used by BestNormalizersProcessor for post processing.</li>
+</ol>
+<p>Here's the files structure.</p>
+<pre><code class="hljs">output
+    └──resources
+        └──lookup
+            └──normalizers
+                ├──email
+                │   └──normalizer-statistics<span class="hljs-selector-class">.csv</span>
+                ├──invoice_date
+                │   ├──best-normalizers<span class="hljs-selector-class">.json</span>
+                │   ├──date-format-priority<span class="hljs-selector-class">.txt</span>
+                │   └──normalizer-statistics<span class="hljs-selector-class">.csv</span>
+                ├──invoice_number
+                │   ├──best-normalizers<span class="hljs-selector-class">.json</span>
+                │   ├──normalizer-statistics<span class="hljs-selector-class">.csv</span>
+                │   └──ocr-corrections<span class="hljs-selector-class">.csv</span>
+                ├──price
+                │   ├──best-normalizers<span class="hljs-selector-class">.json</span>
+                │   ├──locale<span class="hljs-selector-class">.json</span>
+                │   └──normalizer-statistics<span class="hljs-selector-class">.csv</span>
+                ├──product
+                │   └──normalizer-statistics<span class="hljs-selector-class">.csv</span>
+                ├──quantity
+                │   ├──best-normalizers<span class="hljs-selector-class">.json</span>
+                │   ├──locale<span class="hljs-selector-class">.json</span>
+                │   └──normalizer-statistics<span class="hljs-selector-class">.csv</span>
+                └── total_amount
+                    ├──best-normalizers<span class="hljs-selector-class">.json</span>
+                    ├──locale<span class="hljs-selector-class">.json</span>
+                    └──normalizer-statistics<span class="hljs-selector-class">.csv</span>
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/8/2019</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#text-normalization-for-all-text-fields">Text Normalization For All Text Fields</a><ul class="toc-headings"><li><a href="#uppercasenormalizer">UpperCaseNormalizer</a></li><li><a href="#lowercasenormalizer">LowerCaseNormalizer</a></li><li><a href="#capitalizenormalizer">CapitalizeNormalizer</a></li><li><a href="#trimmernormalizer">TrimmerNormalizer</a></li><li><a href="#whitespacenormalizer">WhitespaceNormalizer</a></li><li><a href="#whitespaceremovenormalizer">WhitespaceRemoveNormalizer</a></li><li><a href="#punctuationremovenormalizer">PunctuationRemoveNormalizer</a></li></ul></li><li><a href="#mapdocumenttexttovaluenormalizer">MapDocumentTextToValueNormalizer</a></li><li><a href="#formatting">Formatting</a><ul class="toc-headings"><li><a href="#dateformatnormalizer">DateFormatNormalizer</a></li><li><a href="#amountformatnormalizer">AmountFormatNormalizer</a></li><li><a href="#decimalnumberformatnormalizer">DecimalNumberFormatNormalizer</a></li></ul></li><li><a href="#ocr-error-correction">OCR Error Correction</a><ul class="toc-headings"><li><a href="#ocrdatefixnormalizer">OcrDateFixNormalizer</a></li><li><a href="#dictionarycorrectionnormalizer">DictionaryCorrectionNormalizer</a></li></ul></li><li><a href="#usstatesabbreviationnormalizer">UsStatesAbbreviationNormalizer</a></li><li><a href="#configuration">Configuration</a></li><li><a href="#execution-flow">Execution Flow</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/wf-logo.svg" alt="Knowledgebase" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://www.workfusion.com/reports-whitepapers/">Reports &amp; Whitepapers</a></div><div><h5>Community</h5><a href="https://forum.workfusion.com/" target="_blank" rel="noreferrer noopener">Forum</a><a href="http://automationacademy.com/">Automation Academy</a><a href="https://partners.workfusion.com/">Partners Portal</a></div><div><h5>More</h5><a href="https://www.workfusion.com/iac/">Intelligent Automation Cloud</a></div></section><section class="copyright">Copyright © 2019 WorkFusion, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: 'PNQGK7RZR5',
+                apiKey: 'ba828b974aad37836106a37d2432da4b',
+                indexName: 'search-config',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en","version:undefined"]}
+              });
+            </script></body></html>

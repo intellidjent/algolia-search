@@ -1,0 +1,573 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>AutoML SDK API · Knowledgebase</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;!DOCTYPE html&gt;"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="AutoML SDK API · Knowledgebase"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docusaurus.workfusion.com//"/><meta property="og:description" content="&lt;!DOCTYPE html&gt;"/><meta property="og:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.4/fuse.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/WorkFusion_H_5_RGB.png" alt="Knowledgebase"/><h2 class="headerTitleWithLogo">Knowledgebase</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/terra" target="_self">WorkFusion 10.0</a></li><li class=""><a href="/docs/spa" target="_self">SPA</a></li><li class=""><a href="/docs/spa/admin/install-spa/prepare/overview" target="_self">Administrator&#x27;s Guide</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>AutoML SDK</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">AutoML Concepts<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/what-can-automl-do">What Can AutoML Do?</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Models</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/models-overview">Models Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/information-extraction">Information Extraction</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/checker-model">Checker Model</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/classification">Classification</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/data-set">Data Set</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/automl-glossary">AutoML Glossary</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/concepts/automl-delivery">Complete View on AutoML Delivery</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Hardware Requirements<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/automl/10x-hardware-requirements">Hardware Requirements</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/zookeeper-settings">ZooKeeper Settings</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">AutoML SDK<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/introduction">Introduction</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Components</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/components">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/parser">Parser</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/annotators">Annotators</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/feature-extractors">Feature Extractors</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/post-processing">Post-Processing</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/statistics">Statistics</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/model-configuration">Model Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/search-engine">Search Engine</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Getting Started</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/getting-started">Developing with AutoML SDK</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/environment-configuration">Environment Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/project-configuration">Project Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/automl-sdk-configuration">AutoML SDK Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/model-training">Model Training</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/model-execution">Model Execution</a></li></ul></div><li class="navListItem navListItemActive"><a class="navItem" href="/docs/spa/automl/automl-sdk/automl-sdk-api">AutoML SDK API</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/code-examples">Code Examples</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/automl-sdk/e2e-automl-sdk-walkthrough">End-to-End AutoML SDK Walkthrough</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Data Analyst Manual<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/da-introduction">Data Analyst Manual</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">What does Data Analyst do?</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/da-job">Data Analyst Job</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/da-responsibilities">Data Analyst Responsibilities</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/da-workflow">Data Analyst Workflow</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/customer-data-protection">Customer Data Protection</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Customer documents basics</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/input-docs-characteristics">Input Documents Characteristics</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/input-docs-formats">Formats of Input Documents</a></li><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/labeling-requirements">Labeling Requirements</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Analyst runbook</h4><ul><li class="navListItem"><a class="navItem" href="/docs/spa/automl/da-manual/input-docs-analysis">Input Documents Analysis</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://git.workfusion.com/projects/DOC/repos/documentation/browse/docs/spa/automl/automl-sdk/automl-sdk-api.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">AutoML SDK API</h1></header><article><div><span><!DOCTYPE html>
+<html>
+<body>
+<iframe src="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/index.html" width="1200" height="1500">
+  <p>Your browser does not support iframes.</p>
+</iframe>
+</body>
+</html>
+<!-- ## Main Processing Classes
+<p><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/processing/Processor.html">Processor</a> interface represents improving component, base interface for
+post-processing implementation. Has method:</p>
+<table>
+<thead>
+<tr><th>Method</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/processing/Processor.html#process-T">process(Document document)</a></td><td>Method will be called during post-processing phase for each document, all processing implementation should be implemented here.</td></tr>
+</tbody>
+</table>
+<p>[Annotator][3] interface represents component that process document and creates named entity elements on document data.</p>
+<table>
+<thead>
+<tr><th>Method</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>process(Document document)</td><td>Method will be called during annotation for each document, all custom logic should be implemented here.</td></tr>
+</tbody>
+</table>
+<p>Additional methods can be marked with annotations:</p>
+<ul>
+<li><code>@OnInit</code> method level annotation indicates that the method will be
+called once before processing.</li>
+<li><code>@OnDestroy</code> method level annotation indicates that the method will
+be called once after processing.</li>
+</ul>
+<p>FeatureExtractor interface represents the component that performs
+feature extraction. Has Method:</p>
+<table>
+<thead>
+<tr><th>Method</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>extract(Document doc, Element el);</td><td>Method will be called to collect Features for specified element in the document.</td></tr>
+</tbody>
+</table>
+<p>Additional methods can be marked with annotations:</p>
+<ul>
+<li><code>@OnInit</code> method annotated by this annotation will be invoked after
+getting particular FeatureExtractor for initialization.</li>
+<li><code>@OnDocumentStart</code> method annotated by this annotation will be
+invoked after initialization but before feature extraction for each
+document.</li>
+<li><code>@OnDocumentComplete</code> method annotated by this annotation will be
+invoked once for document after features extraction.</li>
+<li><code>@OnDestroy</code> method annotated by this annotation will be invoked
+once after all another events.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="document-classes"></a><a href="#document-classes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Document Classes</h2>
+<p><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Document.html">Document</a> -
+basic class representing document. Provides the following API:</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Document.html#getId--">getId()</a></td>
+<td>gets unique identifier of the document</td>
+</tr>
+<tr class="even">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Document.html#getText--">getText()</a></td>
+<td>returns plain text of the document</td>
+</tr>
+<tr class="odd">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Document.html#getContent--">getContent()</a></td>
+<td>gives original document text</td>
+</tr>
+<tr class="even">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Document.html#remove-com.workfusion.vds.api.nlp.model.Element-">remove(Element e)</a></td>
+<td>removes element from document</td>
+</tr>
+<tr class="odd">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Document.html#removeAll--">removeAll()</a></td>
+<td>removes all elements from document</td>
+</tr>
+<tr class="even">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Document.html#add-com.workfusion.vds.api.nlp.model.ElementDescriptor-">add(ElementDescriptor ed)</a></td>
+<td>creates element in document from its description</td>
+</tr>
+<tr class="odd">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Document.html#findAll--">findAll()</a></td>
+<td>finds all elements in the document</td>
+</tr>
+<tr class="even">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Document.html#findAll-java.lang.Class-">findAll(Class&lt;T&gt; type)</a></td>
+<td>finds all elements of given type in the document</td>
+</tr>
+<tr class="odd">
+<td><p><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Document.html#findCovered-java.lang.Class-com.workfusion.vds.api.nlp.model.Element-">findCovered(Class&lt;T&gt; type, Element element)</a></p></td>
+<td>gets list of elements of the given element type overlapped by a 'covering' element</td>
+</tr>
+<tr class="even">
+<td><p><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Document.html#findCovered-java.lang.Class-int-int-">findCovered(Class&lt;T&gt; type, int begin, int end)</a></p></td>
+<td>gets list of elements of the given element type which are completely located within the given interval</td>
+</tr>
+<tr class="odd">
+<td><p><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Document.html#findCovering-java.lang.Class-com.workfusion.vds.api.nlp.model.Element-">findCovering(Class&lt;T&gt; type, Element element)</a></p></td>
+<td>gets list of elements of the given element type that 'cover' a certain element</td>
+</tr>
+<tr class="even">
+<td><p><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Document.html#findCovering-java.lang.Class-int-int-">findCovering(Class&lt;T&gt; type, int begin, int end)</a></p></td>
+<td>gets list of elements of the given element type that a completely overlap the given interval</td>
+</tr>
+<tr class="odd">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Document.html#findNext-java.lang.Class-com.workfusion.vds.api.nlp.model.Element-int-">findNext(Class&lt;T&gt; type, Element anchor, int count)</a></td>
+<td>returns the n elements next to the given element</td>
+</tr>
+<tr class="even">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Document.html#findPrevious-java.lang.Class-com.workfusion.vds.api.nlp.model.Element-int-">findPrevious(Class&lt;T&gt; type, Element anchor, int count)</a></td>
+<td>returns the n elements previous to the given element</td>
+</tr>
+<tr class="odd">
+<td>findAllCovered(Class&lt;T&gt; type, Class&lt;S&gt; covered type)</td>
+<td>returns covering elements of type T and collection with covered elements of type S from the document.</td>
+</tr>
+<tr class="even">
+<td>findAllCovering( Class&lt; T &gt; type, Class &gt; covering type )</td>
+<td><p>returns map with covered elements of type T and covering elements of type S from the document.</p></td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/IeDocument.html">IeDocument</a> -
+specific class for IE use case, used in conjunction
+with IeProcessor. Provides convenient methods specific for this use
+case:</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/IeDocument.html#findField-java.lang.String-">findField(String name)</a></td>
+<td>finds field in Document by its name</td>
+</tr>
+<tr class="even">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/IeDocument.html#findFields-java.lang.String-">findFields(String name)</a></td>
+<td>finds fields in Document by name</td>
+</tr>
+<tr class="odd">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/IeDocument.html#findFields--">findFields()</a></td>
+<td>finds all fields in Document.</td>
+</tr>
+<tr class="even">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/IeDocument.html#getFieldsInfo--">getFieldsInfo()</a></td>
+<td>returns filedInfo DTOs which represents Human Task structure for this model.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/IeDocument.html#getFieldInfo-java.lang.String-">getFieldInfo(String code)</a></td>
+<td>return fieldInfo by answer code.</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/ClassificationDocument.html">ClassificationDocument</a></p>
+<ul>
+<li>document in Classification use case. Has methods to work with document
+labels:</li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 34%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/ClassificationDocument.html#findLabels--">findLabels()</a></td>
+<td>find all labels in the document</td>
+</tr>
+<tr class="even">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/ClassificationDocument.html#findLabel-java.lang.String-">findLabel(String name)</a></td>
+<td>find label by its name</td>
+</tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="main-elements"></a><a href="#main-elements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Main Elements</h2>
+<p><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Element.html">Element</a> -
+basic class for all document elements. Exact elements representations
+will be described below. Element provides basic methods like:</p>
+<table>
+<thead>
+<tr><th>Method</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Element.html#getId--">getId()</a></td><td>unique identifier of the element</td></tr>
+<tr><td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Element.html#getDocument--">getDocument()</a></td><td>gets document associated with the document</td></tr>
+<tr><td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Element.html#getText--">getText()</a></td><td>returns original text of the element</td></tr>
+<tr><td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Element.html#getBegin--">getBegin()</a></td><td>gets begin index of element text in document</td></tr>
+<tr><td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Element.html#getEnd--">getEnd()</a></td><td>gets end index of element text in document</td></tr>
+</tbody>
+</table>
+<p><strong>Elements:</strong></p>
+<ul>
+<li>Cell</li>
+<li>Field</li>
+<li>Label</li>
+<li>Line</li>
+<li>Page</li>
+<li>Row</li>
+<li>Table</li>
+<li>Tag</li>
+<li>Token</li>
+<li>Content</li>
+<li>EntityBoundary</li>
+<li>LayotBlock</li>
+<li>NamedEntity</li>
+<li>Sentence</li>
+</ul>
+<p><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Field.html">Field</a> class
+which represents extracted fields in Document for IE use case.</p>
+<table>
+<colgroup>
+<col style="width: 34%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Field.html#getName--">getName()</a></td>
+<td>field name, corresponds to answer code in Control Tower</td>
+</tr>
+<tr class="even">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Field.html#getValue--">getValue()</a></td>
+<td>corrected value from text. If value is not corrected original text is returned.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Field.html#setValue-java.lang.String-">setValue(String value)</a></td>
+<td>sets corrected value</td>
+</tr>
+<tr class="even">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Field.html#getScore--">getScore()</a></td>
+<td>score of field</td>
+</tr>
+<tr class="odd">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Field.html#getScore--">setScore()</a></td>
+<td>sets score of field</td>
+</tr>
+<tr class="even">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Field.html#getAttributes--">getAttributes()</a></td>
+<td>custom field attributes</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Label.html">Label</a> -
+class represents Document label for Classification use case.</p>
+<table>
+<colgroup>
+<col style="width: 34%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Label.html#getName--">getName()</a></td>
+<td>gets label name.</td>
+</tr>
+<tr class="even">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Label.html#getScore--">getScore()</a></td>
+<td>returns Label score.</td>
+</tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="read-only-elements"></a><a href="#read-only-elements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Read-Only Elements</h2>
+<p>Following elements represent document layout, so they are read-only and
+can not be added or removed from document.</p>
+<p><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Page.html">Page</a></p>
+<ul>
+<li>represents document page.</li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Page.html#getPageIndex--">getPageIndex()</a></td>
+<td>returns the page index</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Table.html">Table</a></p>
+<ul>
+<li>represents table in document, do not provides any additional methods,
+uses in getCovered/getCovering methods.</li>
+</ul>
+<p><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Row.html">Row</a></p>
+<ul>
+<li>row in the table, corresponds to &lt;tr&gt; html tag.</li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 34%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Row.html#getRowIndex--">getRowIndex()</a></td>
+<td>returns the number of rows directly preceding the current row in the same table</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Cell.html">Cell</a></p>
+<ul>
+<li>table cell</li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Cell.html#getRowIndex--">getRowIndex()</a></td>
+<td>gets row index of the cell</td>
+</tr>
+<tr class="even">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Cell.html#getColumnIndex--">getColumnIndex()</a></td>
+<td>returns column index of the cell</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Line.html">Line</a></p>
+<ul>
+<li>represents OCR &lt;line&gt; element in xml.</li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 34%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Line.html#getLineIndex--">getLineIndex()</a></td>
+<td>the number of lines directly preceding the current line in the same block</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Tag.html">Tag</a></p>
+<ul>
+<li>class representing xml tag. (eg. &lt;a&gt;, &lt;br&gt;, etc.)</li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 34%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Tag.html#getName--">getName()</a></td>
+<td>tag name</td>
+</tr>
+<tr class="even">
+<td><a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/model/Tag.html#getAttributes--">getAttributes()</a></td>
+<td>return tag attributes</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Token represents token element in the Document.</li>
+<li>Content represents a full content of the document, do not provides
+any additional methods.</li>
+<li>EntityBoundary represents some portions of  XML/HTML text, do not
+provides any additional methods.</li>
+<li>LayotBlock represents a block of text based on OCR pixel positions.</li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>getRightPosition()</td>
+<td>returns right position</td>
+</tr>
+<tr class="even">
+<td><p>getLeftPosition()</p></td>
+<td>returns left position</td>
+</tr>
+<tr class="odd">
+<td>getTopPosition()</td>
+<td>returns top position</td>
+</tr>
+<tr class="even">
+<td>getBottomPosition()</td>
+<td>returns bottom position</td>
+</tr>
+</tbody>
+</table>
+<p>NamedEntity - represents some real object inside Document, like person,
+location, bank code, etc.</p>
+<table>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 69%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>getType()</td>
+<td>returns type of mentioned entity</td>
+</tr>
+<tr class="even">
+<td><p>getScore()</p></td>
+<td>returns score value</td>
+</tr>
+</tbody>
+</table>
+<p>Sentence - represents a sentence element in the document, do not provides
+any additional methods.</p>
+<p>[3]: <a href="https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/annotator/Annotator.html">https://workfusion-docs.s3.amazonaws.com/vds/ml-sdk/latest/com/workfusion/vds/sdk/api/nlp/annotator/Annotator.html</a> --&gt;</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/8/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/spa/automl/automl-sdk/model-execution"><span class="arrow-prev">← </span><span>Model Execution</span></a><a class="docs-next button" href="/docs/spa/automl/automl-sdk/code-examples"><span>Code Examples</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#document-classes">Document Classes</a></li><li><a href="#main-elements">Main Elements</a></li><li><a href="#read-only-elements">Read-Only Elements</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/wf-logo.svg" alt="Knowledgebase" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://www.workfusion.com/reports-whitepapers/">Reports &amp; Whitepapers</a></div><div><h5>Community</h5><a href="https://forum.workfusion.com/" target="_blank" rel="noreferrer noopener">Forum</a><a href="http://automationacademy.com/">Automation Academy</a><a href="https://partners.workfusion.com/">Partners Portal</a></div><div><h5>More</h5><a href="https://www.workfusion.com/iac/">Intelligent Automation Cloud</a></div></section><section class="copyright">Copyright © 2019 WorkFusion, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: 'PNQGK7RZR5',
+                apiKey: 'ba828b974aad37836106a37d2432da4b',
+                indexName: 'search-config',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en","version:undefined"]}
+              });
+            </script></body></html>

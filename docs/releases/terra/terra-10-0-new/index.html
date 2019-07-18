@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Terra release · Knowledgebase</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;WorkFusion Terra is a cornerstone release with a number of significant transformations from both the technology and UX perspectives.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Terra release · Knowledgebase"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docusaurus.workfusion.com//"/><meta property="og:description" content="&lt;p&gt;WorkFusion Terra is a cornerstone release with a number of significant transformations from both the technology and UX perspectives.&lt;/p&gt;
+"/><meta property="og:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docusaurus.workfusion.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.4/fuse.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/WorkFusion_H_5_RGB.png" alt="Knowledgebase"/><h2 class="headerTitleWithLogo">Knowledgebase</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/terra" target="_self">WorkFusion 10.0</a></li><li class=""><a href="/docs/spa" target="_self">SPA</a></li><li class=""><a href="/docs/spa/admin/install-spa/prepare/overview" target="_self">Administrator&#x27;s Guide</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://git.workfusion.com/projects/DOC/repos/documentation/browse/docs/releases/terra/terra-10-0-new.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Terra release</h1></header><article><div><span><p>WorkFusion Terra is a cornerstone release with a number of significant transformations from both the technology and UX perspectives.</p>
+<p>One of the biggest fundamental architectural changes in Terra 10.0 is the new bot orchestration platform designed to address current scalability limitations, as well as to reduce complexity and improve fault-tolerance.</p>
+<p>Another major improvement is replacing 3 databases (MySQL, PostgreSQL, MongoDB) with a single unified database — MS SQL. This fundamental change allowed us to decrease maintenance complexity and enable consistent data backup, as well as to address security and high availability issues.</p>
+<h1><a class="anchor" aria-hidden="true" id="bot-orchestration-platform"></a><a href="#bot-orchestration-platform" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bot Orchestration Platform</h1>
+<p>In pre-Terra SPA versions, we had the following architecture: Control Tower came as a package with a database, services and infrastructure. But what if we had to handle more tasks and one Control Tower was not enough? We had to add another Control Tower with all its infrastructure, and then another... On top of that, all this needed custom orchestration for any specific use case. This could not last any longer. Such architecture was obviously too complex for large enterprise clients.</p>
+<p>In Terra 10.0 the whole architecture has undergone a major re-thinking.</p>
+<p>First off, we drew an explicit line between applications, such as Control Tower, and the execution platform. The platform only exposes its API that triggers cluster execution, orchestration, monitoring, and analytics.</p>
+<p>Second, the platform dynamically scales the number of workers depending on the task load. This results in lean utilization of resources, which can be used for other tasks.</p>
+<p>Last but not least, workers performing tasks are now isolated. This allows to avoid situations when one failed task could lead to unexpected behavior or Control Tower being stuck.</p>
+<p>Introducing the new state-of-the-art bot orchestration platform for a horizontally scalable, predictable, and fault-tolerant system. The platform moves the orchestration of Control Tower and AutoML to a separate worker-based service architecture to remove fundamental limitations to the size, complexity and stability of execution.</p>
+<h1><a class="anchor" aria-hidden="true" id="workspace-tod"></a><a href="#workspace-tod" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>WorkSpace / TOD</h1>
+<p>In Terra 10.0 we re-imagined the approach for document labeling when teaching a bot. This approach is naturally familiar to anyone working with physical documents or digital scans, to put it shortly — with original documents.</p>
+<p>With this release you no longer need to look for data in an OCRed document version, but rather deal with the original document, just like you'd normally do in a real-life situation.</p>
+<p>TOD improves the overall user experience, as well as allows to double the speed of document labeling and cuts the time needed to teach a bot.</p>
+<p>+ OOTB OCR Business Process</p>
+<h1><a class="anchor" aria-hidden="true" id="monitoring"></a><a href="#monitoring" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Monitoring</h1>
+<p>We replaced the old Platform Monitor with an open standard solution — ELK stack. In Terra v10.0, ELK does three major things:</p>
+<ol>
+<li>Logs aggregation and visualization.</li>
+<li>Metrics collection and dashboards with environment status.</li>
+<li>Analytics metric collection.</li>
+</ol>
+<p>Global logs, environment health metrics, and analytics are collected via Logstash and then conveniently visualized and managed in a single place via Elasticsearch and Kibana.</p>
+<h1><a class="anchor" aria-hidden="true" id="deprecations"></a><a href="#deprecations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deprecations</h1>
+<p>Since v10.0 is a fresh start release we thought it's high time that we get rid of some legacy items and components that are no longer in focus, or not supported altogether. These items include WorkSpace Sandbox, all Smartcrowd integrations, WFBI service, and a number of minor leftovers scattered around the system.</p>
+<p>Here's the list of the most noticeable ones:</p>
+<ul>
+<li>Platform Monitor is no longer available being replaced by ELK and Bot Manager.</li>
+<li>Sandbox environment is gone since most of our enterprise customers use a 3-stage environment stack: Dev, UAT, and Production.</li>
+<li>etc...</li>
+</ul>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 5/28/2019</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/wf-logo.svg" alt="Knowledgebase" width="66" height="58"/></a><div><h5>Docs</h5><a href="https://www.workfusion.com/reports-whitepapers/">Reports &amp; Whitepapers</a></div><div><h5>Community</h5><a href="https://forum.workfusion.com/" target="_blank" rel="noreferrer noopener">Forum</a><a href="http://automationacademy.com/">Automation Academy</a><a href="https://partners.workfusion.com/">Partners Portal</a></div><div><h5>More</h5><a href="https://www.workfusion.com/iac/">Intelligent Automation Cloud</a></div></section><section class="copyright">Copyright © 2019 WorkFusion, Inc.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: 'PNQGK7RZR5',
+                apiKey: 'ba828b974aad37836106a37d2432da4b',
+                indexName: 'search-config',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en","version:undefined"]}
+              });
+            </script></body></html>
